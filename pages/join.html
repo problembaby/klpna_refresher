@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 - 간호조무사협회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js" defer></script>
+    <script src="../resources/krds/js/component/ui-script.js" defer></script>
+    <script src="../resources/krds/js/pattern/pattern.js" defer></script>
+    <script src="../resources/js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+
+     <div class="wrap">
+        <div id="container">
+            <div class="inner in-between">
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">회원가입</a></li>
+                        </ol>
+                    </nav>
+                    <!-- breadcrumb -->
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">회원가입</h1>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+                    <!-- 회원가입 영역 -->
+                     <div class="join-area">
+                        <div class="helper-box gray">
+                            <ul class="krds-info-list chkList" role="list">
+                                <li role="listitem">
+                                    온라인(홈페이지) 회원 가입은 협회회비 납입여부와 상관없이 가능합니다.
+                                </li>
+                                <li role="listitem">자격신고센터에 보수교육 이수내역 등록 및 유예•면제•비대상 승인내역 관리를 위해서는 온라인 회원가입이 필요합니다.</li>
+                            </ul>
+                        </div>
+
+                        <div class="join-area-box">
+                            <ol class="join-type-list">
+                                <li class="join-type-item">
+                                    <a href="#" title="개인회원 가입 페이지 이동" class="join-member-link">
+                                        <h2>개인회원 가입</h2>
+                                        <div class="icon-persnal"></div>
+                                    </a>
+                                    <ul class="krds-info-list hollow">
+                                        <li class="listitem"><span>본인 명의 휴대폰 인증</span>을 진행</li>
+                                        <li class="listitem"><span>자격증번호, 발급처, 발급일</span> 필요</li>
+                                    </ul>
+                                </li>
+                                <li class="join-type-item">
+                                    <a href="#" title="기관·단체회원 가입 페이지 이동" class="join-member-link">
+                                        <h2>기관·단체회원 가입</h2>
+                                        <div class="icon-institution"></div>
+                                    </a>
+                                    <ul class="krds-info-list hollow">
+                                        <li class="listitem"><span>담당자 본인 명의 휴대폰 인증</span>진행</li>
+                                        <li class="listitem"><span>사업자등록증(PDF, 이미지 파일 최대5mb) 첨부진행</span></li>
+                                        <li class="listitem">가입 후 대한간호조무사협회 승인이 <span>완료된 후 기관/단체   회원으로 로그인 가능</span></li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                     </div>
+
+                     <!-- //회원가입 영역 -->
+                     
+                </div>
+                
+
+
+            </div>
+        </div>
+     </div>
+
+
+    <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+
+
+
+</body>
+
+</html>
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>

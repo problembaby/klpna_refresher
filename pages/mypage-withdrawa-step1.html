@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원탈퇴 | 마이페이지 - 대한간호조무사협회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script src="../resources/krds/js/component/ui-script.js"></script>
+    <script src="../resources/krds/js/pattern/pattern.js" defer></script>
+    <script src="../resources/js/script.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                <nav class="krds-side-navigation">
+                    <h1 class="lnb-tit">마이페이지</h1>
+                    <!-- lnb-list -->
+                    <ul class="lnb-list">
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">교육현황</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">강의실</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">회비/기금내역</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">1:1문의</a>
+                        </li>
+
+                        <li class="lnb-item">
+                            <button type="button" class="lnb-btn lnb-toggle"
+                                aria-controls="lnbmenu-vf9gqcy" aria-expanded="false">나의게시물</button>
+                            <!-- lnb-submenu -->
+                            <div class="lnb-submenu">
+                                <ul id="lnbmenu-vf9gqcy">
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">신고센터</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">회원게시판</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">노무상담</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">구인정보</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">원격지원서비스</a></li>
+                                </ul>
+                            </div>
+                            <!-- //lnb-submenu -->
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link active selected">회원정보</a>
+                            <!-- lnb-submenu -->
+                            <!-- //lnb-submenu -->
+                        </li>
+                    </ul>
+                    <!-- //lnb-list -->
+                </nav>
+                <!-- //사이드 메뉴 -->
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="/" class="txt" title="홈으로"></a></li>
+                            <li><a href="#;" class="txt">마이페이지</a></li>
+                            <li><a href="#;" class="txt">회원정보</a></li>
+                            <li><a href="#;" class="txt">회원탈퇴</a></li>
+                        </ol>
+                    </nav>
+                    <!-- breadcrumb -->
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">회원탈퇴</h1>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+                    <div class="sub-content mypage">
+
+                        <section class="withdrawal-area">
+                            <div class="ico-find withdraw"></div>
+                            <p class="why-text">왜 탈퇴하시는지 이유가 있을까요?</p>
+                            <div class="bar"></div>
+                            <div class="radio-list">
+                                <div class="krds-form-check large">
+                                    <input type="radio" name="rdo1" id="rdo1-1">
+                                    <label for="rdo1-1">사용을 잘 안하게 돼요</label>
+                                </div>
+                                <div class="krds-form-check large">
+                                    <input type="radio" name="rdo1" id="rdo1-2">
+                                    <label for="rdo1-2">개인정보 보호를 위해 삭제할 정보가 있어요</label>
+                                </div>
+                                <div class="krds-form-check large">
+                                    <input type="radio" name="rdo1" id="rdo1-3">
+                                    <label for="rdo1-3">다른 계정이 있어요</label>
+                                </div>
+                                <div class="krds-form-check large">
+                                    <input type="radio" name="rdo1" id="rdo1-4">
+                                    <label for="rdo1-4">기타</label>
+                                </div>
+                                <div class="textarea-wrap">
+                                    <textarea class="krds-input" placeholder="플레이스홀더" id="textarea" maxlength="100" readonly></textarea>
+                                    <p class="textarea-count">
+                                        <span class="count-now">0</span><span class="count-total">/100</span>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </section>
+
+
+                        <!-- 페이지 버튼 영역 -->
+                        <div class="btn-wrap center btnW140">
+                            <button type="button" class="krds-btn black" onclick="">뒤로</button>
+                            <button type="button" class="krds-btn tertiary">다음 단계로</button>
+                        </div>
+                        <!-- //페이지 버튼 영역 -->
+
+
+
+                    </div>
+
+                    <script>
+                        $(function () {
+                            // 1. 기타 체크 시 textarea readonly 토글
+                            $('input[type=radio][name=rdo1]').on('change', function () {
+                                if ($('#rdo1-4').is(':checked')) {
+                                    $('#textarea').removeAttr('readonly').focus();
+                                } else {
+                                    $('#textarea').attr('readonly', true).val('');
+                                    $('.count-now').text('0');
+                                }
+                            });
+
+                            // 2. 글자 수 실시간 카운트
+                            $('#textarea').on('input', function () {
+                                let currentLength = $(this).val().length;
+                                $('.count-now').text(currentLength);
+                            });
+                        });
+                    </script>
+
+
+
+                </div>
+            </div>
+            <!-- //컨텐츠 영역 -->
+        </div>
+        <!-- //컨테이너 영역 -->
+        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+    </div>
+
+</body>
+
+</html>
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>

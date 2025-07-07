@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 - 간호조무사협회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js" defer></script>
+    <script src="../resources/krds/js/component/ui-script.js" defer></script>
+    <script src="../resources/krds/js/pattern/pattern.js" defer></script>
+    <script src="../resources/js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+
+    <script>
+        /** 비밀번호 실시간 유효성 체크 */
+        function checkPasswordRules(el) {
+            let $el = $(el);
+            let val = $el.val();
+
+            if (val.length > 20) {
+                val = val.substring(0, 20);
+                $el.val(val);
+            }
+
+            const rules = {
+                letter: /[a-zA-Z]/.test(val),
+                number: /\d/.test(val),
+                special: /[!@#$^&*]/.test(val),
+                length: val.length >= 6 && val.length <= 20
+            };
+
+            const $items = $('.password-rule-list .password-rule-item');
+            $items.removeClass('active');
+            if (rules.letter) $items.eq(0).addClass('active');
+            if (rules.number) $items.eq(1).addClass('active');
+            if (rules.special) $items.eq(2).addClass('active');
+            if (rules.length) $items.eq(3).addClass('active');
+        }
+
+
+        function handlePwResetSubmit(buttonEl) {
+            const $area = $(buttonEl).closest('.login-idFind-area');
+            let isValid = true;
+            let $firstInvalid = null;
+
+            $area.find('.form-group').each(function () {
+                const $group = $(this);
+                const isRequired = $group.find('.form-tit .req').length > 0;
+                if (!isRequired) return;
+
+                const $input = $group.find('input, select, textarea').filter(':visible').first();
+                const $hint = $group.find('.form-hint-invalid');
+
+                let val = '';
+                let isEmpty = false;
+
+                if ($input.length) {
+                    if ($input.is(':checkbox') || $input.is(':radio')) {
+                        const $checked = $group.find('input:checked');
+                        isEmpty = ($checked.length === 0);
+                    } else {
+                        val = $input.val()?.trim();
+                        isEmpty = (val === '');
+                    }
+
+                    if (isEmpty) {
+                        $group.addClass('is-error');
+                        $hint.css('display', 'flex');
+                        if (!$firstInvalid) $firstInvalid = $input;
+                        isValid = false;
+                    } else {
+                        $group.removeClass('is-error');
+                        $hint.hide();
+                    }
+                }
+            });
+
+            if (!isValid) {
+                if ($firstInvalid?.length) {
+                    setTimeout(() => $firstInvalid.focus(), 10);
+                }
+                return false;
+            }
+
+            alert('비밀번호 변경 처리 진행 (예시)');
+            // $(buttonEl).closest('form')[0].submit();
+        }
+
+
+    </script>
+
+    <!-- 로그인 영역 -->
+    <div class="login-wrap">
+        <div class="login-img">
+        </div>
+        <div class="login-contents">
+            <div class="login-inner">
+                <div class="login-form-wrap">
+                    <div class="login-title">
+                        <h1>비밀번호 찾기</h1>
+                    </div>
+
+                    <!-- 비밀번호 찾기 -->
+                    <div class="login-idFind-area">
+                        <div class="step">
+                            <ol class="progress-bar">
+                                <li class="progress-step none">1. 가입정보 확인</li>
+                                <li class="progress-step active">2. 비밀번호 변경</li>
+                            </ol>
+                        </div>
+                        <div class="helper-box gray">
+                            <div class="helper-wrap">
+                                <ul class="krds-info-list decimal" role="list">
+                                    <li role="listitem">
+                                        아래에 새로운 비밀번호를 기입하시고 확인 버튼을 누르시면 해당 비밀번호로 변경됩니다.
+                                    </li>
+                                    <li role="listitem">
+                                        <span class="bold">6자~20자 영문 혼용(대소문자구분), 숫자, 특수문자(!@#$^&*만 허용)</span>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ico-find pw2"></div>
+
+                        <form action="">
+                            <div class="fieldset mb40">
+                                <!-- 패스워드 -->
+                                <div class="form-group">
+                                    <div class="form-tit">
+                                        <label for="userPw">비밀번호<i class="req">*</i></label>
+                                    </div>
+                                    <div class="form-input">
+                                        <div class="form-conts btn-ico-wrap" data-delete="true">
+                                            <input type="password" id="userPw" class="krds-input medium"
+                                                placeholder="비밀번호 입력" oninput="checkPasswordRules(this)">
+                                            <div class="btn-group">
+                                                <button type="button"
+                                                    class="krds-btn medium icon pure btn-delete-input">
+                                                    <span class="sr-only">내용 삭제</span>
+                                                    <i class="svg-icon ico-delete-fill"></i>
+                                                </button>
+                                                <button type="button" class="krds-btn medium icon btn-pw-visible"
+                                                    id="btn-pw-visible">
+                                                    <span class="sr-only">입력한 비밀번호 보기</span>
+                                                    <i class="svg-icon ico-pw-visible"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <ol class="password-rule-list">
+                                            <li class="password-rule-item"><span class="ico-chk"></span>영문</li>
+                                            <li class="password-rule-item"><span class="ico-chk"></span>숫자</li>
+                                            <li class="password-rule-item"><span class="ico-chk"></span>특수문자</li>
+                                            <li class="password-rule-item"><span class="ico-chk"></span>최소 6~20자리
+                                            </li>
+                                        </ol>
+                                        <div class="input-txt">
+                                            <p class="form-hint-invalid" style="display: none;">비밀번호를 입력해 주세요.</p>
+                                            <p class="form-hint">6자~20자 영문 혼용(대소문자구분), 숫자, 특수문자(!@#$^&*만 허용) 3가지 조합
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //패스워드 -->
+
+                                <!-- 패스워드 확인 -->
+                                <div class="form-group">
+                                    <div class="form-tit">
+                                        <label for="userPwConfirm">비밀번호 확인<i class="req">*</i></label>
+                                    </div>
+                                    <div class="form-input">
+                                        <div class="form-conts btn-ico-wrap" data-delete="true">
+                                            <input type="password" id="userPwConfirm" class="krds-input medium"
+                                                placeholder="비밀번호 입력">
+                                            <div class="btn-group">
+                                                <button type="button"
+                                                    class="krds-btn medium icon pure btn-delete-input">
+                                                    <span class="sr-only">내용 삭제</span>
+                                                    <i class="svg-icon ico-delete-fill"></i>
+                                                </button>
+                                                <button type="button" class="krds-btn medium icon btn-pw-visible"
+                                                    id="btn-pw-visible">
+                                                    <span class="sr-only">입력한 비밀번호 보기</span>
+                                                    <i class="svg-icon ico-pw-visible"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="input-txt">
+                                            <p class="form-hint-invalid" style="display: none;">비밀번호 확인을 입력해주세요.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //패스워드 확인 -->
+
+
+                                <div class="bar"></div>
+                            </div>
+                            <div class="comp-btn-wrap ">
+                                <button type="button" id="idFindsubmit" class="krds-btn login-btn black"
+                                    onclick="handlePwResetSubmit(this)">비밀번호 찾기</button>
+                            </div>
+                            <div class="krds-disclosure conts-expand-area active mt30">
+                                <button type="button" class="btn-conts-expand">안내 및 유의사항</button>
+                                <div class="expand-wrap">
+                                    <div class="expand-in">
+                                        <ul class="krds-info-list dash">
+                                            <li>타 사이트와 동일한 비밀번호의 사용 또는 이전에 사용했던 비밀번호는 안전하지 않을 수 있습니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+
+                    </div>
+                    <!-- //비밀번호 찾기 -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- //로그인 영역 -->
+
+    <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+
+
+
+</body>
+
+</html>
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>

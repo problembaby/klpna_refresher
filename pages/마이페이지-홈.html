@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지 - 대한간호조무사협회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script src="../resources/krds/js/component/ui-script.js"></script>
+    <script src="../resources/krds/js/pattern/pattern.js" defer></script>
+    <script src="../resources/js/script.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                <nav class="krds-side-navigation">
+                    <h1 class="lnb-tit">마이페이지</h1>
+                    <!-- lnb-list -->
+                    <ul class="lnb-list">
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">교육현황</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">강의실</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">회비/기금내역</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">1:1문의</a>
+                        </li>
+
+                        <li class="lnb-item active">
+                            <button type="button" class="lnb-btn lnb-toggle active selected"
+                                aria-controls="lnbmenu-vf9gqcy" aria-expanded="false">나의게시물</button>
+                            <!-- lnb-submenu -->
+                            <div class="lnb-submenu">
+                                <ul id="lnbmenu-vf9gqcy">
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">신고센터</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">회원게시판</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">노무상담</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">구인정보</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">원격지원서비스</a></li>
+                                </ul>
+                            </div>
+                            <!-- //lnb-submenu -->
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">회원정보</a>
+                            <!-- lnb-submenu -->
+                            <!-- //lnb-submenu -->
+                        </li>
+                    </ul>
+                    <!-- //lnb-list -->
+                </nav>
+                <!-- //사이드 메뉴 -->
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="/" class="txt" title="홈으로"></a></li>
+                            <li><a href="#;" class="txt">마이페이지</a></li>
+                        </ol>
+                    </nav>
+                    <!-- breadcrumb -->
+
+
+                    <div class="sub-content mypage home">
+                        <div class="left-cont">
+                            <!--회원정보-->
+                            <div class="mypage-userInfo">
+                                <div class="user-box">
+                                    <div class="user-info-top">
+                                        <div class="icon ico-regular">
+                                            <span class="sr-only">정회원</span>
+                                        </div>
+                                  <!-- <div class="icon ico-general">
+                                            <span class="sr-only">일반회원</span>
+                                        </div> -->
+                                        <!-- <div class="icon ico-institution">
+                                            <span class="sr-only">기관회원</span>
+                                        </div> -->
+                                         
+
+                                        <div class="user">
+                                            <div class="user-name-wrap">
+                                                <div class="name ellipsis-1">홍길동님</div>
+                                                <button class="btn-edit">수정</button>
+                                            </div>
+                                            <div class="user-level">정회원</div>
+                                        </div>
+                                    </div>
+                                    <ul class="user-info-list">
+                                        <li>
+                                            <span class="label">자격증번호</span>
+                                            <span class="value">1234</span>
+                                        </li>
+                                        <li>
+                                            <span class="label">최종 자격신고일</span>
+                                            <span class="value">2021.01.01</span>
+                                        </li>
+                                        <li>
+                                            <span class="label">소속시도회</span>
+                                            <span class="value">서울특별시</span>
+                                        </li>
+                                        <li>
+                                            <span class="label">근무처</span>
+                                            <span class="value">삼성병원</span>
+                                        </li>
+                                        <li>
+                                            <span class="label">연락처</span>
+                                            <span class="value">010-1234-5678</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--자격신고 대상자 바로가기-->
+                                <a href="#" class="license-box">
+                                    <div class="lincense-box-txt">
+                                        <i class="ico-chk-wh"></i>
+                                        자격신고 대상자 입니다.
+                                    </div>
+                                    <div class="lincense-box-link">자격신고 바로가기</div>
+                                </a>
+                                <!--//자격신고 대상자 바로가기-->
+                            </div>
+                            <!--//회원정보-->
+
+
+
+                            <!--자격신고 현황-->
+                            <div class="lincense-report">
+                                <h2>자격신고 현황</h2>
+                                <div class="req-txt">•최종 자격신고 년도: 2025년</div>
+                                <div class="">
+                                    <table class="table lineTable">
+                                        <caption>자격신고 현황 표, 년도,자격상태, 신고상태를 나타냄.</caption>
+                                        <colgroup>
+                                            <col width="20%">
+                                            <col width="auto">
+                                            <col width="30%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>년도</th>
+                                                <th>자격상태</th>
+                                                <th>신고상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2025</td>
+                                                <td>
+                                                    <span class="license-status bg-target">자격신고대상</span>
+                                                </td>
+                                                <td class="state"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2024</td>
+                                                <td></td>
+                                                <td class="state">
+                                                    <div class="state-1">유예</div>
+                                                    <div class="state-2">신고완료</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2023</td>
+                                                <td></td>
+                                                <td>
+                                                    <div class="state-1">보수교육</div>
+                                                    <div class="state-2">신고완료</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2022</td>
+                                                <td></td>
+                                                <td>
+                                                    <div class="state-1">보수교육</div>
+                                                    <div class="state-2">신고완료</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2021</td>
+                                                <td></td>
+                                                <td>
+                                                    <div class="state-1">보수교육</div>
+                                                    <div class="state-2">신고완료</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2020</td>
+                                                <td>
+                                                    <span class="license-status bg-completed">자격신고완료</span>
+                                                </td>
+                                                <td>
+                                                    <div class="state-1">보수교육</div>
+                                                    <div class="state-2">신고완료</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div>
+
+                            </div>
+                            <!--//자격신고 현황-->
+                        </div>
+
+
+                        <div class="right-cont">
+
+                            <!--나의 교육현황-->
+                            <div class="mypage-education">
+                                <div class="mypage-education-top">
+                                    <h2>나의 교육현황</h2>
+                                    <a href="#" class="krds-btn small text">
+                                        교육신청 변경/취소
+                                        <i class="svg-icon ico-angle right"></i>
+                                    </a>
+                                </div>
+
+                                <div class="table-wrap">
+                                    <table class="table lineTable">
+                                        <caption>나의 교육현황 표 년도, 구분, 과정명, 형태, 기간, 장소를 나타냄</caption>
+                                        <colgroup>
+                                            <col width="30%">
+                                            <col width="auto">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>구분</th>
+                                                <th>교육과정</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!--노 데이터 -->
+                                            <tr style="display: none;">
+                                                <td colspan="2">
+                                                    <div class="no-data">데이터가 없습니다.</div>
+                                                </td>
+                                            </tr>
+                                            <!--//노 데이터 -->
+                                            <tr class="edu-first-tr">
+                                                <td class="edu-td" rowspan="3">
+                                                    <div class="year">2025</div>
+                                                    <div class="txt">보수교육(정기)</div>
+                                                </td>
+                                                <td >
+                                                    <div class="edu-cont-top">
+                                                        <span class="krds-badge small in-person">대면</span>
+                                                        <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                    </div>
+                                                    <ul class="edu-cont-list">
+                                                        <li>
+                                                            <i class="ico-edu-cal"></i>
+                                                            <span class="text">05.03 (토)</span>
+                                                        </li>
+                                                        <li>
+                                                            <i class="ico-edu-location"></i>
+                                                            <span class="text">서귀포시 청사 강의실</span>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="edu-first-tr">
+                                                <td >
+                                                    <div class="edu-cont-top">
+                                                        <span class="krds-badge small in-noPerson">비대면</span>
+                                                        <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                    </div>
+                                                    <ul class="edu-cont-list">
+                                                        <li>
+                                                            <i class="ico-edu-cal"></i>
+                                                            <span class="text">05.03 (토)</span>
+                                                        </li>
+                                                        <li>
+                                                            <i class="ico-edu-zoom"></i>
+                                                            <span class="text">ZOOM</span>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="edu-first-tr">
+                                                <td >
+                                                    <div class="edu-cont-top">
+                                                        <span class="krds-badge small online">온라인</span>
+                                                        <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                    </div>
+                                                    <ul class="edu-cont-list">
+                                                        <li>
+                                                            <i class="ico-edu-cal"></i>
+                                                            <span class="text">~ 05.03 (토) 까지</span>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="edu-two-tr">
+                                                <td class="edu-td">
+                                                    <div class="year">2025</div>
+                                                    <div class="txt">보수교육(정기)</div>
+                                                </td>
+                                                <td >
+                                                    <div class="edu-cont-top">
+                                                        <span class="krds-badge small in-person">대면</span>
+                                                        <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                    </div>
+                                                    <ul class="edu-cont-list">
+                                                        <li>
+                                                            <i class="ico-edu-cal"></i>
+                                                            <span class="text">05.03 (토)</span>
+                                                            <span class="text">05.04 (일)</span>
+                                                            <span class="text">05.05 (월)</span>
+                                                            <span class="text">05.06 (화)</span>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                         
+
+                                        </tbody>
+
+                                    </table>
+                                </div>
+
+                            </div>
+                            <!--//나의 교육현황-->
+
+                            <!--교육 링크-->
+                            <div class="lecturel-link">
+                                <div class="lecturel-link-item">
+                                    <h2>최근 시청 중인 온라인 강의</h2>
+                                    <a href="#" target="_blank" title="새창열림" class="c-lecturel">
+                                        <div class="c-lecturel-top">
+                                            <div class="ttl">4. 간호조무사 근골격계 질환관리</div>
+                                            <div class="link-text">
+                                                <span>이어보기</span>
+                                                <div class="youtube-logo" aria-label="YouTube Logo"></div>
+                                            </div>
+                                        </div>
+                                        <div class="c-lecturel-bottom">
+                                            <div class="col">
+                                                <div class="label">진도율 :</div>
+                                                <div class="text">75.10%</div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="label">교육기간 :</div>
+                                                <div class="text">2025년 12월 31일 수요일까지</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="lecturel-link-item">
+                                    <h2>최근 신청한 (비)대면 교육</h2>
+                                    <a href="#" target="_blank" title="새창열림" class="c-lecturel">
+                                        <div class="c-lecturel-top">
+                                            <div class="ttl">보수교육(기본공통과정)</div>
+                                            <div class="link-text">
+                                                <span class="go-link">바로가기<i class="svg-icon ico-angle right"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="c-lecturel-bottom">
+                                            <div class="col">
+                                                <div class="label">교육일시 :</div>
+                                                <div class="text">25.06.14. 14:00</div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="label">교육장소 :</div>
+                                                <div class="text">서울 용산 KLPN hall</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--//교육 링크-->
+
+                            <!--버튼리스트-->
+                            <div class="mypage-edu-link-wrap">
+                                <a href="#" target="_blank" class="myedBtn" title="교육 이수 현황 페이지 이동">교육 이수 현황 <i class="svg-icon ico-angle right"></i></a>
+
+                                <a href="#" target="_blank" class="myedBtn" title="회비 및 교육비 납부 현황 페이지 이동">회비 및 교육비 납부 현황<i class="svg-icon ico-angle right"></i></a>
+                                
+                                <a href="#" target="_blank" class="myedBtn" title="회비납부 (정회원 전환) 페이지 이동">회비납부 (정회원 전환)<i class="svg-icon ico-angle right"></i></a>
+                            </div>
+                            <!--//버튼리스트-->
+
+                            <!--나의게시물-->
+                            <div class="myposts-section">
+                                <h2>나의 게시물</h2>
+                                <div class="myposts-list">
+                                    <a href="#" target="_blank" title="새창이동" class="myposts-item">
+                                        <div class="ico ico-myposts01"></div>
+                                        <div class="text">1:1문의</div>
+                                    </a>
+                                    <a href="#" target="_blank" title="새창이동" class="myposts-item">
+                                        <div class="ico ico-myposts02"></div>
+                                        <div class="text">회원게시판</div>
+                                    </a>
+                                    <a href="#" target="_blank" title="새창이동" class="myposts-item">
+                                        <div class="ico ico-myposts03"></div>
+                                        <div class="text">신고센터</div>
+                                    </a>
+                                    <a href="#" target="_blank" title="새창이동" class="myposts-item">
+                                        <div class="ico ico-myposts04"></div>
+                                        <div class="text">노무상담</div>
+                                    </a>
+                                    <a href="#" target="_blank" title="새창이동" class="myposts-item">
+                                        <div class="ico ico-myposts05"></div>
+                                        <div class="text">구인구직정보</div>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!--//나의게시물-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- //컨텐츠 영역 -->
+        </div>
+        <!-- //컨테이너 영역 -->
+        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+    </div>
+
+</body>
+
+</html>
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>

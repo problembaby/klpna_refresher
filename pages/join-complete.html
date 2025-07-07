@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 - 간호조무사협회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js" defer></script>
+    <script src="../resources/krds/js/component/ui-script.js" defer></script>
+    <script src="../resources/krds/js/pattern/pattern.js" defer></script>
+    <script src="../resources/js/script.js" defer></script>
+
+</head>
+
+<body>
+    <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+    <div class="wrap">
+        <div id="container">
+            <div class="inner in-between">
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">회원가입</a></li>
+                            <li><a href="#;" class="txt">개인회원</a></li>
+                            <li><a href="#;" class="txt">약관동의</a></li>
+                        </ol>
+                    </nav>
+                    <!-- breadcrumb -->
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">회원가입</h1>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+                    <div class="step">
+                        <ol class="progress-bar">
+                            <li class="progress-step none">1. 약관동의</li>
+                            <li class="progress-step none">2. 본인확인(실명인증)</li>
+                            <li class="progress-step none">3. 회원정보 입력</li>
+                            <li class="progress-step active">4. 가입완료</li>
+                        </ol>
+                    </div>
+
+                    <!-- 약관동의 영역 -->
+
+                    <div class="join-area complete">
+                        <h2 class="sr-only">회원가입완료</h2>
+
+                        <div class="complete-wrap">
+                            <div class="complete-img"></div>
+                            <h3 class="complete-text">
+                                <span class="bold">‘홍길동’</span>님의 회원가입이 완료되었습니다.
+                            </h3>
+                            <p>대한간호조무사협회 통합 온라인 회원이 되신 것을 진심으로 환영합니다!</p>
+                            <p>이제 다양한 서비스를 만나보실 수 있습니다.</p>
+
+
+                            <div class="comp-btn-wrap mt60">
+                                <a href="./login.html" class="krds-btn tertiary xlarge" title="로그인페이지로 이동">로그인</a>
+                                <a href="./index.html" class="krds-btn tertiary xlarge" title="메인페이지로 이동">메인페이지</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- //약관동의 영역 -->
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+
+
+
+</body>
+
+</html>
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>

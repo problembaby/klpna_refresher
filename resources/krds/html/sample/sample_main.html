@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>컴포넌트 라이브러리</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/plugin/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../css/component/output.css" />
+	<link rel="stylesheet" href="../../css/pattern/p_layout.css" />
+	<link rel="stylesheet" href="../../../css/style.css" />
+	
+	<!--js-->
+	<script src="../../js/plugin/swiper-bundle.min.js"></script>
+	<script defer src="../../js/component/ui-script.js"></script>
+	<script defer src="../../js/pattern/pattern.js"></script>
+	<script src="../../../js/script.js"></script>
+
+  </head>
+  <body>
+
+<div id="wrap"> 
+      {{sample_header}}
+      
+      <div id="container">
+  
+        <!-- 컨텐츠 영역 -->
+        <div class="inner">
+          컨텐츠 영역
+        </div>
+        <!-- //컨텐츠 영역 -->
+      </div>
+  
+      {{sample_footer}}
+  
+</div>
+
+    {{modal}}
+    
+
+
+    <script>
+      //재생정지버튼
+      function setupSwiperControls(swiperInstance, playSelector, stopSelector) {
+        const $playButton = document.querySelector(playSelector);
+        const $stopButton = document.querySelector(stopSelector);
+        $playButton.style.display = "none";
+        $playButton.addEventListener("click", () => {
+          swiperInstance.autoplay.start();
+          $stopButton.style.display = "";
+          $playButton.style.display = "none";
+        });
+        $stopButton.addEventListener("click", () => {
+          swiperInstance.autoplay.stop();
+          $stopButton.style.display = "none";
+          $playButton.style.display = "";
+        });
+      }
+      //비주얼 배너
+      const vbSwiper = new Swiper('.vb-swiper .swiper', {
+        on: {
+          init: function() {
+            setupSwiperControls(this, '.vb-swiper .swiper-button-play', '.vb-swiper .swiper-button-stop');
+          }
+        },
+        slidesPerView: 1,
+        spaceBetween: 0,
+        speed: 400,
+        loop: true,
+        navigation: {
+          nextEl: '.vb-swiper .swiper-button-next',
+          prevEl: '.vb-swiper .swiper-button-prev',
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        pagination: {
+          el: ".vb-swiper .swiper-pagination",
+          clickable: true,
+        },
+      });
+      //자주 찾는 메뉴
+      let menuSwiper = undefined;
+  
+      function menuSwiperInit() {
+        const $page = document.querySelector(".menu-list");
+        if (window.innerWidth > 600 && menuSwiper == undefined) {
+          menuSwiper = new Swiper('.menu-list .swiper', {
+            spaceBetween: 16,
+            speed: 400,
+            breakpoints: {
+              600: {
+                slidesPerView: 3,
+              },
+              1024: {
+                slidesPerView: 8,
+              },
+            },
+            navigation: {
+              nextEl: '.menu-list .swiper-button-next',
+              prevEl: '.menu-list .swiper-button-prev',
+            },
+            pagination: {
+              el: ".menu-list .swiper-pagination",
+              clickable: true,
+            },
+          });
+          $page.classList.remove("no-swiper");
+        } else if (window.innerWidth <= 600 && menuSwiper != undefined) {
+          $page.classList.add("no-swiper");
+          menuSwiper.destroy();
+          menuSwiper = undefined;
+        } else {
+          $page.classList.add("no-swiper");
+        }
+      }
+      menuSwiperInit();
+      window.addEventListener("resize", () => {
+        menuSwiperInit();
+      });
+      //복합콘텐츠
+      const contentsSwiper = new Swiper('.contents-list .swiper', {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        speed: 400,
+        breakpoints: {
+          100: {
+            slidesPerView: "auto",
+          },
+          1024: {
+            slidesPerView: 2,
+          },
+          1300: {
+            slidesPerView: 3,
+          },
+        },
+        navigation: {
+          nextEl: '.contents-list .swiper-button-next',
+          prevEl: '.contents-list .swiper-button-prev',
+        },
+        pagination: {
+          el: ".contents-list .swiper-pagination",
+          clickable: true,
+        },
+      });
+      //서비스
+      const serviceSwiper = new Swiper('.service-list .swiper', {
+        spaceBetween: 24,
+        speed: 400,
+        loop: true,
+        breakpoints: {
+          600: {
+            slidesPerView: 1,
+          },
+          1024: {
+            slidesPerView: 2,
+          },
+          1300: {
+            slidesPerView: 3,
+          },
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        navigation: {
+          nextEl: '.service-list .swiper-button-next',
+          prevEl: '.service-list .swiper-button-prev',
+        },
+        pagination: {
+          el: ".service-list .swiper-pagination",
+          type: "fraction",
+        },
+      });
+      const $serviceSwiperPlay = document.querySelector('.service-list .swiper-button-play');
+      const $serviceSwiperStop = document.querySelector('.service-list .swiper-button-stop');
+      $serviceSwiperPlay.style.display = "none";
+      $serviceSwiperPlay.addEventListener("click", () => {
+        serviceSwiper.autoplay.start();
+        $serviceSwiperStop.style.display = "";
+        $serviceSwiperPlay.style.display = "none";
+      });
+      $serviceSwiperStop.addEventListener("click", () => {
+        serviceSwiper.autoplay.stop();
+        $serviceSwiperStop.style.display = "none";
+        $serviceSwiperPlay.style.display = "";
+      });
+    </script>
+
+  </body>
+</html>

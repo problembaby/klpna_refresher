@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>목록 | 간호인력통계 - 대한간호조무사협회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js" defer></script>
+    <script src="../resources/krds/js/component/ui-script.js" defer></script>
+    <script src="../resources/krds/js/pattern/pattern.js" defer></script>
+    <script src="../resources/js/script.js" defer></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                <nav class="krds-side-navigation">
+                    <h1 class="lnb-tit">정보센터</h1>
+                    <!-- lnb-list -->
+                    <ul class="lnb-list">
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">정책자료</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">관련법규</a>
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link active selected">간호인력통계</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">관련기관</a>
+                        </li>
+                    </ul>
+                    <!-- //lnb-list -->
+                </nav>
+                <!-- //사이드 메뉴 -->
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">정보센터</a></li>
+                            <li><a href="#;" class="txt">간호인력통계</a></li>
+                        </ol>
+
+                    </nav>
+                    <!-- breadcrumb -->
+
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">간호인력통계</h1>
+
+                        <ol class="breadcrumb-action">
+                            <li>
+                                <button class="icon-bg-round" onclick="window.print(); return false;">
+                                    <i class="svg-icon ico-print"></i>
+                                    <span class="sr-only">print</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+                    <!-- 검색 입력폼 -->
+                    <form id="" name="" action="#" method="post">
+                        <fieldset class="bbs-search-wrap">
+                            <div class="search-top-box">
+                                <div class="form-col-group">
+                                    <div class="sch-select select-style">
+                                        <select class="krds-form-select medium" title="선택" id="ntt-type">
+                                            <option value="">전체</option>
+                                            <option value="">제목</option>
+                                        </select>
+                                    </div>
+                                    <div class="bbs-search-form-wrap">
+                                        <input type="text" id="search-wrd" class="krds-input medium"
+                                            placeholder="검색어를 입력하세요." title="키워드 입력">
+                                    </div>
+                                    <button type="button" class="krds-btn medium black">
+                                        <i class="svg-icon ico-sch"></i>
+                                        검색
+                                    </button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!-- //검색 입력폼 -->
+
+                    <!-- 검색 결과 : 리스트 상단 -->
+                    <div class="search-list-top">
+                        <ul class="sch-info" aria-live="polite">
+                            <li>총 <span class="point">249</span>건</li>
+                        </ul>
+                    </div>
+                    <!-- //검색 결과 : 리스트 상단 -->
+
+                    <!-- 검색 결과 : 리스트 -->
+
+
+                    <div class="table-board borad-list">
+                        <table>
+                            <caption class="sr-only">공지사항 메뉴의 게시물 목록이며 번호, 제목, 작성자, 등록일, 조회, 첨부, 항목을 제공합니다.</caption>
+                            <colgroup>
+                                <col width="8%;">
+                                <col width="auto">
+                                <col width="10%;">
+                                <col width="10%;">
+                                <col width="110px;">
+                                <col width="100px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">제목</th>
+                                    <th scope="col">작성자</th>
+                                    <th scope="col">등록일</th>
+                                    <th scope="col">조회수</th>
+                                    <th scope="col">첨부</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="no-contents" colspan="6">등록 된 게시물이 없습니다.</td>
+                                </tr>
+
+                                <!-- 상단 고정 글 -->
+                                <tr class="bbsTopfixed">
+                                    <td class="num">
+                                        <img src="../resources//img/icon/ico-topNoti.svg" alt="new">
+                                    </td>
+                                    <td class="cell-subject">
+                                        <a href="#" title="페이지 이동" target="_self">보이스피싱 예방수칙</a>
+                                        <img src="../resources//img/icon/new.svg" alt="new" class="new">
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>2024.06.25</td>
+                                    <td>1,908</td>
+                                    <td class="file-td">
+                                        <i class="ico-link"></i>
+                                    </td>
+
+                                </tr>
+                                 <!-- //상단 고정 글 -->
+
+
+                                <tr>
+                                    <td class="num">490</td>
+                                    <td class="cell-subject">
+                                        <a href="#" title="페이지 이동" target="_self">보이스피싱 예방수칙</a>
+                                        <img src="../resources//img/icon/new.svg" alt="new" class="new">
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>2024.06.25</td>
+                                    <td>1,908</td>
+                                    <td class="file-td">
+                                        <i class="ico-link"></i>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td class="num">490</td>
+                                    <td class="cell-subject">
+                                        <a href="#" title="페이지 이동" target="_self">[경기도] 도민이 뽑은 경기도 책임계약은?</a>
+                                        <img src="../resources//img/icon/new.svg" alt="new" class="new">
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>2024.06.25</td>
+                                    <td>1,908</td>
+                                    <td class="file-td">
+                                        <i class="ico-link"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="num">488</td>
+                                    <td class="cell-subject">
+                                        <a href="#" title="페이지 이동" target="_self">[경기도] 도민이 뽑은 경기도 책임계약은?[경기도] 도민이 뽑은
+                                            경기도 책임계약은?</a>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>2024.06.24</td>
+                                    <td>1,908</td>
+                                    <td class="file-td">
+                                        <i class="ico-link"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="num">487</td>
+                                    <td class="cell-subject">
+                                        <a href="#" title="페이지 이동" target="_self">[경기도] 도민이 뽑은 경기도 책임계약은?</a>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>2024.06.23</td>
+                                    <td>1,908</td>
+                                    <td class="file-td">
+                                        <i class="ico-link"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="num">486</td>
+                                    <td class="cell-subject">
+                                        <a href="#" title="페이지 이동" target="_self">[경기도] 도민이 뽑은 경기도 책임계약은?</a>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>2024.06.22</td>
+                                    <td>1,908</td>
+                                    <td class="file-td">
+                                        <i class="ico-link"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="num">485</td>
+                                    <td class="cell-subject">
+                                        <a href="#" title="페이지 이동" target="_self">[경기도] 도민이 뽑은 경기도 책임계약은?</a>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>2024.06.21</td>
+                                    <td>1,908</td>
+                                    <td class="file-td">
+                                        <i class="ico-link"></i>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td class="num">482</td>
+                                    <td class="cell-subject">
+                                        <a href="#" title="페이지 이동" target="_self">[경기도] 도민이 뽑은 경기도 책임계약은?</a>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>2024.06.18</td>
+                                    <td>1,908</td>
+                                    <td class="file-td">
+                                        <i class="ico-link"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="num">481</td>
+                                    <td class="cell-subject">
+                                        <a href="#" title="페이지 이동" target="_self">[경기도] 도민이 뽑은 경기도 책임계약은?</a>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>2024.06.17</td>
+                                    <td>1,908</td>
+                                    <td class="file-td">
+                                        <i class="ico-link"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="num">480</td>
+                                    <td class="cell-subject">
+                                        <a href="#" title="페이지 이동" target="_self">[경기도] 도민이 뽑은 경기도 책임계약은?</a>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>2024.06.16</td>
+                                    <td>1,908</td>
+                                    <td class="file-td">
+                                        <i class="ico-link"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="num">479</td>
+                                    <td class="cell-subject">
+                                        <a href="#" title="페이지 이동" target="_self">[경기도] 도민이 뽑은 경기도 책임계약은?</a>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>2024.06.15</td>
+                                    <td>1,908</td>
+                                    <td class="file-td">
+                                        <i class="ico-link"></i>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //검색 결과 : 리스트 -->
+
+                    <!-- 페이지네이션 영역 -->
+                    <div class="krds-pagination">
+                        <a class="page-navi prev disabled" href="#">이전</a>
+                        <div class="page-links">
+                            <a class="page-link" href="#">1</a>
+                            <a class="page-link" href="#">2</a>
+                            <a class="page-link" href="#">3</a>
+                            <a class="page-link active" href="#">4</a>
+                            <a class="page-link" href="#">5</a>
+                            <a class="page-link" href="#">6</a>
+                            <a class="page-link" href="#">7</a>
+                            <a class="page-link" href="#">8</a>
+                            <span class="page-link link-dot"></span>
+                            <a class="page-link" href="#">99</a>
+                        </div>
+                        <a class="page-navi next" href="#">다음</a>
+                    </div>
+                    <!-- //페이지네이션 영역 -->
+
+
+                </div>
+
+            </div>
+            <!-- //컨텐츠 영역 -->
+        </div>
+        <!-- //컨테이너 영역 -->
+
+        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>

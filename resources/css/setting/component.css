@@ -1,0 +1,423 @@
+
+/**------------------------------------------
+버튼색상 정의
+--------------------------------------------*/
+
+
+/* .krds-btn:active, .krds-btn:hover, .krds-btn:focus {
+    color: #fff;
+}
+ */
+
+.krds-btn.primary {
+    background-color: #256EF4;
+    border-color: #007bff;
+    color: var(--krds-button--color-primary-text);
+}
+
+
+.krds-btn.primary:hover {
+    background-color: #0048B7;
+}
+
+.krds-btn.primary:active,
+.krds-btn.primary:focus {
+    background-color: #003A92;
+}
+
+.krds-btn.primary[disabled],
+.krds-btn.primary.disabled {
+    background-color: var(--krds-button--color-primary-fill-disabled);
+    border-color: var(--krds-button--color-primary-border-disabled);
+    color: var(--krds-button--color-primary-text-disabled);
+}
+
+.krds-btn.primary[disabled]:not(.icon) .svg-icon,
+.krds-btn.primary.disabled:not(.icon) .svg-icon {
+    background-color: var(--krds-button--color-primary-text-disabled);
+}
+
+.krds-btn.primary[disabled]:hover,
+.krds-btn.primary.disabled:hover {
+    background-color: var(--krds-button--color-primary-fill-disabled);
+    border-color: var(--krds-button--color-primary-border-disabled);
+    color: var(--krds-button--color-primary-text-disabled);
+}
+
+
+.krds-btn.secondary {
+    background-color: #0AF;
+    border-color: #0091D9;
+    color: #fff;
+}
+
+.krds-btn.secondary:not(.icon) .svg-icon {
+    background-color: #ffffff;
+}
+
+.krds-btn.secondary:hover {
+    background-color: #0091D9;
+}
+
+.krds-btn.secondary:active,
+.krds-btn.secondary:focus {
+    background-color: #0079B5;
+}
+
+.krds-btn.secondary[disabled],
+.krds-btn.secondary.disabled {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.secondary[disabled]:not(.icon) .svg-icon,
+.krds-btn.secondary.disabled:not(.icon) .svg-icon {
+    background-color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.secondary[disabled]:hover,
+.krds-btn.secondary.disabled:hover {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.btn-bg-gray {
+    background-color: #666666;
+    color: #fff
+}
+
+.btn-bg-gray:hover,
+.btn-bg-gray:focus {
+    background-color: #555555;
+    color: #fff
+}
+
+
+.krds-btn.quaternary {
+    background-color: #666;
+    border-color: #666;
+    color: #fff;
+}
+
+.krds-btn.quaternary:not(.icon) .svg-icon {
+    background-color: #ffffff;
+}
+
+.krds-btn.quaternary:hover {
+    background-color: #444;
+}
+
+.krds-btn.quaternary:active,
+.krds-btn.quaternary:focus {
+    background-color: #252525;
+}
+
+.krds-btn.quaternary[disabled],
+.krds-btn.quaternary.disabled {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.quaternary[disabled]:not(.icon) .svg-icon,
+.krds-btn.quaternary.disabled:not(.icon) .svg-icon {
+    background-color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.quaternary[disabled]:hover,
+.krds-btn.quaternary.disabled:hover {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+
+/**-------------------------------------------
+탭 스타일 정의  
+--------------------------------------------*/
+
+
+
+.tab.line.full .btn-tab {
+    border: 0;
+    border-bottom: 2px solid #B1B8BE;
+}
+
+.tab.line .active .btn-tab {
+    color: #0050CA;
+}
+
+.tab.line .btn-tab:before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: "";
+    width: 0;
+    height: 0.4rem;
+    background-color: #0050CA;
+    transition: var(--krds-transition-base);
+}
+
+
+.tab.fill.full > ul > li:last-of-type .btn-tab {
+    border-top-right-radius:  30px;
+    border-bottom-right-radius: 30px;;
+}
+.tab.fill.full > ul > li:first-of-type .btn-tab {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #8087A2;
+    color:#fff;
+    font-size: 18px;
+}
+
+.tab.full .btn-tab {
+    height: var(--krds-tab--button-size-height);
+    padding: 0;
+    font-size: var(--krds-tab--full-button-pc-font-size);
+}
+
+
+.tab.full > ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    position: relative;
+    width: 100%;
+    gap: 10px;
+}
+
+.tab.fill.full > ul > li + li .btn-tab {
+    border-left: none;
+    border: 0;
+    border-radius: 30px;
+    background: #8087A2;
+    color:#fff;
+    font-size: 18px;
+}
+.tab.fill.full > ul > li .btn-tab {
+    border-radius: 30px;
+}
+
+
+.tab.fill .active .btn-tab {
+    background-color: #0050CA!important;
+    border-color: #0050CA !important;
+    color: #fff;
+}
+
+
+.ellipsis-1{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.ellipsis-2{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.ellipsis-3{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.ico-file::before{
+    display: block;
+    content: "";
+
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-image: url(../../img/icon/ico-file2.svg);
+}
+.ico-chk::before{
+    display: block;
+    content: "";
+
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-image: url(../../img/icon/ico-chk.svg);
+}
+
+.ico-chk-wh::before{
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-image: url(../../img/icon/ico-chk-wh.svg);
+}
+
+
+/** 사이즈 일정 버튼 */
+.btnW140 button, .btnW140 a {
+    display: flex;
+    max-width: 140px;
+    width: auto;
+    height: var(--size-height-9, 64px);
+    min-width: 98px;
+    padding: 0px var(--padding-8, 24px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-2, 4px);
+    flex: 1;
+}
+
+.btn-wrap{width: 100%; display: flex; justify-content: center; align-items: center; gap : var(--krds-gap-5); margin-top:40px}
+
+
+.red{color:#DE3412}
+.blue{color:#0050CA}
+
+.krds-btn.tertiary {
+    background-color: #fff;
+    border-color: var(--krds-button--color-tertiary-border);
+    color: var(--krds-button--color-tertiary-text);
+}
+
+textarea.krds-input {
+        font-size: var(--krds-input--pc-font-size-medium);
+}
+
+.a-link{text-decoration: underline; transition:0s}
+.a-link:hover{color:#003A92; text-decoration: underline;}
+
+
+.svg-icon.small{
+       display: inline-flex;
+    width: var(--krds-icon--size-small);
+    height: var(--krds-icon--size-small);
+    background-color: var(--krds-light-color-text-basic);
+    forced-color-adjust: none;
+}
+
+
+.svg-icon.medium{
+       display: inline-flex;
+    width: var(--krds-icon--size-medium);
+    height: var(--krds-icon--size-medium);
+    background-color: var(--krds-light-color-text-basic);
+    forced-color-adjust: none;
+}
+
+
+/****************************
+데이터 피커 디자인
+****************************/
+
+
+/* 데이트피커 스타일 */
+input[type="text"].datepicker {
+    padding: 0 50px 0 20px;
+    background: url(../../krds/img/component/icon/ico_calendar.svg) no-repeat right;
+    background-color: #fff;
+    background-size: 18px;
+    background-position: right 10px center;
+    cursor: pointer;
+    
+}
+
+
+/**------------------------------------------ 
+jQuery UI 캘린더 스타일
+--------------------------------------------*/
+.ui-widget-header {
+  border: 0 solid #ddd;
+  background: #eef2f7 !important;
+  color: #333;
+  font-weight: bold;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default, .ui-button, 
+html .ui-button.ui-state-disabled:hover, 
+html .ui-button.ui-state-disabled:active {
+  border: 0 !important;
+  background: #eef2f7 !important;
+  font-weight: normal;
+  color: #454545;
+  text-align: center;
+    border-radius: 6px;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, 
+.ui-widget-header .ui-state-highlight {
+  border: 0 !important;
+  background: #dbdbdb !important;
+  color: #000 !important;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+  position: relative;
+  padding: 10px !important;
+  border-bottom: 1px solid #eee;
+}
+
+.ui-widget.ui-widget-content {
+    background-color: #eef2f7;
+    border: 1px solid var(--krds-calendar--color-border);
+    border-radius: var(--krds-calendar--radius);
+    overflow: hidden;
+}
+.ui-widget-header {
+    border: 0 solid #ddd!important;
+    background: #e9e9e9;
+    color: #333;
+    font-weight: bold;
+}
+
+.ui-datepicker-week-end span[title=Sunday]{color:var(--krds-light-color-text-danger);}
+.ui-datepicker-week-end span[title=Saturday]{color:#003A92}
+/* jQuery UI Datepicker 요일별 색상 */
+.ui-datepicker-calendar .datepicker-sunday a { color: #d32f2f ; }   /* 빨간색 */
+.ui-datepicker-calendar .datepicker-saturday a { color: #003A92 ; } /* 파란색 */
+
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    border: 0 solid #c5c5c5;
+    background: #f6f6f6;
+    font-weight: normal;
+    color: #454545;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ui-datepicker .ui-datepicker-title {
+    margin: 0 2.3em;
+    line-height: 3.8em;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, a.ui-button:active, 
+.ui-button:active, .ui-button.ui-state-active:hover {
+  border: 0 !important;
+  background: #003A92 !important;
+  font-weight: normal;
+  color: #fff !important;
+}
+
+
+@media (max-width: 1024px){
+    .krds-modal {
+    --krds-modal--size-large: 70rem;
+    }
+}
+
+@media (max-width: 479px) {
+    .btn-wrap button{width: 100%; max-width: 100%;}
+}

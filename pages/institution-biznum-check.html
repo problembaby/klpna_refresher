@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 - 간호조무사협회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js" defer></script>
+    <script src="../resources/krds/js/component/ui-script.js" defer></script>
+    <script src="../resources/krds/js/pattern/pattern.js" defer></script>
+    <script src="../resources/js/script.js" defer></script>
+
+</head>
+
+<body>
+    <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+
+    <script>
+        /** 유효성검사 */
+        function validateForm() {
+            let isValid = true;
+            let $firstInvalid = null;
+
+            $('.form-group').each(function () {
+                const $group = $(this);
+                const isRequired = $group.find('.form-tit .req').length > 0;
+                if (!isRequired) return;
+
+                const $input = $group.find('input, select, textarea').filter(':visible').first();
+                const $hint = $group.find('.form-hint-invalid');
+
+                let val = '';
+                let isEmpty = false;
+
+                if ($input.length) {
+                    if ($input.is(':checkbox') || $input.is(':radio')) {
+                        const $checked = $group.find('input:checked');
+                        isEmpty = ($checked.length === 0);
+                    } else {
+                        val = $input.val()?.trim();
+                        isEmpty = (val === '');
+                    }
+
+                    if (isEmpty) {
+                        $group.addClass('is-error');
+                        $hint.css('display', 'flex');
+                        if (!$firstInvalid) $firstInvalid = $input;
+                        isValid = false;
+                    } else {
+                        $group.removeClass('is-error');
+                        $hint.hide();
+                    }
+                }
+            });
+
+            // 포커스 이동 보장
+            if (!isValid && $firstInvalid?.length) {
+                setTimeout(() => $firstInvalid.focus(), 10);
+                return;
+            }
+
+            $('form').submit();
+        }
+
+        $(function () {
+            // 모든 입력 요소에 대해 실시간 오류 해제 처리
+            $('input, select, textarea').on('input change', function () {
+                const $input = $(this);
+                const $group = $input.closest('.form-group');
+                const $hint = $group.find('.form-hint-invalid');
+
+                // 에러 상태 해제
+                $group.removeClass('is-error');
+                $hint.hide();
+            });
+        });
+    </script>
+
+    <div class="wrap">
+        <div id="container">
+            <div class="inner in-between">
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">회원가입</a></li>
+                            <li><a href="#;" class="txt">기관·단체회원</a></li>
+                            <li><a href="#;" class="txt">사업자등록번호 확인</a></li>
+                        </ol>
+                    </nav>
+                    <!-- breadcrumb -->
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">회원가입</h1>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+                    <div class="step">
+                        <ol class="progress-bar">
+                            <li class="progress-step none">1. 약관동의</li>
+                            <li class="progress-step active">2. 사업자등록번호 확인</li>
+                            <li class="progress-step">3. 기관/단체 정보 입력</li>
+                            <li class="progress-step">4. 가입완료</li>
+                        </ol>
+                    </div>
+
+                    <!-- 약관동의 영역 -->
+
+                    <div class="join-area check">
+                        <h2 class="sr-only">사업자등록번호 확인</h2>
+
+                        <div class="">
+                            <h3>휴대전화 본인확인 서비스</h3>
+                            <div class="helper-box gray">
+                                <ul class="krds-info-list decimal" role="list">
+                                    <li role="listitem">
+                                        생년월일, 성명, 내/외국인, 휴대폰번호, 통신사를 입력하여 본인확인을 받습니다.
+                                    </li>
+                                    <li role="listitem">본인 명의의 휴대전화가 아닐 경우 본인확인이 이루어지지 않습니다.</li>
+                                    <li role="listitem"><span class="">휴대폰 본인인증을 하셔야 회원가입이 가능합니다.</span></li>
+                                </ul>
+                            </div>
+
+                            <form action="#">
+                                <div class="fieldset form-700">
+
+                                    <!-- 사업자등록번호 -->
+                                    <div class="form-group">
+                                        <div class="form-tit">
+                                            <label for="bizNo1">사업자등록번호<i class="req">*</i></label>
+                                        </div>
+                                        <div class="form-input">
+                                            <div class="input-group">
+                                                <div class="form-conts">
+                                                    <ul class="input-group range">
+                                                        <li>
+                                                            <select name="" id="bizNo1" class="krds-form-select medium">
+                                                                <option value="">선택</option>
+                                                                <option value="010">010</option>
+                                                                <option value="011">011</option>
+                                                            </select>
+                                                        </li>
+                                                        <li class="mark">-</li>
+                                                        <li>
+                                                            <input type="text" id="bizNo2" class="krds-input medium"
+                                                                placeholder="" maxlength="4">
+                                                        </li>
+                                                        <li class="mark">-</li>
+                                                        <li>
+                                                            <input type="text" id="bizNo3" class="krds-input medium"
+                                                                placeholder="" maxlength="4">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="input-txt">
+                                                <p class="form-hint-invalid" style="display: none;">사업자등록번호를 입력해주세요.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //사업자등록번호 -->
+
+
+                                    <!-- 대표자명 -->
+                                    <div class="form-group">
+                                        <div class="form-tit">
+                                            <label for="ceoName">대표자명<i class="req">*</i></label>
+                                        </div>
+                                        <div class="form-input">
+                                            <div class="input-group">
+                                                <div class="form-conts">
+                                                    <input type="text" id="ceoName" class="krds-input medium"
+                                                        placeholder="대표자명 입력" maxlength="30">
+                                                </div>
+                                            </div>
+                                            <div class="input-txt">
+                                                <p class="form-hint-invalid" style="display: none;">대표자명를 입력해주세요.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //대표자명 -->
+
+                                    <!--가입일자-->
+                                    <div class="form-group">
+                                        <div class="form-tit">
+                                            <label for="joinYear">가입일자<i class="req">*</i></label>
+                                        </div>
+                                        <div class="form-input">
+                                            <div class="input-group">
+                                                <div class="form-conts">
+                                                    <ul class="input-group date">
+                                                        <li>
+                                                            <select name="" id="joinYear"
+                                                                class="krds-form-select medium">
+                                                                <option value="">선택</option>
+                                                            </select>
+                                                            <span>년</span>
+                                                        </li>
+                                                        <li>
+                                                            <select name="" id="joinMonth"
+                                                                class="krds-form-select medium">
+                                                                <option value="">선택</option>
+                                                            </select>
+                                                            <span>월</span>
+                                                        </li>
+                                                        <li>
+                                                            <select name="" id="joinDay"
+                                                                class="krds-form-select medium">
+                                                                <option value="">선택</option>
+                                                            </select>
+                                                            <span>일</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="input-txt">
+                                                <p class="form-hint-invalid" style="display: none;">가입일자을 입력해주세요.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--//가입일자-->
+
+                                    
+                                </div>
+                            </form>
+                            <div class="bar"></div>
+
+                        </div>
+
+                    </div>
+                    <!-- //약관동의 영역 -->
+
+                    <!-- 페이지 버튼 영역 -->
+                    <div class="page-btn-wrap center join-page-btn">
+                        <button type="button" class="krds-btn tertiary"
+                            onclick="history.back(-1); return false;">뒤로</button>
+                        <button type="button" class="krds-btn black" onclick="validateForm()">기관확인</button>
+                    </div>
+                    <!-- //페이지 버튼 영역 -->
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+
+
+
+</body>
+
+</html>
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>

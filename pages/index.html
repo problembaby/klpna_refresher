@@ -1,0 +1,1861 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="../vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title> 갤러리 게시판 | 대한간호조무사협회</title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+	<link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+	<link rel="stylesheet" href="../resources/css/style.css" />
+	<link rel="stylesheet" href="../resources/lib/aos/aos.css">
+
+
+	<!--js-->
+	<script src="../resources/js/jquery-3.7.1.min.js"></script>
+	<script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+	<script defer src="../resources/krds/js/component/ui-script.js"></script>
+	<script defer src="../resources/krds/js/pattern/pattern.js"></script>
+	<script src="../resources/js/script.js"></script>
+	<script src="../resources/lib/aos/aos.js"></script>
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+	<!-- 본문 바로가기 -->
+	<div id="krds-skip-link">
+		<a href="#breadcrumb">본문 바로가기</a>
+		<a href="#gnb">메뉴 바로가기</a>
+	</div>
+	<!-- //본문 바로가기 -->
+
+
+	<!-- 헤더 -->
+	<header id="krds-header">
+		<!-- 헤더 컨텐츠 영역  -->
+		<div class="header-util">
+			<div class="inner">
+				<ul class="header-util-list">
+					<li>
+						<a href="../pages/login.html" title="로그인 페이지 이동" class="btn-navi login">로그인</a>
+						<!-- <a href="#" class="btn-navi loginout">로그아웃</a> -->
+					</li>
+					<li><a href="../pages/contact.html" title="1:1문의 페이지 이동" class="btn-navi login">1:1문의</a></li>
+					<li>
+						<a href="#" target="_blank" class="ico-mypage" title="마이페이지 페이지 이동">
+							<span class="sr-only"></span>
+						</a>
+					</li>
+					<li>
+						<button type="button" class="btn-navi all open-modal" title="협회 리스트 모달 열림" aria-expanded="false"
+							data-target="popAllMenuVIew">
+							<span class="sr-only">전체메뉴</span>
+						</button>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+		<div class="header-in">
+			<!-- 헤더 상단 기타메뉴 -->
+			<div class="header-container">
+				<div class="inner">
+					<div class="header-branding">
+						<h2 class="logo klpna">
+							<a href="#">
+								<span class="sr-only">간호조무사협회</span>
+							</a>
+						</h2>
+						<div class="header-actions">
+							<nav id="gnb" class="gnb" aria-label="주요 메뉴">
+								<ul class="gnb-menu">
+									<li class="depth01">
+										<button type="button" class="gnb-main-trigger"
+											aria-expanded="false">협회안내</button>
+										<ul class="depth2">
+											<li><a href="#">인사말</a></li>
+											<li><a href="#">연혁</a></li>
+											<li><a href="#">정관</a></li>
+											<li><a href="#">주요사업</a></li>
+											<li><a href="#">조직도</a></li>
+											<li><a href="#">시도회</a></li>
+											<li><a href="#">오시는 길</a></li>
+										</ul>
+									</li>
+									<li class="depth01">
+										<button type="button" class="gnb-main-trigger"
+											aria-expanded="false">간호조무사</button>
+										<ul class="depth2">
+											<li><a href="#">간호조무사란</a></li>
+											<li><a href="#">윤리선언/강령/지침</a></li>
+											<li><a href="#">자격제도</a></li>
+											<li><a href="#">업무범위FAQ</a></li>
+										</ul>
+									</li>
+									<li class="depth01">
+										<button type="button" class="gnb-main-trigger"
+											aria-expanded="false">홍보센터</button>
+										<ul class="depth2">
+											<li><a href="#">보도자료</a></li>
+											<li><a href="#">협회활동갤러리</a></li>
+											<li><a href="#">시도협회갤러리</a></li>
+											<li><a href="#">간호조무사뉴스</a></li>
+											<li><a href="#">SNS홍보</a></li>
+											<li><a href="#">매거진</a></li>
+											<li><a href="#">인터넷신문</a></li>
+										</ul>
+									</li>
+									<li class="depth01">
+										<button type="button" class="gnb-main-trigger"
+											aria-expanded="false">정보센터</button>
+										<ul class="depth2">
+											<li><a href="#">정책자료</a></li>
+											<li><a href="#">관련법규</a></li>
+											<li><a href="#">간호인력통계</a></li>
+											<li><a href="#">관련기관</a></li>
+										</ul>
+									</li>
+									<li class="depth01">
+										<button type="button" class="gnb-main-trigger"
+											aria-expanded="false">회원혜택</button>
+										<ul class="depth2">
+											<li><a href="#">드림복지</a></li>
+											<li><a href="#">KLPNA상조회</a></li>
+											<li><a href="#">노무상담</a></li>
+										</ul>
+									</li>
+									<li class="depth01">
+										<button type="button" class="gnb-main-trigger"
+											aria-expanded="false">취업정보</button>
+										<ul class="depth2">
+											<li><a href="#">구인</a></li>
+											<li><a href="#">나라일터(채용)</a></li>
+										</ul>
+									</li>
+									<li class="depth01">
+										<button type="button" class="gnb-main-trigger"
+											aria-expanded="false">회원소통</button>
+										<ul class="depth2">
+											<li><a href="../pages/공지사항_목록.html">공지사항</a></li>
+											<li><a href="#">회원게시판</a></li>
+											<li><a href="#">신고센터</a></li>
+											<li><a href="#">원격서비스</a></li>
+										</ul>
+									</li>
+								</ul>
+								<div class="gnb-bg" style="display: none;"></div>
+
+							</nav>
+							<button type="button" class="btn-navi all" aria-controls="mobile-nav">전체메뉴</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //헤더 상단 기타메뉴 -->
+
+		</div>
+		<!-- //헤더 컨텐츠 영역  -->
+
+		<!-- 메인메뉴 : 모바일 -->
+		<div id="mobile-nav" class="krds-main-menu-mobile" style="display: none;">
+			<div class="gnb-wrap">
+				<!-- gnb-header -->
+				<div class="gnb-header">
+					<!-- gnb-utils -->
+					<div class="gnb-utils">
+						<ul class="utility-list">
+							<li>
+								<div class="krds-drop-wrap">
+									<button type="button" class="krds-btn small text drop-btn" aria-expanded="false">
+										서비스 바로가기 <i class="svg-icon ico-toggle"></i>
+									</button>
+									<div class="drop-menu" style="display: none;">
+										<div class="drop-in">
+											<ul class="drop-list">
+												<li><a href="https://klpna.or.kr/" class="item-link"
+														title="대한간호조무사협회 새창열림" target="_blank">대한간호조무사협회</a></li>
+												<li><a href="https://klpnedu.or.kr/" class="item-link"
+														title="보수교육센터 새창열림" target="_blank">보수교육센터</a></li>
+												<li><a href="https://klpnacademy.or.kr/" class="item-link"
+														title="직무교육센터 새창열림" target="_blank">직무교육센터</a></li>
+												<li><a href="https://klpna.or.kr/" class="item-link" title="자격신고센터 새창열림"
+														target="_blank">자격신고센터</a></li>
+												<li><a href="https://klpna.or.kr/academy" class="item-link"
+														title="학회센터 새창열림" target="_blank">학회센터</a></li>
+											</ul>
+
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- //gnb-utils -->
+					<!-- gnb-login -->
+					<div class="gnb-login">
+						<!-- <span class="user">홍길동님</span>
+			  <button type="button" class="krds-btn large text"><i class="svg-icon ico-logout"></i> 로그아웃</button> -->
+						<button type="button" class="krds-btn large text"><i class="svg-icon ico-log"></i> 로그인을
+							해주세요</button>
+					</div>
+					<!-- //gnb-login -->
+					<!--퀵메뉴 -->
+					<div class="gnb-service-menu">
+						<a href="#" class="qk-menu">
+							<i class="ico quick-icon01"></i>
+							<div class="txt">회비납부</div>
+						</a>
+						<a href="#" class="qk-menu">
+							<i class="ico quick-icon02"></i>
+							<div class="txt">
+
+								나의강의실
+							</div>
+						</a>
+						<a href="#" class="qk-menu">
+							<i class="ico quick-icon03"></i>
+							<div class="txt">
+
+								간무협챗봇
+							</div>
+						</a>
+					</div>
+					<!-- 퀵메뉴 -->
+				</div>
+				<!-- //gnb-header -->
+
+				<!-- gnb-body -->
+				<div class="gnb-body">
+					<!-- gnb-menu -->
+					<div class="gnb-menu">
+						<div class="menu-wrap">
+							<ul role="tablist">
+								<li role="none">
+									<a href="#mGnb-anchor1" class="gnb-main-trigger active" role="tab"
+										aria-selected="true" aria-controls="mGnb-anchor1" id="tab-0">협회안내</a>
+								</li>
+								<li role="none">
+									<a href="#mGnb-anchor2" class="gnb-main-trigger" role="tab" aria-selected="false"
+										aria-controls="mGnb-anchor2" id="tab-1">간호조무사</a>
+								</li>
+								<li role="none">
+									<a href="#mGnb-anchor3" class="gnb-main-trigger" role="tab" aria-selected="false"
+										aria-controls="mGnb-anchor3" id="tab-2">홍보센터</a>
+								</li>
+								<li role="none">
+									<a href="#mGnb-anchor4" class="gnb-main-trigger" role="tab" aria-selected="false"
+										aria-controls="mGnb-anchor4" id="tab-3">정보센터</a>
+								</li>
+								<li role="none">
+									<a href="#mGnb-anchor5" class="gnb-main-trigger" role="tab" aria-selected="false"
+										aria-controls="mGnb-anchor5" id="tab-4">회원혜택</a>
+								</li>
+								<li role="none">
+									<a href="#mGnb-anchor6" class="gnb-main-trigger" role="tab" aria-selected="false"
+										aria-controls="mGnb-anchor6" id="tab-5">취업정보</a>
+								</li>
+								<li role="none">
+									<a href="#mGnb-anchor7" class="gnb-main-trigger" role="tab" aria-selected="false"
+										aria-controls="mGnb-anchor7" id="tab-6">회원소통</a>
+								</li>
+							</ul>
+						</div>
+						<div class="submenu-wrap">
+							<div class="gnb-sub-list" id="mGnb-anchor1" role="tabpanel" aria-labelledby="tab-0">
+								<h2 class="sub-title">협회안내</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">인사말</a></li>
+									<li><a href="#" class="gnb-sub-trigger">연혁</a></li>
+									<li><a href="#" class="gnb-sub-trigger">정관</a></li>
+									<li><a href="#" class="gnb-sub-trigger">주요사업</a></li>
+									<li><a href="#" class="gnb-sub-trigger">조직도</a></li>
+									<li><a href="#" class="gnb-sub-trigger">시도회</a></li>
+									<li><a href="#" class="gnb-sub-trigger">오시는 길</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor2" role="tabpanel" aria-labelledby="tab-1">
+								<h2 class="sub-title">간호조무사</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">간호조무사란</a></li>
+									<li><a href="#" class="gnb-sub-trigger">윤리선언/강령/지침</a></li>
+									<li><a href="#" class="gnb-sub-trigger">자격제도</a></li>
+									<li><a href="#" class="gnb-sub-trigger">업무범위FAQ</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor3" role="tabpanel" aria-labelledby="tab-2">
+								<h2 class="sub-title">홍보센터</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">보도자료</a></li>
+									<li><a href="#" class="gnb-sub-trigger">협회활동갤러리</a></li>
+									<li><a href="#" class="gnb-sub-trigger">시도협회갤러리</a></li>
+									<li><a href="#" class="gnb-sub-trigger">간호조무사뉴스</a></li>
+									<li><a href="#" class="gnb-sub-trigger">SNS홍보</a></li>
+									<li><a href="#" class="gnb-sub-trigger">매거진</a></li>
+									<li><a href="#" class="gnb-sub-trigger">인터넷신문</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor4" role="tabpanel" aria-labelledby="tab-3">
+								<h2 class="sub-title">정보센터</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">정책자료</a></li>
+									<li><a href="#" class="gnb-sub-trigger">관련법규</a></li>
+									<li><a href="#" class="gnb-sub-trigger">간호인력통계</a></li>
+									<li><a href="#" class="gnb-sub-trigger">관련기관</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor5" role="tabpanel" aria-labelledby="tab-4">
+								<h2 class="sub-title">회원혜택</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">드림복지</a></li>
+									<li><a href="#" class="gnb-sub-trigger">KLPNA상조회</a></li>
+									<li><a href="#" class="gnb-sub-trigger">노무상담</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor6" role="tabpanel" aria-labelledby="tab-5">
+								<h2 class="sub-title">취업정보</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">구인</a></li>
+									<li><a href="#" class="gnb-sub-trigger">나라일터(채용)</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor7" role="tabpanel" aria-labelledby="tab-6">
+								<h2 class="sub-title">회원소통</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">공지사항</a></li>
+									<li><a href="#" class="gnb-sub-trigger">회원게시판</a></li>
+									<li><a href="#" class="gnb-sub-trigger">신고센터</a></li>
+									<li><a href="#" class="gnb-sub-trigger">원격서비스</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- //gnb-menu -->
+
+					<!-- gnb-bottom -->
+					<div class="gnb-bottom">
+						<a href="#" class="krds-btn small text">로그인 <i class="svg-icon ico-angle right"></i></a>
+						<a href="#" class="krds-btn small text" target="_blank" title="새 창 열기"> 회원가입 <i
+								class="svg-icon ico-go"></i></a>
+					</div>
+					<!-- //gnb-bottom -->
+				</div>
+				<!-- //gnb-body -->
+
+
+				<!-- gnb-close -->
+				<button type="button" class="krds-btn medium icon" id="close-nav">
+					<span class="sr-only">전체메뉴 닫기</span>
+					<i class="svg-icon ico-popup-close"></i>
+				</button>
+				<!-- //gnb-close -->
+			</div>
+		</div>
+
+		<!-- //메인메뉴 : 모바일 -->
+	</header>
+	<div class="gnb-backdrop"></div>
+	<!-- //헤더 영역 -->
+
+
+
+
+
+	<!-- 모달 : 전체메뉴보기 -->
+	<section id="popAllMenuVIew" class="krds-modal fade allmenu" data-type="full">
+		<!-- <section id="popAllMenuVIew" class="krds-modal fade allmenu show in" data-type="full"> -->
+		<!-- modal-dialog -->
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="inner">
+					<!-- modal title -->
+					<div class="modal-header">
+						<div class="allmenu-top">
+							<a href="#" target="_self" title="로그인으로 페이지 이동">로그인</a>
+							<a href="#" target="_self" title="1:1문의로 페이지 이동">1:1문의</a>
+						</div>
+						<h1>전체메뉴</h1>
+
+						<div class="allmenu-link-list">
+							<a href="#" class="krds-btn fc-white">대한간호조무사협회 <i class="svg-icon ico-angle down"></i></a>
+							<a href="#" class="krds-btn blue">보수교육센터 <i class="ico-blue-home"></i></a>
+							<a href="#" class="krds-btn blue">직무교육센터 <i class="ico-blue-home"></i></a>
+							<a href="#" class="krds-btn blue">자격신고센터 <i class="ico-blue-home"></i></a>
+							<a href="#" class="krds-btn blue">학회센터 <i class="ico-blue-home"></i></a>
+						</div>
+
+					</div>
+					<!-- //modal title -->
+
+					<!-- modal contents -->
+					<div class="modal-conts">
+						<ul class="allMenu-nav">
+							<li class="allMenu-nav-item">
+								<div class="menu-title">협회안내</div>
+								<ul class="menu-list">
+									<li><a href="#" title="페이지 이동">인사말</a></li>
+									<li><a href="#" title="페이지 이동">연혁정관</a></li>
+									<li><a href="#" title="페이지 이동">주요사업</a></li>
+									<li><a href="#" title="페이지 이동">조직도</a></li>
+									<li><a href="#" title="페이지 이동">시도회</a></li>
+									<li><a href="#" title="페이지 이동">오시는 길</a></li>
+								</ul>
+							</li>
+							<li class="allMenu-nav-item">
+								<div class="menu-title">간호조무사</div>
+								<ul class="menu-list">
+									<li><a href="#" title="페이지 이동">간호조무사란</a></li>
+									<li><a href="#" title="페이지 이동">윤리선언/강령/지침</a></li>
+									<li><a href="#" title="페이지 이동">자격제도</a></li>
+									<li><a href="#" title="페이지 이동">업무범위 FAQ</a></li>
+									<li><a href="#" title="페이지 이동">온라인민원/증명서</a></li>
+								</ul>
+							</li>
+							<li class="allMenu-nav-item">
+								<div class="menu-title">홍보센터</div>
+								<ul class="menu-list">
+									<li><a href="#" title="페이지 이동">보도자료</a></li>
+									<li><a href="#" title="페이지 이동">협회활동갤러리</a></li>
+									<li><a href="#" title="페이지 이동">시도협회갤러리</a></li>
+									<li><a href="#" title="페이지 이동">간호조무사뉴스</a></li>
+									<li><a href="#" title="페이지 이동">SNS홍보</a></li>
+									<li><a href="#" title="페이지 이동">매거진</a></li>
+									<li><a href="#" title="페이지 이동">인터넷신문</a></li>
+								</ul>
+							</li>
+							<li class="allMenu-nav-item">
+								<div class="menu-title">정보센터</div>
+								<ul class="menu-list">
+									<li><a href="#" title="페이지 이동">정책자료</a></li>
+									<li><a href="#" title="페이지 이동">관련법규</a></li>
+									<li><a href="#" title="페이지 이동">간호인력통계</a></li>
+									<li><a href="#" title="페이지 이동">관련기관</a></li>
+								</ul>
+							</li>
+							<li class="allMenu-nav-item">
+								<div class="menu-title">회원혜택</div>
+								<ul class="menu-list">
+									<li><a href="#" title="페이지 이동">드림복지</a></li>
+									<li><a href="#" title="페이지 이동">KLPA상조회</a></li>
+									<li><a href="#" title="페이지 이동">노무상담</a></li>
+								</ul>
+							</li>
+							<li class="allMenu-nav-item">
+								<div class="menu-title">취업정보</div>
+								<ul class="menu-list">
+									<li><a href="#" title="페이지 이동">구인</a></li>
+									<li><a href="#" title="페이지 이동">대체인력</a></li>
+									<li><a href="#" title="페이지 이동">나라일터(채용)</a></li>
+								</ul>
+							</li>
+							<li class="allMenu-nav-item">
+								<div class="menu-title">회원소통</div>
+								<ul class="menu-list">
+									<li><a href="#" title="페이지 이동">공지사항</a></li>
+									<li><a href="#" title="페이지 이동">회원게시판</a></li>
+									<li><a href="#" title="페이지 이동">신고센터</a></li>
+									<li><a href="#" title="페이지 이동">원격서비스</a></li>
+								</ul>
+							</li>
+						</ul>
+
+
+						<ul class="allMenu-nav mypage">
+							<li class="allMenu-nav-item">
+								<div class="menu-title">마이페이지</div>
+								<ul class="menu-list">
+									<li><a href="#" title="페이지 이동">내정보</a></li>
+									<li><a href="#" title="페이지 이동">나의게시물</a></li>
+									<li><a href="#" title="페이지 이동">원격지원서비스</a></li>
+									<li><a href="#" title="페이지 이동">1:1문의</a></li>
+									<li><a href="#" title="페이지 이동">기타모금 납부내역</a></li>
+									<li><a href="#" title="페이지 이동">회비/교육비 내역</a></li>
+									<li><a href="#" title="페이지 이동">보수교육이수현황</a></li>
+									<li><a href="#" title="페이지 이동">직무교육이수현황</a></li>
+									<li><a href="#" title="페이지 이동">증명서발급</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+					<!-- //modal contents -->
+
+				</div>
+
+
+				<!-- close button -->
+				<button type="button" class="krds-btn xlarge icon btn-close close-modal">
+					<span class="sr-only">닫기</span>
+					<i class="svg-icon ico-popup-close"></i>
+				</button>
+				<!-- //close button -->
+			</div>
+		</div>
+		<!-- //modal-dialog -->
+		<div class="modal-back"></div>
+	</section>
+
+	<!-- //모달 : 전체메뉴보기 -->
+
+	<div class="wrap">
+		<div id="container">
+
+
+			<!--퀵메뉴-->
+			<div class="quick-wrap" id="aside">
+				<div class="a_nav">
+					<ul class="quick-wrap-ul">
+						<li class="quick-wrap-item">
+							<a href="#" target="_blank" title="회비납부 페이지 이동">
+								<div class="txt">회비납부</div>
+								<i class="quick-icon01"></i>
+							</a>
+						</li>
+						<li class="quick-wrap-item">
+							<a href="#" target="_blank" title="나의강의실 페이지 이동">
+								<div class="txt">나의강의실</div>
+								<i class="quick-icon02"></i>
+							</a>
+						</li>
+						<li class="quick-wrap-item">
+							<a href="#" target="_blank" title="간무협챗봇 페이지 이동">
+								<div class="txt">간무협챗봇</div>
+								<i class="quick-icon03"></i>
+							</a>
+						</li>
+					</ul>
+
+					<button class="ico-plus blackRound a_control">
+						<div class="sr-only">퀵메뉴 제어 버튼</div>
+						<span class="ac_deco"></span>
+						<span class="ac_deco t1"></span>
+					</button>
+				</div>
+			</div>
+
+			<!-- 메인 섹션1 -->
+			<section class="mainSection01" id="mainSection01">
+				<div class="inner">
+					<!--배너영역-->
+					<div class="main-banner">
+						<!-- Swiper -->
+						<div class="swiper mainSwiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#" target="_blank" title="새창이동">
+										<img src="../resources/img/main/testBanner.png" alt="메인1">
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" target="_blank" title="새창이동">
+										<img src="../resources/img/main/testBanner.png" alt="메인2">
+									</a>
+								</div>
+							</div>
+							<div class="swiper-indicator swiper-btn-pos">
+								<div class="swiper-pagination"></div>
+
+								<div class="swiper-progress">
+									<div class="swiper-progress-fill"></div>
+								</div>
+
+								<div class="swiper-navigation">
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-controller">
+										<button type="button" class="swiper-button-play" style="display: none;">
+											<span class="sr-only">슬라이드 재생</span>
+										</button>
+										<button type="button" class="swiper-button-stop">
+											<span class="sr-only">슬라이드 멈춤</span>
+										</button>
+									</div>
+									<div class="swiper-button-next"></div>
+								</div>
+
+							</div>
+						</div>
+
+
+					</div>
+					<!--//배너영역-->
+
+					<!--로그인 후 화면 -->
+					<div class="main-login-area" style="display: none;" data-aos="flip-left">
+						<div class="login-box">
+							<div class="login-info-top">
+								<div class="user-name-wrap">
+									<div class="name">홍길동님</div>
+									<button class="btn-edit">수정</button>
+								</div>
+								<div class="user-level">정회원</div>
+							</div>
+							<ul class="user-info-list">
+								<li>
+									<span class="label">자격증번호</span>
+									<span class="value">1234</span>
+								</li>
+								<li>
+									<span class="label">최종 자격신고일</span>
+									<span class="value">2021.01.01</span>
+								</li>
+								<li>
+									<span class="label">소속시도회</span>
+									<span class="value">서울특별시</span>
+								</li>
+								<li>
+									<span class="label">근무처</span>
+									<span class="value">삼성병원</span>
+								</li>
+								<li>
+									<span class="label">연락처</span>
+									<span class="value">010-1234-5678</span>
+								</li>
+							</ul>
+						</div>
+						<div class="edu-summary">
+							<a href="#" target="_blank" title="교육이수 새창열림" class="edu-item">
+								<div class="edu-title">교육이수</div>
+								<div class="edu-count"><span class="value">1</span>건</div>
+							</a>
+							<a href="#" target="_blank" title="교육이수 새창열림" class="edu-item">
+								<div class="edu-title">교육미이수</div>
+								<div class="edu-count"><span class="value">2</span>건</div>
+							</a>
+						</div>
+					</div>
+					<!--//로그인 후 화면 -->
+
+					<!--비로그인 화면-->
+					<div class="main-login-area" data-aos="flip-left" style="display: ;">
+						<div class="guest-box">
+							<div class="guest-btn-list">
+								<a href="#" class="krds-btn tertiary guest-box-btn" title="개인회원 로그인으로 페이지 이동"
+									data-aos="fade-up" data-aos-delay="300"><i class="ico-loginBtn01"></i>개인회원 로그인</a>
+								<a href="#" class="krds-btn tertiary guest-box-btn" title="기관회원 로그인으로 페이지 이동"
+									data-aos="fade-up" data-aos-delay="600"><i class="ico-loginBtn02"></i>기관회원 로그인</a>
+							</div>
+							<div class="main-join-find">
+								<a href="#" title="회원가입으로 페이지 이동">회원가입</a>
+								<a href="#" title="회원가입으로 페이지 이동">ID/PW 찾기</a>
+							</div>
+							<p class="login-noti">
+								로그인 하시면 <span class="bold">나의 자격정보와 교육 이수현황</span>을 확인 할 수있습니다.
+							</p>
+						</div>
+
+					</div>
+
+					<!--//비로그인 화면-->
+				</div>
+			</section>
+
+			<!-- //메인 섹션1 -->
+
+			<!--메인 섹션2-->
+			<section class="mainSection02" id="mainSection02" data-aos="fade-up">
+				<div class="inner">
+					<div class="shortcut-wrap">
+						<!-- tab -->
+						<div class="krds-tab-area layer">
+							<!-- tab list -->
+							<div class="tab fill full">
+								<ul role="tablist">
+									<li id="tab_shortcut_01" role="tab" aria-selected="true"
+										aria-controls="panel_shortcut_01" class="active">
+										<button type="button" class="btn-tab">대한간호조무사협회 <i class="sr-only created">
+												선택됨</i></button>
+									</li>
+									<li id="tab_shortcut_02" role="tab" aria-selected="false"
+										aria-controls="panel_shortcut_02">
+										<button type="button" class="btn-tab">보수교육센터</button>
+									</li>
+
+									<li id="tab_shortcut_03" role="tab" aria-selected="false"
+										aria-controls="panel_shortcut_03">
+										<button type="button" class="btn-tab">직무교육센터</button>
+									</li>
+									<li id="tab_shortcut_04" role="tab" aria-selected="false"
+										aria-controls="panel_shortcut_04">
+										<button type="button" class="btn-tab">자격신고센터</button>
+									</li>
+									<li id="tab_shortcut_05" role="tab" aria-selected="false"
+										aria-controls="panel_shortcut_05">
+										<button type="button" class="btn-tab">학회센터</button>
+									</li>
+
+								</ul>
+							</div>
+							<!-- //tab list -->
+
+							<!-- tab contents -->
+							<div class="tab-conts-wrap shortcut">
+								<!-- 탭 1 -->
+								<div id="panel_shortcut_01" aria-labelledby="tab_shortcut_01" class="tab-conts active"
+									data-quick-nav="false">
+									<a href="#" target="_blank" title="새창열림" class="shortcut-tit">
+										<h3>대한간호조무사협회</h3>
+										<p>바로가기</p>
+									</a>
+									<ol class="shortcut-list">
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_01_01"></div>
+												<div class="txt">노무상담</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_01_02"></div>
+												<div class="txt">회비납부</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_01_03"></div>
+												<div class="txt">보도자료</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_01_04"></div>
+												<div class="txt">회원카드신청</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_01_05"></div>
+												<div class="txt">국회청원</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_01_06"></div>
+												<div class="txt">교육변경·환불</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_01_07"></div>
+												<div class="txt">1:1문의</div>
+											</a>
+										</li>
+									</ol>
+
+								</div>
+
+								<!-- 탭 2 -->
+								<div id="panel_shortcut_02" aria-labelledby="tab_shortcut_02" class="tab-conts"
+									data-quick-nav="false">
+									<a href="#" target="_blank" title="새창열림" class="shortcut-tit">
+										<h3>보수교육센터</h3>
+										<p>바로가기</p>
+									</a>
+									<ol class="shortcut-list">
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_02_01"></div>
+												<div class="txt">보수교육일정</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_02_02"></div>
+												<div class="txt">보수교육신청</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_02_03"></div>
+												<div class="txt">온라인교육 강의실</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_02_04"></div>
+												<div class="txt">비대면교육 강의실</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_02_05"></div>
+												<div class="txt">대면교육 강의실</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_02_06"></div>
+												<div class="txt">교육변경·환불</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_02_07"></div>
+												<div class="txt">자격신고</div>
+											</a>
+										</li>
+									</ol>
+								</div>
+
+								<!-- 탭 3 -->
+								<div id="panel_shortcut_03" aria-labelledby="tab_shortcut_03" class="tab-conts"
+									data-quick-nav="false">
+									<a href="#" target="_blank" title="새창열림" class="shortcut-tit">
+										<h3>직무교육센터</h3>
+										<p>바로가기</p>
+									</a>
+									<ol class="shortcut-list">
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_03_01"></div>
+												<div class="txt">직무교육</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_03_02"></div>
+												<div class="txt">치매교육</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_03_03"></div>
+												<div class="txt">실습교육</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_03_04"></div>
+												<div class="txt">외부위탁교육</div>
+											</a>
+										</li>
+										<li class="shortcut-list-item">
+											<a href="#">
+												<div class="img shortImg_03_05"></div>
+												<div class="txt">기타교육</div>
+											</a>
+										</li>
+
+									</ol>
+								</div>
+
+								<!-- 탭 4 -->
+								<div id="panel_shortcut_04" aria-labelledby="tab_shortcut_04" class="tab-conts"
+									data-quick-nav="false">
+									<a href="#" target="_blank" title="새창열림" class="shortcut-tit">
+										<h3>자격신고센터</h3>
+										<p>바로가기</p>
+									</a>
+									<ol class="shortcut-list">
+										<li class="shortcut-list-item"><a href="#">
+												<div class="img shortImg_04_01"></div>
+												<div class="txt">직무교육</div>
+											</a></li>
+										<li class="shortcut-list-item"><a href="#">
+												<div class="img shortImg_04_02"></div>
+												<div class="txt">치매교육</div>
+											</a></li>
+										<li class="shortcut-list-item"><a href="#">
+												<div class="img shortImg_04_03"></div>
+												<div class="txt">실습교육</div>
+											</a></li>
+										<li class="shortcut-list-item"><a href="#">
+												<div class="img shortImg_04_04"></div>
+												<div class="txt">외부위탁교육</div>
+											</a></li>
+										<li class="shortcut-list-item"><a href="#">
+												<div class="img shortImg_04_05"></div>
+												<div class="txt">자격5</div>
+											</a></li>
+										<li class="shortcut-list-item"><a href="#">
+												<div class="img shortImg_04_06"></div>
+												<div class="txt">자격6</div>
+											</a></li>
+										<li class="shortcut-list-item"><a href="#">
+												<div class="img shortImg_04_07"></div>
+												<div class="txt">자격7</div>
+											</a></li>
+									</ol>
+								</div>
+
+								<!-- 탭 5 -->
+								<div id="panel_shortcut_05" aria-labelledby="tab_shortcut_05" class="tab-conts"
+									data-quick-nav="false">
+									<a href="#" target="_blank" title="새창열림" class="shortcut-tit">
+										<h3>학회센터</h3>
+										<p>바로가기</p>
+									</a>
+									<ol class="shortcut-list">
+										<li class="shortcut-list-item"><a href="#">
+												<div class="img shortImg_05_01"></div>
+												<div class="txt">서비스1</div>
+											</a></li>
+										<li class="shortcut-list-item"><a href="#">
+												<div class="img shortImg_05_02"></div>
+												<div class="txt">서비스2</div>
+											</a></li>
+										<li class="shortcut-list-item"><a href="#">
+												<div class="img shortImg_05_03"></div>
+												<div class="txt">서비스3</div>
+											</a></li>
+										<li class="shortcut-list-item"><a href="#">
+												<div class="img shortImg_05_04"></div>
+												<div class="txt">서비스4</div>
+											</a></li>
+										<li class="shortcut-list-item"><a href="#">
+												<div class="img shortImg_05_05"></div>
+												<div class="txt">서비스5</div>
+											</a></li>
+										<li class="shortcut-list-item"><a href="#">
+												<div class="img shortImg_05_06"></div>
+												<div class="txt">서비스6</div>
+											</a></li>
+										<li class="shortcut-list-item"><a href="#">
+												<div class="img shortImg_05_07"></div>
+												<div class="txt">서비스7</div>
+											</a></li>
+									</ol>
+								</div>
+							</div>
+
+						</div>
+						<!-- //tab -->
+
+
+
+
+
+					</div>
+				</div>
+
+			</section>
+			<!--//메인 섹션2-->
+
+			<!--메인 섹션3-->
+			<section class="mainSection03" id="mainSection03">
+				<div class="inner ">
+					<div class="main-bbs-wrap">
+						<div class="notice" data-aos="fade-up" data-aos-delay="300">
+							<div class="notice-top">
+								<h3>공지사항</h3>
+								<a href="#" target="_self" title="공지사항 페이지 이동" class="view-all">전체보기<i
+										class="svg-icon ico-plus"></i></a>
+							</div>
+							<ul class="notice-list">
+								<li class="notice-list-item">
+									<a href="#" target="_blank" title="공지사항 새창열림">
+										<p class="ellipsis-2"><span class="ico-notice"></span>서울디지털대학교 2025학년도 2학기 신·편입생
+											모집과 제휴 장학 혜택 안내
+										</p>
+										<div class="date">2025.05.12</div>
+									</a>
+								</li>
+								<li class="notice-list-item">
+									<a href="#" target="_blank" title="공지사항 새창열림">
+										<p class="ellipsis-2"><span class="ico-notice"></span>전국 산불피해 성금 사용 내역 공개</p>
+										<div class="date">2025.05.12</div>
+									</a>
+								</li>
+								<li class="notice-list-item">
+									<a href="#" target="_blank" title="공지사항 새창열림">
+										<p class="ellipsis-2">수원여자대학교 2025년 하반기 방문간호 간호조무사 교육과정 교육생 모집안내(17기)</p>
+										<div class="date">2025.05.12</div>
+									</a>
+								</li>
+								<li class="notice-list-item">
+									<a href="#" target="_blank" title="공지사항 새창열림">
+										<p class="ellipsis-2">[공고 제 2025-008 호] 2025년 간호조무사 보수교육(임상실무) 실시기관 공모 공고</p>
+										<div class="date">2025.05.12</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="press" data-aos="fade-up" data-aos-delay="600">
+							<div class="press-top">
+								<h3>보도자료<small>간호조무사 News</small></h3>
+								<a href="#" target="_self" title="보도자료 페이지 이동" class="view-all">전체보기<i
+										class="svg-icon ico-plus"></i>
+								</a>
+							</div>
+
+							<ul class="press-list">
+								<li class="press-list-item">
+									<a href="#" target="_blank" title="보도자료 새창열림">
+										<div class="date">
+											<div class="dd">23</div>
+											<div class="yyyymm">2025.05</div>
+										</div>
+										<div class="content">
+											<div class="title ellipsis-1">
+												대한간호조무사협회, 국민의힘과 간호조무사 정책 협약 체결
+											</div>
+											<p class="text ellipsis-3">초고령사회 대비 지역 기반 보건의료체계 강화 및 일차의료 만성질환관리 등 간호조무사
+												제도적 참여 보장 방안 약속초고령사회 대비 지역 기반 보건의료체계 강화 및 일차의료 만성질환관리 등 간호조무사 제도적 참여 보장
+												방안 약속초고령사회 대비 지역 기반 보건의료체계 강화 및 일차의료 만성질환관리 등 간호조무사 제도적 참여 보장 방안 약속초고령사회
+												대비 지역 기반 보건의료체계 강화 및 일차의료 만성질환관리 등 간호조무사 제도적 참여 보장 방안 약속</p>
+										</div>
+									</a>
+								</li>
+
+								<li class="press-list-item">
+									<a href="#" target="_blank" title="보도자료 새창열림">
+										<div class="date">
+											<div class="dd">23</div>
+											<div class="yyyymm">2025.05</div>
+										</div>
+										<div class="content">
+											<div class="title ellipsis-1">
+												대한간호조무사협회, 국민의힘과 간호조무사 정책 협약 체결
+											</div>
+											<p class="text ellipsis-3">초고령사회 대비 지역 기반 보건의료체계 강화 및 일차의료 만성질환관리 등 간호조무사
+												제도적 참여 보장 방안 약속초고령사회 대비 지역 기반 보건의료체계 강화 및 일차의료 만성질환관리 등 간호조무사 제도적 참여 보장
+												방안 약속초고령사회 대비 지역 기반 보건의료체계 강화 및 일차의료 만성질환관리 등 간호조무사 제도적 참여 보장 방안 약속초고령사회
+												대비 지역 기반 보건의료체계 강화 및 일차의료 만성질환관리 등 간호조무사 제도적 참여 보장 방안 약속</p>
+										</div>
+									</a>
+								</li>
+
+
+								<li class="press-list-item">
+									<a href="#" target="_blank" title="보도자료 새창열림">
+										<div class="date">
+											<div class="dd">23</div>
+											<div class="yyyymm">2025.05</div>
+										</div>
+										<div class="content">
+											<div class="title ellipsis-1">
+												대한간호조무사협회, 국민의힘과 간호조무사 정책 협약 체결
+											</div>
+											<p class="text ellipsis-3">초고령사회 대비 지역 기반 보건의료체계 강화 및 일차의료 만성질환관리 등 간호조무사
+												제도적 참여 보장 방안 약속초고령사회 대비 지역 기반 보건의료체계 강화 및 일차의료 만성질환관리 등 간호조무사 제도적 참여 보장
+												방안 약속초고령사회 대비 지역 기반 보건의료체계 강화 및 일차의료 만성질환관리 등 간호조무사 제도적 참여 보장 방안 약속초고령사회
+												대비 지역 기반 보건의료체계 강화 및 일차의료 만성질환관리 등 간호조무사 제도적 참여 보장 방안 약속</p>
+										</div>
+									</a>
+								</li>
+
+
+
+
+							</ul>
+
+						</div>
+						<div class="banner" data-aos="fade-up" data-aos-delay="900">
+							<!-- 배너2 -->
+							<div class="swiper mainSwiper2">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a href="#" target="_blank" title="새창이동">
+											<img src="https://placehold.co/620x900" alt="대체이미지">
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" target="_blank" title="새창이동">
+											<img src="https://placehold.co/620x900" alt="대체이미지">
+										</a>
+									</div>
+								</div>
+								<div class="swiper-indicator swiper-btn-pos">
+									<div class="swiper-pagination"></div>
+
+									<div class="swiper-navigation">
+										<div class="swiper-button-prev"></div>
+										<div class="swiper-controller">
+											<button type="button" class="swiper-button-play" style="display: none;">
+												<span class="sr-only">슬라이드 재생</span>
+											</button>
+											<button type="button" class="swiper-button-stop">
+												<span class="sr-only">슬라이드 멈춤</span>
+											</button>
+										</div>
+										<div class="swiper-button-next"></div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<!--//메인 섹션3-->
+
+			<!--메인 섹션4-->
+			<section class="mainSection04" id="mainSection04">
+				<div class="inner">
+					<div class="news-wrap">
+						<h2 class="title">간호조무사와 함께해온 협회</h2>
+						<div class="news-box-list">
+							<div class="video" data-aos="fade-up">
+								<h3>간호조무사 50년사</h3>
+								<div class="video-iframe">
+									<iframe width="100%" height="305"
+										src="https://www.youtube.com/embed/ML-MIXJ_eh0?si=WK8s9jFd0TEIPkMj"
+										title="YouTube video player" frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								</div>
+							</div>
+							<div class="projects" data-aos="fade-up" data-aos-delay="300">
+								<h3>주요산업</h3>
+								<a href="#" target="_self" title="페이지 이동" class="news-gray-box">
+									<p>양질의 간호조무사 양성과 간호서비스의 질 향상을 위해 최선을 다하고 있습니다.</p>
+									<i class="pos">
+										<div class="ico-sec0401"></div>
+										<div class="ico-ro"></div>
+										<div class="ico-ro2"></div>
+										<div class="ico-ro2 poss"></div>
+									</i>
+								</a>
+							</div>
+
+							<div class="welfare" data-aos="fade-up" data-aos-delay="600">
+								<h3>회원복지</h3>
+								<a href="#" target="_self" title="페이지 이동" class="news-gray-box">
+
+									<p>드림복지몰,
+
+										KLPNA상조회 등
+
+										협회회원을 위한 특별한
+
+										혜택 제공을 위해
+
+										노력 중입니다.</p>
+									<i class="ico-sec0402 pos"></i>
+
+								</a>
+								<a href="#" target="_self" title="페이지 이동" class="news-gray-box">
+									<p>협회 자문 공인노무사가정성을 다하여 상담해
+
+										드립니다.</p>
+									<i class="ico-sec0403 pos"></i>
+								</a>
+							</div>
+							<div class="jobinfo" data-aos="fade-up" data-aos-delay="900">
+								<h3>구인정보</h3>
+								<div class="joinfo-list">
+
+									<a href="#" class="item news-gray-box">
+										<div class="title ellipsis-1">천호로앤 간호조무사구함.</div>
+										<div class="mid-info">
+											<div class="date">2025.05.12</div>
+											<div class="location">서울 > 강동구</div>
+										</div>
+										<div class="company">로앤산부인과의원</div>
+									</a>
+
+
+									<a href="#" class="item news-gray-box">
+										<div class="title ellipsis-1">천호로앤 간호조무사구함.</div>
+										<div class="mid-info">
+											<div class="date">2025.05.12</div>
+											<div class="location">서울 > 강동구</div>
+										</div>
+										<div class="company">로앤산부인과의원</div>
+									</a>
+
+
+									<a href="#" class="item news-gray-box">
+										<div class="title ellipsis-1">천호로앤 간호조무사구함.</div>
+										<div class="mid-info">
+											<div class="date">2025.05.12</div>
+											<div class="location">서울 > 강동구</div>
+										</div>
+										<div class="company">로앤산부인과의원</div>
+									</a>
+
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<!--//메인 섹션4-->
+
+			<!--메인 섹션5-->
+			<section class="mainSection05" id="mainSection05">
+				<div class="inner">
+					<div class="local-news-wrap">
+						<h2 class="title">함께하는 시도협회 소식</h2>
+						<div class="krds-tab-area layer mainLocalTab">
+							<!-- tab list -->
+							<div class="tab fill full">
+								<a href="#" class="local-title">
+									<div class="local-name">서울시간호조무사회 <i class="ico-homeGo"></i></div>
+									<span>바로가기</span>
+								</a>
+								<ul role="tablist" data-aos="fade-up">
+									<li id="tab_local_01" role="tab" aria-selected="false"
+										aria-controls="panel_local_01">
+										<button type="button" class="btn-tab">전체</button>
+									</li>
+									<li id="tab_local_02" role="tab" aria-selected="true" aria-controls="panel_local_02"
+										class="active">
+										<button type="button" class="btn-tab">서울
+											<i class="sr-only created">선택됨</i>
+										</button>
+									</li>
+									<li id="tab_local_03" role="tab" aria-selected="false"
+										aria-controls="panel_local_03">
+										<button type="button" class="btn-tab">부산시</button>
+									</li>
+									<li id="tab_local_04" role="tab" aria-selected="false"
+										aria-controls="panel_local_04">
+										<button type="button" class="btn-tab">대구시</button>
+									</li>
+									<li id="tab_local_05" role="tab" aria-selected="false"
+										aria-controls="panel_local_05">
+										<button type="button" class="btn-tab">인천시</button>
+									</li>
+									<li id="tab_local_06" role="tab" aria-selected="false"
+										aria-controls="panel_local_06">
+										<button type="button" class="btn-tab">광주·전남</button>
+									</li>
+									<li id="tab_local_07" role="tab" aria-selected="false"
+										aria-controls="panel_local_07">
+										<button type="button" class="btn-tab">대전·충남</button>
+									</li>
+									<li id="tab_local_08" role="tab" aria-selected="false"
+										aria-controls="panel_local_08">
+										<button type="button" class="btn-tab">울산·경남</button>
+									</li>
+									<li id="tab_local_09" role="tab" aria-selected="false"
+										aria-controls="panel_local_09">
+										<button type="button" class="btn-tab">경기도</button>
+									</li>
+									<li id="tab_local_10" role="tab" aria-selected="false"
+										aria-controls="panel_local_10">
+										<button type="button" class="btn-tab">강원도</button>
+									</li>
+									<li id="tab_local_11" role="tab" aria-selected="false"
+										aria-controls="panel_local_11">
+										<button type="button" class="btn-tab">충청북도</button>
+									</li>
+									<li id="tab_local_12" role="tab" aria-selected="false"
+										aria-controls="panel_local_12">
+										<button type="button" class="btn-tab">전라북도</button>
+									</li>
+									<li id="tab_local_13" role="tab" aria-selected="false"
+										aria-controls="panel_local_13">
+										<button type="button" class="btn-tab">경상북도</button>
+									</li>
+									<li id="tab_local_14" role="tab" aria-selected="false"
+										aria-controls="panel_local_14">
+										<button type="button" class="btn-tab">제주도</button>
+									</li>
+								</ul>
+
+							</div>
+							<!-- //tab list -->
+
+
+							<!-- tab contents -->
+							<div class="tab-conts-wrap" data-aos="fade-up" data-aos-delay="300">
+								<article id="panel_local_01" aria-labelledby="tab_local_01" class="tab-conts"
+									data-quick-nav="false">
+									<!-- 전체 -->
+									<h3>전체</h3>
+								</article>
+								<article id="panel_local_02" aria-labelledby="tab_local_02" class="tab-conts active"
+									data-quick-nav="false">
+									<!-- 서울 -->
+									<div class="local-bbs-list">
+										<div class="gallery">
+											<div class="bbs-top">
+												<h3>갤러리</h3>
+												<a href="#" target="_self" title="갤러리 페이지 이동" class="view-all">전체보기<i
+														class="svg-icon ico-plus"></i></a>
+											</div>
+											<ul class="gallery-list">
+												<li class="item">
+													<a href="#" title="페이지 이동">
+														<div class="img">
+															<img src="../resources/img/main/test01.png" alt="테스트 이미지">
+														</div>
+														<p class="txt ellipsis-2">[공고 제2025-001호] 대한간호조무사협회 전산용역 입찰공고
+														</p>
+													</a>
+												</li>
+												<li class="item">
+													<a href="#" title="페이지 이동">
+														<div class="img">
+															<img src="../resources/img/main/test02.png" alt="테스트 이미지">
+														</div>
+														<p class="txt ellipsis-2">[공고 제2025-001호] 대한간호조무사협회 전산용역 입찰공고
+														</p>
+													</a>
+												</li>
+												<li class="item">
+													<a href="#" title="페이지 이동">
+														<div class="img">
+															<img src="../resources/img/main/test03.png" alt="테스트 이미지">
+														</div>
+														<p class="txt ellipsis-2">[공고 제2025-001호] 대한간호조무사협회 전산용역 입찰공고
+														</p>
+													</a>
+												</li>
+												<li class="item">
+													<a href="#" title="페이지 이동">
+														<div class="img">
+															<img src="../resources/img/main/test04.png" alt="테스트 이미지">
+														</div>
+														<p class="txt ellipsis-2">[공고 제2025-001호] 대한간호조무사협회 전산용역 입찰공역
+															입찰공역 입찰공역 입찰공역 입찰공역 입찰공역 입찰공고</p>
+													</a>
+												</li>
+											</ul>
+
+										</div>
+										<div class="notice">
+											<div class="bbs-top">
+												<h3>공지사항</h3>
+												<a href="#" target="_self" title="공지사항 페이지 이동" class="view-all">전체보기<i
+														class="svg-icon ico-plus"></i></a>
+											</div>
+											<ul class="notice-list">
+												<li class="item">
+													<a href="#" title="페이지 이동">
+														<div class="txt ellipsis-2">
+															[비대면 실시간교육] 기본간호(임종간호) 교육자료
+														</div>
+														<div class="date">2025.05.12</div>
+													</a>
+												</li>
+												<li class="item">
+													<a href="#" title="페이지 이동">
+														<div class="txt ellipsis-2">
+															[비대면 실시간교육] 모성간호(사춘기 및 결혼기 여성) 교육자료
+														</div>
+														<div class="date">2025.05.12</div>
+													</a>
+												</li>
+												<li class="item">
+													<a href="#" title="페이지 이동">
+														<div class="txt ellipsis-2">
+															서울특별시간호조무사회 제12대 김지연 회장 취임인사
+														</div>
+														<div class="date">2025.05.12</div>
+													</a>
+												</li>
+												<li class="item">
+													<a href="#" title="페이지 이동">
+														<div class="txt ellipsis-2">
+															서울시간호조무사회 임원(감사)선거 후보안내
+														</div>
+														<div class="date">2025.05.12</div>
+													</a>
+												</li>
+												<li class="item">
+													<a href="#" title="페이지 이동">
+														<div class="txt ellipsis-2">
+															[삼육보건대학교 부설평생교육원 방문간호 간호조무사 교육과정 교육생 모집(17기)
+														</div>
+														<div class="date">2025.05.12</div>
+													</a>
+												</li>
+
+											</ul>
+										</div>
+									</div>
+								</article>
+								<article id="panel_local_03" aria-labelledby="tab_local_03" class="tab-conts"
+									data-quick-nav="false">
+									<!-- 부산시 -->
+									<h3>부산시</h3>
+								</article>
+								<article id="panel_local_04" aria-labelledby="tab_local_04" class="tab-conts"
+									data-quick-nav="false">
+									<!-- 대구시 -->
+									<h3>대구시</h3>
+								</article>
+								<article id="panel_local_05" aria-labelledby="tab_local_05" class="tab-conts"
+									data-quick-nav="false">
+									<!-- 인천시 -->
+									<h3>인천시</h3>
+								</article>
+								<article id="panel_local_06" aria-labelledby="tab_local_06" class="tab-conts"
+									data-quick-nav="false">
+									<!-- 광주·전남 -->
+									<h3>광주·전남</h3>
+								</article>
+								<article id="panel_local_07" aria-labelledby="tab_local_07" class="tab-conts"
+									data-quick-nav="false">
+									<!-- 대전·충남 -->
+									<h3>대전·충남</h3>
+								</article>
+								<article id="panel_local_08" aria-labelledby="tab_local_08" class="tab-conts"
+									data-quick-nav="false">
+									<!-- 울산·경남 -->
+									<h3>울산·경남</h3>
+								</article>
+								<article id="panel_local_09" aria-labelledby="tab_local_09" class="tab-conts"
+									data-quick-nav="false">
+									<!-- 경기도 -->
+									<h3>경기도</h3>
+								</article>
+								<article id="panel_local_10" aria-labelledby="tab_local_10" class="tab-conts"
+									data-quick-nav="false">
+									<!-- 강원도 -->
+									<h3>강원도</h3>
+								</article>
+								<article id="panel_local_11" aria-labelledby="tab_local_11" class="tab-conts"
+									data-quick-nav="false">
+									<!-- 충청북도 -->
+									<h3>충청북도</h3>
+								</article>
+								<article id="panel_local_12" aria-labelledby="tab_local_12" class="tab-conts"
+									data-quick-nav="false">
+									<!-- 전라북도 -->
+									<h3>전라북도</h3>
+								</article>
+								<article id="panel_local_13" aria-labelledby="tab_local_13" class="tab-conts"
+									data-quick-nav="false">
+									<!-- 경상북도 -->
+									<h3>경상북도</h3>
+								</article>
+								<article id="panel_local_14" aria-labelledby="tab_local_14" class="tab-conts"
+									data-quick-nav="false">
+									<!-- 제주도 -->
+									<h3>제주도</h3>
+								</article>
+							</div>
+							<!-- //tab contents -->
+
+
+						</div>
+					</div>
+
+				</div>
+
+			</section>
+			<!--//메인 섹션5-->
+
+			<!--유관기관-->
+			<section class="related-org" id="related-org">
+				<div class="inner">
+					<!-- 배너3 -->
+
+					<div class="swiper mainSwiper3" data-aos="fade-up">
+
+						<div class="swiper-indicator">
+							<h2>유관기관 바로가기</h2>
+							<div class="swiper-navigation">
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-controller">
+									<button type="button" class="swiper-button-play" style="display: none;">
+										<span class="sr-only">슬라이드 재생</span>
+									</button>
+									<button type="button" class="swiper-button-stop">
+										<span class="sr-only">슬라이드 멈춤</span>
+									</button>
+								</div>
+								<div class="swiper-button-next"></div>
+							</div>
+
+						</div>
+
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="#" target="_blank" title="새창이동">
+									<img src="../resources/img/org/org01.png" alt="대체이미지">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank" title="새창이동">
+									<img src="../resources/img/org/org02.png" alt="대체이미지">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank" title="새창이동">
+									<img src="../resources/img/org/org03.png" alt="대체이미지">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank" title="새창이동">
+									<img src="../resources/img/org/org04.png" alt="대체이미지">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank" title="새창이동">
+									<img src="../resources/img/org/org05.png" alt="대체이미지">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank" title="새창이동">
+									<img src="../resources/img/org/org06.png" alt="대체이미지">
+								</a>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+		</div>
+	</div>
+
+
+	<script>
+
+		// 메인 스와이퍼
+		let swiper1, swiper2, swiper3;
+		let isPlaying1 = true;
+		let isPlaying2 = true;
+		let isPlaying3 = true;
+		let progressInterval1;
+
+		function initSwiper1() {
+			swiper1 = new Swiper(".mainSwiper", {
+				navigation: {
+					nextEl: ".mainSwiper .swiper-button-next",
+					prevEl: ".mainSwiper .swiper-button-prev",
+				},
+				pagination: {
+					el: ".mainSwiper .swiper-pagination",
+					type: "fraction",
+				},
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+				},
+				on: {
+					slideChangeTransitionStart: () => {
+						resetProgressBar1();
+					}
+				}
+			});
+			startProgressBar1();
+		}
+
+		function initSwiper2() {
+			swiper2 = new Swiper(".mainSwiper2", {
+				navigation: {
+					nextEl: ".mainSwiper2 .swiper-button-next",
+					prevEl: ".mainSwiper2 .swiper-button-prev",
+				},
+				pagination: {
+					el: ".mainSwiper2 .swiper-pagination",
+					type: "fraction",
+				},
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+				}
+			});
+		}
+
+		function initSwiper3() {
+			swiper3 = new Swiper(".mainSwiper3", {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				loop: true,
+				navigation: {
+					nextEl: ".mainSwiper3 .swiper-button-next",
+					prevEl: ".mainSwiper3 .swiper-button-prev",
+				},
+				autoplay: {
+					delay: 2000,
+					disableOnInteraction: false,
+				},
+				breakpoints: {
+					0: {
+						slidesPerView: 3,
+					},
+					768: {
+						slidesPerView: 3,
+					},
+					1024: {
+						slidesPerView: 5,
+					}
+				}
+			});
+		}
+
+
+		function startProgressBar1() {
+			const $progress = $('.mainSwiper .swiper-progress-fill');
+			let width = 0;
+			$progress.css('width', '0%');
+			progressInterval1 = setInterval(() => {
+				width += 2;
+				if (width >= 100) {
+					width = 100;
+					clearInterval(progressInterval1);
+				}
+				$progress.css('width', width + '%');
+			}, 100);
+		}
+
+		function resetProgressBar1() {
+			clearInterval(progressInterval1);
+			startProgressBar1();
+		}
+
+		function togglePlayPause1() {
+			const $playBtn = $('.mainSwiper .swiper-button-play');
+			const $stopBtn = $('.mainSwiper .swiper-button-stop');
+			if (isPlaying1) {
+				swiper1.autoplay.stop();
+				clearInterval(progressInterval1);
+				isPlaying1 = false;
+				$playBtn.show();
+				$stopBtn.hide();
+			} else {
+				swiper1.autoplay.start();
+				startProgressBar1();
+				isPlaying1 = true;
+				$playBtn.hide();
+				$stopBtn.show();
+			}
+		}
+
+		function togglePlayPause2() {
+			const $playBtn = $('.mainSwiper2 .swiper-button-play');
+			const $stopBtn = $('.mainSwiper2 .swiper-button-stop');
+			if (isPlaying2) {
+				swiper2.autoplay.stop();
+				isPlaying2 = false;
+				$playBtn.show();
+				$stopBtn.hide();
+			} else {
+				swiper2.autoplay.start();
+				isPlaying2 = true;
+				$playBtn.hide();
+				$stopBtn.show();
+			}
+		}
+
+		function togglePlayPause3() {
+			const $playBtn = $('.mainSwiper3 .swiper-button-play');
+			const $stopBtn = $('.mainSwiper3 .swiper-button-stop');
+			if (isPlaying3) {
+				swiper3.autoplay.stop();
+				isPlaying3 = false;
+				$playBtn.show();
+				$stopBtn.hide();
+			} else {
+				swiper3.autoplay.start();
+				isPlaying3 = true;
+				$playBtn.hide();
+				$stopBtn.show();
+			}
+		}
+
+		$(document).ready(function () {
+			initSwiper1();
+			initSwiper2();
+			initSwiper3();
+
+			$('.mainSwiper .swiper-button-play').on('click', togglePlayPause1);
+			$('.mainSwiper .swiper-button-stop').on('click', togglePlayPause1);
+
+			$('.mainSwiper2 .swiper-button-play').on('click', togglePlayPause2);
+			$('.mainSwiper2 .swiper-button-stop').on('click', togglePlayPause2);
+
+			$('.mainSwiper3 .swiper-button-play').on('click', togglePlayPause3);
+			$('.mainSwiper3 .swiper-button-stop').on('click', togglePlayPause3);
+		});
+
+
+
+		//탭에 따른 지역 타이틀 수정
+		$(document).ready(function () {
+			const localNameMap = {
+				tab_local_01: '대한간호조무사협회',
+				tab_local_02: '서울시간호조무사회',
+				tab_local_03: '부산시간호조무사회',
+				tab_local_04: '대구시간호조무사회',
+				tab_local_05: '인천시간호조무사회',
+				tab_local_06: '광주·전남간호조무사회',
+				tab_local_07: '대전·충남간호조무사회',
+				tab_local_08: '울산·경남간호조무사회',
+				tab_local_09: '경기도간호조무사회',
+				tab_local_10: '강원도간호조무사회',
+				tab_local_11: '충청북도간호조무사회',
+				tab_local_12: '전라북도간호조무사회',
+				tab_local_13: '경상북도간호조무사회',
+				tab_local_14: '제주도간호조무사회'
+			};
+
+			$('.mainLocalTab .tab [role=tab]').on('click', function () {
+				const tabId = $(this).attr('id');
+				const newName = localNameMap[tabId] || '대한간호조무사협회';
+				$('.local-name').html(`${newName} <i class="ico-homeGo"></i>`);
+			});
+		});
+
+
+	</script>
+
+
+
+	<!-- footer -->
+	<footer id="krds-footer">
+		<div class="o-foot-quick">
+			<div class="inner">
+				<div class="foot-link">
+					<div class="foot-link-item">
+						<button type="button" class="link footSelect" title="협회 바로가기" aria-expanded="false">서비스
+							바로가기</button>
+						<div class="drop-down">
+							<a href="https://klpna.or.kr/" title="대한간호조무사협회 새창열림" target="_blank">대한간호조무사협회</a>
+							<a href="https://klpnedu.or.kr/" title="보수교육센터 새창열림" target="_blank">보수교육센터</a>
+							<a href="https://klpnacademy.or.kr/" title="직무교육센터 새창열림" target="_blank">직무교육센터</a>
+							<a href="https://klpna.or.kr/" title="자격신고센터 새창열림" target="_blank">자격신고센터</a>
+							<a href="https://klpna.or.kr/academy" title="학회센터 새창열림" target="_blank">학회센터</a>
+
+						</div>
+					</div>
+
+					<div class="foot-link-item last">
+						<button type="button" class="link footSelect" title="협회 바로가기" aria-expanded="false">협회
+							바로가기</button>
+						<div class="drop-down">
+							<a href="/index.jsp" target="_blank" class="link-item" title="대한간호조무사협회 중앙회 새창 열림">대한간호조무사협회
+								중앙회</a>
+							<a href="/Sub_seoul_index.jsp" target="_blank" class="link-item"
+								title="서울시간호조무사회 새창 열림">서울시간호조무사회</a>
+							<a href="/Sub_pusan_index.jsp" target="_blank" class="link-item"
+								title="부산시간호조무사회 새창 열림">부산시간호조무사회</a>
+							<a href="/Sub_daegu_index.jsp" target="_blank" class="link-item"
+								title="대구시간호조무사회 새창 열림">대구시간호조무사회</a>
+							<a href="/Sub_inchon_index.jsp" target="_blank" class="link-item"
+								title="인천시간호조무사회 새창 열림">인천시간호조무사회</a>
+							<a href="/Sub_gwangju_index.jsp" target="_blank" class="link-item"
+								title="광주·전남간호조무사회 새창 열림">광주·전남간호조무사회</a>
+							<a href="/Sub_daejun_index.jsp" target="_blank" class="link-item"
+								title="대전·충남간호조무사회 새창 열림">대전·충남간호조무사회</a>
+							<a href="/Sub_ulsan_index.jsp" target="_blank" class="link-item"
+								title="울산·경남간호조무사회 새창 열림">울산·경남간호조무사회</a>
+							<a href="/Sub_kyungki_index.jsp" target="_blank" class="link-item"
+								title="경기도간호조무사회 새창 열림">경기도간호조무사회</a>
+							<a href="/Sub_kangwon_index.jsp" target="_blank" class="link-item"
+								title="강원도간호조무사회 새창 열림">강원도간호조무사회</a>
+							<a href="/Sub_chonbuk_index.jsp" target="_blank" class="link-item"
+								title="충청북도간호조무사회 새창 열림">충청북도간호조무사회</a>
+							<a href="/Sub_jeonra_index.jsp" target="_blank" class="link-item"
+								title="전북도간호조무사회 새창 열림">전북도간호조무사회</a>
+							<a href="/Sub_kyongbuk_index.jsp" target="_blank" class="link-item"
+								title="경상북도간호조무사회 새창 열림">경상북도간호조무사회</a>
+							<a href="/Sub_cheju_index.jsp" target="_blank" class="link-item"
+								title="제주도간호조무사회 새창 열림">제주도간호조무사회</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="link-sns">
+					<a href="https://pf.kakao.com/_cbkxexl" class="krds-btn xlarge icon border" target="_blank"
+						title="새 창 열기">
+						<span class="sr-only">카카오</span>
+						<i class="svg-icon ico-kakao"></i>
+					</a>
+
+					<a href="https://www.youtube.com/@KLPNA_%EA%B0%84%ED%98%B8%EC%A1%B0%EB%AC%B4%EC%82%AC%ED%98%91%ED%9A%8C"
+						class="krds-btn xlarge icon border" target="_blank" title="새 창 열기">
+						<span class="sr-only">인스타그램</span>
+						<i class="svg-icon ico-instagram"></i>
+					</a>
+					<a href="https://www.instagram.com/lpnnews/" class="krds-btn xlarge icon border" target="_blank"
+						title="새 창 열기">
+						<span class="sr-only">유튜브</span>
+						<i class="svg-icon ico-youtube"></i>
+					</a>
+
+				</div>
+			</div>
+		</div>
+		<div class="inner">
+			<div class="f-top">
+				<div class="left">
+					<div class="f-logo">
+						<span class="sr-only">KRDS - Korea Design System</span>
+					</div>
+					<p class="f-logo-p">대한간호조무사협회는 국민건강을 수호하며 국민과 함께 성장해왔습니다.<br>
+						'초고령 사회, 국민건강의 동반자 간호조무사의 해'</p>
+				</div>
+				<div class="right">
+					<a href="#" target="_self" title="이용약관 페이지 이동" class="f-link-item">이용약관</a>
+					<a href="#" target="_self" title="개인정보처리방침 페이지 이동" class="f-link-item bold">개인정보처리방침</a>
+					<a href="#" target="_self" title="이메일무단수집거부 페이지 이동" class="f-link-item">이메일무단수집거부</a>
+					<a href="#" target="_self" title="오시는길 페이지 이동" class="f-link-item">오시는길</a>
+				</div>
+			</div>
+
+			<div class="f-cnt">
+				<div class="f-info">
+					<ul class="info-cs">
+						<li><strong class="strong">서울특별시 용산구 한강대로 15길 11 (우 04379)</strong></li>
+						<li>
+							<p>대표자 : 곽지연</p>
+							<p>사업자등록번호 : 113-82-03615</p>
+						</li>
+						<li>
+							<p>대표전화 : 1661-6933</p>
+							<p>팩스 : 02) 859-8917</p>
+							<p>이메일 : mylpn@klpna.or.kr</p>
+						</li>
+						<li>
+							<p>업무시간 : 9:00~18:00 (점심시간 12:00~13:00, 상담센터 12:30~13:30)</p>
+						</li>
+					</ul>
+				</div>
+
+				<div class="f-counseling">
+					<h3>상담센터</h3>
+					<div class="f-counseling-tel">1661-6933</div>
+					<div class="f-counseling-time">
+						<p>평일 09:00 ~ 18:00</p>
+						<p>상담센터 점심 12:30 ~ 13:30</p>
+						<p>시도회 점심 12:00 ~ 13:00</p>
+					</div>
+				</div>
+				<div class="f-btn">
+					<button type="button" class="krds-btn tertiary small">원격지원 사전예약</button>
+					<button type="button" class="krds-btn tertiary small">원격지원프로그램 다운로드</button>
+				</div>
+			</div>
+
+			<div class="f-btm">
+				<div class="f-btm-text">
+					<p class="f-copy">Copyright (C) Korea Licensed Practical Nurses Association. All Rights Reserved.
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+
+
+
+	<script>
+		//aos
+		AOS.init({
+			easing: 'ease-in-out-sine',
+			once: true,
+			offset: 120,
+			duration: 1000
+
+		});
+	</script>
+
+</body>
+
+</html>

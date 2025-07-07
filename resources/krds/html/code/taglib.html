@@ -1,0 +1,3632 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>컴포넌트 라이브러리</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/plugin/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../css/component/output.css" />
+	<link rel="stylesheet" href="../../css/pattern/p_layout.css" />
+	<link rel="stylesheet" href="../../../css/style.css" />
+	<link rel="stylesheet" href="../../../lib/jquery-ui-1.14.1.custom/jquery-ui.min.css" />
+	
+	<!--js-->
+	<script src="../../js/plugin/swiper-bundle.min.js"></script>
+	<script defer src="../../js/component/ui-script.js"></script>
+	<script defer src="../../js/pattern/pattern.js"></script>
+	<script src="../../../js/script.js"></script>
+
+	<script src="../../../lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+
+	
+  <style>
+    /* 컴포넌트 라이브러리 페이지 전용 스타일 */
+    #taglist {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      margin-top: 30px
+    }
+  </style>
+  
+</head>
+
+<body>
+
+<!--
+    페이지 정보
+    ----------------------------------------
+    파일명: taglib.html
+    제작자: 오청열
+    제작일: 2025-02-27
+    수정일: 2025-02-28
+    설명: krds 컴포넌트 라이브러리 페이지
+    ----------------------------------------
+-->
+
+
+  <div id="container" class="krds-in-page-navigation-type">
+
+
+
+    <!-- 컨텐츠 영역 -->
+    <div class="inner">
+      <!-- 페이지 타이틀 영역 -->
+      <div class="page-title-wrap">
+        <h1 class="h-tit">컴포넌트 라이브러리</h1>
+        <p class="guide-txt">컴포넌트 패턴 리스트</p>
+      </div>
+
+	   <div class="helper-box gray">
+			<p class="helper-tit">로그인에 어려움이 있으신가요?</p>
+			<div class="helper-desc-wrap">
+				<ul class="krds-info-list decimal" role="list">
+					<li role="listitem">
+						로그인 관련 1661-6933 (내선번호 1번)으로 전화주세요.
+					</li>
+					<li role="listitem">서비스에 로그인할 수 있도록 도와드리겠습니다.</li>
+				</ul>
+			</div>
+		</div>
+      <!-- //페이지 타이틀 영역 -->
+
+      <!-- 컨텐츠 영역 -->
+      <div class="conts-area">
+
+        <h2>accordion_line</h2>
+        <div style="width:100%">
+          <!-- accordion -->
+          <div class="krds-accordion type-line">
+            <div class="accordion-item">
+              <h5 class="accordion-header"><button type="button" id="accordionHeaderSample01" class="btn-accordion"
+                  aria-controls="accordionCollapseSample01">아코디언 타이틀 영역</button></h5>
+              <div id="accordionCollapseSample01" class="accordion-collapse collapse"
+                aria-labelledby="accordionHeaderSample01">
+                <div class="accordion-body">
+                  <!-- accordion contents -->
+                  아코디언 내용 영역
+                  <!-- //accordion contents -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h5 class="accordion-header"><button type="button" id="accordionHeaderSample02" class="btn-accordion"
+                  aria-controls="accordionCollapseSample02">아코디언 타이틀 영역</button></h5>
+              <div id="accordionCollapseSample02" class="accordion-collapse collapse"
+                aria-labelledby="accordionHeaderSample02">
+                <div class="accordion-body">
+                  <!-- accordion contents -->
+                  아코디언 내용 영역
+                  <!-- //accordion contents -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //accordion -->
+        </div>
+
+        <h2>accordion</h2>
+        <div style="width:100%">
+          <!-- accordion -->
+          <div class="krds-accordion">
+            <div class="accordion-item">
+              <h5 class="accordion-header"><button type="button" id="accordionHeaderSample01" class="btn-accordion"
+                  aria-controls="accordionCollapseSample01">아코디언 타이틀 영역</button></h5>
+              <div id="accordionCollapseSample01" class="accordion-collapse collapse"
+                aria-labelledby="accordionHeaderSample01">
+                <div class="accordion-body">
+                  <!-- accordion contents -->
+                  아코디언 내용 영역
+                  <!-- //accordion contents -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h5 class="accordion-header"><button type="button" id="accordionHeaderSample02" class="btn-accordion"
+                  aria-controls="accordionCollapseSample02">아코디언 타이틀 영역</button></h5>
+              <div id="accordionCollapseSample02" class="accordion-collapse collapse"
+                aria-labelledby="accordionHeaderSample02">
+                <div class="accordion-body">
+                  <!-- accordion contents -->
+                  아코디언 내용 영역
+                  <!-- //accordion contents -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //accordion -->
+
+
+
+          <h2>badge_numberr</h2>
+          <div style="width:100%">
+            <!-- badge -->
+            <div class="krds-badge-wrap">
+              <span class="krds-badge bg-primary number">5</span>
+              <span class="krds-badge bg-primary number">999+</span>
+            </div>
+
+            <div class="krds-badge-wrap">
+              <span class="krds-badge bg-point number">5</span>
+              <span class="krds-badge bg-point number">999+</span>
+            </div>
+            <!-- //badge -->
+          </div>
+
+
+          <h2>badge_size</h2>
+          <div style="width:100%">
+            <!-- badge -->
+            <div class="krds-badge-wrap">
+              <span class="krds-badge large outline-primary">Label</span>
+              <span class="krds-badge large outline-secondary">Label</span>
+              <span class="krds-badge large outline-gray">Label</span>
+              <span class="krds-badge large outline-point">Label</span>
+              <span class="krds-badge large outline-danger">Label</span>
+              <span class="krds-badge large outline-warning">Label</span>
+              <span class="krds-badge large outline-success">Label</span>
+              <span class="krds-badge large outline-information">Label</span>
+              <span class="krds-badge large outline-disabled">Label</span>
+            </div>
+
+            <div class="krds-badge-wrap">
+              <span class="krds-badge medium bg-primary">Label</span>
+              <span class="krds-badge medium bg-secondary">Label</span>
+              <span class="krds-badge medium bg-gray">Label</span>
+              <span class="krds-badge medium bg-point">Label</span>
+              <span class="krds-badge medium bg-danger">Label</span>
+              <span class="krds-badge medium bg-warning">Label</span>
+              <span class="krds-badge medium bg-success">Label</span>
+              <span class="krds-badge medium bg-information">Label</span>
+              <span class="krds-badge medium bg-disabled">Label</span>
+            </div>
+
+            <div class="krds-badge-wrap">
+              <span class="krds-badge small bg-light-primary">Label</span>
+              <span class="krds-badge small bg-light-secondary">Label</span>
+              <span class="krds-badge small bg-light-gray">Label</span>
+              <span class="krds-badge small bg-light-point">Label</span>
+              <span class="krds-badge small bg-light-danger">Label</span>
+              <span class="krds-badge small bg-light-warning">Label</span>
+              <span class="krds-badge small bg-light-success">Label</span>
+              <span class="krds-badge small bg-light-information">Label</span>
+              <span class="krds-badge small bg-light-disabled">Label</span>
+            </div>
+            <!-- //badge -->
+          </div>
+
+
+          <h2>breadcrumb</h2>
+          <div style="width:100%">
+            <!-- breadcrumb -->
+            <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="home"><a href="#" class="txt">홈</a></li>
+                <li><a href="#" class="txt">서비스 신청</a></li>
+                <li><a href="#" class="txt">서비스 신청2</a></li>
+              </ol>
+            </nav>
+            <!-- breadcrumb -->
+          </div>
+
+
+          <h2>button_hierarchy</h2>
+          <div style="width:100%">
+            <!-- button -->
+            <button type="button" class="krds-btn primary">버튼 : primary</button>
+            <button type="button" class="krds-btn secondary">버튼 : secondary</button>
+            <button type="button" class="krds-btn tertiary">버튼 : tertiary</button>
+            <button type="button" class="krds-btn quaternary">버튼 : Quaternary</button>
+            <button type="button" class="krds-btn black">버튼 : black</button>
+            <button type="button" class="krds-btn blue">버튼 : blue</button>
+
+			 <button type="button" class="krds-btn tertiary fileBtn">다운로드 <i class="svg-icon ico-down"></i></button>
+			 <button type="button" class="krds-btn tertiary fileBtn">삭제<i class="svg-icon ico-delete-fill"></i></button>
+            <!-- //button -->
+          </div>
+
+          <h2>button_icon</h2>
+          <div style="width:100%">
+			
+            <!-- button -->
+            <button type="button" class="krds-btn icon">
+              <span class="sr-only">검색</span>
+              <i class="svg-icon ico-sch"></i>
+            </button>
+            <button type="button" class="krds-btn icon medium">
+              <span class="sr-only">입력한 비밀번호 보기</span>
+              <i class="svg-icon ico-pw-visible"></i>
+            </button>
+            <button class="krds-btn icon medium btn-help-exec">
+              <span class="sr-only">도움말</span>
+              <i class="svg-icon ico-help"></i>
+            </button>
+
+            <button type="button" class="krds-btn large icon border">
+              <span class="sr-only">새로고침</span>
+              <i class="svg-icon ico-refresh"></i>
+            </button>
+            <button type="button" class="krds-btn large icon border">
+              <span class="sr-only">열기</span>
+              <i class="svg-icon ico-angle down"></i>
+            </button>
+            <button type="button" class="krds-btn xlarge icon border">
+              <span class="sr-only">이전 약관</span>
+              <i class="svg-icon ico-angle left"></i>
+            </button>
+            <button type="button" class="krds-btn xlarge icon border" disabled>
+              <span class="sr-only">다음 약관</span>
+              <i class="svg-icon ico-angle right"></i>
+            </button>
+            <!-- //button -->
+          </div>
+
+
+          <h2>button_size</h2>
+          <div style="width:100%">
+            <!-- button -->
+<button type="button" class="krds-btn xsmall">x-small 버튼</button>
+<button type="button" class="krds-btn small">small 버튼</button>
+<button type="button" class="krds-btn medium">medium 버튼</button>
+<button type="button" class="krds-btn large">large 버튼</button>
+<button type="button" class="krds-btn xlarge">x-large 버튼</button>
+<!-- //button -->
+          </div>
+
+          <h2>button_text</h2>
+          <div style="width:100%">
+            <!-- button -->
+<button type="button" class="krds-btn small text">텍스트 버튼</button>
+<button type="button" class="krds-btn xsmall text">찜하기 <i class="svg-icon ico-like"></i></button>
+<button type="button" class="krds-btn small text">주민등록표초본 <i class="svg-icon ico-angle right"></i></button>
+<button type="button" class="krds-btn medium text">검색 <i class="svg-icon ico-sch"></i></button>
+<button type="button" class="krds-btn large text">바로가기 <i class="svg-icon ico-go"></i></button>
+<button type="button" class="krds-btn xlarge text">자세히 보기 <i class="svg-icon ico-more"></i></button>
+<button type="button" class="krds-btn text">파일다운로드 <i class="svg-icon ico-down"></i></button>
+<button type="button" class="krds-btn text" disabled>필터 <i class="svg-icon ico-filter"></i></button>
+<!-- //button -->
+          </div>
+
+          <h2>button_with_icon</h2>
+          <div style="width:100%">
+            <!-- button -->
+<button type="button" class="krds-btn xsmall">
+	x-small 버튼
+	<i class="svg-icon ico-sch"></i>
+</button>
+<button type="button" class="krds-btn small">
+	small 버튼
+	<i class="svg-icon ico-sch"></i>
+</button>
+<button type="button" class="krds-btn medium">
+	medium 버튼
+	<i class="svg-icon ico-sch"></i>
+</button>
+<button type="button" class="krds-btn large">
+	large 버튼
+	<i class="svg-icon ico-sch"></i>
+</button>
+<button type="button" class="krds-btn xlarge">
+	<i class="svg-icon ico-sch"></i>
+	x-large 버튼
+</button>
+<!-- //button -->
+          </div>
+
+          
+          
+          <h2>button</h2>
+          <div style="width:100%">
+            <!-- button -->
+<button type="button" class="krds-btn">버튼</button>
+<!-- //button -->
+          </div>
+
+          
+          
+          <h2>calendar_range</h2>
+          <div style="width:100%">
+            <!-- calendar -->
+<div class="form-group">
+	<div class="form-tit">
+		날짜선택
+	</div>
+	<div class="form-conts calendar-conts">
+		<div class="calendar-input">
+			<ul class="input-group range set">
+				<li>
+					<input type="number" class="krds-input datepicker" placeholder="시작날짜" title="시작날짜 입력">
+				</li>
+				<li class="mark">-</li>
+				<li>
+					<input type="number" class="krds-input datepicker" placeholder="종료날짜" title="종료날짜 입력">
+				</li>
+			</ul>
+			<button type="button" class="krds-btn medium icon form-btn-datepicker">
+				<span class="sr-only">달력 열기</span>
+				<i class="svg-icon ico-calendar"></i>
+			</button>
+		</div>
+		<div class="krds-calendar-area">
+			<div class="calendar-wrap bottom" aria-label="달력">
+				<div class="calendar-head">
+					<button type="button" class="btn-cal-move prev"><span class="sr-only">이전 달</span></button>
+					<div class="calendar-switch-wrap">
+						<div class="calendar-drop-down">
+							<button type="button" class="btn-cal-switch year" aria-label="연도 선택">2024년</button>
+							<div class="calendar-select calendar-year-wrap">
+								<ul class="sel year">
+									<li>
+										<button type="button">2001년</button>
+									</li>
+									<li>
+										<button type="button">2002년</button>
+									</li>
+									<li>
+										<button type="button" disabled>2003년</button>
+									</li>
+									<li>
+										<button type="button">2004년</button>
+									</li>
+									<li>
+										<button type="button">2005년</button>
+									</li>
+									<li>
+										<button type="button">2006년</button>
+									</li>
+									<li>
+										<button type="button">2007년</button>
+									</li>
+									<li>
+										<button type="button">2008년</button>
+									</li>
+									<li>
+										<button type="button">2009년</button>
+									</li>
+									<li>
+										<button type="button">2010년</button>
+									</li>
+									<li>
+										<button type="button" class="active">2011년</button>
+									</li>
+									<li>
+										<button type="button">2012년</button>
+									</li>
+									<li>
+										<button type="button">2013년</button>
+									</li>
+									<li>
+										<button type="button">2014년</button>
+									</li>
+									<li>
+										<button type="button">2015년</button>
+									</li>
+									<li>
+										<button type="button">2016년</button>
+									</li>
+									<li>
+										<button type="button">2017년</button>
+									</li>
+									<li>
+										<button type="button">2018년</button>
+									</li>
+									<li>
+										<button type="button">2019년</button>
+									</li>
+									<li>
+										<button type="button">2020년</button>
+									</li>
+									<li>
+										<button type="button">2021년</button>
+									</li>
+									<li>
+										<button type="button">2022년</button>
+									</li>
+									<li>
+										<button type="button">2023년</button>
+									</li>
+									<li>
+										<button type="button">2024년</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="calendar-drop-down">
+							<button type="button" class="btn-cal-switch month" aria-label="월 선택">12월</button>
+							<div class="calendar-select calendar-mon-wrap">
+								<ul class="sel month">
+									<li>
+										<button type="button" disabled>01월</button>
+									</li>
+									<li>
+										<button type="button" class="active">02월</button>
+									</li>
+									<li>
+										<button type="button">03월</button>
+									</li>
+									<li>
+										<button type="button">04월</button>
+									</li>
+									<li>
+										<button type="button">05월</button>
+									</li>
+									<li>
+										<button type="button">06월</button>
+									</li>
+									<li>
+										<button type="button">07월</button>
+									</li>
+									<li>
+										<button type="button">08월</button>
+									</li>
+									<li>
+										<button type="button">09월</button>
+									</li>
+									<li>
+										<button type="button">10월</button>
+									</li>
+									<li>
+										<button type="button">11월</button>
+									</li>
+									<li>
+										<button type="button">12월</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn-cal-move next"><span class="sr-only">다음 달</span></button>
+				</div>
+				<div class="calendar-body">
+					<div class="calendar-table-wrap">
+						<table class="calendar-tbl">
+							<caption>
+								2024년 12월
+							</caption>
+							<thead>
+								<tr>
+									<th>일</th>
+									<th>월</th>
+									<th>화</th>
+									<th>수</th>
+									<th>목</th>
+									<th>금</th>
+									<th>토</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="old day-off"><button type="button" class="btn-set-date"><span>26</span></button></td>
+									<td class="old"><button type="button" class="btn-set-date"><span>27</span></button></td>
+									<td class="old"><button type="button" class="btn-set-date"><span>28</span></button></td>
+									<td class="old"><button type="button" class="btn-set-date"><span>29</span></button></td>
+									<td class="old"><button type="button" class="btn-set-date"><span>30</span></button></td>
+									<td><button type="button" class="btn-set-date"><span>1</span></button></td>
+									<td><button type="button" class="btn-set-date"><span>2</span></button></td>
+								</tr>
+								<tr>
+									<td class="day-off"><button type="button" class="btn-set-date"><span>3</span></button></td>
+									<td><button type="button" class="btn-set-date"><span>4</span></button></td>
+									<td><button type="button" class="btn-set-date"><span>5</span></button></td>
+									<td class="day-event"><button type="button" class="btn-set-date"><span>6</span></button></td>
+									<td class="period start"><button type="button" class="btn-set-date"><span>7</span></button></td>
+									<td class="period"><button type="button" class="btn-set-date"><span>8</span></button></td>
+									<td class="period"><button type="button" class="btn-set-date"><span>9</span></button></td>
+								</tr>
+								<tr>
+									<td class="period day-off"><button type="button" class="btn-set-date"><span>10</span></button></td>
+									<td class="period"><button type="button" class="btn-set-date"><span>11</span></button></td>
+									<td class="period"><button type="button" class="btn-set-date"><span>12</span></button></td>
+									<td class="period"><button type="button" class="btn-set-date"><span>13</span></button></td>
+									<td class="period"><button type="button" class="btn-set-date"><span>14</span></button></td>
+									<td class="period"><button type="button" class="btn-set-date"><span>15</span></button></td>
+									<td class="period end"><button type="button" class="btn-set-date"><span>16</span></button></td>
+								</tr>
+								<tr>
+									<td class="day-off"><button type="button" class="btn-set-date"><span>17</span></button></td>
+									<td><button type="button" class="btn-set-date"><span>18</span></button></td>
+									<td><button type="button" class="btn-set-date"><span>19</span></button></td>
+									<td class="today"><button type="button" class="btn-set-date"><span>20</span></button></td>
+									<td><button type="button" class="btn-set-date"><span>21</span></button></td>
+									<td><button type="button" class="btn-set-date"><span>22</span></button></td>
+									<td><button type="button" class="btn-set-date"><span>23</span></button></td>
+								</tr>
+								<tr>
+									<td class="day-off"><button type="button" class="btn-set-date"><span>24</span></button></td>
+									<td><button type="button" class="btn-set-date"><span>25</span></button></td>
+									<td><button type="button" class="btn-set-date"><span>26</span></button></td>
+									<td><button type="button" class="btn-set-date"><span>27</span></button></td>
+									<td><button type="button" class="btn-set-date"><span>28</span></button></td>
+									<td><button type="button" class="btn-set-date"><span>29</span></button></td>
+									<td><button type="button" class="btn-set-date"><span>30</span></button></td>
+								</tr>
+								<tr>
+									<td class="day-off"><button type="button" class="btn-set-date"><span>31</span></button></td>
+									<td class="new"><button type="button" class="btn-set-date"><span>1</span></button></td>
+									<td class="new"><button type="button" class="btn-set-date"><span>2</span></button></td>
+									<td class="new"><button type="button" class="btn-set-date"><span>3</span></button></td>
+									<td class="new"><button type="button" class="btn-set-date"><span>4</span></button></td>
+									<td class="new"><button type="button" class="btn-set-date"><span>5</span></button></td>
+									<td class="new"><button type="button" class="btn-set-date"><span>6</span></button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="calendar-footer">
+					<div class="calendar-btn-wrap">
+						<button type="button" class="krds-btn small text" id="get-today">오늘</button>
+						<button type="button" class="krds-btn small tertiary">취소</button>
+						<button type="button" class="krds-btn small primary">확인</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //calendar -->
+          </div>
+
+          
+          
+          <h2>calendar</h2>
+          <div style="width:100%">
+            <!-- calendar -->
+<div class="form-group">
+	<div class="form-tit">
+		<label for="cal">기간선택</label>
+	</div>
+	<div class="form-conts calendar-conts">
+		<div class="calendar-input">
+			<input type="number" class="krds-input datepicker cal" placeholder="YYYY.MM.DD" id="cal">
+			<button type="button" class="krds-btn medium icon form-btn-datepicker">
+				<span class="sr-only">달력 열기</span>
+				<i class="svg-icon ico-calendar"></i>
+			</button>
+		</div>
+		<div class="krds-calendar-area">
+			<div class="calendar-wrap bottom single" aria-label="달력">
+				<div class="calendar-head">
+					<button type="button" class="btn-cal-move prev"><span class="sr-only">이전 달</span></button>
+					<div class="calendar-switch-wrap">
+						<div class="calendar-drop-down">
+							<button type="button" class="btn-cal-switch year" aria-label="연도 선택">2024년</button>
+							<div class="calendar-select calendar-year-wrap">
+								<ul class="sel year">
+									<li>
+										<button type="button">2001년</button>
+									</li>
+									<li>
+										<button type="button" class="active">2002년</button>
+									</li>
+									<li>
+										<button type="button" disabled>2003년</button>
+									</li>
+									<li>
+										<button type="button">2004년</button>
+									</li>
+									<li>
+										<button type="button">2005년</button>
+									</li>
+									<li>
+										<button type="button">2006년</button>
+									</li>
+									<li>
+										<button type="button">2007년</button>
+									</li>
+									<li>
+										<button type="button">2008년</button>
+									</li>
+									<li>
+										<button type="button">2009년</button>
+									</li>
+									<li>
+										<button type="button">2010년</button>
+									</li>
+									<li>
+										<button type="button">2011년</button>
+									</li>
+									<li>
+										<button type="button">2012년</button>
+									</li>
+									<li>
+										<button type="button">2013년</button>
+									</li>
+									<li>
+										<button type="button">2014년</button>
+									</li>
+									<li>
+										<button type="button">2015년</button>
+									</li>
+									<li>
+										<button type="button">2016년</button>
+									</li>
+									<li>
+										<button type="button">2017년</button>
+									</li>
+									<li>
+										<button type="button">2018년</button>
+									</li>
+									<li>
+										<button type="button">2019년</button>
+									</li>
+									<li>
+										<button type="button">2020년</button>
+									</li>
+									<li>
+										<button type="button">2021년</button>
+									</li>
+									<li>
+										<button type="button">2022년</button>
+									</li>
+									<li>
+										<button type="button">2023년</button>
+									</li>
+									<li>
+										<button type="button">2024년</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="calendar-drop-down">
+							<button type="button" class="btn-cal-switch month" aria-label="월 선택">12월</button>
+							<div class="calendar-select calendar-mon-wrap">
+								<ul class="sel month">
+									<li>
+										<button type="button">01월</button>
+									</li>
+									<li>
+										<button type="button" disabled>02월</button>
+									</li>
+									<li>
+										<button type="button">03월</button>
+									</li>
+									<li>
+										<button type="button">04월</button>
+									</li>
+									<li>
+										<button type="button">05월</button>
+									</li>
+									<li>
+										<button type="button">06월</button>
+									</li>
+									<li>
+										<button type="button">07월</button>
+									</li>
+									<li>
+										<button type="button">08월</button>
+									</li>
+									<li>
+										<button type="button">09월</button>
+									</li>
+									<li>
+										<button type="button">10월</button>
+									</li>
+									<li>
+										<button type="button">11월</button>
+									</li>
+									<li>
+										<button type="button" class="active">12월</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn-cal-move next"><span class="sr-only">다음 달</span></button>
+				</div>
+				<div class="calendar-body">
+					<div class="calendar-table-wrap">
+						<table class="calendar-tbl">
+							<caption>
+								2024년 12월
+							</caption>
+							<thead>
+							<tr>
+								<th>일</th>
+								<th>월</th>
+								<th>화</th>
+								<th>수</th>
+								<th>목</th>
+								<th>금</th>
+								<th>토</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td class="old day-off"><button type="button" class="btn-set-date"><span>26</span></button></td>
+								<td class="old"><button type="button" class="btn-set-date"><span>27</span></button></td>
+								<td class="old"><button type="button" class="btn-set-date"><span>28</span></button></td>
+								<td class="old"><button type="button" class="btn-set-date"><span>29</span></button></td>
+								<td class="old"><button type="button" class="btn-set-date"><span>30</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>1</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>2</span></button></td>
+							</tr>
+							<tr>
+								<td class="day-off"><button type="button" class="btn-set-date"><span>3</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>4</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>5</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>6</span></button></td>
+								<td class="period start end"><button type="button" class="btn-set-date"><span>7</span></button></td>
+								<td class="day-event"><button type="button" class="btn-set-date"><span>8</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>9</span></button></td>
+							</tr>
+							<tr>
+								<td class="day-off"><button type="button" class="btn-set-date"><span>10</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>11</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>12</span></button></td>
+								<td class="disabled"><button type="button" class="btn-set-date" disabled><span>13</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>14</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>15</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>16</span></button></td>
+							</tr>
+							<tr>
+								<td class="day-off"><button type="button" class="btn-set-date"><span>17</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>18</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>19</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>20</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>21</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>22</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>23</span></button></td>
+							</tr>
+							<tr>
+								<td class="day-off"><button type="button" class="btn-set-date"><span>24</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>25</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>26</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>27</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>28</span></button></td>
+								<td><button type="button" class="btn-set-date"><span>29</span></button></td>
+								<td class="today"><button type="button" class="btn-set-date"><span>30</span></button></td>
+							</tr>
+							<tr>
+								<td class="day-off"><button type="button" class="btn-set-date"><span>31</span></button></td>
+								<td class="new"><button type="button" class="btn-set-date"><span>1</span></button></td>
+								<td class="new"><button type="button" class="btn-set-date"><span>2</span></button></td>
+								<td class="new"><button type="button" class="btn-set-date"><span>3</span></button></td>
+								<td class="new"><button type="button" class="btn-set-date"><span>4</span></button></td>
+								<td class="new"><button type="button" class="btn-set-date"><span>5</span></button></td>
+								<td class="new"><button type="button" class="btn-set-date"><span>6</span></button></td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="calendar-footer">
+					<div class="calendar-btn-wrap">
+						<button type="button" class="krds-btn small text" id="get-today">오늘</button>
+						<button type="button" class="krds-btn small tertiary">취소</button>
+						<button type="button" class="krds-btn small primary">확인</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //calendar -->
+          </div>
+
+          
+          
+          <h2>carousel_banner</h2>
+          <div style="width:100%">
+            <!-- carousel -->
+<!--
+ 	해당 컴포넌트 사용 시 페이지에
+ 	/resources/css/plugin/swiper-bundle.min.css
+ 	/resources/js/plugin/swiper-bundle.min.js
+ 	를 추가 필요
+ -->
+<div class="main-sect">
+  <div class="inner">
+      <div class="type-wrap">
+          <div class="d-fix">
+              <div class="in">
+                  <div class="main-d-ban-swiper">
+                      <div class="swiper">
+                          <ul class="swiper-wrapper">
+                              <li class="swiper-slide">
+                                  <div class="text">
+                                      <p class="cate">서브타이틀</p>
+                                      <p class="tit">타이틀</p>
+                                  </div>
+                                  <div class="im">
+                                      <svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+                                          <rect width="243" height="178" fill="#E6E8EA" />
+                                      </svg>
+                                  </div>
+                              </li>
+                              <li class="swiper-slide">
+                                  <div class="text">
+                                      <p class="cate">서브타이틀</p>
+                                      <p class="tit">타이틀</p>
+                                  </div>
+                                  <div class="im">
+                  <svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+                    <rect width="243" height="178" fill="#E6E8EA"/>
+                  </svg>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="swiper-indicator">
+                          <div class="swiper-pagination"></div>
+                          <div class="swiper-controller">
+                              <button type="button" class="swiper-button-play">
+                                  <span class="sr-only">슬라이드 재생</span>
+                              </button>
+                              <button type="button" class="swiper-button-stop">
+                                  <span class="sr-only">슬라이드 멈춤</span>
+                              </button>
+                          </div>
+                          <div class="swiper-navigation">
+                              <button type="button" class="swiper-button-prev">
+                                  <span class="sr-only">이전</span>
+                              </button>
+                              <button type="button" class="swiper-button-next">
+                                  <span class="sr-only">다음</span>
+                              </button>
+                              <a href="#" class="swiper-button-more">
+                                  <span class="sr-only">더 보기</span>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- //carousel -->
+
+<script>
+  const eleBanSwiper = new Swiper(".main-d-ban-swiper .swiper", {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      speed: 400,
+      loop: true,
+      autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+      },
+      navigation: {
+          nextEl: ".main-d-ban-swiper .swiper-button-next",
+          prevEl: ".main-d-ban-swiper .swiper-button-prev",
+      },
+      pagination: {
+          el: ".main-d-ban-swiper .swiper-pagination",
+          type: "fraction",
+      },
+  });
+  const $eleBanSwiperPlay = document.querySelector(".main-d-ban-swiper .swiper-button-play");
+  const $eleBanSwiperStop = document.querySelector(".main-d-ban-swiper .swiper-button-stop");
+
+  $eleBanSwiperPlay.style.display = "none";
+
+  $eleBanSwiperPlay.addEventListener("click", () => {
+      eleBanSwiper.autoplay.start();
+      $eleBanSwiperStop.style.display = "";
+      $eleBanSwiperPlay.style.display = "none";
+  });
+
+  $eleBanSwiperStop.addEventListener("click", () => {
+      eleBanSwiper.autoplay.stop();
+      $eleBanSwiperStop.style.display = "none";
+      $eleBanSwiperPlay.style.display = "";
+  });
+</script>
+
+          </div>
+
+          
+          
+          <h2>carousel</h2>
+          <div style="width:100%">
+            <!-- carousel -->
+<!--
+ 	해당 컴포넌트 사용 시 페이지에
+ 	/resources/css/plugin/swiper-bundle.min.css
+ 	/resources/js/plugin/swiper-bundle.min.js
+ 	를 추가 필요
+ -->
+<!-- visual banner -->
+<div class="main-vban-wrap bg">
+	<div class="inner">
+		<div class="vb-swiper">
+			<div class="swiper">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide">
+						<div class="in">
+							<div class="text">
+								<p class="tit">타이틀 영역 <br class="w-hide">타이틀 영역</p>
+								<p class="txt">컨텐츠 영역 컨텐츠 영역 <br class="w-hide">컨텐츠 영역 컨텐츠 영역</p>
+								<a href="#" class="krds-btn primary">버튼 영역</a>
+							</div>
+							<div class="im">
+								<svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+									<rect width="243" height="178" fill="#E6E8EA"/>
+								</svg>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="in">
+							<div class="text">
+								<p class="tit">타이틀 영역 <br class="w-hide">타이틀 영역</p>
+								<p class="txt">컨텐츠 영역 컨텐츠 영역 <br class="w-hide">컨텐츠 영역 컨텐츠 영역</p>
+								<a href="#" class="krds-btn primary">버튼 영역</a>
+							</div>
+							<div class="im">
+								<svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+									<rect width="243" height="178" fill="#E6E8EA"/>
+								</svg>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="in">
+							<div class="text">
+								<p class="tit">타이틀 영역 <br class="w-hide">타이틀 영역</p>
+								<p class="txt">컨텐츠 영역 컨텐츠 영역 <br class="w-hide">컨텐츠 영역 컨텐츠 영역</p>
+								<a href="#" class="krds-btn primary">버튼 영역</a>
+							</div>
+							<div class="im">
+								<svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+									<rect width="243" height="178" fill="#E6E8EA"/>
+								</svg>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="in">
+							<div class="text">
+								<p class="tit">타이틀 영역 <br class="w-hide">타이틀 영역</p>
+								<p class="txt">컨텐츠 영역 컨텐츠 영역 <br class="w-hide">컨텐츠 영역 컨텐츠 영역</p>
+								<a href="#" class="krds-btn primary">버튼 영역</a>
+							</div>
+							<div class="im">
+								<svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+									<rect width="243" height="178" fill="#E6E8EA"/>
+								</svg>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<button type="button" class="swiper-button-prev">
+				<span class="sr-only">이전</span>
+			</button>
+			<button type="button" class="swiper-button-next">
+				<span class="sr-only">다음</span>
+			</button>
+			<div class="swiper-indicator text-center">
+				<div class="swiper-pagination"></div>
+				<a href="#" class="swiper-button-more">
+					<span class="sr-only">더 보기</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //visual banner -->
+
+<script>
+	//비주얼 배너
+	const vbSwiper = new Swiper('.vb-swiper .swiper', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		speed: 400,
+		loop: true,
+		navigation: {
+			nextEl: '.vb-swiper .swiper-button-next',
+			prevEl: '.vb-swiper .swiper-button-prev',
+		},
+		pagination: {
+			el: ".vb-swiper .swiper-pagination",
+			clickable: true,
+		},
+	});
+
+
+  
+</script>
+<!-- //carousel -->
+          </div>
+
+          
+          
+          <h2>checkbox_chip</h2>
+          <div style="width:100%">
+            <!-- checkbox -->
+<div class="krds-check-area">
+	<div class="krds-form-chip">
+		<input type="checkbox" class="checkbox" id="chk_chip_1">
+		<label class="krds-form-chip-outline" for="chk_chip_1">chip 상태 : default</label>
+	</div>
+	<div class="krds-form-chip">
+		<input type="checkbox" class="checkbox" id="chk_chip_2" checked>
+		<label class="krds-form-chip-outline" for="chk_chip_2">chip 상태 : checked</label>
+	</div>
+	<div class="krds-form-chip">
+		<input type="checkbox" class="checkbox" id="chk_chip_3" disabled>
+		<label class="krds-form-chip-outline" for="chk_chip_3">chip 상태 : disabled</label>
+	</div>
+</div>
+<!-- //checkbox -->
+          </div>
+
+          
+          
+          <h2>checkbox_size</h2>
+          <div style="width:100%">
+            <!-- checkbox -->
+<div class="krds-check-area">
+	<div class="krds-form-check medium">
+		<input type="checkbox" id="chk_1-2a">
+		<label for="chk_1-2a">사이즈 : medium</label>
+	</div>
+	<div class="krds-form-check large">
+		<input type="checkbox" id="chk_1-3a">
+		<label for="chk_1-3a">사이즈 : large</label>
+	</div>
+</div>
+<!-- //checkbox -->
+          </div>
+
+          
+          
+          <h2>checkbox</h2>
+          <div style="width:100%">
+            <!-- checkbox -->
+<div class="fieldset">
+	<div class="form-group">
+		<div class="form-conts">
+			<div class="krds-check-area">
+				<div class="krds-form-check">
+					<input type="checkbox" name="chk_1" id="chk_1">
+					<label for="chk_1">기본</label>
+				</div>
+				<div class="krds-form-check">
+					<input type="checkbox" name="chk_1" id="chk_2" checked>
+					<label for="chk_2">선택됨</label>
+				</div>
+				<div class="krds-form-check">
+					<input type="checkbox" name="chk_1" id="chk_3" disabled>
+					<label for="chk_3">비활성화</label>
+				</div>
+				<div class="krds-form-check">
+					<input type="checkbox" name="chk_1" id="chk_4" disabled checked>
+					<label for="chk_4">선택된 비활성화</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="form-conts">
+			<div class="krds-check-area chk-column">
+				<div class="krds-form-check ">
+					<input type="checkbox" id="chk_additional_1" checked>
+					<label for="chk_additional_1">체크박스</label>
+					<div class="krds-form-check-cnt">
+						<p class="krds-form-check-p">
+							부가적인 설명이 들어갑니다.
+						</p>
+					</div>
+				</div>
+				<div class="krds-form-check">
+					<input type="checkbox" id="chk_additional_2">
+					<label for="chk_additional_2">체크박스</label>
+					<div class="krds-form-check-cnt">
+						<p class="krds-form-check-p">
+							부가적인 설명이 들어갑니다.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //checkbox -->
+          </div>
+
+          
+          
+          <h2>coach_mark</h2>
+          <div style="width:100%">
+            <!-- coach mark -->
+<div class="txt-box bg-white bg-white krds-coach-mark">
+	<!-- 따라하기 말풍선 -->
+	<div class="coach-balloon">
+		<h5 class="sr-only">따라하기 가이드</h5>
+		<h6 class="coach-tit">1단계 : 코치 마크</h6>
+		<p class="desc">1단계 코치 마크 내용입니다.</p>
+		<div class="coach-controls">
+			<div class="num">
+				<span class="sr-only">현재 단계</span>
+				<strong>1</strong>
+				<span class="sr-only">총 단계</span>
+				<span>4</span>
+			</div>
+			<div class="btn-wrap">
+				<button type="button" class="krds-btn small text">그만보기</button>
+				<button type="button" class="krds-btn small tertiary">다음으로</button>
+			</div>
+		</div>
+	</div>
+	<!--// 따라하기 말풍선 -->
+
+	<!-- 코치 마크 내용 -->
+	<div>
+		<h3>코치 마크 내용</h3>
+	</div>
+	<!-- //코치 마크 내용 -->
+</div>
+<!-- coach mark -->
+          </div>
+
+          
+          
+          <h2>contextual_help</h2>
+          <div style="width:100%">
+            <!-- contextual help -->
+<!-- tooltip : 위치 - 상단 왼쪽 -->
+<div class="krds-contextual-help top left">
+	<p class="tooltip-txt">예시이미지(상단 왼쪽)</p>
+	<div class="tooltip-action">
+		<button type="button" class="krds-btn medium icon tooltip-btn">
+			<span class="sr-only">도움말</span>
+			<i class="svg-icon ico-tooltip"></i>
+		</button>
+		<div class="tooltip-popover" role="tooltip">
+			<h4 class="tooltip-title">도움말 제목</h4>
+			<div class="tooltip-contents">
+				<p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가 요청하는 경우에만 화면에 표시된다.</p>
+				<div class="btn-wrap">
+					<a href="#;" class="krds-btn xsmall text">바로가기 <i class="svg-icon ico-angle right"></i></a>
+				</div>
+			</div>
+			<button type="button" class="krds-btn xsmall icon tooltip-close">
+				<span class="sr-only">닫기</span>
+				<i class="svg-icon ico-modal-close"></i>
+			</button>
+		</div>
+	</div>
+</div>
+<!-- //tooltip : 위치 - 상단 왼쪽 -->
+
+<!-- tooltip : 위치 - 상단 중앙 -->
+<div class="krds-contextual-help top center">
+	<p class="tooltip-txt">예시이미지(상단 중앙)</p>
+	<div class="tooltip-action">
+		<button type="button" class="krds-btn medium icon tooltip-btn" aria-expanded="false">
+			<span class="sr-only">도움말</span>
+			<i class="svg-icon ico-tooltip"></i>
+		</button>
+		<div class="tooltip-popover" role="tooltip">
+			<h4 class="tooltip-title">도움말 제목</h4>
+			<div class="tooltip-contents">
+				<p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가 요청하는 경우에만 화면에 표시된다.</p>
+				<div class="btn-wrap">
+					<a href="#;" class="krds-btn xsmall text">바로가기 <i class="svg-icon ico-angle right"></i></a>
+				</div>
+			</div>
+			<button type="button" class="krds-btn xsmall icon tooltip-close">
+				<span class="sr-only">닫기</span>
+				<i class="svg-icon ico-modal-close"></i>
+			</button>
+		</div>
+	</div>
+</div>
+<!-- //tooltip : 위치 - 상단 중앙 -->
+
+<!-- tooltip : 위치 - 상단 오른쪽 -->
+<div class="krds-contextual-help top right">
+	<p class="tooltip-txt">예시이미지(상단 오른쪽)</p>
+	<div class="tooltip-action">
+		<button type="button" class="krds-btn medium icon tooltip-btn" aria-expanded="false">
+			<span class="sr-only">도움말</span>
+			<i class="svg-icon ico-tooltip"></i>
+		</button>
+		<div class="tooltip-popover" role="tooltip">
+			<h4 class="tooltip-title">도움말 제목</h4>
+			<div class="tooltip-contents">
+				<p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가 요청하는 경우에만 화면에 표시된다.</p>
+				<div class="btn-wrap">
+					<a href="#;" class="krds-btn xsmall text">바로가기 <i class="svg-icon ico-angle right"></i></a>
+				</div>
+			</div>
+			<button type="button" class="krds-btn xsmall icon tooltip-close">
+				<span class="sr-only">닫기</span>
+				<i class="svg-icon ico-modal-close"></i>
+			</button>
+		</div>
+	</div>
+</div>
+<!-- //tooltip : 위치 - 상단 오른쪽 -->
+
+<br><br>
+
+<!-- tooltip : 위치 - 하단 왼쪽 -->
+<div class="krds-contextual-help bottom left">
+	<p class="tooltip-txt">예시이미지(하단 왼쪽)</p>
+	<div class="tooltip-action">
+		<button type="button" class="krds-btn medium icon tooltip-btn" aria-expanded="false">
+			<span class="sr-only">도움말</span>
+			<i class="svg-icon ico-tooltip"></i>
+		</button>
+		<div class="tooltip-popover" role="tooltip">
+			<h4 class="tooltip-title">도움말 제목</h4>
+			<div class="tooltip-contents">
+				<p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가 요청하는 경우에만 화면에 표시된다.</p>
+				<div class="btn-wrap">
+					<a href="#;" class="krds-btn xsmall text">바로가기 <i class="svg-icon ico-angle right"></i></a>
+				</div>
+			</div>
+			<button type="button" class="krds-btn xsmall icon tooltip-close">
+				<span class="sr-only">닫기</span>
+				<i class="svg-icon ico-modal-close"></i>
+			</button>
+		</div>
+	</div>
+</div>
+<!-- //tooltip : 위치 - 하단 왼쪽 -->
+
+<!-- tooltip : 위치 - 하단 중앙 -->
+<div class="krds-contextual-help bottom center">
+	<p class="tooltip-txt">예시이미지(하단 중앙)</p>
+	<div class="tooltip-action">
+		<button type="button" class="krds-btn medium icon tooltip-btn" aria-expanded="false">
+			<span class="sr-only">도움말</span>
+			<i class="svg-icon ico-tooltip"></i>
+		</button>
+		<div class="tooltip-popover" role="tooltip">
+			<h4 class="tooltip-title">도움말 제목</h4>
+			<div class="tooltip-contents">
+				<p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가 요청하는 경우에만 화면에 표시된다.</p>
+				<div class="btn-wrap">
+					<a href="#;" class="krds-btn xsmall text">바로가기 <i class="svg-icon ico-angle right"></i></a>
+				</div>
+			</div>
+			<button type="button" class="krds-btn xsmall icon tooltip-close">
+				<span class="sr-only">닫기</span>
+				<i class="svg-icon ico-modal-close"></i>
+			</button>
+		</div>
+	</div>
+</div>
+<!-- //tooltip : 위치 - 하단 중앙 -->
+
+<!-- tooltip : 위치 - 하단 오른쪽 -->
+<div class="krds-contextual-help bottom right">
+	<p class="tooltip-txt">예시이미지(하단 오른쪽))</p>
+	<div class="tooltip-action">
+		<button type="button" class="krds-btn medium icon tooltip-btn" aria-expanded="false">
+			<span class="sr-only">도움말</span>
+			<i class="svg-icon ico-tooltip"></i>
+		</button>
+		<div class="tooltip-popover" role="tooltip">
+			<h4 class="tooltip-title">도움말 제목</h4>
+			<div class="tooltip-contents">
+				<p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가 요청하는 경우에만 화면에 표시된다.</p>
+				<div class="btn-wrap">
+					<a href="#;" class="krds-btn xsmall text">바로가기 <i class="svg-icon ico-angle right"></i></a>
+				</div>
+			</div>
+			<button type="button" class="krds-btn xsmall icon tooltip-close">
+				<span class="sr-only">닫기</span>
+				<i class="svg-icon ico-modal-close"></i>
+			</button>
+		</div>
+	</div>
+</div>
+<!-- //tooltip : 위치 - 하단 오른쪽 -->
+<!-- //contextual help -->
+          </div>
+
+          
+
+          <h2>critical_alerts</h2>
+          <div style="width:100%">
+<!-- critical alerts -->
+<div class="main-urgent-wrap">
+	<ul class="krds-critical-alerts">
+		<li>
+			<div class="critical-ban">
+				<span class="critical-badge danger">긴급</span>
+				<p class="critical-txt">긴급 공지 내용 표시</p>
+				<a href="#" class="krds-btn medium text">
+					<span class="m-hide">자세히 보기</span>
+					<i class="svg-icon ico-angle right"></i>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div class="critical-ban">
+				<span class="critical-badge ok">안전</span>
+				<p class="critical-txt">긴급 공지 내용 표시</p>
+				<a href="#" class="krds-btn medium text">
+					<span class="m-hide">자세히 보기</span>
+					<i class="svg-icon ico-angle right"></i>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div class="critical-ban">
+				<span class="critical-badge info">안내</span>
+				<p class="critical-txt">긴급 공지 내용 표시</p>
+				<a href="#" class="krds-btn medium text">
+					<span class="m-hide">자세히 보기</span>
+					<i class="svg-icon ico-angle right"></i>
+				</a>
+			</div>
+		</li>
+	</ul>
+</div>
+<!-- //critical alerts -->
+          </div>
+          
+          <h2>contextual_help</h2>
+          <div style="width:100%">
+            <!-- date input -->
+<!-- 폼그룹 -->
+<div class="form-group">
+	<div class="form-tit">
+		<label for="cal">레이블</label>
+	</div>
+	<div class="form-conts">
+		<div class="form-conts calendar-conts">
+			<div class="calendar-input">
+				<input type="number" class="krds-input datepicker cal" placeholder="YYYY.MM.DD" id="cal" />
+				<button type="button" class="krds-btn medium icon form-btn-datepicker">
+					<span class="sr-only">달력 열기</span>
+					<i class="svg-icon ico-calendar"></i>
+				</button>
+			</div>
+			<div class="krds-calendar-area">
+				<div class="calendar-wrap bottom" aria-label="달력">
+					<div class="calendar-head">
+						<button type="button" class="btn-cal-move prev"><span class="sr-only">이전 달</span></button>
+						<div class="calendar-switch-wrap">
+							<div class="calendar-drop-down">
+								<button type="button" class="btn-cal-switch year" aria-label="연도 선택">2024년</button>
+								<div class="calendar-select calendar-year-wrap">
+									<ul class="sel year">
+										<li>
+											<button type="button">2001년</button>
+										</li>
+										<li>
+											<button type="button" class="active">2002년</button>
+										</li>
+										<li>
+											<button type="button" disabled>2003년</button>
+										</li>
+										<li>
+											<button type="button">2004년</button>
+										</li>
+										<li>
+											<button type="button">2005년</button>
+										</li>
+										<li>
+											<button type="button">2006년</button>
+										</li>
+										<li>
+											<button type="button">2007년</button>
+										</li>
+										<li>
+											<button type="button">2008년</button>
+										</li>
+										<li>
+											<button type="button">2009년</button>
+										</li>
+										<li>
+											<button type="button">2010년</button>
+										</li>
+										<li>
+											<button type="button">2011년</button>
+										</li>
+										<li>
+											<button type="button">2012년</button>
+										</li>
+										<li>
+											<button type="button">2013년</button>
+										</li>
+										<li>
+											<button type="button">2014년</button>
+										</li>
+										<li>
+											<button type="button">2015년</button>
+										</li>
+										<li>
+											<button type="button">2016년</button>
+										</li>
+										<li>
+											<button type="button">2017년</button>
+										</li>
+										<li>
+											<button type="button">2018년</button>
+										</li>
+										<li>
+											<button type="button">2019년</button>
+										</li>
+										<li>
+											<button type="button">2020년</button>
+										</li>
+										<li>
+											<button type="button">2021년</button>
+										</li>
+										<li>
+											<button type="button">2022년</button>
+										</li>
+										<li>
+											<button type="button">2023년</button>
+										</li>
+										<li>
+											<button type="button">2024년</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="calendar-drop-down">
+								<button type="button" class="btn-cal-switch month" aria-label="월 선택">12월</button>
+								<div class="calendar-select calendar-mon-wrap">
+									<ul class="sel month">
+										<li>
+											<button type="button" disabled>01월</button>
+										</li>
+										<li>
+											<button type="button">02월</button>
+										</li>
+										<li>
+											<button type="button">03월</button>
+										</li>
+										<li>
+											<button type="button">04월</button>
+										</li>
+										<li>
+											<button type="button">05월</button>
+										</li>
+										<li>
+											<button type="button">06월</button>
+										</li>
+										<li>
+											<button type="button">07월</button>
+										</li>
+										<li>
+											<button type="button">08월</button>
+										</li>
+										<li>
+											<button type="button">09월</button>
+										</li>
+										<li>
+											<button type="button">10월</button>
+										</li>
+										<li>
+											<button type="button">11월</button>
+										</li>
+										<li>
+											<button type="button" class="active">12월</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="btn-cal-move next"><span class="sr-only">다음 달</span></button>
+					</div>
+					<div class="calendar-body">
+						<div class="calendar-table-wrap">
+							<table class="calendar-tbl">
+								<caption>
+									2024년 12월
+								</caption>
+								<thead>
+								<tr>
+									<th>일</th>
+									<th>월</th>
+									<th>화</th>
+									<th>수</th>
+									<th>목</th>
+									<th>금</th>
+									<th>토</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td class="old day-off">
+										<button type="button" class="btn-set-date"><span>26</span></button>
+									</td>
+									<td class="old">
+										<button type="button" class="btn-set-date"><span>27</span></button>
+									</td>
+									<td class="old">
+										<button type="button" class="btn-set-date"><span>28</span></button>
+									</td>
+									<td class="old">
+										<button type="button" class="btn-set-date"><span>29</span></button>
+									</td>
+									<td class="old">
+										<button type="button" class="btn-set-date"><span>30</span></button>
+									</td>
+									<td>
+										<button type="button" class="btn-set-date"><span>1</span></button>
+									</td>
+									<td>
+										<button type="button" class="btn-set-date"><span>2</span></button>
+									</td>
+								</tr>
+								<tr>
+									<td class="day-off">
+										<button type="button" class="btn-set-date"><span>3</span></button>
+									</td>
+									<td>
+										<button type="button" class="btn-set-date"><span>4</span></button>
+									</td>
+									<td>
+										<button type="button" class="btn-set-date"><span>5</span></button>
+									</td>
+									<td>
+										<button type="button" class="btn-set-date"><span>6</span></button>
+									</td>
+									<td class="period start">
+										<button type="button" class="btn-set-date"><span>7</span></button>
+									</td>
+									<td class="period">
+										<button type="button" class="btn-set-date"><span>8</span></button>
+									</td>
+									<td class="period">
+										<button type="button" class="btn-set-date"><span>9</span></button>
+									</td>
+								</tr>
+								<tr>
+									<td class="period day-off">
+										<button type="button" class="btn-set-date"><span>10</span></button>
+									</td>
+									<td class="period">
+										<button type="button" class="btn-set-date"><span>11</span></button>
+									</td>
+									<td class="period">
+										<button type="button" class="btn-set-date"><span>12</span></button>
+									</td>
+									<td class="period">
+										<button type="button" class="btn-set-date"><span>13</span></button>
+									</td>
+									<td class="period">
+										<button type="button" class="btn-set-date"><span>14</span></button>
+									</td>
+									<td class="period">
+										<button type="button" class="btn-set-date"><span>15</span></button>
+									</td>
+									<td class="period end">
+										<button type="button" class="btn-set-date"><span>16</span></button>
+									</td>
+								</tr>
+								<tr>
+									<td class="day-off">
+										<button type="button" class="btn-set-date"><span>17</span></button>
+									</td>
+									<td>
+										<button type="button" class="btn-set-date"><span>18</span></button>
+									</td>
+									<td>
+										<button type="button" class="btn-set-date"><span>19</span></button>
+									</td>
+									<td>
+										<button type="button" class="btn-set-date"><span>20</span></button>
+									</td>
+									<td>
+										<button type="button" class="btn-set-date"><span>21</span></button>
+									</td>
+									<td>
+										<button type="button" class="btn-set-date"><span>22</span></button>
+									</td>
+									<td>
+										<button type="button" class="btn-set-date"><span>23</span></button>
+									</td>
+								</tr>
+								<tr>
+									<td class="day-off">
+										<button type="button" class="btn-set-date"><span>24</span></button>
+									</td>
+									<td class="today">
+										<button type="button" class="btn-set-date"><span>25</span></button>
+									</td>
+									<td class="day-event">
+										<button type="button" class="btn-set-date"><span>26</span></button>
+									</td>
+									<td>
+										<button type="button" class="btn-set-date"><span>27</span></button>
+									</td>
+									<td>
+										<button type="button" class="btn-set-date"><span>28</span></button>
+									</td>
+									<td>
+										<button type="button" class="btn-set-date"><span>29</span></button>
+									</td>
+									<td>
+										<button type="button" class="btn-set-date"><span>30</span></button>
+									</td>
+								</tr>
+								<tr>
+									<td class="day-off">
+										<button type="button" class="btn-set-date"><span>31</span></button>
+									</td>
+									<td class="new">
+										<button type="button" class="btn-set-date"><span>1</span></button>
+									</td>
+									<td class="new">
+										<button type="button" class="btn-set-date"><span>2</span></button>
+									</td>
+									<td class="new">
+										<button type="button" class="btn-set-date"><span>3</span></button>
+									</td>
+									<td class="new">
+										<button type="button" class="btn-set-date"><span>4</span></button>
+									</td>
+									<td class="new">
+										<button type="button" class="btn-set-date"><span>5</span></button>
+									</td>
+									<td class="new">
+										<button type="button" class="btn-set-date"><span>6</span></button>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="calendar-footer">
+						<div class="calendar-btn-wrap">
+							<button type="button" class="krds-btn small text" id="get-today">오늘</button>
+							<button type="button" class="krds-btn small tertiary">취소</button>
+							<button type="button" class="krds-btn small primary">확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p class="form-hint">도움말</p>
+</div>
+<!-- //폼그룹 -->
+<!-- //date input -->
+          </div>
+          
+          <h2>disclosure</h2>
+          <div style="width:100%">
+            <!-- disclosure -->
+<div class="krds-disclosure conts-expand-area">
+	<button type="button" class="btn-conts-expand">신청 서비스안내</button>
+	<div class="expand-wrap">
+		<div class="expand-in">
+			<ul class="krds-info-list dash">
+				<li>하나의 아이디로 안전하고 편리하게 여러 전자정부 서비스를 이용할 수 있는 서비스입니다.</li>
+				<li>디지털원패스 이용문의 : 1533-3713 (평일9~18시, 공휴일제외)</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- //disclosure -->
+          </div>
+          
+          <h2>file_upload</h2>
+          <div style="width:100%">
+            <!-- file upload -->
+<div class="krds-file-upload line">
+	<!-- 파일 업로드 상단 -->
+	<div class="file-head">
+		<h3 class="tit">타이틀영역</h3>
+		<div>
+			<p>컨텐츠 영역</p>
+		</div>
+	</div>  
+	<!-- //파일 업로드 상단 -->
+
+	<!-- 파일 업로드 영역 -->
+	<div class="file-upload">
+		<p class="txt">첨부할 파일을 여기에 끌어다 놓거나, 파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</p>
+		<div class="file-upload-btn-wrap">
+			<input type="file" name="myFile" id="fileu-upload" hidden>
+			<label for="fileu-upload">
+				<button type="button" class="krds-btn medium"><i class="svg-icon ico-upload"></i>파일선택</button>
+			</label>
+		</div>
+	</div>
+	<!-- //파일 업로드 영역 -->
+	<!-- 파일 리스트 영역 -->
+	<div class="file-list">
+		<div class="total"><span class="current">3개</span> / 10개</div>
+		<ul class="upload-list">
+			<li>
+				<div class="file-info">
+					<div class="file-name">위임장(주민등록법 시행령 별지 제15호의2호서식) [hwp, 17KB] </div>
+					<div class="btn-wrap">
+					<span class="krds-spinner" role="status">
+						<span class="sr-only">업로드 중</span>
+					</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="file-info">
+					<div class="file-name">위임장(주민등록법 시행령 별지 제15호의2호서식) [hwp, 17KB] </div>
+					<div class="btn-wrap">
+					<span class="ico-invalid complete">
+						<em class="sr-only">업로드 완료</em>
+					</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="file-info">
+					<div class="file-name">위임장(주민등록법 시행령 별지 제15호의2호서식) [hwp, 17KB] </div>
+					<div class="btn-wrap">
+						<button type="button" class="krds-btn medium text">삭제 <i class="svg-icon ico-delete-fill"></i></button>
+					</div>
+				</div>
+			</li>
+			<li class="is-error">
+				<div class="file-info">
+					<div class="file-name">전입재등록신고서 [주민등록법 시행령 : 별지서식 15, 15호의2호] [hwp, 17KB]</div>
+					<div class="btn-wrap">
+						<button type="button" class="krds-btn medium text">삭제 <i class="svg-icon ico-delete-fill"></i></button>
+					</div>
+				</div>
+				<p class="file-hint-invalid">
+					등록 가능한 파일 용량을 초과하였습니다.<br>
+					20MB 미만의 파일만 등록할 수 있습니다.
+				</p>
+			</li>
+			<li>
+				<div class="file-info m-column">
+					<div class="file-name">위임장(주민등록법 시행령 별지 제15호의2호서식) [hwp, 17KB] </div>
+					<div class="btn-wrap">
+						<button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
+						<button type="button" class="krds-btn medium text">바로보기 <i class="svg-icon ico-angle right"></i></button>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="upload-delete-btn">
+			<button type="button" class="krds-btn xsmall tertiary">전체 파일 삭제<i class="svg-icon ico-angle right"></i></button>
+		</div>
+	</div>
+	<!-- //파일 리스트 영역 -->
+</div>
+<!-- //file upload -->
+
+          </div>
+          
+          <h2>help_panel</h2>
+          <div style="width:100%">
+            <a href="help_panel.html" target="_blank" class="krds-btn medium">도움말패널 보기로 이동</a>
+          </div>
+          
+          <h2>identifier</h2>
+          <div style="width:100%">
+            <!-- identifier -->
+<div class="krds-identifier">
+	<span class="logo">
+		<span class="sr-only">KRDS - Korea Design System</span>
+	</span>
+	<span class="ban-txt">이 누리집은 보건복지부 산하기관 누리집입니다.</span>
+</div>
+<!-- //identifier -->
+          </div>
+          
+          <h2>in_page_navigation</h2>
+          <div style="width:100%">
+
+            <a href="in_page_navigation.html" target="_blank" class="krds-btn medium">in_page_navigation 로 이동</a>
+    </div>
+
+
+    <h2>language_switcher_page</h2>
+      <div style="width:100%">
+        <!-- language switcher -->
+<div class="krds-drop-wrap krds-language">
+  <button type="button" class="krds-btn small text drop-btn">
+    <i class="svg-icon ico-global"></i>
+    언어 변경
+    <i class="svg-icon ico-toggle"></i>
+  </button>
+  <div class="drop-menu">
+    <div class="drop-in">
+      <div class="drop-top">
+        <p class="current-laguage">
+          <span>현재 언어</span>
+          <strong>한국어</strong>
+        </p>
+      </div>
+      <ul class="drop-list">
+        <li><a href="#" class="item-link" lang="en" target="_blank" title="새 창 열림">English (영어)<i class="svg-icon ico-go"></i></a></li>
+        <li><a href="#" class="item-link" lang="zh" target="_blank" title="새 창 열림">中文 (중국어)<i class="svg-icon ico-go"></i></a></li>
+        <li><a href="#" class="item-link" lang="ja" target="_blank" title="새 창 열림">日本語 (일본어)<i class="svg-icon ico-go"></i></a></li>
+        <li><a href="#" class="item-link" lang="fr" target="_blank" title="새 창 열림">français (프랑스어)<i class="svg-icon ico-go"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- //language switcher -->
+      </div>
+
+
+
+
+
+    <h2>language_switcher</h2>
+      <div style="width:100%">
+        <!-- language switcher -->
+<div class="krds-drop-wrap krds-language">
+	<button type="button" class="krds-btn small text drop-btn">
+		<i class="svg-icon ico-global"></i>
+		언어 변경
+		<i class="svg-icon ico-toggle"></i>
+	</button>
+	<div class="drop-menu">
+		<div class="drop-in">
+			<ul class="drop-list">
+				<li><a href="#" class="item-link active" lang="ko">한국어</a></li>
+				<li><a href="#" class="item-link" lang="en">English (영어)</a></li>
+				<li><a href="#" class="item-link" lang="zh">中文 (중국어)</a></li>
+				<li><a href="#" class="item-link" lang="ja">日本語 (일본어)</a></li>
+				<li><a href="#" class="item-link" lang="fr">français (프랑스어)</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- //language switcher -->
+      </div>
+    <h2>link</h2>
+      <div style="width:100%">
+        <!-- link -->
+<a href="https://www.naver.com" class="krds-btn small link">
+	<span class="underline">텍스트 사이의 링크 (높이 값 초기화)</span>
+	<i class="svg-icon ico-go"></i>
+</a>
+<a href="#!" class="krds-btn medium link basic">
+	<span class="underline">공유하기</span>
+	<i class="svg-icon ico-share"></i>
+</a>
+<a href="#!" class="krds-btn large link basic">
+	<span>바로가기</span>
+	<i class="svg-icon ico-go"></i>
+</a>
+<a href="#!" class="krds-btn large link disabled">
+	<span class="underline">바로가기</span>
+	<i class="svg-icon ico-go"></i>
+</a>
+<!-- //link -->
+      </div>
+
+    <h2>masthead</h2>
+      <div style="width:100%">
+        <!-- masthead -->
+<div id="krds-masthead">
+	<div class="toggle-wrap">
+		<div class="toggle-head">
+			<div class="inner">
+				<span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //masthead -->
+      </div>
+    <h2>modal_sample</h2>
+      <div style="width:100%">
+        <button type="button" class="krds-btn large open-modal" data-target="modal_sample_01">class 및 data-target 호출</button>
+<!-- modal -->
+<!-- <section id="modal_sample_01" class="krds-modal fade in shown" role="dialog" aria-labelledby="tit_modal_sample_01"> -->
+<section id="modal_sample_01" class="krds-modal fade in" role="dialog" aria-labelledby="tit_modal_sample_01">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!-- modal title -->
+			<div class="modal-header">
+				<h2 id="tit_modal_sample_01" class="modal-title">
+					모달 제목
+				</h2>
+			</div>
+			<!-- //modal title -->
+			<!-- modal contents -->
+			<div class="modal-conts">
+				<div class="conts-area">
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+				</div>
+			</div>
+			<!-- //modal contents -->
+			<!-- modal btn -->
+			<div class="modal-btn btn-wrap">
+				<button type="button" class="krds-btn medium tertiary close-modal">아니요</button>
+				<button type="button" class="krds-btn medium primary close-modal">예</button>
+			</div>
+			<!-- //modal btn -->
+			<!-- close button -->
+			<button type="button" class="krds-btn medium icon btn-close close-modal">
+				<span class="sr-only">닫기</span>
+				<i class="svg-icon ico-popup-close"></i>
+			</button>
+			<!-- //close button -->
+		</div>
+	</div>
+	<div class="modal-back in"></div>
+</section>
+<!-- //modal -->
+      </div>
+    <h2>modal</h2>
+      <div style="width:100%">
+        
+<button type="button" class="krds-btn large open-modal" data-target="modal_sample_03">class 및 data-target 호출</button>
+<!-- modal -->
+<section id="modal_sample_03" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_sample_03">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!-- modal title -->
+			<div class="modal-header">
+				<h2 id="tit_modal_sample_03" class="modal-title">
+					모달 제목
+				</h2>
+			</div>
+			<!-- //modal title -->
+			<!-- modal contents -->
+			<div class="modal-conts">
+				<div class="conts-area">
+					시작 <br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+					<br>
+					끝
+				</div>
+			</div>
+			<!-- //modal contents -->
+			<!-- modal btn -->
+			<div class="modal-btn btn-wrap">
+				<button type="button" class="krds-btn medium tertiary close-modal">아니요</button>
+				<button type="button" class="krds-btn medium primary close-modal">예</button>
+			</div>
+			<!-- //modal btn -->
+			<!-- close button -->
+			<button type="button" class="krds-btn medium icon btn-close close-modal">
+				<span class="sr-only">닫기</span>
+				<i class="svg-icon ico-popup-close"></i>
+			</button>
+			<!-- //close button -->
+		</div>
+	</div>
+	<div class="modal-back"></div>
+</section>
+<!-- //modal -->
+      </div>
+    <h2>pagination</h2>
+      <div style="width:100%">
+        <!-- pagination -->
+<div class="krds-pagination">
+	<a class="page-navi prev" href="#">이전</a>
+	<div class="page-links">
+		<a class="page-link" href="#">1</a>
+		<a class="page-link" href="#">2</a>
+		<a class="page-link" href="#">3</a>
+		<a class="page-link active" href="#"><span class="sr-only">현재페이지 </span>4</a>
+		<a class="page-link" href="#">5</a>
+		<a class="page-link" href="#">6</a>
+		<a class="page-link" href="#">7</a>
+		<a class="page-link" href="#">8</a>
+		<a class="page-link" href="#">9</a>
+		<span class="page-link link-dot"></span>
+		<a class="page-link" href="#">99</a>
+	</div>
+	<a class="page-navi next" href="#">다음</a>
+</div>
+<!-- //pagination -->
+      </div>
+    <h2>radio_button</h2>
+      <div style="width:100%">
+        <!-- radio button -->
+<div class="fieldset">
+	<div class="form-group">
+		<div class="form-conts">
+			<div class="krds-check-area">
+				<div class="krds-form-check">
+					<input type="radio" name="rdo_1" id="rdo_1">
+					<label for="rdo_1">기본</label>
+				</div>
+				<div class="krds-form-check">
+					<input type="radio" name="rdo_1" id="rdo_2" checked>
+					<label for="rdo_2">선택됨</label>
+				</div>
+				<div class="krds-form-check">
+					<input type="radio" name="rdo_1" id="rdo_3" disabled>
+					<label for="rdo_3">비활성화</label>
+				</div>
+				<div class="krds-form-check">
+					<input type="radio" name="rdo_1a" id="rdo_4" disabled checked>
+					<label for="rdo_4">선택된 비활성화</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="form-conts">
+			<div class="krds-check-area chk-column">
+				<div class="krds-form-check ">
+					<input type="radio" name="rdo_1" id="rdo_1-1" checked>
+					<label for="rdo_1-1">라디오버튼</label>
+					<div class="krds-form-check-cnt">
+						<p class="krds-form-check-p">
+							부가적인 설명이 들어갑니다.
+						</p>
+					</div>
+				</div>
+				<div class="krds-form-check">
+					<input type="radio" name="rdo_1" id="rdo_1-2">
+					<label for="rdo_1-2">라디오버튼</label>
+					<div class="krds-form-check-cnt">
+						<p class="krds-form-check-p">
+							부가적인 설명이 들어갑니다.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //radio button -->
+      </div>
+    <h2>radio_chip</h2>
+      <div style="width:100%">
+        <!-- radio button -->
+<div class="krds-check-area">
+	<div class="krds-form-chip">
+		<input type="radio" class="radio" name="rdo_chip" id="rdo_chip_1">
+		<label class="krds-form-chip-outline" for="rdo_chip_1">chip 상태 : default </label>
+	</div>
+	<div class="krds-form-chip">
+		<input type="radio" class="radio" name="rdo_chip" id="rdo_chip_2" checked>
+		<label class="krds-form-chip-outline" for="rdo_chip_2">chip 상태 : checked </label>
+	</div>
+	<div class="krds-form-chip">
+		<input type="radio" class="radio" name="rdo_chip" id="rdo_chip_3" disabled>
+		<label class="krds-form-chip-outline" for="rdo_chip_3">chip 상태 :disabled </label>
+	</div>
+</div>
+<!-- //radio button -->
+      </div>
+    <h2>radio_size</h2>
+      <div style="width:100%">
+        <!-- radio button -->
+<div class="krds-check-area">
+	<div class="krds-form-check medium">
+		<input type="radio" name="rdo_2-1" id="rdo_2-2">
+		<label for="rdo_2-2">사이즈 : medium</label>
+	</div>
+	<div class="krds-form-check large">
+		<input type="radio" name="rdo_2-1" id="rdo_2-3">
+		<label for="rdo_2-3">사이즈 : large</label>
+	</div>
+</div>
+<!-- //radio button -->
+      </div>
+    <h2>resize</h2>
+      <div style="width:100%">
+        <!-- resize -->
+<div class="krds-drop-wrap krds-resize" data-adjust="scale">
+	<button type="button" class="krds-btn small text drop-btn">화면크기 <i class="svg-icon ico-toggle"></i></button>
+	<div class="drop-menu">
+		<div class="drop-in">
+			<ul class="drop-list">
+				<li><button type="button" class="item-link sm" data-adjust-scale="sm">작게</button></li>
+				<li><button type="button" class="item-link md active" data-adjust-scale="md">보통</button></li>
+				<li><button type="button" class="item-link lg" data-adjust-scale="lg">조금 크게</button></li>
+				<li><button type="button" class="item-link xlg" data-adjust-scale="xlg">크게</button></li>
+				<li><button type="button" class="item-link xxlg" data-adjust-scale="xxlg">가장크게</button></li>
+			</ul>
+			<div class="drop-bottom">
+				<button type="button" class="krds-btn medium text" data-adjust-scale="md"><i class="svg-icon ico-reset"></i> 초기화</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //resize -->
+      </div>
+
+
+    <h2>select_size</h2>
+      <div style="width:100%">
+        <!-- select -->
+<div class="fieldset">
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="select_size_small">레이블</label>
+		</div>
+		<div class="form-conts">
+			<select id="select_size_small" class="krds-form-select large" title="선택">
+				<option value="" selected>large</option>
+				<option value="">medium</option>
+				<option value="">small</option>
+			</select>
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="select_size_medium">레이블</label>
+		</div>
+		<div class="form-conts">
+			<select id="select_size_medium" class="krds-form-select medium" title="선택">
+				<option value="">large</option>
+				<option value="" selected>medium</option>
+				<option value="">small</option>
+			</select>
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="select_size_large">레이블</label>
+		</div>
+		<div class="form-conts">
+			<select id="select_size_large" class="krds-form-select small" title="선택">
+				<option value="">large</option>
+				<option value="">medium</option>
+				<option value="" selected>small</option>
+			</select>
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+</div>
+<!-- //select -->
+      </div>
+
+
+
+      <h2>select_sorting</h2>
+      <div style="width:100%">
+        <!-- select -->
+<select id="select_sorting" class="krds-form-select-sort" title="선택">
+  <option value="">항목1</option>
+  <option value="">항목2</option>
+  <option value="">항목3</option>
+  <option value="">항목4</option>
+</select>
+<select id="select_sorting_large" class="krds-form-select-sort large" title="선택">
+  <option value="" selected>항목1</option>
+  <option value="">항목2</option>
+  <option value="">항목3</option>
+</select>
+<select id="select_sorting_medium" class="krds-form-select-sort medium" title="선택">
+  <option value="">항목1</option>
+  <option value="" selected>항목2</option>
+  <option value="">항목3</option>
+</select>
+<select id="select_sorting_small" class="krds-form-select-sort small" title="선택">
+  <option value="">항목1</option>
+  <option value="">항목2</option>
+  <option value="" selected>항목3</option>
+</select>
+<!-- //select -->
+      </div>
+
+
+      <h2>select_state</h2>
+      <div style="width:100%">
+        <!-- select -->
+<div class="fieldset">
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="select_error">레이블</label>
+		</div>
+		<div class="form-conts">
+			<select id="select_error" class="krds-form-select is-error" title="선택">
+				<option value="">항목1</option>
+				<option value="">항목2</option>
+				<option value="">항목3</option>
+				<option value="">항목4</option>
+			</select>
+		</div>
+		<p class="form-hint-invalid">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+</div>
+<!-- //select -->
+      </div>
+
+
+      <h2>select</h2>
+      <div style="width:100%">
+        <!-- select -->
+<div class="fieldset">
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="select_name">레이블</label>
+		</div>
+		<div class="form-conts">
+			<select id="select_name" class="krds-form-select" title="선택">
+				<option value="">항목1</option>
+				<option value="">항목2</option>
+				<option value="">항목3</option>
+				<option value="">항목4</option>
+			</select>
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="select_name4">레이블</label>
+		</div>
+		<div class="form-conts">
+			<select id="select_name4" class="krds-form-select completed" title="선택">
+				<option value="" selected>선택완료 상태</option>
+				<option value="">항목2</option>
+				<option value="">항목3</option>
+				<option value="">항목4</option>
+			</select>
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="select_error">레이블</label>
+		</div>
+		<div class="form-conts">
+			<select id="select_error" class="krds-form-select is-error" title="선택">
+				<option value="">항목1</option>
+				<option value="">항목2</option>
+				<option value="">항목3</option>
+				<option value="">항목4</option>
+			</select>
+		</div>
+		<p class="form-hint-invalid">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="select_name3">레이블</label>
+		</div>
+		<div class="form-conts">
+			<select id="select_name3" class="krds-form-select" title="선택" disabled>
+				<option value="">disabled</option>
+				<option value="">항목2</option>
+				<option value="">항목3</option>
+				<option value="">항목4</option>
+			</select>
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+</div>
+<!-- //select -->
+      </div>
+
+
+      <h2>side_navigation</h2>
+      <div style="width:100%">
+        <!-- side navigation -->
+<nav class="krds-side-navigation">
+	<h2 class="lnb-tit">1Depth-title</h2>
+	<!-- lnb-list -->
+	<ul class="lnb-list" role="menubar">
+		<li class="lnb-item active" role="none">
+			<button type="button" class="lnb-btn lnb-toggle active" role="menuitem" aria-controls="lnbmenu-1" aria-expanded="true">2Depth-menu</button>
+			<!-- lnb-submenu -->
+			<div class="lnb-submenu">
+				<ul id="lnbmenu-1" role="menu">
+					<li class="lnb-subitem" role="none">
+						<button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-2" aria-expanded="false" aria-haspopup="true">3Depth-menu</button>
+						<!-- lnb-submenu-lv2 -->
+						<div class="lnb-submenu-lv2" id="lnbmenu-2" role="menu">
+							<button type="button" class="lnb-btn-tit">3Depth-title</button>
+							<ul>
+								<li role="none"><a href="#" class="lnb-btn" role="menuitem">4Depth</a></li>
+								<li role="none"><a href="#" class="lnb-btn" role="menuitem">4Depth</a></li>
+								<li role="none"><a href="#" class="lnb-btn" role="menuitem">4Depth</a></li>
+							</ul>
+						</div>
+						<!-- //lnb-submenu-lv2 -->
+					</li>
+					<li class="lnb-subitem" role="none"><a href="#" class="lnb-btn lnb-link" role="menuitem">3Depth-link</a></li>
+					<li class="lnb-subitem active" role="none"><a href="#" class="lnb-btn lnb-link" role="menuitem" aria-current="page">3Depth-link</a></li>
+				</ul>
+			</div>
+			<!-- //lnb-submenu -->
+		</li>
+		<li class="lnb-item" role="none">
+			<button type="button" class="lnb-btn lnb-toggle" role="menuitem" aria-controls="lnbmenu-4" aria-expanded="false">2Depth-menu</button>
+			<!-- lnb-submenu -->
+			<div class="lnb-submenu">
+				<ul id="lnbmenu-4" role="menu">
+					<li class="lnb-subitem" role="none">
+						<button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-5" aria-expanded="false" aria-haspopup="true">3Depth-menu</button>
+						<!-- lnb-submenu-lv2 -->
+						<div class="lnb-submenu-lv2" id="lnbmenu-5" role="menu">
+							<button type="button" class="lnb-btn-tit">3Depth-title</button>
+							<ul>
+								<li role="none"><a href="#" class="lnb-btn" role="menuitem">4Depth</a></li>
+								<li role="none"><a href="#" class="lnb-btn" role="menuitem">4Depth</a></li>
+								<li role="none"><a href="#" class="lnb-btn" role="menuitem">4Depth</a></li>
+							</ul>
+						</div>
+						<!-- //lnb-submenu-lv2 -->
+					</li>
+					<li class="lnb-subitem" role="none"><a href="#" class="lnb-btn lnb-link" role="menuitem">3Depth-link</a></li>
+					<li class="lnb-subitem" role="none"><a href="#" class="lnb-btn lnb-link" role="menuitem">3Depth-link</a></li>
+				</ul>
+			</div>
+			<!-- //lnb-submenu -->
+		</li>
+		<li class="lnb-item" role="none">
+			<button type="button" class="lnb-btn lnb-toggle" role="menuitem" aria-controls="lnbmenu-6" aria-expanded="false">2Depth-menu</button>
+			<!-- lnb-submenu -->
+			<div class="lnb-submenu">
+				<ul id="lnbmenu-6" role="menu">
+					<li class="lnb-subitem" role="none">
+						<button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-7" aria-expanded="false" aria-haspopup="true">3Depth-menu</button>
+						<!-- lnb-submenu-lv2 -->
+						<div class="lnb-submenu-lv2" id="lnbmenu-7" role="menu">
+							<button type="button" class="lnb-btn-tit">3Depth-title</button>
+							<ul>
+								<li role="none"><a href="#" class="lnb-btn" role="menuitem">4Depth</a></li>
+								<li role="none"><a href="#" class="lnb-btn" role="menuitem">4Depth</a></li>
+								<li role="none"><a href="#" class="lnb-btn" role="menuitem">4Depth</a></li>
+							</ul>
+						</div>
+						<!-- //lnb-submenu-lv2 -->
+					</li>
+					<li class="lnb-subitem" role="none"><a href="#" class="lnb-btn lnb-link" role="menuitem">3Depth-link</a></li>
+					<li class="lnb-subitem" role="none"><a href="#" class="lnb-btn lnb-link" role="menuitem">3Depth-link</a></li>
+				</ul>
+			</div>
+			<!-- //lnb-submenu -->
+		</li>
+	</ul>
+	<!-- //lnb-list -->
+</nav>
+<!-- //side navigation -->
+
+      </div>
+
+
+      <h2>skip_link</h2>
+      <div style="width:100%">
+        <!-- 건너뛰기 링크 -->
+<div id="krds-skip-link">
+	<a href="#breadcrumb">본문 바로가기</a>
+</div>
+<!-- //건너뛰기 링크 -->
+      </div>
+
+
+      <h2>spinner</h2>
+      <div style="width:100%">
+        <!-- spinner -->
+<!-- 인풋 내 스피너 -->
+<div class="form-group">
+	<div class="form-tit">
+		<label for="consult_name">Label</label>
+	</div>
+	<div class="form-conts">
+		<div class="form-spinner">
+			<input type="text" id="consult_name" class="krds-input" placeholder="placeholder">
+			<div class="krds-spinner" role="status">
+				<span class="sr-only">로딩 중</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //인풋 내 스피너 -->
+
+<br>
+<br>
+
+<!-- 스피너 -->
+<div class="krds-spinner" role="status">
+	<span class="sr-only">로딩 중</span>
+	Loading data..
+</div>
+<!-- //스피너 -->
+<!-- //spinner -->
+      </div>
+
+
+      <h2>step_indicator</h2>
+      <div style="width:100%">
+        <!-- step indicator -->
+<!-- 스텝 -->
+<ol class="krds-step-wrap">
+	<li class="done">
+        <span>
+            <i class="step">1단계</i>
+            <span class="step-tit">단계 레이블</span>
+        </span>
+	</li>
+	<li class="done">
+        <span>
+            <i class="step">2단계</i>
+            <span class="step-tit">단계 레이블</span>
+        </span>
+	</li>
+	<li class="done">
+        <span>
+            <i class="step">3단계</i>
+            <span class="step-tit">단계 레이블</span>
+        </span>
+	</li>
+	<li class="active">
+        <span>
+            <em class="sr-only">현재단계</em>
+            <i class="step">4단계</i>
+            <span class="step-tit">단계 레이블</span>
+        </span>
+	</li>
+	<li>
+        <span>
+            <i class="step">5단계</i>
+            <span class="step-tit">단계 레이블</span>
+        </span>
+	</li>
+</ol>
+<!-- //스텝 -->
+
+<br>
+<br>
+
+<!-- 페이지 타이틀과 스텝 혼합 -->
+<div class="page-title-wrap between">
+	<h2 class="h-tit">타이틀</h2>
+	<!-- 스텝 영역 -->
+	<ol class="krds-step-wrap">
+		<li class="done">
+            <span>
+                <i class="step">1단계</i>
+                <span class="step-tit">유의 사항 확인</span>
+            </span>
+		</li>
+		<li class="done">
+            <span>
+                <i class="step">2단계</i>
+                <span class="step-tit">신청인 정보</span>
+            </span>
+		</li>
+		<li class="active">
+            <span>
+                <em class="sr-only">현재단계</em>
+                <i class="step">3단계</i>
+                <span class="step-tit">이사 전 살던 곳</span>
+            </span>
+		</li>
+		<li>
+            <span>
+                <i class="step">4단계</i>
+                <span class="step-tit">이사 온 곳</span>
+            </span>
+		</li>
+	</ol>
+	<!-- //스텝 영역 -->
+</div>
+<!-- //페이지 타이틀과 스텝 혼합 -->
+<!-- //step indicator -->
+      </div>
+
+
+      <h2>structured_list</h2>
+      <div style="width:100%">
+        <!-- 구조화 목록 -->
+<ul class="krds-structured-list type-full">
+	<li class="structured-item">
+		<div class="in">
+			<div class="card-top">
+				<span class="krds-badge bg-light-primary">뱃지</span>
+			</div>
+			<div class="card-body">
+				<a href="#" class="c-text">
+					<p class="c-tit"><span class="span">타이틀 영역</span></p>
+					<p class="c-txt">
+						간단한 설명이 들어가는 영역입니다. 최대 3줄까지 작성합니다. 간단한 설명이 들어가는 영역입니다. 간단한 설명이 들어가는 영역입니다.
+					</p>
+					<p class="c-date">
+						<strong class="key">신청 기간</strong>
+						<span class="value">2023.00.00-2024.00.00</span>
+					</p>
+				</a>
+				<div class="c-btn">
+					<a href="#" class="krds-btn medium secondary" title="타이틀 영역">신청하기</a>
+				</div>
+			</div>
+			<div class="card-btm">
+				<span class="tag">태그</span>
+				<span class="tag">태그</span>
+			</div>
+			<div class="card-btn">
+				<button type="button" class="krds-btn medium text" title="타이틀 영역"><i class="svg-icon ico-share"></i> 공유하기</button>
+				<button type="button" class="krds-btn medium text" title="타이틀 영역"><i class="svg-icon ico-like"></i> 찜하기</button>
+			</div>
+		</div>
+	</li>
+	<li class="structured-item">
+		<div class="in">
+			<div class="card-top">
+				<span class="krds-badge bg-light-success">뱃지</span>
+			</div>
+			<div class="card-body">
+				<a href="#" class="c-text">
+					<p class="c-tit"><span class="span">타이틀 영역</span></p>
+					<p class="c-txt">
+						간단한 설명이 들어가는 영역입니다. 최대 3줄까지 작성합니다. 간단한 설명이 들어가는 영역입니다. 간단한 설명이 들어가는 영역입니다.
+					</p>
+					<p class="c-date">
+						<strong class="key">신청 기간</strong>
+						<span class="value">2023.00.00-2024.00.00</span>
+					</p>
+				</a>
+				<div class="c-btn">
+					<a href="#" class="krds-btn medium secondary" title="타이틀 영역">신청하기</a>
+				</div>
+			</div>
+			<div class="card-btm">
+				<span class="tag">태그</span>
+				<span class="tag">태그</span>
+			</div>
+			<div class="card-btn">
+				<button type="button" class="krds-btn medium text" title="타이틀 영역"><i class="svg-icon ico-share"></i> 공유하기</button>
+				<button type="button" class="krds-btn medium text" title="타이틀 영역"><i class="svg-icon ico-like"></i> 찜하기</button>
+			</div>
+		</div>
+	</li>
+	<li class="structured-item">
+		<div class="in">
+			<div class="card-top">
+				<span class="krds-badge bg-secondary">뱃지</span>
+			</div>
+			<div class="card-body">
+				<a href="#" class="c-text">
+					<p class="c-tit"><span class="span">타이틀 영역</span></p>
+					<p class="c-txt">
+						간단한 설명이 들어가는 영역입니다. 최대 3줄까지 작성합니다. 간단한 설명이 들어가는 영역입니다. 간단한 설명이 들어가는 영역입니다.
+					</p>
+					<p class="c-date">
+						<strong class="key">신청 기간</strong>
+						<span class="value">2023.00.00-2024.00.00</span>
+					</p>
+				</a>
+				<div class="c-btn">
+					<a href="#" class="krds-btn medium secondary" title="타이틀 영역">신청하기</a>
+				</div>
+			</div>
+			<div class="card-btm">
+				<span class="tag">태그</span>
+				<span class="tag">태그</span>
+			</div>
+			<div class="card-btn">
+				<button type="button" class="krds-btn medium text" title="타이틀 영역"><i class="svg-icon ico-share"></i> 공유하기</button>
+				<button type="button" class="krds-btn medium text" title="타이틀 영역"><i class="svg-icon ico-like"></i> 찜하기</button>
+			</div>
+		</div>
+	</li>
+</ul>
+<!-- 구조화 목록 -->
+      </div>
+
+
+      <h2>tab</h2>
+      <div style="width:100%">
+        <meta charset="UTF-8" />
+
+<!-- tab -->
+<div class="krds-tab-area layer">
+	<!-- tab list -->
+	<div class="tab line full">
+		<ul role="tablist">
+			<li id="tab_login_01" role="tab" aria-selected="true" aria-controls="panel_login_01" class="active">
+				<button type="button" class="btn-tab">타이틀 1 <i class="sr-only created"> 선택됨</i></button>
+			</li>
+			<li id="tab_login_02" role="tab" aria-selected="false" aria-controls="panel_login_02">
+				<button type="button" class="btn-tab">타이틀 2</button>
+			</li>
+			<li id="tab_login_02" role="tab" aria-selected="false" aria-controls="panel_login_03">
+				<button type="button" class="btn-tab">타이틀 2</button>
+			</li>
+		</ul>
+	</div>
+	<!-- //tab list -->
+	
+	<!-- tab contents -->
+	<div class="tab-conts-wrap">
+		<section id="panel_login_01" aria-labelledby="tab_login_01" class="tab-conts active" data-quick-nav="false">
+			<h3 class="sr-only">탭 영역 타이틀</h3>
+			탭 1 영역
+		</section>
+		<section id="panel_login_02" aria-labelledby="tab_login_02" class="tab-conts" data-quick-nav="false">
+			<h3 class="sr-only">탭 영역 타이틀</h3>
+			탭 2 영역
+		</section>
+		<section id="panel_login_03" aria-labelledby="tab_login_03" class="tab-conts" data-quick-nav="false">
+			<h3 class="sr-only">탭 영역 타이틀</h3>
+			탭 3 영역
+		</section>
+	</div>
+	<!-- //tab contents -->
+</div>
+<!-- //tab -->
+
+
+
+      </div>
+
+
+      <h2>table</h2>
+      <div style="width:100%">
+        <!-- table -->
+<div class="krds-table-wrap">
+	<table class="tbl col data">
+		<caption>000에 대한 표로 제목1,제목2에 대한 내용으로 구성되어 있으며 제목1은 제목1-1,제목1-2,제목1-3으로 구성되어있다.</caption>
+		<colgroup>
+			<col style="width: 30%;">
+			<col>
+		</colgroup>
+		<thead>
+		<tr>
+			<th scope="col">제목1</th>
+			<th scope="col">제목2</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<th scope="row">제목1-1</th>
+			<td>내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </td>
+		</tr>
+		<tr>
+			<th scope="row">제목1-2</th>
+			<td>내용이 들어갑니다.</td>
+		</tr>
+		<tr>
+			<th scope="row">제목1-3</th>
+			<td>내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+<!-- //table -->
+      </div>
+
+
+	  <div class="table-board borad-list">
+                        <table>
+                            <caption class="sr-only">공지사항 메뉴의 게시물 목록이며 번호, 제목, 작성자, 등록일, 조회, 첨부, 항목을 제공합니다.</caption>
+                            <colgroup>
+                                <col width="8%;">
+                                <col width="auto">
+                                <col width="10%;">
+                                <col width="10%;">
+                                <col width="110px;">
+                                <col width="100px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">제목</th>
+                                    <th scope="col">작성자</th>
+                                    <th scope="col">등록일</th>
+                                    <th scope="col">조회수</th>
+                                    <th scope="col">첨부</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                       
+
+                                <!-- 상단 고정 글 -->
+                                <tr class="bbsTopfixed">
+                                    <td class="num">
+                                        <img src="../resources//img/icon/ico-topNoti.svg" alt="new">
+                                    </td>
+                                    <td class="cell-subject">
+                                        <a href="#" title="페이지 이동" target="_self">보이스피싱 예방수칙</a>
+                                        <img src="../resources//img/icon/new.svg" alt="new" class="new">
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>2024.06.25</td>
+                                    <td>1,908</td>
+                                    <td class="file-td">
+                                        <i class="ico-link"></i>
+                                    </td>
+
+                                </tr>
+                                 <!-- //상단 고정 글 -->
+
+
+                                <tr>
+                                    <td class="num">490</td>
+                                    <td class="cell-subject">
+                                        <a href="#" title="페이지 이동" target="_self">보이스피싱 예방수칙</a>
+                                        <img src="../resources//img/icon/new.svg" alt="new" class="new">
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>2024.06.25</td>
+                                    <td>1,908</td>
+                                    <td class="file-td">
+                                        <i class="ico-link"></i>
+                                    </td>
+
+                                </tr>
+      
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //검색 결과 : 리스트 -->
+
+                        <section class="info-sec">
+                            <h2>자격증 및 수료증 현황</h2>
+                            <div class="responsive-table">
+                                <table class="table bg2">
+                                    <colgroup>
+                                        <col width="20%">
+                                        <col width="30%">
+                                        <col width="20%">
+                                        <col width="30%">
+                                    </colgroup>
+                                    <tr>
+                                        <th class="label">발급처</th>
+                                        <td><span id="" class="text-value">보건복지부</span></td>
+                                        <th class="label">자격증번호</th>
+                                        <td><span id="" class="text-value">제5236호</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label">발급일</th>
+                                        <td><span id="" class="text-value">2025-02-04</span></td>
+                                        <th class="label">자격증 현황</th>
+                                        <td><span id="" class="text-value">병원 코디네이터</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label">수료증 현황</th>
+                                        <td><span id="" class="text-value">2방문간호교육(수료)</span></td>
+                                        <th class="label">취득 학습기관</th>
+                                        <td><span id="" class="text-value">병원간호조무사협의회</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </section>
+
+      <h2>tag_link</h2>
+      <div style="width:100%">
+        <!-- tag -->
+<div class="krds-tag-wrap large">
+	<a href="#" class="krds-btn-tag link">
+		태그
+	</a>
+	<a href="#" class="krds-btn-tag link">
+		태그
+	</a>
+	<a href="#" class="krds-btn-tag link">
+		태그
+	</a>
+</div>
+<div class="krds-tag-wrap medium">
+	<a href="#" class="krds-btn-tag link">
+		태그
+	</a>
+	<a href="#" class="krds-btn-tag link">
+		태그
+	</a>
+	<a href="#" class="krds-btn-tag link">
+		태그
+	</a>
+</div>
+<div class="krds-tag-wrap small">
+	<a href="#" class="krds-btn-tag link">
+		태그
+	</a>
+	<a href="#" class="krds-btn-tag link">
+		태그
+	</a>
+	<a href="#" class="krds-btn-tag link">
+		태그
+	</a>
+</div>
+<!-- //tag -->
+      </div>
+
+
+      <h2>tag</h2>
+      <div style="width:100%">
+
+        <!-- tag -->
+<div class="krds-tag-wrap large">
+	<span class="krds-btn-tag">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+	<span class="krds-btn-tag">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+	<span class="krds-btn-tag">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+</div>
+<div class="krds-tag-wrap medium">
+	<span class="krds-btn-tag">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+	<span class="krds-btn-tag">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+	<span class="krds-btn-tag">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+</div>
+<div class="krds-tag-wrap small">
+	<span class="krds-btn-tag">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+	<span class="krds-btn-tag">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+	<span class="krds-btn-tag">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+</div>
+<!-- //tag -->
+      </div>
+
+
+      <h2>text_input_icon</h2>
+      <div style="width:100%">
+
+        <!-- text input -->
+<div class="fieldset">
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="login_pw">레이블</label>
+		</div>
+		<div class="form-conts btn-ico-wrap">
+			<input type="password" id="login_pw" class="krds-input" placeholder="8-12자의 영문자, 숫자, 특수문자 조합" value="1234567890">
+			<button type="button" class="krds-btn medium icon">
+				<span class="sr-only">입력한 비밀번호 보기</span>
+				<i class="svg-icon ico-pw-visible"></i>
+			</button>
+		</div>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="login_pw2">레이블</label>
+		</div>
+		<div class="form-conts btn-ico-wrap">
+			<input type="text" id="login_pw2" class="krds-input" placeholder="8-12자의 영문자, 숫자, 특수문자 조합" value="1234567890">
+			<button type="button" class="krds-btn medium icon">
+				<span class="sr-only">입력한 비밀번호 가리기</span>
+				<i class="svg-icon ico-pw-visible-on"></i>
+			</button>
+		</div>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="form_delete">레이블</label>
+		</div>
+		<div class="form-conts btn-ico-wrap" data-delete="true">
+			<input type="text" id="form_delete" class="krds-input" placeholder="내용을 입력하세요">
+			<button type="button" class="krds-btn medium icon pure btn-delete-input">
+				<span class="sr-only">내용 삭제</span>
+				<i class="svg-icon ico-delete-fill"></i>
+			</button>
+		</div>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="form_btn_multiple">레이블</label>
+		</div>
+		<div class="form-conts btn-ico-wrap" data-delete="true">
+			<input type="password" id="form_btn_multiple" class="krds-input" placeholder="8-12자의 영문자, 숫자, 특수문자 조합" value="1234567890">
+			<div class="btn-group">
+				<button type="button" class="krds-btn medium icon pure btn-delete-input">
+					<span class="sr-only">내용 삭제</span>
+					<i class="svg-icon ico-delete-fill"></i>
+				</button>
+				<button type="button" class="krds-btn medium icon">
+					<span class="sr-only">입력한 비밀번호 보기</span>
+					<i class="svg-icon ico-pw-visible"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+	<!-- //폼그룹 -->
+</div>
+<!-- //text input -->
+      </div>
+
+
+      <h2>text_input_size</h2>
+      <div style="width:100%">
+        <!-- text input -->
+<div class="fieldset">
+	<!-- 폼그룹 -->
+	<div class="form-group">
+	    <div class="form-tit">
+	        <label for="consult_name31">레이블</label>
+	    </div>
+	    <div class="form-conts">
+	        <input type="text" id="consult_name31" class="krds-input small" placeholder="플레이스홀더">
+	    </div>
+	    <p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="consult_name32">레이블</label>
+		</div>
+		<div class="form-conts">
+			<input type="text" id="consult_name32" class="krds-input medium" placeholder="플레이스홀더">
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="consult_name33">레이블</label>
+		</div>
+		<div class="form-conts">
+			<input type="text" id="consult_name33" class="krds-input large" placeholder="플레이스홀더">
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+</div>
+<!-- //text input -->
+      </div>
+
+
+      <h2>text_input_state</h2>
+      <div style="width:100%">
+        <!-- text input -->
+<div class="fieldset">
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="consult_name21">레이블</label>
+		</div>
+		<div class="form-conts is-error">
+			<input type="text" id="consult_name21" class="krds-input" placeholder="플레이스홀더" value="에러">
+		</div>
+		<p class="form-hint-invalid">에러 메시지</p>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="consult_name22">레이블</label>
+		</div>
+		<div class="form-conts is-success">
+			<input type="text" id="consult_name22" class="krds-input" placeholder="플레이스홀더" value="성공">
+		</div>
+		<p class="form-hint-success">성공 메시지</p>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="consult_name23">레이블</label>
+		</div>
+		<div class="form-conts is-information">
+			<input type="text" id="consult_name23" class="krds-input" placeholder="플레이스홀더" value="정보">
+		</div>
+		<p class="form-hint-information">정보 메시지</p>
+	</div>
+	<!-- //폼그룹 -->
+</div>
+<!-- //text input -->
+      </div>
+
+
+      <h2>text_input</h2>
+      <div style="width:100%">
+        <!-- text input -->
+<div class="fieldset">
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="consult_name">레이블</label>
+		</div>
+		<div class="form-conts">
+			<input type="text" id="consult_name" class="krds-input" placeholder="플레이스홀더">
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="consult_name2">레이블</label>
+		</div>
+		<div class="form-conts">
+			<input type="text" id="consult_name2" class="krds-input" placeholder="플레이스홀더" value="readonly" readonly>
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="consult_name3">레이블</label>
+		</div>
+		<div class="form-conts">
+			<input type="text" id="consult_name3" class="krds-input" placeholder="플레이스홀더" value="disabled" disabled>
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+</div>
+<!-- //text input -->
+      </div>
+
+
+      <h2>text_list_ordered</h2>
+      <div style="width:100%">
+        <!-- text list -->
+<!-- krds-info-list -->
+<ol class="krds-info-list ordered">
+  <li><span class="num">1. </span>텍스트 목록 레벨1</li>
+  <li>
+    <span class="num">2. </span>텍스트 목록 레벨1
+    <ol class="krds-info-list ordered">
+      <li><span class="num">a. </span>텍스트 목록 레벨2</li>
+      <li>
+        <span class="num">b. </span>텍스트 목록 레벨2
+        <ol class="krds-info-list ordered">
+					<li><span class="num">①</span>텍스트 목록 레벨3</li>
+					<li><span class="num">②</span>텍스트 목록 레벨3</li>
+				</ol>
+      </li>
+			<li><span class="num">c. </span>텍스트 목록 레벨2</li>
+    </ol>
+  </li>
+  <li><span class="num">3. </span>텍스트 목록 레벨1</li>
+</ol>
+
+<br>
+<br>
+
+<ol class="krds-info-list ordered">
+  <li>
+    <span class="num">1. </span>텍스트 목록 레벨1
+    <ul class="krds-info-list dash">
+      <li>
+        텍스트 목록 레벨2
+        <ol class="krds-info-list ordered">
+					<li><span class="num">①</span>텍스트 목록 레벨3</li>
+					<li><span class="num">②</span>텍스트 목록 레벨3</li>
+				</ol>
+      </li>
+    </ul>
+  </li>
+	<li>
+    <span class="num">2. </span>텍스트 목록 레벨1
+    <ol class="krds-info-list ordered">
+			<li>
+				<span class="num">a. </span>텍스트 목록 레벨2
+				<ul class="krds-info-list hollow">
+          <li>텍스트 목록 레벨3</li>
+          <li>텍스트 목록 레벨3</li>
+        </ul>
+			</li>
+		</ol>
+  </li>
+</ol>
+<!-- //krds-info-list -->
+<!-- //text list -->
+      </div>
+
+
+      <h2>text_list</h2>
+      <div style="width:100%">
+        <!-- text list -->
+<!-- krds-info-list -->
+<ul class="krds-info-list decimal">
+	<li>텍스트 목록 레벨1</li>
+	<li>
+		텍스트 목록 레벨1
+		<ul class="krds-info-list dash">
+			<li>텍스트 목록 레벨2</li>
+			<li>
+				텍스트 목록 레벨2
+				<ul class="krds-info-list hollow">
+					<li>텍스트 목록 레벨3</li>
+					<li>텍스트 목록 레벨3</li>
+				</ul>
+			</li>
+			<li>텍스트 목록 레벨2</li>
+		</ul>
+	</li>
+	<li>텍스트 목록 레벨1</li>
+</ul>
+
+<br>
+<br>
+
+<ul class="krds-info-list decimal">
+	<li>
+		텍스트 목록 레벨1
+		<ul class="krds-info-list dash">
+			<li>
+				텍스트 목록 레벨2
+				<ol class="krds-info-list ordered">
+					<li><span class="num">①</span>텍스트 목록 레벨3</li>
+					<li><span class="num">②</span>텍스트 목록 레벨3</li>
+				</ol>
+			</li>
+		</ul>
+	</li>
+	<li>
+		텍스트 목록 레벨1
+		<ol class="krds-info-list ordered">
+			<li>
+				<span class="num">a. </span>텍스트 목록 레벨2
+				<ul class="krds-info-list hollow">
+					<li>텍스트 목록 레벨3</li>
+					<li>텍스트 목록 레벨3</li>
+				</ul>
+			</li>
+		</ol>
+	</li>
+</ul>
+<!-- //krds-info-list -->
+<!-- //text list -->
+      </div>
+
+
+      <h2>textarea</h2>
+      <div style="width:100%">
+        <!-- textarea -->
+<!-- 폼그룹 -->
+<div class="form-group">
+	<div class="form-tit">
+		<label for="textarea">레이블</label>
+	</div>
+	<div class="form-conts">
+		<div class="textarea-wrap">
+			<textarea class="krds-input" placeholder="플레이스홀더" id="textarea"></textarea>
+			<p class="textarea-count">
+				<span class="count-now">0</span><span class="count-total">/100</span>
+			</p>
+		</div>
+	</div>
+</div>
+<!-- //폼그룹 -->
+<!-- //textarea -->
+      </div>
+
+
+
+      <h2>toggle_switch_size</h2>
+      <div style="width:100%">
+        <!-- toggle switch -->
+<div class="krds-form-toggle-switch large">
+	<input type="checkbox" id="switch_lg_1">
+	<label for="switch_lg_1"><span class="switch-toggle"><i></i></span>switch size : large</label>
+</div>
+<div class="krds-form-toggle-switch medium">
+	<input type="checkbox" id="switch_lg_md">
+	<label for="switch_lg_md"><span class="switch-toggle"><i></i></span>switch size : medium</label>
+</div>
+<!-- //toggle switch -->
+      </div>
+
+
+
+      <h2>toggle_switch</h2>
+      <div style="width:100%">
+        <!-- toggle switch -->
+<div class="krds-form-toggle-switch">
+	<input type="checkbox" id="switch">
+	<label for="switch"><span class="switch-toggle"><i></i></span>switch : default</label>
+</div>
+<div class="krds-form-toggle-switch">
+	<input type="checkbox" id="switch_checked" checked>
+	<label for="switch_checked"><span class="switch-toggle"><i></i></span>switch : checked</label>
+</div>
+<div class="krds-form-toggle-switch">
+	<input type="checkbox" id="switch_disabled_1" disabled>
+	<label for="switch_disabled_1"><span class="switch-toggle"><i></i></span>switch : disabled</label>
+</div>
+<!-- //toggle switch -->
+      </div>
+
+
+
+      <h2>tooltip_box</h2>
+      <div style="width:100%">
+        <!-- tooltip -->
+<button type="button" class="krds-btn small text krds-tooltip tooltip-box" data-tooltip="tooltip-box 툴팁은 150자 내외의 텍스트만 제공되어야 합니다. 내부에 닫기 버튼을 포함한 대화형 요소를 사용하지 않습니다. 본문을 가리지 않도록 주의합니다.">
+  tooltip-box
+  <i class="svg-icon ico-angle right"></i>
+</button>
+
+<button type="button" class="krds-btn icon krds-tooltip tooltip-box" data-tooltip="tooltip-box 툴팁은 150자 내외의 텍스트만 제공되어야 합니다. 내부에 닫기 버튼을 포함한 대화형 요소를 사용하지 않습니다. 본문을 가리지 않도록 주의합니다.">
+  <span class="sr-only">도움말</span>
+  <i class="svg-icon ico-help"></i>
+</button>
+
+<button type="button" class="krds-btn krds-tooltip tooltip-box" data-tooltip="tooltip-box 툴팁은 150자 내외의 텍스트만 제공되어야 합니다. 내부에 닫기 버튼을 포함한 대화형 요소를 사용하지 않습니다. 본문을 가리지 않도록 주의합니다.">도움말</button>
+<!-- //tooltip -->
+      </div>
+
+
+
+      <h2>tooltip_vertical</h2>
+      <div style="width:100%">
+        <!-- tooltip -->
+<button type="button" class="krds-btn small text krds-tooltip tooltip-vertical" data-tooltip="tooltip-vertical 옵션입니다">
+  tooltip-vertical <i class="svg-icon ico-angle right"></i>
+</button>
+
+<button type="button" class="krds-btn icon krds-tooltip tooltip-vertical" data-tooltip="아이콘 버튼에 제공되는 툴팁">
+  <span class="sr-only">도움말</span>
+  <i class="svg-icon ico-help"></i>
+</button>
+
+<button type="button" class="krds-btn krds-tooltip tooltip-vertical" data-tooltip="버튼에 제공되는 툴팁">도움말</button>
+<!-- //tooltip -->
+      </div>
+
+
+
+      <h2>tooltip</h2>
+      <div style="width:100%">
+        <!-- tooltip -->
+<button type="button" class="krds-btn small text krds-tooltip" data-tooltip="툴팁의 기본 설정입니다">
+	tooltip-horizontal <i class="svg-icon ico-angle right"></i>
+</button>
+
+<button type="button" class="krds-btn icon krds-tooltip" data-tooltip="아이콘 버튼에 제공되는 툴팁">
+	<span class="sr-only">도움말</span>
+	<i class="svg-icon ico-help"></i>
+</button>
+
+<button type="button" class="krds-btn krds-tooltip" data-tooltip="버튼에 제공되는 툴팁">도움말</button>
+<!-- //tooltip -->
+      </div>
+
+
+
+      <h2>tutorial_panel</h2>
+      <div style="width:100%">
+        <a href="tutorial_panel.html" target="_blank" class="krds-btn medium">tutorial_panerl 로 이동</a>
+
+      </div>
+
+
+
+      <h2>아이콘</h2>
+      <div style="width:100%">
+		<button class="icon-bg-round">
+			<i class="svg-icon ico-share ico"></i>
+			<span class="sr-only">공유하기</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-print"></i>
+			<span class="sr-only">print</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-download"></i>
+			<span class="sr-only">download</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-add"></i>
+			<span class="sr-only">추가</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-angle up"></i>
+			<span class="sr-only">위로</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-angle down"></i>
+			<span class="sr-only">아래로</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-angle left"></i>
+			<span class="sr-only">왼쪽</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-angle right"></i>
+			<span class="sr-only">오른쪽</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-calendar"></i>
+			<span class="sr-only">달력</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-check"></i>
+			<span class="sr-only">체크</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-close"></i>
+			<span class="sr-only">닫기</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-delete"></i>
+			<span class="sr-only">삭제</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-delete-fill"></i>
+			<span class="sr-only">삭제(채움)</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-down"></i>
+			<span class="sr-only">다운로드</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-edit"></i>
+			<span class="sr-only">수정</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-error"></i>
+			<span class="sr-only">오류</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-filter"></i>
+			<span class="sr-only">필터</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-global"></i>
+			<span class="sr-only">글로벌</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-go"></i>
+			<span class="sr-only">이동</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-help"></i>
+			<span class="sr-only">도움말</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-info"></i>
+			<span class="sr-only">정보</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-like"></i>
+			<span class="sr-only">좋아요</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-link"></i>
+			<span class="sr-only">링크</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-list"></i>
+			<span class="sr-only">목록</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-loading"></i>
+			<span class="sr-only">로딩</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-lock"></i>
+			<span class="sr-only">잠금</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-menu"></i>
+			<span class="sr-only">메뉴</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-modal-close"></i>
+			<span class="sr-only">모달 닫기</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-more"></i>
+			<span class="sr-only">더보기</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-notice"></i>
+			<span class="sr-only">공지</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-popup-close"></i>
+			<span class="sr-only">팝업 닫기</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-print"></i>
+			<span class="sr-only">프린트</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-pw-visible"></i>
+			<span class="sr-only">비밀번호 보기</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-pw-visible-on"></i>
+			<span class="sr-only">비밀번호 가리기</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-refresh"></i>
+			<span class="sr-only">새로고침</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-reset"></i>
+			<span class="sr-only">초기화</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-sch"></i>
+			<span class="sr-only">검색</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-share"></i>
+			<span class="sr-only">공유</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-toggle"></i>
+			<span class="sr-only">토글</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-tooltip"></i>
+			<span class="sr-only">툴팁</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-upload"></i>
+			<span class="sr-only">업로드</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-valid"></i>
+			<span class="sr-only">유효</span>
+		</button>
+		<button>
+			<i class="svg-icon ico-warning"></i>
+			<span class="sr-only">경고</span>
+		</button>
+      </div>
+
+
+
+      <h2>페이지 버튼</h2>
+      <div style="width:100%">
+		<!-- 페이지 버튼 영역 -->
+                        <div class="page-btn-wrap center btnW140">
+                            <button type="button" class="krds-btn black" onclick="">뒤로</button>
+                            <button type="button" class="krds-btn tertiary">다음 단계로</button>
+                        </div>
+                        <!-- //페이지 버튼 영역 -->
+      </div>
+
+
+
+      <h2>버튼 오른쪽</h2>
+      <div style="width:100%">
+		<!-- 버튼 리스트 start -->
+                    <div class="btnList-sort right">
+                        <button type="button" class="krds-btn black">등록</button>
+                    </div>
+                    <!-- //버튼 리스트 end -->
+
+
+					<div class="page-btn-wrap both m-column">
+              <button type="button" class="krds-btn xlarge tertiary" id="btn-back">목록으로 돌아가기</button>
+              <button type="button" class="krds-btn xlarge" id="btn-submit">제출하기</button>
+            </div>
+      </div>
+
+
+
+	  <h2>데이터피커</h2>
+	<div>
+
+		
+<input type="text" id="" class="krds-input datepicker medium"
+                                                                    placeholder="YYYY-MM-DD" maxlength="4">
+
+
+																	   <ul class="input-group range set">
+                                                            <li>
+                                                                <input type="text" id="" class="krds-input datepicker medium"
+                                                                    placeholder="YYYY-MM-DD" maxlength="4" >
+                                                            </li>
+                                                            <li class="mark">~</li>
+                                                            <li>
+                                                                <input type="text" id="" class="krds-input datepicker medium"
+                                                                    placeholder="YYYY-MM-DD" maxlength="4">
+                                                            </li>
+                                                        </ul>
+
+
+
+	</div>
+
+
+      
+    </div>
+
+	  </div>
+	</div>
+	  </div>
+	
+    
+
+</body>
+
+</html>

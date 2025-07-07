@@ -1,0 +1,79 @@
+@import url('./setting/root.css');  /** 루트 */
+@import url('./setting/common.css'); /** 공통 */
+@import url('./setting/layout.css'); /** 컴포넌트 */ 
+@import url('./setting/component.css'); /** 컴포넌트 */ 
+@import url('./setting/board.css'); /** 게시판 */ 
+
+
+.main-container .inner{padding-top: 2rem}
+
+/*서브 타이틀 모바일에서 보임 재정의 */
+.page-title-wrap[data-type=responsive] .h-tit {
+    display: block;
+}
+.page-title-wrap{display: flex; justify-content: space-between; flex-direction: row;}
+
+.page-title-wrap .h-tit {
+    font-size: var(--krds-pc-font-size-heading-large); /* 32px 재성정 */
+}
+
+/* 아이콘 배경을 원형(라운드)으로 만드는 클래스 */
+.icon-bg-round {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px; 
+  height: 38px; 
+  border-radius: 50%;
+  border:1px solid #DDDDDD; 
+}
+.icon-bg-round:hover, .icon-bg-round:focus {
+    background-color: var(--krds-breadcrumb--color-action-hover);
+}
+
+.krds-breadcrumb-wrap .breadcrumb .home .txt::before {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    content: "";
+    display: inline-flex;
+    width: var(--krds-icon--size-small);
+    height: var(--krds-icon--size-small);
+    background-color: #0D0E10;
+    forced-color-adjust: none;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+    -webkit-mask-image: url(../img/icon/home.svg);
+    mask-image: url(../img/icon/home.svg);
+}
+
+.breadcrumb-action{display: flex; gap:5px; }
+
+.bbs-search-wrap label{align-items: center;}
+
+
+
+/** 노트북 */
+@media (max-width: 1440px) {
+}
+
+/** 테블릿 */
+@media (max-width: 1023px) {
+}
+
+/** 모바일 */
+@media (max-width: 767px) {
+.bbs-search-wrap .select-style{width: 100%;}
+}
+
+@media (max-width: 479px) {
+}
+
+@media (max-width: 320px) {
+}
+

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 - 간호조무사협회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js" defer></script>
+    <script src="../resources/krds/js/component/ui-script.js" defer></script>
+    <script src="../resources/krds/js/pattern/pattern.js" defer></script>
+    <script src="../resources/js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+    <!-- 로그인 영역 -->
+    <div class="login-wrap">
+        <div class="login-img">
+        </div>
+        <div class="login-contents">
+            <div class="login-inner">
+                <div class="login-form-wrap">
+                    <div class="login-title">
+                        <h1>아이디 찾기</h1>
+                    </div>
+
+                    <!-- 아이디 찾기 -->
+                    <div class="login-idFind-area">
+                        <div class="step">
+                            <ol class="progress-bar">
+                                <li class="progress-step none">1. 가입정보 확인</li>
+                                <li class="progress-step active">2. 아이디 확인</li>
+                            </ol>
+                        </div>
+                        <div class="helper-box gray">
+                            <div class="helper-wrap">
+                                <ul class="krds-info-list decimal" role="list">
+                                    <li role="listitem">
+                                        입력하신 정보와 일치하는 아이디는 다음과 같습니다.
+                                    </li>
+                                  
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ico-find find02"></div>
+                        <div class="bar"></div>
+                        <div class="find-id-area">
+                            <span class="label">아이디</span>
+                            <div class="user-id">abcdef1234</div>
+                        </div>
+                        <div class="bar"></div>
+                        <div class="comp-btn-wrap mt60">
+                        <a href="./login.html"  class="krds-btn tertiary xlarge" >로그인</a>
+                        <a  href="./login_find_pw.html"type="button" class="krds-btn tertiary xlarge" >비밀번호찾기</a>
+                    </div>
+
+                  
+                    </div>
+                    <!-- //아이디 찾기 -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- //로그인 영역 -->
+
+    <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+
+
+
+</body>
+
+</html>
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>
