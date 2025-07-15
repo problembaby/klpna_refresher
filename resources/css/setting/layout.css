@@ -1,6 +1,7 @@
 @import url('./header_footer.css');
 @import url('./main.css');
 @import url('./mypage.css');
+@import url('./edu_layout.css'); /** 보수교육 레이아웃 *
 
 
 
@@ -22,7 +23,7 @@
     border-bottom: var(--krds-side-navigation--title-border-width) solid var(--krds-side-navigation--title-color-border);
     height:170px;
     border-radius: 20px 20px 0px 0px;
-    background: #0767C7;
+    background: #8261AC;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -357,15 +358,16 @@
 
 #krds-header .header-container .logo.klpna {
     display: inline-flex;
-    width: 25rem;
+    width:  20rem;
     height: 4rem;
+    text-align: center;
 }
 
 
-#krds-header .header-container .logo.klpna a {
+/* #krds-header .header-container .logo.klpna a {
     background-image: url(../../img/logo/klpna-logo.svg);
     background-repeat: no-repeat;
-}
+} */
 
 
 /* popup */

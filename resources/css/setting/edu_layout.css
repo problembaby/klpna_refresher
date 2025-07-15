@@ -1,0 +1,9 @@
+
+.header-util .inner.edu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-util .inner.edu .logo.klpna a::before{
+    display: ;
+}

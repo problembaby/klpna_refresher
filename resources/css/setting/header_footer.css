@@ -1,7 +1,16 @@
 
 
 
-.gnb-menu { display: flex; gap: 7rem; z-index: 9999; }
+.logo.klpna{
+  color: #282A2C;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.64px;
+}
+
+.gnb-menu { display: flex; gap: 18rem; z-index: 9999; }
 .gnb-menu button.gnb-main-trigger { color: #0D0E10; text-align: center; font-size: 22px; font-weight: 600; }
 /* .gnb-menu button.gnb-main-trigger:focus{    
     outline: 0rem solid var(--krds-light-color-border-inverse);
@@ -60,7 +69,7 @@ letter-spacing: -0.35px;}
 }
 
 
-.depth01 .gnb-main-trigger.active {color: #0767C7; position: relative; font-weight: 700;}
+.depth01 .gnb-main-trigger.active {color: #8261AC; position: relative; font-weight: 700;}
 .depth01 .gnb-main-trigger.active::before {display: block; content: ""; background: url(../../img/main/ico-menu-action.svg)no-repeat; width: 19px; height: 8px; position: absolute; top:-5px; left:50%; transform: translateX(-50%);}
 
 .gnb-main-trigger + .depth2::before{
@@ -69,8 +78,8 @@ letter-spacing: -0.35px;}
   position: absolute;
   width: 100%;
   border-radius: 5px;
-  background: linear-gradient(226deg, #0050CA 3.64%, #0AF 96.83%);
-  height:290px;
+  background: linear-gradient(226deg, #8261AC 3.64%, #bd9de9 96.83%);
+  height:190px;
   top:0;
   left:0;
   transform: scaleY(0);
@@ -109,7 +118,7 @@ letter-spacing: -0.35px;}
   animation: bounceFade 1.2s ease-in-out forwards;
 }
 .depth01 .gnb-main-trigger:hover {
-  color: #0767C7;
+  color: #8261AC;
 }
 
 /* active일 경우 고정 표시 */
@@ -147,9 +156,9 @@ letter-spacing: -0.35px;}
 
 
 
-.gnb-bg{background-color: #fff; position: absolute; width: 100%; height:310px; top:90px; left:50%; transform: translateX(-50%); z-index: 99;}
+.gnb-bg{background-color: #fff; position: absolute; width: 100%; height:210px; top:90px; left:50%; transform: translateX(-50%); z-index: 99; }
 
-.gnb-bg::after { content: ""; display: block; background: url(../../img/main/gnbBg.png)no-repeat center; width: 310px; height: 258px; position: absolute; left: 267px; bottom: 42px; }
+.gnb-bg::after { content: ""; display: none; background: url(../../img/main/gnbBg.png)no-repeat center; width: 310px; height: 258px; position: absolute; left: 267px;bottom: 42px; }
 
 #krds-footer {
     position: relative;
@@ -417,9 +426,16 @@ line-height: 150%; /* 24px */ transition: 0s;
 
 .modal-content .inner{height:100%; overflow: auto; padding:0}
 
+@media(max-width:1700px) {
+  .gnb-bg::after { left: 100px; }
+}
 
 /** 노트북 */
 @media (max-width: 1440px) {
+
+  .gnb-bg::after { display: none;}
+
+
     .gnb-menu button.gnb-main-trigger {
     color: #0D0E10;
     text-align: center;
