@@ -1,16 +1,7 @@
 
 
 
-.logo.klpna{
-  color: #282A2C;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-letter-spacing: -0.64px;
-}
-
-.gnb-menu { display: flex; gap: 18rem; z-index: 9999; }
+.gnb .gnb-menu { display: flex; /* gap: 7rem; */ z-index: 9999; }
 .gnb-menu button.gnb-main-trigger { color: #0D0E10; text-align: center; font-size: 22px; font-weight: 600; }
 /* .gnb-menu button.gnb-main-trigger:focus{    
     outline: 0rem solid var(--krds-light-color-border-inverse);
@@ -28,7 +19,7 @@ letter-spacing: -0.64px;
 font-size: 16px;
 font-weight: 500;
 letter-spacing: -0.32px; width: 130px; transition: 0s;}
-.depth2 li a:hover{ font-weight: 600; 
+.depth2 li a:hover{ font-weight: 600; color:#0050CA; text-decoration: underline;
 }
 
 .header-container{height:90px; display: flex; align-items: center; border-bottom: 1px solid #D4D4D4;}
@@ -69,30 +60,30 @@ letter-spacing: -0.35px;}
 }
 
 
-.depth01 .gnb-main-trigger.active {color: #8261AC; position: relative; font-weight: 700;}
+.depth01 .gnb-main-trigger.active {color: #0767C7; position: relative; font-weight: 700;}
 .depth01 .gnb-main-trigger.active::before {display: block; content: ""; background: url(../../img/main/ico-menu-action.svg)no-repeat; width: 19px; height: 8px; position: absolute; top:-5px; left:50%; transform: translateX(-50%);}
 
-.gnb-main-trigger + .depth2::before{
+/* .gnb-main-trigger + .depth2::before{
   display: block;
   content:"";
   position: absolute;
   width: 100%;
   border-radius: 5px;
-  background: linear-gradient(226deg, #8261AC 3.64%, #bd9de9 96.83%);
-  height:190px;
+  background: linear-gradient(226deg, #0050CA 3.64%, #0AF 96.83%);
+  height:290px;
   top:0;
   left:0;
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.3s ease-in-out;
   z-index: -1;
-}
+} */
 
 .gnb-main-trigger.active + .depth2::before {
   transform: scaleY(1);
 }
 
-.gnb-main-trigger.active + .depth2 a{color:#fff}
+/* .gnb-main-trigger.active + .depth2 a{color:#fff} */
 
 .depth01 .gnb-main-trigger {
   position: relative;
@@ -118,7 +109,7 @@ letter-spacing: -0.35px;}
   animation: bounceFade 1.2s ease-in-out forwards;
 }
 .depth01 .gnb-main-trigger:hover {
-  color: #8261AC;
+  color: #0767C7;
 }
 
 /* active일 경우 고정 표시 */
@@ -156,9 +147,9 @@ letter-spacing: -0.35px;}
 
 
 
-.gnb-bg{background-color: #fff; position: absolute; width: 100%; height:210px; top:90px; left:50%; transform: translateX(-50%); z-index: 99; }
+.gnb-bg{background-color: #fff; position: absolute; width: 100%; height:310px; top:90px; left:50%; transform: translateX(-50%); z-index: 99;}
 
-.gnb-bg::after { content: ""; display: none; background: url(../../img/main/gnbBg.png)no-repeat center; width: 310px; height: 258px; position: absolute; left: 267px;bottom: 42px; }
+.gnb-bg::after { content: ""; display: block; background: url(../../img/main/gnbBg.png)no-repeat center; width: 310px; height: 258px; position: absolute; left: 267px;bottom: 42px; }
 
 #krds-footer {
     position: relative;
@@ -397,24 +388,39 @@ line-height: 150%; /* 24px */
     background-color: #fff;
 }
 
-.allMenu-nav{display: flex; gap: 10px; flex-direction: column; margin-top: 30px;}
-.allMenu-nav li.allMenu-nav-item{display: flex; align-items: center; width: 100%; border-bottom:1px solid #D9D9D9;  padding: 20px 0;}
+.allMenu-nav{display: flex; gap: 20px; flex-direction: column; margin-top: 30px;}
+.allMenu-nav li.allMenu-nav-item{display: flex; width: 100%; background-color: #F8F8F8;  padding: 20px 0;}
+.allMenu-nav.mypage li.allMenu-nav-item{background-color: #ECF2FE; }
 .allMenu-nav li.allMenu-nav-item .menu-title{ color: var(--color-text-title, #0D0E10);
 font-size: 18px;
 font-style: normal;
 font-weight: 700;
-line-height: 150%; /* 27px */ flex: 0 150px; padding-left:10px}
+line-height: 150%; /* 27px */ flex: 0 150px; padding-left:20px}
 .allMenu-nav li.allMenu-nav-item .menu-list{display: flex; gap: 20px; flex-wrap: wrap; width: 100%; }
-.allMenu-nav li.allMenu-nav-item .menu-list li{display: flex; align-items: center; gap:5px; flex:0 160px }
-.allMenu-nav li.allMenu-nav-item .menu-list li::before{width: 5px; height:5px; content:""; background-color: #0D0E10; display: block; border-radius: 50%;}
+.allMenu-nav li.allMenu-nav-item .menu-list > li{display: flex; flex-direction: column; flex:0 160px }
+.allMenu-nav li.allMenu-nav-item .menu-list > li > a::before{width: 5px; height:5px; content:""; background-color: #0D0E10; display: block; border-radius: 50%;}
 
-.allMenu-nav li.allMenu-nav-item .menu-list li a{width:100%; color: var(--color-text-basic, #0D0E10);
+.allMenu-nav li.allMenu-nav-item .menu-list > li a{width:100%; color: var(--color-text-basic, #0D0E10);
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
-line-height: 150%; /* 24px */ transition: 0s;
+line-height: 150%; /* 24px */ transition: 0s; display: flex; align-items: center; gap:5px; display: flex; 
 }
-.allMenu-nav li.allMenu-nav-item .menu-list li a:hover{color:#0050CA; font-weight: 700; text-decoration: underline;}
+.allMenu-nav li.allMenu-nav-item .menu-list > li a:hover{color:#0050CA; font-weight: 700; text-decoration: underline;}
+.allMenu-nav li.allMenu-nav-item .menu-list > li a + .depth3 {display: flex; flex-direction: column; gap:5px; margin-top:10px; position: relative; border-left: 1px solid var(--color-border-nomal, #C6C6C6); padding-left: 10px;}
+.allMenu-nav li.allMenu-nav-item .menu-list > li a + .depth3 a {color: var(--color-text-sub_title, #464C53);
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 21px */}
+
+.allMenu-nav li.allMenu-nav-item .menu-list > li a + .depth3 a .svg-icon {
+    display: inline-flex;
+    width: 15px;
+    height: 15px;
+    background-color: var(--krds-light-color-text-basic);
+    forced-color-adjust: none;
+}
 
 
 .allMenu-nav.mypage{
@@ -582,8 +588,7 @@ line-height: 150%; /* 24px */ transition: 0s;
     display: flex;
     align-items: flex-start;
     width: 100%;
-    border-bottom: 1px solid #D9D9D9;
-    padding: 20px 0;
+    padding: 20px 20px;
     flex-direction: column;
 }
 
@@ -606,6 +611,12 @@ line-height: 150%; /* 24px */ transition: 0s;
 .allMenu-nav.mypage {
     background: var(--color-bg-secondary, #fff);
 
+}
+
+
+#popAllMenuVIew.krds-modal:not([data-type=bottom-sheet]) .modal-dialog .modal-conts{
+        padding-inline: 0;
+        padding-bottom: 0;
 }
 
 

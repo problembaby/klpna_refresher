@@ -13,7 +13,7 @@ background: #fff;flex:1; max-width: 1039px; border-radius: 30px; overflow: hidde
     width: 100%;
     height:330px;
     border-radius: 30px;
-    background: #8261AC;
+    background: #0767C7;
     padding: 18px;
     color:#fff;
 }
@@ -22,8 +22,8 @@ background: #fff;flex:1; max-width: 1039px; border-radius: 30px; overflow: hidde
     height:100%;
 }
 .guest-btn-list{width: 100%; display: flex; flex-direction: column; gap:30px; margin-top: 30px;}
-.guest-btn-list a.krds-btn{color: #8261AC;}
-.guest-box-btn.tertiary{width: 100%; background-color: #fff; color: #8261AC;
+.guest-btn-list a.krds-btn{color: #0050CA;}
+.guest-box-btn.tertiary{width: 100%; background-color: #fff; color: #0050CA;
 text-align: center;
 font-size: 24px;
 height: 97px;
@@ -44,7 +44,7 @@ font-style: normal;
 font-weight: 500;
 }
 .login-noti .bold{
- color: #fff769;
+ color: #68D4FF;
 }
 
 
@@ -64,7 +64,7 @@ font-weight: 500;
 
 .edu-summary{display: flex; justify-content: space-between; margin-top: 20px; gap:20px}
 .edu-summary .edu-item{border-radius: 30px;
-background: #8261AC; width: 161.112px;
+background: #0767C7; width: 161.112px;
 height: 110px;
 flex-shrink: 0; text-align: center; display: block; color:#fff;}
 .edu-item .edu-title{display: flex; align-items: center; justify-content: center; margin-top:10px;}
@@ -236,7 +236,7 @@ line-height: 100%; /* 18px */
 
 
 
-/** 대한간호조무사협회 바로가기 아이콘 */
+/** 대한간호조무사시도회 바로가기 아이콘 */
 .shortImg_01_01::before {
   content: "";
   background: url(../../img/main/shortImg_01_01.svg) no-repeat center/contain;
@@ -644,7 +644,7 @@ font-weight: 400; margin-top: 5px;}
   flex-direction: column;
   gap: 10px;
   position: absolute;
-  top: -180px;
+  bottom: 80px;
   right: 0;
   pointer-events: none;
   opacity: 0;
@@ -656,7 +656,7 @@ font-weight: 400; margin-top: 5px;}
 }
 
 
-#aside { position: fixed; left: calc(100% - 10rem); bottom: 10px; z-index: 4000; pointer-events: none; }
+#aside { position: fixed; left: calc(100% - 10rem); bottom: 70px; z-index: 4000; pointer-events: none; }
 .a_control .ac_deco {
   display: block;
   position: absolute;
@@ -705,6 +705,10 @@ font-weight: 400; margin-top: 5px;}
   width: 150px;
 }
 
+.quick-wrap-item a:hover{
+  background-color: #05417C;
+}
+
 .quick-icon01::before {
   content: "";
   display: block;
@@ -717,8 +721,8 @@ font-weight: 400; margin-top: 5px;}
   content: "";
   display: block;
   background: url(../../img/main/quick-icon02.png)no-repeat;
-  width: 20px;
-  height: 23px;
+  width: 23px;
+  height: 20px;
 }
 
 .quick-icon03::before {
@@ -727,6 +731,43 @@ font-weight: 400; margin-top: 5px;}
   background: url(../../img/main/quick-icon03.png)no-repeat;
   width: 20px;
   height: 20px;
+}
+
+.quick-icon04::before {
+  content: "";
+  display: block;
+  background: url(../../img/main/quick-icon04.png)no-repeat;
+  width: 20px;
+  height: 22px;
+}
+
+#topBtn{
+    position: fixed;
+    left: calc(100% - 10rem);
+    bottom: 10px;
+    z-index: 4000;
+    pointer-events: auto;
+    cursor: pointer;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0s linear 0.4s;;
+}
+
+#topBtn.show{
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease; /* show 땐 즉시 보이고 페이드인 */
+}
+
+
+.ico-top{display: flex; justify-content: center; margin-bottom: 3px;}
+.ico-top::before{
+  display: block;
+  content:"";
+  background: url(../../img/icon/ico-top.svg)no-repeat;
+  width: 15px;
+  height:18px
 }
 
 
@@ -830,6 +871,7 @@ font-weight: 400; margin-top: 5px;}
 .mainLocalTab .tab {
     width: 100%;
     max-width: 100%;
+    position: relative;
 }
 .mainLocalTab  .tab.full > ul > li {
     width: 10%;
@@ -942,7 +984,7 @@ font-weight: 400; margin-top: 5px;}
 }
 .edu-summary .edu-item {
     border-radius: 20px;
-    background: #8261AC;
+    background: #0767C7;
     width: calc(50% - 10px);
     height: 80px;
     flex-shrink: 0;
@@ -987,7 +1029,7 @@ font-weight: 400; margin-top: 5px;}
     width: 100%;
     height: auto;
     border-radius: 20px;
-    background: #8261AC;
+    background: #0767C7;
     padding: 18px;
     color: #fff;
 }  
@@ -1000,7 +1042,12 @@ font-weight: 400; margin-top: 5px;}
 .shortcut-list {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
+
+.shortcut-list-item{flex: 1 1 30%}
 
 .shortcut-list-item .img {
     width: 70px;

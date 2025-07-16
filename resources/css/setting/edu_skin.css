@@ -1,0 +1,100 @@
+
+/***********************
+헤더 푸터
+*************************/
+
+.gnb .gnb-menu {
+    display: flex;
+    gap: 16rem; 
+    z-index: 9999;
+}
+
+.gnb-bg {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 234px;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    overflow: hidden;
+}
+
+.gnb-bg::after {
+    content: "";
+    display: block;
+    background: url(../../img/main/gnbBg.png)no-repeat center;
+    width: 310px;
+    height: 258px;
+    position: absolute;
+    left: 267px;
+    bottom: -41px;
+}
+
+
+.header-util .inner.edu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-util .inner.edu .logo.klpna a{display: block;}
+.header-util .inner.edu .logo.klpna a::before{
+    display: block;
+    content:"";
+    background: url(../../img/logo/topUtill_logo.png)no-repeat;
+    width: 195px;
+    height: 29px;
+    background-size: contain;
+}
+
+.fc-puple{color:#AF77F5}
+
+#krds-header .header-container .logo a {
+color: #333;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.64px;
+}
+
+.header-util-list li .btn-navi.all::before{margin-top: 3px;}
+
+
+/** 색상변경 */
+.depth01 .gnb-main-trigger:hover, .depth01 .gnb-main-trigger.active, .depth2 li a:hover{  color:#AF77F5; }
+
+/** 노트북 */
+@media (max-width: 1440px) {
+    .gnb-bg{display: none;}
+}
+
+/** 테블릿 */
+@media (max-width: 1023px) {
+}
+
+/** 모바일 */
+@media (max-width: 767px) {
+    #krds-header .header-container .logo a {
+    font-size: 23px;
+    text-align: left;
+
+
+}
+
+@media (max-width: 479px) {
+    .header-util .inner.edu .logo.klpna a::before {
+    width: 140px;
+    height: 25px;
+
+}
+}
+
+@media (max-width: 360px) {
+        .header-util .inner.edu .logo.klpna a::before {
+    display: none;
+
+}
+}
+

@@ -45,29 +45,37 @@ const KRDSFormUtil = {
     /**
      * [공통] 퀵메뉴 열기/닫기 토글 기능
      */
-    bindQuickMenuToggle() {
-        const toggleBtn = document.querySelector('.a_control');
-        const quickWrap = document.querySelector('.quick-wrap-ul');
-        const items = document.querySelectorAll('.quick-wrap-item');
+   bindQuickMenuToggle() {
+	const toggleBtn = document.querySelector('.a_control');
+	const quickWrap = document.querySelector('.quick-wrap-ul');
+	const items = document.querySelectorAll('.quick-wrap-item');
 
-        if (!toggleBtn || !quickWrap) return;
+	if (!toggleBtn || !quickWrap) return;
 
-        let isOpen = false;
+	let isOpen = true; // 기본 상태를 열림으로 설정
 
-        toggleBtn.addEventListener('click', function () {
-            isOpen = !isOpen;
-            toggleBtn.classList.toggle('on', isOpen);
-            quickWrap.classList.toggle('q-show', isOpen);
+	// 초기 상태를 열림으로 설정
+	toggleBtn.classList.add('on');
+	quickWrap.classList.add('q-show');
+	items.forEach((item, i) => {
+		setTimeout(() => item.classList.add('q-show'), i * 100);
+	});
 
-            if (isOpen) {
-                [...items].reverse().forEach((item, i) => {
-                    setTimeout(() => item.classList.add('q-show'), i * 100);
-                });
-            } else {
-                items.forEach(item => item.classList.remove('q-show'));
-            }
-        });
-    },
+	toggleBtn.addEventListener('click', function () {
+		isOpen = !isOpen;
+		toggleBtn.classList.toggle('on', isOpen);
+		quickWrap.classList.toggle('q-show', isOpen);
+
+		if (isOpen) {
+			[...items].reverse().forEach((item, i) => {
+				setTimeout(() => item.classList.add('q-show'), i * 100);
+			});
+		} else {
+			items.forEach(item => item.classList.remove('q-show'));
+		}
+	});
+}
+,
 
     /**
      * [공통] GNB 열기/닫기 토글 기능
@@ -256,7 +264,7 @@ $(function () {
     }
   });
 
-  // 단독 datepicker (input-group.range 바깥)
+  // 단독 datepicker (input-group.range 를 제외 처리)
   $('input[type="text"].datepicker').each(function () {
     // 이미 위에서 처리된 경우(범위 내 input) skip
     if ($(this).closest('.input-group.range').length === 0) {
@@ -294,4 +302,44 @@ $(function () {
     var clipboard = (e.originalEvent || e).clipboardData.getData('text');
     if (/[^0-9]/.test(clipboard)) e.preventDefault();
   });
+
+
+   // textarea 글자 수 카운트 (최대 3000자)
+    window.updateTextareaCount = function (textareaEl) {
+        const $textarea = $(textareaEl);
+        const $countNowEl = $textarea.closest('.form-conts').find('.count-now');
+        if (!$countNowEl.length) return;
+
+        let value = $textarea.val();
+        if (value.length > 3000) {
+            value = value.substring(0, 3000);
+            $textarea.val(value);
+        }
+        $countNowEl.text(value.length);
+    };
 });
+
+
+
+
+/**********************************
+ * 탑이동
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+		const topBtn = document.getElementById('topBtn');
+		const threshold  = 500; // 스레드 높이값
+
+		// 스크롤 이벤트
+		window.addEventListener('scroll',() => {
+			window.scrollY > threshold ? topBtn.classList.add('show') : topBtn.classList.remove('show');
+		});
+
+		// 클릭시 부드러운 스크롤
+		topBtn.addEventListener('click', e => {
+			//e.preventDefault();
+			window.scrollTo({ top:0, behavior : 'smooth'});
+		});
+
+
+	});

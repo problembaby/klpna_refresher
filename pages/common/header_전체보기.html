@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="../../resources/krds/css/component/output.css" />
 	<link rel="stylesheet" href="../../resources/krds/css/pattern/p_layout.css" />
 	<link rel="stylesheet" href="../../resources/css/style.css" />
+	<link rel="stylesheet" href="../../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.css" />
 
 
 	<!--js-->
@@ -19,8 +20,8 @@
 	<script src="../../resources/krds/js/plugin/swiper-bundle.min.js"></script>
 	<script defer src="../../resources/krds/js/component/ui-script.js"></script>
 	<script defer src="../../resources/krds/js/pattern/pattern.js"></script>
+	<script src="../../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
 	<script src="../../resources/js/script.js"></script>
-
 </head>
 
 
@@ -81,7 +82,7 @@
 										<li><a href="#">정관</a></li>
 										<li><a href="#">주요사업</a></li>
 										<li><a href="#">조직도</a></li>
-										<li><a href="#">시도회</a></li>
+										<li><a href="#">시도지부</a></li>
 										<li><a href="#">오시는 길</a></li>
 									</ul>
 								</li>
@@ -91,7 +92,7 @@
 										<li><a href="#">간호조무사란</a></li>
 										<li><a href="#">윤리선언/강령/지침</a></li>
 										<li><a href="#">자격제도</a></li>
-										<li><a href="#">업무범위FAQ</a></li>
+										<li><a href="#">업무범위 FAQ</a></li>
 									</ul>
 								</li>
 								<li class="depth01">
@@ -99,7 +100,7 @@
 									<ul class="depth2">
 										<li><a href="#">보도자료</a></li>
 										<li><a href="#">협회활동갤러리</a></li>
-										<li><a href="#">시도협회갤러리</a></li>
+										<li><a href="#">시도회갤러리</a></li>
 										<li><a href="#">간호조무사뉴스</a></li>
 										<li><a href="#">SNS홍보</a></li>
 										<li><a href="#">매거진</a></li>
@@ -118,7 +119,7 @@
 								<li class="depth01">
 									<button type="button" class="gnb-main-trigger" aria-expanded="false">회원혜택</button>
 									<ul class="depth2">
-										<li><a href="#">드림복지</a></li>
+										<li><a href="#">드림복지사업</a></li>
 										<li><a href="#">KLPNA상조회</a></li>
 										<li><a href="#">노무상담</a></li>
 									</ul>
@@ -170,7 +171,8 @@
 									<div class="drop-in">
 										<ul class="drop-list">
 											<li><a href="https://klpna.or.kr/" class="item-link" title="대한간호조무사협회 새창열림"
-													target="_blank">대한간호조무사협회</a></li>
+													target="_blank">대한간호조무사협회</a>
+												</li>
 											<li><a href="https://klpnedu.or.kr/" class="item-link" title="보수교육센터 새창열림"
 													target="_blank">보수교육센터</a></li>
 											<li><a href="https://klpnacademy.or.kr/" class="item-link"
@@ -266,7 +268,7 @@
 								<li><a href="#" class="gnb-sub-trigger">정관</a></li>
 								<li><a href="#" class="gnb-sub-trigger">주요사업</a></li>
 								<li><a href="#" class="gnb-sub-trigger">조직도</a></li>
-								<li><a href="#" class="gnb-sub-trigger">시도회</a></li>
+								<li><a href="#" class="gnb-sub-trigger">시도지부</a></li>
 								<li><a href="#" class="gnb-sub-trigger">오시는 길</a></li>
 							</ul>
 						</div>
@@ -276,7 +278,7 @@
 								<li><a href="#" class="gnb-sub-trigger">간호조무사란</a></li>
 								<li><a href="#" class="gnb-sub-trigger">윤리선언/강령/지침</a></li>
 								<li><a href="#" class="gnb-sub-trigger">자격제도</a></li>
-								<li><a href="#" class="gnb-sub-trigger">업무범위FAQ</a></li>
+								<li><a href="#" class="gnb-sub-trigger">업무범위 FAQ</a></li>
 							</ul>
 						</div>
 						<div class="gnb-sub-list" id="mGnb-anchor3" role="tabpanel" aria-labelledby="tab-2">
@@ -284,7 +286,7 @@
 							<ul>
 								<li><a href="#" class="gnb-sub-trigger">보도자료</a></li>
 								<li><a href="#" class="gnb-sub-trigger">협회활동갤러리</a></li>
-								<li><a href="#" class="gnb-sub-trigger">시도협회갤러리</a></li>
+								<li><a href="#" class="gnb-sub-trigger">시도회갤러리</a></li>
 								<li><a href="#" class="gnb-sub-trigger">간호조무사뉴스</a></li>
 								<li><a href="#" class="gnb-sub-trigger">SNS홍보</a></li>
 								<li><a href="#" class="gnb-sub-trigger">매거진</a></li>
@@ -303,7 +305,7 @@
 						<div class="gnb-sub-list" id="mGnb-anchor5" role="tabpanel" aria-labelledby="tab-4">
 							<h2 class="sub-title">회원혜택</h2>
 							<ul>
-								<li><a href="#" class="gnb-sub-trigger">드림복지</a></li>
+								<li><a href="#" class="gnb-sub-trigger">드림복지사업</a></li>
 								<li><a href="#" class="gnb-sub-trigger">KLPNA상조회</a></li>
 								<li><a href="#" class="gnb-sub-trigger">노무상담</a></li>
 							</ul>
@@ -373,8 +375,9 @@
 					<h1>전체메뉴</h1>
 
 					<div class="allmenu-link-list">
-						<a href="#" class="krds-btn fc-white">대한간호조무사협회 <i class="svg-icon ico-angle down"></i></a>
-						<a href="#" class="krds-btn blue">보수교육센터 <i class="ico-blue-home"></i></a>
+						
+						<a href="#" class="krds-btn fc-white">보수교육센터 <i class="svg-icon ico-angle down"></i></a>
+						<a href="#" class="krds-btn blue">대한간호조무사협회 <i class="ico-blue-home"></i></a>
 						<a href="#" class="krds-btn blue">직무교육센터 <i class="ico-blue-home"></i></a>
 						<a href="#" class="krds-btn blue">자격신고센터 <i class="ico-blue-home"></i></a>
 						<a href="#" class="krds-btn blue">학회센터 <i class="ico-blue-home"></i></a>
@@ -387,88 +390,71 @@
 				<div class="modal-conts">
 					<ul class="allMenu-nav">
 						<li class="allMenu-nav-item">
-							<div class="menu-title">협회안내</div>
+							<div class="menu-title">교육소개</div>
 							<ul class="menu-list">
-								<li><a href="#" title="페이지 이동">인사말</a></li>
-								<li><a href="#" title="페이지 이동">연혁정관</a></li>
-								<li><a href="#" title="페이지 이동">주요사업</a></li>
-								<li><a href="#" title="페이지 이동">조직도</a></li>
-								<li><a href="#" title="페이지 이동">시도회</a></li>
-								<li><a href="#" title="페이지 이동">오시는 길</a></li>
-							</ul>
-						</li>
-						<li class="allMenu-nav-item">
-							<div class="menu-title">간호조무사</div>
-							<ul class="menu-list">
-								<li><a href="#" title="페이지 이동">간호조무사란</a></li>
-								<li><a href="#" title="페이지 이동">윤리선언/강령/지침</a></li>
-								<li><a href="#" title="페이지 이동">자격제도</a></li>
-								<li><a href="#" title="페이지 이동">업무범위 FAQ</a></li>
-								<li><a href="#" title="페이지 이동">온라인민원/증명서</a></li>
-							</ul>
-						</li>
-						<li class="allMenu-nav-item">
-							<div class="menu-title">홍보센터</div>
-							<ul class="menu-list">
-								<li><a href="#" title="페이지 이동">보도자료</a></li>
-								<li><a href="#" title="페이지 이동">협회활동갤러리</a></li>
-								<li><a href="#" title="페이지 이동">시도협회갤러리</a></li>
-								<li><a href="#" title="페이지 이동">간호조무사뉴스</a></li>
-								<li><a href="#" title="페이지 이동">SNS홍보</a></li>
-								<li><a href="#" title="페이지 이동">매거진</a></li>
-								<li><a href="#" title="페이지 이동">인터넷신문</a></li>
-							</ul>
-						</li>
-						<li class="allMenu-nav-item">
-							<div class="menu-title">정보센터</div>
-							<ul class="menu-list">
-								<li><a href="#" title="페이지 이동">정책자료</a></li>
 								<li><a href="#" title="페이지 이동">관련법규</a></li>
-								<li><a href="#" title="페이지 이동">간호인력통계</a></li>
-								<li><a href="#" title="페이지 이동">관련기관</a></li>
+								<li><a href="#" title="페이지 이동">신청방법</a></li>
+								<li><a href="#" title="페이지 이동">교육일정</a></li>
+								<li><a href="#" title="페이지 이동">교육이수시간</a></li>
 							</ul>
 						</li>
 						<li class="allMenu-nav-item">
-							<div class="menu-title">회원혜택</div>
+							<div class="menu-title">교육신청</div>
 							<ul class="menu-list">
-								<li><a href="#" title="페이지 이동">드림복지</a></li>
-								<li><a href="#" title="페이지 이동">KLPA상조회</a></li>
-								<li><a href="#" title="페이지 이동">노무상담</a></li>
+								<li><a href="#" title="페이지 이동">교육신청</a></li>
 							</ul>
 						</li>
 						<li class="allMenu-nav-item">
-							<div class="menu-title">취업정보</div>
-							<ul class="menu-list">
-								<li><a href="#" title="페이지 이동">구인</a></li>
-								<li><a href="#" title="페이지 이동">대체인력</a></li>
-								<li><a href="#" title="페이지 이동">나라일터(채용)</a></li>
-							</ul>
-						</li>
-						<li class="allMenu-nav-item">
-							<div class="menu-title">회원소통</div>
+							<div class="menu-title">교육소식</div>
 							<ul class="menu-list">
 								<li><a href="#" title="페이지 이동">공지사항</a></li>
-								<li><a href="#" title="페이지 이동">회원게시판</a></li>
-								<li><a href="#" title="페이지 이동">신고센터</a></li>
-								<li><a href="#" title="페이지 이동">원격서비스</a></li>
+								<li><a href="#" title="페이지 이동">자주묻는질문</a></li>
 							</ul>
 						</li>
+					
 					</ul>
 
 
-					<ul class="allMenu-nav mypage">
+					<ul class="allMenu-nav mypage mb100">
 						<li class="allMenu-nav-item">
 							<div class="menu-title">마이페이지</div>
 							<ul class="menu-list">
-								<li><a href="#" title="페이지 이동">내정보</a></li>
-								<li><a href="#" title="페이지 이동">나의게시물</a></li>
-								<li><a href="#" title="페이지 이동">원격지원서비스</a></li>
+								<li><a href="#" title="페이지 이동">교육현황</a></li>
+								<li><a href="#" title="페이지 이동">강의실</a></li>
+								<li><a href="#" title="페이지 이동">회비/기금내역</a>
+									<ul class="depth3">
+										<li>
+											<a href="#" title="페이지이동">회비납부 내역</a>
+										</li>
+										<li><a href="#" title="페이지이동">정치세력화추진모금 내역</a></li>
+										<li><a href="#" title="페이지이동">노조설립약정금납부 내역</a></li>
+									</ul>
+
+								</li>
 								<li><a href="#" title="페이지 이동">1:1문의</a></li>
-								<li><a href="#" title="페이지 이동">기타모금 납부내역</a></li>
-								<li><a href="#" title="페이지 이동">회비/교육비 내역</a></li>
-								<li><a href="#" title="페이지 이동">보수교육이수현황</a></li>
-								<li><a href="#" title="페이지 이동">직무교육이수현황</a></li>
-								<li><a href="#" title="페이지 이동">증명서발급</a></li>
+								<li><a href="#" title="페이지 이동">나의게시물</a>
+									<ul class="depth3">
+										<li>
+											<a href="#" title="페이지이동">신고센터</a>								
+										</li>
+										<li><a href="#" title="페이지이동">회원게시판</a></li>
+										<li><a href="#" title="페이지이동">노무상담</a></li>
+										<li><a href="#" title="페이지이동">구인정보</a></li>
+										<li><a href="#" title="페이지이동">대체인력 구인</a></li>
+										<li><a href="#" title="페이지이동">원격지원서비스</a></li>
+									</ul>
+								</li>
+								<li><a href="#" title="페이지 이동">대의원추천</a>
+									<ul class="depth3">
+										<li>
+											<a href="#" title="페이지이동">중앙회장단</a>								
+										</li>
+										<li><a href="#" title="페이지이동">시도회장단</a></li>
+										<li><a href="#" title="페이지이동">감사</a></li>
+										<li><a href="#" title="페이지이동">나의추천현황</a></li>
+									</ul>
+								</li>
+								<li><a href="#" title="페이지 이동">회원정보</a></li>
 							</ul>
 						</li>
 					</ul>
