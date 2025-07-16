@@ -303,6 +303,70 @@ background: #B094D3; padding: 0 27px;   transition: transform 0.3s ease; }
 }
 
 
+.ico-q::before {
+    content: "Q";
+    display: block;
+    display: flex;
+    width: 26px;
+    height: 26px;
+    padding: 0px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50%;
+    background: var(--color-primary, #fff);
+    color: #9157DA;
+    text-align: center;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%;
+    margin-right: 10px;
+}
+
+.ico-a::before {
+    content: "A";
+    display: block;
+    display: flex;
+    width: 26px;
+    height: 26px;
+    padding: 0px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50%;
+    background: transparent;
+    color: black;
+    text-align: center;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%;
+    margin-right: 10px;
+}
+
+
+.krds-badge.bg-primary {
+    background-color: #AF77F5;
+    color: var(--krds-badge--color-text-basic);
+}
+
+.krds-accordion .accordion-item.active .accordion-collapse {
+    height: auto;
+    max-height: 100vh;
+    transition: all 1.5s ease-in-out;
+    visibility: visible;
+background: var(--gray-gray-5, #F8F8F8);
+}
+
+.o-accordion-list .accordion-body {
+    padding-top:20px!important;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 
 /** 노트북 */
 @media (max-width: 1440px) {
