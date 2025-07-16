@@ -3,6 +3,11 @@
 헤더 푸터
 *************************/
 
+#krds-header .header-container .logo.klpna a {
+    background-image: none;
+    background-repeat: no-repeat;
+}
+
 .gnb .gnb-menu {
     display: flex;
     gap: 16rem; 
@@ -215,6 +220,89 @@ background: #B094D3; padding: 0 27px;   transition: transform 0.3s ease; }
  }
 
 
+ /**************************
+ lnb
+ *****************************/
+
+ .krds-side-navigation .lnb-tit {
+    /* font-size: var(--krds-side-navigation--title-font-size); */
+    font-size: 32px;
+    font-weight: var(--krds-font-weight-bold);
+    padding: 0 var(--krds-side-navigation--title-padding-x) var(--krds-side-navigation--title-padding-bottom) var(--krds-side-navigation--title-padding-x);
+    border-bottom: var(--krds-side-navigation--title-border-width) solid var(--krds-side-navigation--title-color-border);
+    height: 170px;
+    border-radius: 20px 20px 0px 0px;
+    background: #AF77F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+}
+
+
+ .krds-side-navigation .lnb-list .lnb-item .lnb-btn.selected {
+    background-color: transparent;
+    color: #AF77F5;
+}
+.krds-side-navigation .lnb-list .lnb-item .lnb-submenu .lnb-btn.active {
+    color: #AF77F5;
+}
+
+
+/*****************************
+공지사항
+*****************************/
+
+
+.search-list-top .sch-info .point {
+    color: #9157DA;
+}
+
+.table-board table thead tr th {
+    font-family: var(--body-font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #2c2e3f;
+    padding: 0 5px;
+    vertical-align: middle;
+    height: 50px;
+    border-top: 2px solid #9157DA;
+    border-bottom: 1px solid var(--color-border-nomal, #C6C6C6);
+    background: var(--color-bg-nomal, #F7F8FB);
+}
+
+.krds-pagination .page-links .page-link.active {
+    background-color: transparent;
+    color: #9157DA;
+    position: relative;
+}
+
+.krds-pagination .page-links .page-link.active::after {
+    display: block;
+    background-color: #9157DA;
+    width: 8px;
+    height: 8px;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.board-detailed .page-content {
+    border-top: 2px solid #9157DA;
+    border-bottom: 0 solid #000;
+    background: #fff;
+    margin-top: 16px;
+}
+
+.krds-btn.blue {
+    background-color: #fff;
+    border-color: #9157DA;
+    color: #9157DA;
+}
+
+
 
 /** 노트북 */
 @media (max-width: 1440px) {
@@ -223,6 +311,11 @@ background: #B094D3; padding: 0 27px;   transition: transform 0.3s ease; }
 
 /** 테블릿 */
 @media (max-width: 1023px) {
+
+    .table-board.borad-list {
+    border-top: 2px solid #9157DA;
+    padding-top: 10px;
+}
     .mainSection03 .main-bbs-wrap .faq {
     background: #F1F2F6;
     padding: 25px 20px;
