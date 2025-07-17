@@ -412,10 +412,123 @@ html .ui-button.ui-state-disabled:active {
 }
 
 
+.mob-overflow-icon{display: none;}
+.mob-overflow-icon::before{content: ""; display: block; background: url(../../img/icon/ico-mobSlide.svg); width: 30px; height:30px; position: absolute; z-index: 99; right:5px; top: 50%; transform: translateY(-50%);}
+
+
+.mainSection05 .mob-overflow-icon::before{right:5px; top: 50%; transform: translateY(77%);}
+
+.mypage-education  .mob-overflow-icon::before{right:5px; top:75px}
+
+
+
+/* 감싼 구조 대응용 스타일 */
+label.radio-inline> input[type="radio"],
+label.radio-inline> input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* 기존 label 스타일 동일 적용 */
+label.radio-inline{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--krds-form-check--gap);
+  font-size: var(--krds-form-check--pc-font-size-medium);
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  label.radio-inline{
+    font-size: var(--krds-form-check--mobile-font-size-medium);
+  }
+}
+
+/* before: 라디오/체크박스 외곽 */
+label.radio-inline:before {
+  content: "";
+  display: flex;
+  flex-shrink: 0;
+  width: var(--krds-form-check--button-size-medium);
+  height: var(--krds-form-check--button-size-medium);
+  margin-top: var(--krds-form-check--button-margin-top);
+  background-color: var(--krds-form-check--button-color-element);
+  border: 0.1rem solid var(--krds-form-check--button-color-border);
+  border-radius: var(--krds-form-check--radio-button-radius-medium);
+  transition: 0.4s cubic-bezier(0.4, 0, 0.23, 1);
+}
+
+/* after: 라디오 선택 시 내부 점 */
+label.radio-inline:after {
+  content: "";
+  position: absolute;
+  top: calc((var(--krds-form-check--button-size-medium) - var(--krds-form-check--radio-check-size-medium)) / 2 + var(--krds-form-check--button-margin-top));
+  left: calc((var(--krds-form-check--button-size-medium) - var(--krds-form-check--radio-check-size-medium)) / 2);
+  width: var(--krds-form-check--radio-check-size-medium);
+  height: var(--krds-form-check--radio-check-size-medium);
+  background-color: transparent;
+  border-radius: var(--krds-radius-max);
+  z-index: 4;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.23, 1);
+}
+
+/* label:before → 외곽 원 */
+label.radio-inline:before {
+  content: "";
+  display: flex;
+  flex-shrink: 0;
+  width: var(--krds-form-check--button-size-medium);
+  height: var(--krds-form-check--button-size-medium);
+  margin-top: var(--krds-form-check--button-margin-top);
+  background-color: var(--krds-form-check--button-color-element); /* 흰색 또는 투명 */
+  border: 0.1rem solid var(--krds-form-check--button-color-border); /* 외곽선 */
+  border-radius: var(--krds-form-check--radio-button-radius-medium); /* 원형 */
+  transition: 0.3s;
+}
+
+/* label:after → 내부 선택된 점 */
+label.radio-inline:after {
+  content: "";
+  position: absolute;
+      top: 10px;
+    left: calc((var(--krds-form-check--button-size-medium) - var(--krds-form-check--radio-check-size-medium)) / 2);
+  width: var(--krds-form-check--radio-check-size-medium);
+  height: var(--krds-form-check--radio-check-size-medium);
+  background-color: transparent; /* 초기엔 비움 */
+  border-radius: 50%;
+  transition: 0.3s;
+  z-index: 4;
+}
+
+/* 체크된 상태일 때 after에만 색상 적용 (before에는 적용 ❌) */
+label.radio-inline.checked:after {
+  background-color: var(--krds-form-check--radio-check-color-element-checked); /* 기본 파란 점 */
+}
+label.radio-inline.checked::before {
+       border-color: var(--krds-form-check--button-color-border-checked);
+}
+
+
+
+.krds-form-check > label.radio-inline{margin-right:10px}
+
 @media (max-width: 1024px){
     .krds-modal {
     --krds-modal--size-large: 70rem;
     }
+}
+
+@media (max-width: 767px){
+    .krds-modal{
+            --krds-modal--size-large: 95%;
+            --krds-modal--size-medium: 95%;
+            --krds-modal--size-small: 95%;
+
+    } 
+    .mob-overflow-icon{display: block;}
 }
 
 @media (max-width: 479px) {
