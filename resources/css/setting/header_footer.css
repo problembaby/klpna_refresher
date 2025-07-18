@@ -1,7 +1,7 @@
 
 
 
-.gnb .gnb-menu { display: flex; /* gap: 7rem; */ z-index: 9999; }
+.gnb .gnb-menu { display: flex; gap: 7rem;  z-index: 9999; }
 .gnb-menu button.gnb-main-trigger { color: #0D0E10; text-align: center; font-size: 22px; font-weight: 600; }
 /* .gnb-menu button.gnb-main-trigger:focus{    
     outline: 0rem solid var(--krds-light-color-border-inverse);

@@ -173,6 +173,7 @@
   padding: 20px;
   color: #0D0E10;
   margin-bottom: 40px;
+  position: relative;
 }
 
 .mypage-education-top {
@@ -490,6 +491,7 @@ line-height: 150%; /* 24px */}
   width: 100%;
   overflow-x: auto;
   display: block;
+  position: relative;
 }
 
 .table-wrap .table {
