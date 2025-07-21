@@ -729,6 +729,204 @@ background: var(--color-primary-bg, #ECF2FE);
 
 .list-fs16{font-size: 16px; display: flex; flex-direction: column; gap:5px; margin: 10px 0;}
 
+
+
+/*************************
+교육신청 
+**************************/
+.bg-purple .progress-step.active{
+    background: var(--color-bosu, #AF77F5);
+    color: #fff;
+
+}
+
+.bg-purple .progress-step.active::after {
+    display: block;
+    content: "";
+    width: 28px;
+    height: 50px;
+    background-color: #F7F8FB;
+    background-image: url(../../img/refre/step_after_purple.svg);
+    position: absolute;
+    z-index: 1;
+    right: -28px;
+}
+
+.ea-section{
+    display: flex;
+    padding: 20px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 12px;
+}
+
+.ea-section.sky{background: var(--color-bg-secondary, #F7F8FB);}
+.ea-section.gray { background: var(--color-bg-secondary, #F8F8F8); }
+
+.ico-check::before{
+     display: block;
+    content:"";
+    background: url(../../img/refre/ico-check.svg)no-repeat;
+    width: 16px;
+    height: 16px;
+}
+
+.ico-card::before{
+     display: block;
+    content:"";
+    background: url(../../img/refre/ico-card.svg)no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+.ea-section .ea-title{display: flex; gap:4px; align-items: center; margin-bottom: 10px;}
+.ea-section .ea-title h2{font-size: 16px;}
+.ea-section .ea-title .req{color: var(--color-system-danger, #DE3412);
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%;}
+
+
+.ea-top-area{display: flex; justify-content: space-between; width: 100%; align-items: center;}
+.ea-top-area h3{color: var(--color-text-title, #0D0E10);
+font-size: 20px;
+font-style: normal;
+font-weight: 400;}
+
+.ea-top-area h3 .user-name{font-weight: 700;}
+.ea-top-area h3 .bold{color: var(--color-text-inverse, #FFF);
+font-size: 20px;
+font-style: normal;
+font-weight: 700; background: var(--color-text-bosu_txt, #9157DA); padding:0 10px}
+
+.ea-terms-desc{
+    padding: 20px;
+    border-radius: 10px;
+    background: #FFF;
+    width: 100%;
+    margin-top: 10px;
+}
+.ea-list{display: flex; flex-direction: column; gap:10px}
+.ea-list li{display: flex; gap:5px; align-items: center; position: relative; padding-left: 12px; font-size: 14px; }
+.ea-list li::before{content:""; display: block; width: 4px; height:4px; background-color: #333; border-radius: 50%; flex:0 5px; position: absolute; left:0; top:10px}
+.ea-list .bold-blue{
+    color: var(--color-primary, #0050CA);
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */
+}
+.ea-list .bold{
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */
+}
+
+.ea-agree-area{background: #333; color:#fff; padding:10px 20px; display: flex; width: 100%; justify-content: space-between; color: var(--color-text-inverse, #FFF);
+font-size: 16px;
+line-height: 150%; /* 24px */}
+
+.ea-top-area.check-list{
+    display: flex;
+    justify-content: flex-start;
+    gap:20px;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.ea-list.fs16 li{
+    font-size:16px
+}
+
+.ea-terms-desc h4{
+    color: var(--color-text-title, #0D0E10);
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 27px */
+margin-bottom: 10px;
+}
+
+.fs-14{font-size: 14px;}
+
+
+.krds-btn.blue:not(.icon) .svg-icon {
+    background-color: #9157Da;
+}
+
+.krds-btn.btn-expand .svg-icon.ico-angle.right{transform: rotate(0deg)}
+
+
+
+.ea-card-area .top{display: flex; align-items: center; justify-content: space-between;}
+.es-card-desc{
+padding: 20px 40px;
+border-radius: 12px;
+background: var(--color-bg-nomal, #F8F8F8);
+margin-top: 16px;
+}
+
+
+.es-card-desc{display: flex; flex-direction: column;}
+.es-card-desc .top-text{display: flex; flex-direction: row; justify-content: space-between; align-items: center;}
+.es-card-desc .top-text h4{
+    color: var(--color-text-title, #0D0E10);
+font-family: "Pretendard GOV";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 30px */
+}
+
+.es-card-conf{display: flex; gap:40px; align-items: center; border-radius: 10px; padding:20px;
+background: #FFF; margin-top:30px}
+.es-card-conf .img{padding:20px; width: 100%; max-width: 400px;}
+.es-card-conf .img img{width: 355px;}
+.es-card-conf .cont h5{color: var(--color-text-title, #0D0E10);
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */}
+.es-card-conf .cont .st{
+    color: var(--color-text-basic, #0D0E10);
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 27px */
+margin-bottom: 10px;
+
+}
+
+.ea-list.card{gap:5px}
+.ref-text p{color: var(--color-text-sub_title, #464C53);
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 16.8px */ margin-bottom: 5px;}
+
+
+/* 아이콘 회전 (open 클래스 있을 때) */
+.krds-btn.btn-expand .svg-icon.ico-angle.right {
+  transition: transform 0.3s ease;
+}
+
+.krds-btn.btn-expand.open .svg-icon.ico-angle.right {
+  transform: rotate(-180deg);
+}
+
+.div-expand{display: none;}
+
+.krds-btn:hover {
+    background-color: #8261AC;
+}
+
+
 /** 노트북 */
 @media (max-width: 1440px) {
     .gnb-bg{display: none;}
@@ -738,7 +936,7 @@ background: var(--color-primary-bg, #ECF2FE);
 @media (max-width: 1023px) {
 
     .table-board.borad-list {
-    border-top: 2px solid #9157DA;
+    border-top: 2px solid #AF77F5;
     padding-top: 10px;
 }
     .mainSection03 .main-bbs-wrap .faq {
@@ -849,7 +1047,35 @@ td.cell-subject .subject-title {
 
 .lect-expend{flex-direction: column; gap:5px}
 
-    
+.ea-top-area {display: flex; flex-direction: column; align-items: flex-end;}
+.ea-top-area.check-list {display: flex; flex-direction: row; gap: 5px 15px}
+.ea-card-area .top {
+    flex-direction: column; gap:10px
+}
+.ea-card-area .top > *{ width: 100%;}
+.es-card-conf {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    background: #FFF;
+    margin-top: 30px;
+    flex-direction: column;
+}
+.es-card-desc .top-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px
+}
+
+.ea-agree-area {
+   flex-direction: column;
+   align-items: flex-end;
+}
+
 }
 
 @media (max-width: 479px) {
@@ -858,6 +1084,20 @@ td.cell-subject .subject-title {
     height: 25px;
 
 }
+
+.ea-section {
+    display: flex;
+    padding: 20px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 12px;
+}
+
+.krds-btn.btn-expand{font-size: 14px;}
+
+
 }
 
 @media (max-width: 360px) {
