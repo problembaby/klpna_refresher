@@ -429,6 +429,13 @@ td.cell-subject .subject-title .btn-list{display: flex; gap:5px}
     width: 18px;
     height: 19px;
 }
+.ico-location::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-location.svg)no-repeat;
+    width: 18px;
+    height: 19px;
+}
 
 .krds-modal .modal-dialog .modal-btn.center{justify-content: center!important;}
 
@@ -665,6 +672,32 @@ line-height: 150%; /* 19.5px */
 }
 
 
+/****************************
+대면교육 
+*******************************/
+.td-appl{display: flex; flex-direction: column;}
+.appl-stat{
+    color: var(--color-text-bosu_txt, #9157DA);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 27px */
+}
+.appl-stat.end{color:#464C53; }
+.appl-stat.end + .appl-num .red{color:#333; font-weight: 400!important;}
+.o-list.fs-16 li{ font-size: 16px;}
+.n-link{color: var(--color-text-basic, #0D0E10);
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 19.5px */
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: auto;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+}
 
 /** 노트북 */
 @media (max-width: 1440px) {
@@ -738,6 +771,24 @@ td.cell-subject .subject-title {
     max-width: 618px;
 }
 
+.table-board table tbody tr td.edu-period{width: 100%;}
+.table-board table tbody tr td.edu-period::after{display: none;}
+.td-appl-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center; gap:10px; margin-top: 5px;
+    border:1px solid #D9D9D9;
+    padding: 5px 10px;
+    border-radius: 6px;
+    justify-content: center;
+
+}
+.table-board table tbody tr td.td-appl {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
 
 }
 
@@ -751,7 +802,7 @@ td.cell-subject .subject-title {
     .lec-title {
     flex-direction: column;
 }
-.lec-detail-list li {
+.lec-detail-list > li {
     flex-direction: column;
 }
 .lec-bottom-list {
