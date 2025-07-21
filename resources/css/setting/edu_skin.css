@@ -699,6 +699,36 @@ text-decoration-thickness: auto;
 text-underline-offset: auto;
 }
 
+/**********************************
+관련법규
+************************************/
+.rel-law{display: flex; flex-direction: column; gap:30px; margin-top: 30px;}
+.rel-law .law-title{font-size: 24px; font-weight: 700;}
+
+.law-box{
+    display: flex;
+    padding: 20px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 12px;
+}
+
+.law-box.gray{
+background: var(--gray-gray-5, #F8F8F8);
+
+}
+.law-box.sky{
+background: var(--color-primary-bg, #ECF2FE);
+
+}
+
+.law-box h3{font-size: 18px; font-weight: 700;}
+.law-box p{font-size: 16px; font-weight: 400;}
+
+.list-fs16{font-size: 16px; display: flex; flex-direction: column; gap:5px; margin: 10px 0;}
+
 /** 노트북 */
 @media (max-width: 1440px) {
     .gnb-bg{display: none;}
