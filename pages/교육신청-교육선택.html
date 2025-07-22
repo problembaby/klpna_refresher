@@ -40,48 +40,47 @@
                 // body 에 몇번째 단계인지 나타내는 클래스   
                 $('body').addClass('edu-appl-step01')
 
-
-
-                // 라디오 버튼 클릭 시 data-subject 텍스트 삽입 + 단계 전환
-                $('.td-chk input[type="radio"]').on('change', function () {
-                    const subjectName = $(this).data('subject'); // ✅ data-subject 속성 값 사용
-
-                    $('#eab-subject').text(subjectName); // 텍스트 삽입
-
+                // 라디오 버튼 클릭 시 data-subject 텍스트 삽입 + 텍스트 영역만 슬라이드 표시
+                $('.td-chk .chk-subject').on('change', function () {
+                    const subjectName = $(this).data('subject');
                     const $step01 = $('#edu-step01');
+                    const $subjectText = $step01.find('.edu-item-subject');
 
-                    if ($step01.hasClass('none')) {
-                        $step01
-                            .hide()
-                            .removeClass('none')
-                            .addClass('selected')
-                            .slideDown(300); // 부드럽게 열림
-                    } else {
-                        $step01.addClass('selected');
-                    }
+                    $step01.removeClass('none').addClass('selected');
+
+                    // 슬라이드 업 → 텍스트 바꾸기 → 슬라이드 다운
+                    $subjectText.stop(true, true).slideUp(150, function () {
+                        $('#eab-subject').text(subjectName);
+                        $subjectText.slideDown(200);
+                    });
                 });
 
-                // 다음 버튼 클릭 시 유효성 검사
-                $('.krds-btn:contains("다음")').on('click', function () {
-                    const isAgreed = $('#agree-check').is(':checked');
-                    const selectedRadio = $('.td-chk input[type="radio"]:checked');
 
-                    if (selectedRadio.length === 0) {
-                        alert('과정을 선택해주세요.');
-                        return;
-                    }
-
-
-                    if (!isAgreed) {
-                        alert('이용약관에 동의해주세요.');
-                        return;
-                    }
-
-                    // 여기서 다음 단계로 넘어가는 코드 작성
-                    alert('선택내역 확인으로 이동합니다.');
-                });
             });
 
+
+            /**********************************
+             *  다음 버튼 클릭 시 유효성 검사
+             * *****************************/
+
+
+            function validateStep01() {
+                const isAgreed = $('#agree-check').is(':checked');
+                const selectedRadio = $('input[name="subject"]:checked');
+
+                if (selectedRadio.length === 0) {
+                    alert('과정을 선택해주세요.');
+                    return;
+                }
+
+                if (!isAgreed) {
+                    alert('이용약관에 동의해주세요.');
+                    return;
+                }
+
+                // ✅ 다음 단계 이동 로직 여기에 작성
+                alert('선택내역 확인으로 이동합니다.');
+            }
 
 
             /************************************************
@@ -256,14 +255,27 @@
                                         <div class="sch-select select-style">
                                             <select class="krds-form-select medium" title="선택" id="ntt-type">
                                                 <option value="">시도회 전체</option>
-                                                <option value=""></option>
+                                                <option value="대한간호조무사협회 중앙회">대한간호조무사협회 중앙회</option>
+                                                <option value="서울시간호조무사회">서울시간호조무사회</option>
+                                                <option value="부산시간호조무사회">부산시간호조무사회</option>
+                                                <option value="대구시간호조무사회">대구시간호조무사회</option>
+                                                <option value="인천시간호조무사회">인천시간호조무사회</option>
+                                                <option value="광주·전남간호조무사회">광주·전남간호조무사회</option>
+                                                <option value="대전·충남간호조무사회">대전·충남간호조무사회</option>
+                                                <option value="울산·경남간호조무사회">울산·경남간호조무사회</option>
+                                                <option value="경기도간호조무사회">경기도간호조무사회</option>
+                                                <option value="강원도간호조무사회">강원도간호조무사회</option>
+                                                <option value="충청북도간호조무사회">충청북도간호조무사회</option>
+                                                <option value="전북도간호조무사회">전북도간호조무사회</option>
+                                                <option value="경상북도간호조무사회">경상북도간호조무사회</option>
+                                                <option value="제주도간호조무사회">제주도간호조무사회</option>
                                             </select>
                                         </div>
                                         <div class="sch-select select-style">
                                             <select class="krds-form-select medium" title="선택" id="ntt-type">
                                                 <option value="">접수상태 전체</option>
                                                 <option value="접수중">접수중</option>
-                                                <option value="마감">마감</option>
+                                                <option value="접수마감">접수마감</option>
                                             </select>
                                         </div>
                                         <div class="bbs-search-form-wrap">
@@ -364,7 +376,7 @@
                                         </td>
                                         <td class="td-chk">
                                             <div class="krds-form-check large">
-                                                <input type="radio" name="subject" value="S001"
+                                                <input type="radio" name="subject" class="chk-subject" value="S001"
                                                     data-subject="간호실무의 개념 및 병태생리" id="rdo-1">
                                                 <label for="rdo-1"></label>
                                             </div>
@@ -414,7 +426,7 @@
                                         </td>
                                         <td class="td-chk">
                                             <div class="krds-form-check large">
-                                                <input type="radio" name="subject" value="S002"
+                                                <input type="radio" name="subject" class="chk-subject" value="S002"
                                                     data-subject="현대 정신건강의 실무" id="rdo-2">
                                                 <label for="rdo-2"></label>
                                             </div>
@@ -465,7 +477,7 @@
                                         </td>
                                         <td class="td-chk">
                                             <div class="krds-form-check large">
-                                                <input type="radio" name="subject" value="S003"
+                                                <input type="radio" name="subject" class="chk-subject" value="S003"
                                                     data-subject="과정명이 최대 2줄로 나옴, 말 줄임 적용" id="rdo-3" disabled>
                                                 <label for="rdo-3"></label>
                                             </div>
@@ -990,10 +1002,10 @@
 
 
     <!-- 모달 : 자세히보기 -->
-    <section id="modal_terms" class="detailed krds-modal fade in shown" role="dialog" aria-labelledby="tit_modal_terms"
-        data-type="large">
-        <!--  <section id="modal_terms" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_detail"
+    <!--   <section id="modal_terms" class="detailed krds-modal fade in shown" role="dialog" aria-labelledby="tit_modal_terms"
         data-type="large"> -->
+    <section id="modal_terms" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_detail"
+        data-type="large">
         <div class="modal-dialog">
             <div class="modal-content">
                 <!-- modal title -->

@@ -1069,7 +1069,12 @@ font-size: 13px;
 font-style: normal;
 font-weight: 700;
 line-height: 150%; /* 19.5px */}
-.edu-item-subject{color: var(--color-text-bosu_txt, #9157DA);
+
+
+
+.edu-item-subject{
+display: none;
+color: var(--color-text-bosu_txt, #9157DA);
 font-size: 18px;
 font-style: normal;
 font-weight: 700;
