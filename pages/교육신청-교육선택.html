@@ -1,0 +1,1099 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>교육선택 - KLPNA 보수교육센터</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+    <link rel="stylesheet" href="../resources/lib/aos/aos.css">
+
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script defer src="../resources/krds/js/component/ui-script.js"></script>
+    <script defer src="../resources/krds/js/pattern/pattern.js"></script>
+    <script src="../resources/js/script.js"></script>
+    <script src="../resources/lib/aos/aos.js"></script>
+
+<body>
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+
+
+
+        <script>
+
+
+            $(document).ready(function () {
+
+                // body 에 몇번째 단계인지 나타내는 클래스   
+                $('body').addClass('edu-appl-step01')
+
+
+
+                // 라디오 버튼 클릭 시 data-subject 텍스트 삽입 + 단계 전환
+                $('.td-chk input[type="radio"]').on('change', function () {
+                    const subjectName = $(this).data('subject'); // ✅ data-subject 속성 값 사용
+
+                    $('#eab-subject').text(subjectName); // 텍스트 삽입
+
+                    const $step01 = $('#edu-step01');
+
+                    if ($step01.hasClass('none')) {
+                        $step01
+                            .hide()
+                            .removeClass('none')
+                            .addClass('selected')
+                            .slideDown(300); // 부드럽게 열림
+                    } else {
+                        $step01.addClass('selected');
+                    }
+                });
+
+                // 다음 버튼 클릭 시 유효성 검사
+                $('.krds-btn:contains("다음")').on('click', function () {
+                    const isAgreed = $('#agree-check').is(':checked');
+                    const selectedRadio = $('.td-chk input[type="radio"]:checked');
+
+                    if (selectedRadio.length === 0) {
+                        alert('과정을 선택해주세요.');
+                        return;
+                    }
+
+
+                    if (!isAgreed) {
+                        alert('이용약관에 동의해주세요.');
+                        return;
+                    }
+
+                    // 여기서 다음 단계로 넘어가는 코드 작성
+                    alert('선택내역 확인으로 이동합니다.');
+                });
+            });
+
+
+
+            /************************************************
+             * 선택정보 하단 고정 스크립트
+             * **************************************/
+
+            $(function () {
+                const $board = $(".edu-appl-board");
+                let $footer;
+
+                function updateFooter() {
+                    $footer = $("footer, .footer, #footer");
+                }
+
+                function toggleFixedBoard() {
+                    updateFooter();
+                    if ($footer.length === 0) return;
+
+                    const scrollTop = $(window).scrollTop();
+                    const windowHeight = $(window).height();
+                    const footerTop = $footer.offset().top;
+
+                    const boardHeight = $board.outerHeight();
+                    const boardBottom = scrollTop + windowHeight;
+
+                    const shouldFix = boardBottom < footerTop - 10;
+
+                    if (shouldFix) {
+                        // 고정 상태
+                        $board.addClass("fixed").css({
+                            position: "fixed",
+                            bottom: "0",
+                            top: "auto",
+                            transform: "translateY(0)",
+                        });
+                    } else {
+                        // footer 위에 고정
+                        $board.removeClass("fixed").css({
+                            position: "absolute",
+                            bottom: "auto",
+                            top: footerTop - boardHeight - 10 + "px",
+                            transform: "none",
+                        });
+                    }
+                }
+
+                $(window).on("scroll resize orientationchange", toggleFixedBoard);
+                setTimeout(toggleFixedBoard, 300); // footer 늦게 렌더될 경우 대비
+            });
+
+
+
+        </script>
+
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">교육신청</a></li>
+                        </ol>
+
+                    </nav>
+                    <!-- breadcrumb -->
+
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">교육신청</h1>
+                        <ol class="breadcrumb-action">
+                            <li>
+                                <button class="icon-bg-round" onclick="window.print(); return false;">
+                                    <i class="svg-icon ico-print"></i>
+                                    <span class="sr-only">print</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+
+                    <!--스탭-->
+                    <div class="step bg-purple">
+                        <ol class="progress-bar">
+                            <li class="progress-step none">1. 신청안내</li>
+                            <li class="progress-step active">2. 교육선택</li>
+                            <li class="progress-step">3. 선택내역 확인</li>
+                            <li class="progress-step">4. 결제 완료</li>
+                        </ol>
+                    </div>
+                    <!--//스탭-->
+
+                    <!--컨텐츠  :교육신청-->
+                    <div class="edu-appl-cont mb-borad">
+                        <section class="ea-section expend sky">
+                            <h2>1.(비)대면교육 선택</h2>
+                            <div class="white-box">
+                                <ol class="ea-list fs16">
+                                    <li>
+                                        <p class="blue fw-medium">연말 진행되는 (비)대면교육 정원이 마감될 경우 내년 보수교육을 신청하시기 바랍니다</p>
+                                    </li>
+                                    <li>
+                                        <div class="ea-list-p">
+                                            <p>
+                                                <span class="text-bg-red">2025년 온라인교육(4H)+온라인교육(4H)은 2년 주기로 신청
+                                                    가능합니다.</span>
+                                            </p>
+                                            <p>ex) 2025년 정기 온라인(8H) 이수 시, 2026년 (비)대면(4H)+온라인(4H) 이수</p>
+                                            <p>ex) 2025년 정기 (비)대면(4H)+온라인(4H) 이수 시, 2026년 온라인(8H) or (비)대면(4H)+온라인(4H)
+                                                이수</p>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+
+
+                            <div class="white-box">
+                                <ol class="ea-list fs16">
+                                    <li>올해 (비)대면교육 과목이 과거 연도와 중복되지 않도록 신청 바랍니다.</li>
+                                    <li>올해 (비)대면교육 지각부 작성자(추가비 면제)는 올해 (비)대면교육에 한해서만 가능합니다.</li>
+                                    <li>
+                                        <p class="blue fw-medium">연말 진행되는 (비)대면교육 정원이 마감될 경우 내년 보수교육을 신청하시기 바랍니다.</p>
+                                    </li>
+                                    <li>
+                                        <div class="ea-list-p">
+                                            <p>
+                                                <span class="text-bg-red">2025년 온라인교육(4H)+온라인교육(4H)은 2년 주기로 신청
+                                                    가능합니다.</span>
+                                            </p>
+                                            <p>ex) 2025년 정기 온라인(8H) 이수 시, 2026년 (비)대면(4H)+온라인(4H) 이수</p>
+                                            <p>ex) 2025년 정기 (비)대면(4H)+온라인(4H) 이수 시, 2026년 온라인(8H) or (비)대면(4H)+온라인(4H)
+                                                이수</p>
+                                        </div>
+                                    </li>
+                                    <li>(비)대면교육이 시작되면 입실 불가합니다. (절대 시간 엄수)</li>
+                                    <li>자격증을 취득한 해는 보수교육 면제입니다. 면제 신청을 해주세요. (면제 미신청자만 해당)</li>
+                                </ol>
+                            </div>
+                            <div class="mb60"></div>
+                            <button type="button" class="krds-btn text bot-close-btn">
+                                더보기
+                                <i class="svg-icon ico-angle"></i>
+                            </button>
+                        </section>
+
+                        <!-- 검색 입력폼 -->
+                        <form id="" name="" action="#" method="post" class="mt30">
+                            <fieldset class="bbs-search-wrap">
+                                <div class="search-top-box full">
+                                    <div class="form-col-group">
+                                        <div class="sch-select select-style">
+                                            <ul class="input-group range mw500">
+                                                <li>
+                                                    <input type="text" id="" class="krds-input datepicker medium"
+                                                        placeholder="시작일">
+                                                </li>
+                                                <li class="mark">~</li>
+                                                <li>
+                                                    <input type="text" id="" class="krds-input datepicker medium"
+                                                        placeholder="종료일" maxlength="4">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="form-col-group">
+
+                                        <div class="sch-select select-style">
+                                            <select class="krds-form-select medium" title="선택" id="ntt-type">
+                                                <option value="">시도회 전체</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                        <div class="sch-select select-style">
+                                            <select class="krds-form-select medium" title="선택" id="ntt-type">
+                                                <option value="">접수상태 전체</option>
+                                                <option value="접수중">접수중</option>
+                                                <option value="마감">마감</option>
+                                            </select>
+                                        </div>
+                                        <div class="bbs-search-form-wrap">
+                                            <input type="text" id="search-wrd" class="krds-input medium"
+                                                placeholder="과정명을 입력하세요." title="키워드 입력">
+                                        </div>
+                                        <button type="button" class="krds-btn medium black">
+                                            <i class="svg-icon ico-sch"></i>
+                                            검색
+                                        </button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <!-- //검색 입력폼 -->
+
+
+                        <!-- 검색 결과 : 리스트 상단 -->
+                        <div class="search-list-top">
+                            <ul class="sch-info" aria-live="polite">
+                                <li>총 <span class="point">24</span>건</li>
+                            </ul>
+                            <div class="sch-sort gap-2">
+                                <select name="" id="" class="krds-form-select small">
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="50">50</option>
+                                </select>
+                                <button type="button" class="krds-btn black small">적용</button>
+                            </div>
+                        </div>
+                        <!-- //검색 결과 : 리스트 상단 -->
+
+                        <!-- 검색 결과 : 리스트 -->
+                        <div class="table-board borad-list">
+                            <table>
+                                <caption class="sr-only">대면교육일정 일정 목록이며 NO, 과정명,일자/시간/장소 접수상태, 과정선택을 제공합니다.</caption>
+                                <colgroup>
+                                    <col width="8%;">
+                                    <col width="auto">
+                                    <col width="20%">
+                                    <col width="10%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">NO</th>
+                                        <th scope="col">과정명</th>
+                                        <th scope="col">일자/시간/장소</th>
+                                        <th scope="col">신청현황</th>
+                                        <th scope="col">과정선택</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="display:none">
+                                        <td class="no-contents" colspan="5">등록 된 게시물이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">1</td>
+                                        <td class="cell-subject">
+                                            <div class="subject-title">
+                                                <a href="#none" title="페이지 이동" target="_self" class="open-modal"
+                                                    data-target="modal_detail">
+                                                    <p class="ellipsis-2 subject-">간호실무의 개념 및 병태생리</p>
+                                                </a>
+                                                <div class="btn-list">
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_detail">
+                                                        상세보기
+                                                        <i class="svg-icon ico-plus small"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="edu-period">
+                                            <ul class="edu-priod-list">
+                                                <li>
+                                                    <i class="ico-calendar"></i>
+                                                    <p>2025.05.03 (토)</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-time"></i>
+                                                    <p>14:00 ~ 16:00</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-location"></i>
+                                                    <p>서귀포시 청사 강의실</p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="td-appl">
+                                            <div class="td-appl-area">
+                                                <div class="appl-stat ing">접수중</div>
+                                                <!-- <div class="appl-stat end">접수마감</div> -->
+                                                <div class="appl-num">
+                                                    (<span class="red fw-bold">28</span>/100)
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="td-chk">
+                                            <div class="krds-form-check large">
+                                                <input type="radio" name="subject" value="S001"
+                                                    data-subject="간호실무의 개념 및 병태생리" id="rdo-1">
+                                                <label for="rdo-1"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">1</td>
+                                        <td class="cell-subject">
+                                            <div class="subject-title">
+                                                <a href="#none" title="페이지 이동" target="_self" class="open-modal"
+                                                    data-target="modal_detail">
+                                                    <p class="ellipsis-2 subject-name">현대 정신건강의 실무</p>
+                                                </a>
+                                                <div class="btn-list">
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_detail">
+                                                        상세보기
+                                                        <i class="svg-icon ico-plus small"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="edu-period">
+                                            <ul class="edu-priod-list">
+                                                <li>
+                                                    <i class="ico-calendar"></i>
+                                                    <p>2025.05.03 (토)</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-time"></i>
+                                                    <p>14:00 ~ 16:00</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-location"></i>
+                                                    <p>서귀포시 청사 강의실</p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="td-appl">
+                                            <div class="td-appl-area">
+                                                <div class="appl-stat ing">접수중</div>
+                                                <!-- <div class="appl-stat end">접수마감</div> -->
+                                                <div class="appl-num">
+                                                    (<span class="red fw-bold">28</span>/100)
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="td-chk">
+                                            <div class="krds-form-check large">
+                                                <input type="radio" name="subject" value="S002"
+                                                    data-subject="현대 정신건강의 실무" id="rdo-2">
+                                                <label for="rdo-2"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">2</td>
+                                        <td class="cell-subject">
+                                            <div class="subject-title">
+                                                <a href="#none" title="페이지 이동" target="_self" class="open-modal"
+                                                    data-target="modal_detail">
+                                                    <p class="ellipsis-2 subject-name">과정명이 최대 2줄로 나옴, 말 줄임 적용
+                                                    </p>
+                                                </a>
+                                                <div class="btn-list">
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_detail">
+                                                        상세보기
+                                                        <i class="svg-icon ico-plus small"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="edu-period">
+                                            <ul class="edu-priod-list">
+                                                <li>
+                                                    <i class="ico-calendar"></i>
+                                                    <p>2025.05.03 (토)</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-time"></i>
+                                                    <p>14:00 ~ 16:00</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-location"></i>
+                                                    <p>서귀포시 청사 강의실</p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="td-appl">
+                                            <div class="td-appl-area">
+                                                <!-- <div class="appl-stat ing">접수중</div> -->
+                                                <div class="appl-stat end">접수마감</div>
+                                                <div class="appl-num">
+                                                    (<span class="red fw-bold">100</span>/100)
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="td-chk">
+                                            <div class="krds-form-check large">
+                                                <input type="radio" name="subject" value="S003"
+                                                    data-subject="과정명이 최대 2줄로 나옴, 말 줄임 적용" id="rdo-3" disabled>
+                                                <label for="rdo-3"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //검색 결과 : 리스트 -->
+
+                        <div class="agree-area">
+                            <div class="terms-view">
+                                <p>간호조무사 대면교육 동의서 (동의 필수)</p>
+                                <button type="button" class="krds-btn small text">자세히보기 <i
+                                        class="svg-icon ico-angle right"></i></button>
+
+
+                            </div>
+                            <div class="krds-form-check medium">
+                                <input type="checkbox" name="agree-check" id="agree-check" required>
+                                <label for="agree-check">상기 교육을 수강함에 있어 대면교육 동의서 내용에 동의합니다.</label>
+                            </div>
+                        </div>
+
+
+                        <div class="btnList-sort right">
+                            <button type="button" class="krds-btn blue">뒤로</button>
+                            <button type="button" class="krds-btn" onclick="validateStep01()">다음 <i
+                                    class="svg-icon ico-angle right"></i></button>
+                        </div>
+
+                        <!-- 페이지네이션 영역 -->
+                        <div class="krds-pagination">
+                            <a class="page-navi prev disabled" href="#">이전</a>
+                            <div class="page-links">
+                                <a class="page-link" href="#">1</a>
+                                <a class="page-link" href="#">2</a>
+                                <a class="page-link" href="#">3</a>
+                                <a class="page-link active" href="#">4</a>
+                                <a class="page-link" href="#">5</a>
+                                <a class="page-link" href="#">6</a>
+                                <a class="page-link" href="#">7</a>
+                                <a class="page-link" href="#">8</a>
+                                <span class="page-link link-dot"></span>
+                                <a class="page-link" href="#">99</a>
+                            </div>
+                            <a class="page-navi next" href="#">다음</a>
+                        </div>
+                        <!-- //페이지네이션 영역 -->
+
+
+
+
+
+                    </div>
+
+                    <!--//컨텐츠  :교육신청-->
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+        <!--교육신청 : 하단 고정 보드-->
+        <div class="edu-appl-board fixed box-shadow">
+            <div class="inner">
+                <div class="edu-board-top">
+                    <h2><i class="ico-white-write"></i>선택정보</h2>
+                    <span class="edu-year">교육년도: 2025년</span>
+                </div>
+                <div class="edu-appl-list">
+                    <div class="edu-items step01 none" id="edu-step01">
+                        <div class="icon">
+                            <i class="ico-chk-list"></i>
+                        </div>
+                        <div class="text">
+                            <div class="edu-item-title">1.(비)대면교육 선택</div>
+                            <div class="edu-item-subject"><span id="eab-subject"></span> (4시간)</div>
+                        </div>
+                    </div>
+
+                    <div class="edu-items step02 none" id="edu-step02">
+                        <div class="icon">
+                            <i class="ico-chk-list"></i>
+                        </div>
+                        <div class="text">
+                            <div class="edu-item-title">2.온라인교육 선택 (4시간)</div>
+                            <div class="edu-item-subject"><span id="eab-subject"></span> (4시간)</div>
+                        </div>
+                    </div>
+
+
+                    <div class="edu-items step03 none" id="edu-step03">
+                        <div class="icon">
+                            <i class="ico-chk-list"></i>
+                        </div>
+                        <div class="text">
+                            <div class="edu-item-title">3. 유예해소교육 선택</div>
+                            <div class="edu-item-subject"><span id="eab-subject"></span> (4시간)</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--//교육신청 : 하단 고정 보드-->
+
+
+        <!-- //컨텐츠 영역 -->
+    </div>
+    <!-- //컨테이너 영역 -->
+
+    <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+    </div>
+
+
+
+
+
+    <!-- 모달 : 상세보기 -->
+
+    <!--    <section id="modal_detail" class="detailed krds-modal fade in shown" role="dialog"
+        aria-labelledby="tit_modal_detail" data-type="large">  -->
+    <section id="modal_detail" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_detail"
+        data-type="large">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- modal title -->
+                <div class="modal-header">
+                    <h2 id="tit_modal_detail">
+                        강의 상세정보
+                    </h2>
+                </div>
+                <!-- //modal title -->
+
+                <!-- modal contents -->
+                <div class="modal-conts pb40">
+                    <div class="lec-top">
+                        <div class="lec-title">
+
+                            <h3>유아와 학령전기 아동의 건강문제와 가족의 건강증진</h3>
+                        </div>
+
+
+                        <ul class="lec-detail-list">
+                            <li>
+                                <div class="label"><i class="ico-calendar"></i>교육기간 :</div>
+                                <div class="date">2025년 7월 18일(금) 13:00 ~17:00</div>
+                            </li>
+                            <li>
+                                <div class="label"><i class="ico-write"></i>특이사항 :</div>
+                                <div class="text">특이사항.....</div>
+                            </li>
+                            <li>
+                                <div class="label"><i class="ico-call"></i>담당자 연락처 :</div>
+                                <div class="text">02-1234-5678</div>
+                            </li>
+                        </ul>
+                        <ul class="lec-bottom-list">
+                            <li>
+                                <div class="label">접수현황 : </div>
+                                <div class="text"><span class="value">45</span>/100</div>
+                            </li>
+                            <li>
+                                <div class="label">마감일 : </div>
+                                <div class="text">2025-06-31</div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <div class="lec-tab-contents">
+
+                        <!-- tab -->
+                        <div class="krds-tab-area layer mt40">
+                            <!-- tab list -->
+                            <div class="tab fill gary bot-line">
+                                <ul role="tablist">
+                                    <li id="tab_login_01" role="tab" aria-selected="true" aria-controls="panel_login_01"
+                                        class="active">
+                                        <button type="button" class="btn-tab">
+                                            강의소개
+                                            <i class="sr-only created">
+                                                선택됨</i></button>
+                                    </li>
+                                    <li id="tab_login_02" role="tab" aria-selected="false"
+                                        aria-controls="panel_login_02">
+                                        <button type="button" class="btn-tab">시간표</button>
+                                    </li>
+                                </ul>
+
+                                <div class="bottom-border"></div>
+                            </div>
+                            <!-- //tab list -->
+
+                            <!-- tab contents -->
+                            <div class="tab-conts-wrap">
+                                <section id="panel_login_01" aria-labelledby="tab_login_01" class="tab-conts active"
+                                    data-quick-nav="false">
+                                    <div class="lec-box mh200">
+                                        <p>과정소개, 학습목표등 text...</p>
+                                    </div>
+
+                                </section>
+                                <section id="panel_login_02" aria-labelledby="tab_login_02" class="tab-conts"
+                                    data-quick-nav="false">
+                                    <h3 class="mb10">1. 대면교육</h3>
+                                    <div class="lec-box">
+                                        <ul class="lec-detail-list">
+                                            <li>
+                                                <div class="label"><i class="ico-write"></i>수강방법 :</div>
+                                                <div class="text">
+                                                    <ul class="o-list fs-16">
+                                                        <li>교육장소에 참석하여 수강</li>
+                                                        <li>비대면ZOOM교육 : 스마트폰, PC 등으로 접속하여 실시간 수강 (상세방법 안내 예정)</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="label"><i class="ico-clock"></i>이수시간 :</div>
+                                                <div class="text">180분</div>
+                                            </li>
+                                            <li>
+                                                <div class="label"><i class="ico-location"></i>교육장소 :</div>
+                                                <div class="text">
+                                                    경기도 수원시 팔달구 권선로 733 LD그린토피아1층
+                                                    <a href="https://naver.me/FZ2i9WUE" target="_blank"
+                                                        class="a-link n-link">네이버 지도보기</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <ul class="edu-list">
+                                        <li class="edu-list-item">
+                                            <div class="title">
+                                                <small>1교시</small>
+                                                <h4>유아의 정상성장발달</h4>
+                                            </div>
+                                            <ul class="o-list" role="list">
+                                                <li role="listitem">유아의 성장발달</li>
+                                                <li role="listitem">정상적인 성장발달과 관련된 문제 대처방법</li>
+                                                <li role="listitem">간호조력자의 역할</li>
+                                            </ul>
+
+                                            <div class="lect-info">
+                                                <div class="krds-disclosure conts-expand-area">
+                                                    <ul class="lect-info-list">
+                                                        <li>
+                                                            <i class="ico-time"></i>
+                                                            <div class="text">60분</div>
+                                                        </li>
+                                                        <li>
+                                                            <i class="ico-user"></i>
+                                                            <div class="text">강사 : 이순신</div>
+                                                            <button type="button" class="btn-conts-expand">강사
+                                                                프로필보기</button>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="expand-wrap">
+                                                        <div class="expand-in lect-expend">
+                                                            <div class="lect-expend-thumb">
+                                                                <div class="lect-name">
+                                                                    <span class="name">이순신</span>
+                                                                    강사
+                                                                </div>
+                                                                <div class="img">
+                                                                    <img src="../resources/img/refre/lect-img.png"
+                                                                        alt="사진">
+                                                                </div>
+                                                            </div>
+                                                            <div class="lect-expend-cont">
+                                                                <h4>대표 프로필</h4>
+                                                                <ul class="o-list" role="list">
+                                                                    <li role="listitem">서울다나운연합의원(대표원장)</li>
+                                                                    <li role="listitem">text</li>
+                                                                    <li role="listitem">text</li>
+                                                                </ul>
+                                                                <h4>학력 및 경력사항 (주요사항)</h4>
+                                                                <ul class="o-list" role="list">
+                                                                    <li role="listitem">text</li>
+                                                                    <li role="listitem">text</li>
+                                                                    <li role="listitem">text</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </li>
+
+
+                                        <li class="edu-list-item">
+                                            <div class="title">
+                                                <small>2교시</small>
+                                                <h4>유아기 최적의 건강증진</h4>
+                                            </div>
+                                            <ul class="o-list" role="list">
+                                                <li role="listitem">유아의 성장발달</li>
+                                                <li role="listitem">정상적인 성장발달과 관련된 문제 대처방법</li>
+                                                <li role="listitem">간호조력자의 역할</li>
+                                            </ul>
+
+                                            <div class="lect-info">
+                                                <div class="krds-disclosure conts-expand-area">
+                                                    <ul class="lect-info-list">
+                                                        <li>
+                                                            <i class="ico-time"></i>
+                                                            <div class="text">60분</div>
+                                                        </li>
+                                                        <li>
+                                                            <i class="ico-user"></i>
+                                                            <div class="text">강사 : 이순신</div>
+                                                            <button type="button" class="btn-conts-expand">강사
+                                                                프로필보기</button>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="expand-wrap">
+                                                        <div class="expand-in lect-expend">
+                                                            <div class="lect-expend-thumb">
+                                                                <div class="lect-name">
+                                                                    <span class="name">이순신</span>
+                                                                    강사
+                                                                </div>
+                                                                <div class="img">
+                                                                    <img src="../resources/img/refre/lect-img.png"
+                                                                        alt="사진">
+                                                                </div>
+                                                            </div>
+                                                            <div class="lect-expend-cont">
+                                                                <h4>대표 프로필</h4>
+                                                                <ul class="o-list" role="list">
+                                                                    <li role="listitem">서울다나운연합의원(대표원장)</li>
+                                                                    <li role="listitem">text</li>
+                                                                    <li role="listitem">text</li>
+                                                                </ul>
+                                                                <h4>학력 및 경력사항 (주요사항)</h4>
+                                                                <ul class="o-list" role="list">
+                                                                    <li role="listitem">text</li>
+                                                                    <li role="listitem">text</li>
+                                                                    <li role="listitem">text</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </li>
+
+
+                                        <li class="edu-list-item">
+                                            <div class="title">
+                                                <small>3교시</small>
+                                                <h4>학령전기 아동의 정상성장발달</h4>
+                                            </div>
+                                            <ul class="o-list" role="list">
+                                                <li role="listitem">유아의 성장발달</li>
+                                                <li role="listitem">정상적인 성장발달과 관련된 문제 대처방법</li>
+                                                <li role="listitem">간호조력자의 역할</li>
+                                            </ul>
+
+                                            <div class="lect-info">
+                                                <div class="krds-disclosure conts-expand-area">
+                                                    <ul class="lect-info-list">
+                                                        <li>
+                                                            <i class="ico-time"></i>
+                                                            <div class="text">60분</div>
+                                                        </li>
+                                                        <li>
+                                                            <i class="ico-user"></i>
+                                                            <div class="text">강사 : 이순신</div>
+                                                            <button type="button" class="btn-conts-expand">강사
+                                                                프로필보기</button>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="expand-wrap">
+                                                        <div class="expand-in lect-expend">
+                                                            <div class="lect-expend-thumb">
+                                                                <div class="lect-name">
+                                                                    <span class="name">이순신</span>
+                                                                    강사
+                                                                </div>
+                                                                <div class="img">
+                                                                    <img src="../resources/img/refre/lect-img.png"
+                                                                        alt="사진">
+                                                                </div>
+                                                            </div>
+                                                            <div class="lect-expend-cont">
+                                                                <h4>대표 프로필</h4>
+                                                                <ul class="o-list" role="list">
+                                                                    <li role="listitem">서울다나운연합의원(대표원장)</li>
+                                                                    <li role="listitem">text</li>
+                                                                    <li role="listitem">text</li>
+                                                                </ul>
+                                                                <h4>학력 및 경력사항 (주요사항)</h4>
+                                                                <ul class="o-list" role="list">
+                                                                    <li role="listitem">text</li>
+                                                                    <li role="listitem">text</li>
+                                                                    <li role="listitem">text</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </li>
+
+
+
+                                        <li class="edu-list-item">
+                                            <div class="title">
+                                                <small>4교시</small>
+                                                <h4>유아기와 학령전기 아동의 건강문제</h4>
+                                            </div>
+                                            <ul class="o-list" role="list">
+                                                <li role="listitem">유아의 성장발달</li>
+                                                <li role="listitem">정상적인 성장발달과 관련된 문제 대처방법</li>
+                                                <li role="listitem">간호조력자의 역할</li>
+                                            </ul>
+
+                                            <div class="lect-info">
+                                                <div class="krds-disclosure conts-expand-area">
+                                                    <ul class="lect-info-list">
+                                                        <li>
+                                                            <i class="ico-time"></i>
+                                                            <div class="text">60분</div>
+                                                        </li>
+                                                        <li>
+                                                            <i class="ico-user"></i>
+                                                            <div class="text">강사 : 이순신</div>
+                                                            <button type="button" class="btn-conts-expand">강사
+                                                                프로필보기</button>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="expand-wrap">
+                                                        <div class="expand-in lect-expend">
+                                                            <div class="lect-expend-thumb">
+                                                                <div class="lect-name">
+                                                                    <span class="name">이순신</span>
+                                                                    강사
+                                                                </div>
+                                                                <div class="img">
+                                                                    <img src="../resources/img/refre/lect-img.png"
+                                                                        alt="사진">
+                                                                </div>
+                                                            </div>
+                                                            <div class="lect-expend-cont">
+                                                                <h4>대표 프로필</h4>
+                                                                <ul class="o-list" role="list">
+                                                                    <li role="listitem">서울다나운연합의원(대표원장)</li>
+                                                                    <li role="listitem">text</li>
+                                                                    <li role="listitem">text</li>
+                                                                </ul>
+                                                                <h4>학력 및 경력사항 (주요사항)</h4>
+                                                                <ul class="o-list" role="list">
+                                                                    <li role="listitem">text</li>
+                                                                    <li role="listitem">text</li>
+                                                                    <li role="listitem">text</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </li>
+                                    </ul>
+
+                                </section>
+                            </div>
+                            <!-- //tab contents -->
+                        </div>
+                        <!-- //tab -->
+
+                    </div>
+                </div>
+                <!-- //modal contents -->
+
+
+                <!-- close button -->
+                <button type="button" class="krds-btn medium icon btn-close close-modal">
+                    <span class="sr-only">닫기</span>
+                    <i class="svg-icon ico-popup-close"></i>
+                </button>
+                <!-- //close button -->
+            </div>
+        </div>
+        <div class="modal-back in"></div>
+    </section>
+
+    <!-- // 모달 : 상세보기 -->
+
+
+
+
+    <!-- 모달 : 자세히보기 -->
+    <section id="modal_terms" class="detailed krds-modal fade in shown" role="dialog" aria-labelledby="tit_modal_terms"
+        data-type="large">
+        <!--  <section id="modal_terms" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_detail"
+        data-type="large"> -->
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- modal title -->
+                <div class="modal-header">
+                    <h2 id="tit_modal_terms" class="modal-title">
+                        간호조무사 대면교육 동의서
+                    </h2>
+                </div>
+                <!-- //modal title -->
+                <!-- modal contents -->
+                <div class="modal-conts mb40">
+                    <div class="bar"></div>
+                    <div class="modal-terms-conf mt20">
+                        <h3 class="modal-terms-title">현대 정신 건강의 실무</h3>
+                        <p class="modal-terms-date">2025.06.22 (일) 14:00 ~ 18:00</p>
+                        <div class="ea-section gray mt10">
+                            <h4>운영방침</h4>
+                            <ol class="dash-list fs14">
+                                <li>- 교육 시작 시 입실 불가(교통상황 및 주차시간 고려 요망)</li>
+                                <li>- 교육생 외 입장 불가(가족, 애완동물 등)</li>
+                                <li>- 교육 중 이탈(외출, 개인업무 등)로 인해 발생한 문제에 대해서는 교육생 본인에게 책임이 있음</li>
+                                <li>- 출결 확인을 위하여 교육장 입·퇴실 시 QR코드 출결 또는 출석부에 총 1회 서명</li>
+                            </ol>
+                        </div>
+
+                        <div class="ea-section gray mt10">
+                            <h4>사진·영상 활용</h4>
+                            <ol class="dash-list fs14">
+                                <li>- 사용 형식 : 교육 중 강의 장면 등 사진 및 동영상 촬영</li>
+                                <li>- 사용 목적 : 교육 홍보, 사업 결과 보고 등</li>
+                                <li>- 보존기간: 간호조무사 등 규칙 제16조(보수교육 관계서류의 보존)에 의거 3년 동안 보존</li>
+
+                            </ol>
+                        </div>
+                        <p class="req-text mt10">
+                            ※ 초상권 사용에 대한 동의를 거부할 권리가 있습니다.
+                        </p>
+                        <p class="req-text">다만 위 사항은 교육 신청에 반드시 필요한 사항으로, 거부하실 경우 교육 신청이 제한될 수 있습니다.</p>
+                    </div>
+                </div>
+                <!-- //modal contents -->
+
+                <!-- close button -->
+                <button type="button" class="krds-btn medium icon btn-close close-modal">
+                    <span class="sr-only">닫기</span>
+                    <i class="svg-icon ico-popup-close"></i>
+                </button>
+                <!-- //close button -->
+            </div>
+        </div>
+        <div class="modal-back in"></div>
+    </section>
+    <!-- //modal -->
+    <!--// 모달 : 자세히보기 -->
+
+</body>
+
+</html>
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>
