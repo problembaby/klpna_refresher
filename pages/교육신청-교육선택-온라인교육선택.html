@@ -34,18 +34,19 @@
 
         <script>
 
-            /***********************
+
+             /***********************
              * 선택정보 동작 
              * ***************************/
 
             $(document).ready(function () {
-                $('body').addClass('edu-appl-step01');  // edu-appl-step01, edu-appl-step02 ,edu-appl-step03
+                $('body').addClass('edu-appl-step02');  // edu-appl-step01, edu-appl-step02 ,edu-appl-step03
 
                 $('.td-chk .chk-subject').on('change', function () {
                     const subjectName = $(this).data('subject');
-                    const $step = $('#edu-step01');   // #edu-step01, #edu-step02, #edu-step03
+                    const $step = $('#edu-step02');   // #edu-step01, #edu-step02, #edu-step03
                     const $subjectText = $step.find('.edu-item-subject');
-                    const $subjectSpan = $('#eab-subject01'); // #eab-subject01 #eab-subject02 #eab-subject03
+                    const $subjectSpan = $('#eab-subject02'); // #eab-subject01 #eab-subject02 #eab-subject03
 
                     $step.removeClass('none').addClass('selected');
                     $subjectSpan.stop(true, true).fadeOut(100, function () {
@@ -57,7 +58,7 @@
                     }
                 });
             });
-
+            
 
 
             /**********************************
@@ -65,24 +66,17 @@
              * *****************************/
 
 
-            function validateStep01() {
-                const isAgreed = $('#agree-check').is(':checked');
-                const selectedRadio = $('input[name="subject-radio"]:checked');
+            function validateStep02() {
+                let isValid = true;
 
-                if (selectedRadio.length === 0) {
+                // 과정 선택 체크
+                if ($('input[name="subjectCode"]:checked').length === 0) {
                     alert('과정을 선택해주세요.');
-                    return;
+                    isValid = false;
                 }
 
-                if (!isAgreed) {
-                    alert('이용약관에 동의해주세요.');
-                    return;
-                }
-
-                // ✅ 다음 단계 이동 로직 여기에 작성
-                alert('선택내역 확인으로 이동합니다.');
+                return isValid;
             }
-
 
             /************************************************
              * 선택정보 하단 고정 스크립트
@@ -181,56 +175,38 @@
 
                     <!--컨텐츠  :교육신청-->
                     <div class="edu-appl-cont mb-borad">
-                        <section class="ea-section expend sky">
-                            <h2>1.(비)대면교육 선택</h2>
-                            <div class="white-box">
-                                <ol class="ea-list fs16">
-                                    <li>
-                                        <p class="blue fw-medium">연말 진행되는 (비)대면교육 정원이 마감될 경우 내년 보수교육을 신청하시기 바랍니다</p>
-                                    </li>
-                                    <li>
-                                        <div class="ea-list-p">
-                                            <p>
-                                                <span class="text-bg-red">2025년 온라인교육(4H)+온라인교육(4H)은 2년 주기로 신청
-                                                    가능합니다.</span>
-                                            </p>
-                                            <p>ex) 2025년 정기 온라인(8H) 이수 시, 2026년 (비)대면(4H)+온라인(4H) 이수</p>
-                                            <p>ex) 2025년 정기 (비)대면(4H)+온라인(4H) 이수 시, 2026년 온라인(8H) or (비)대면(4H)+온라인(4H)
-                                                이수</p>
-                                        </div>
-                                    </li>
-                                </ol>
-                            </div>
 
 
-                            <div class="white-box">
-                                <ol class="ea-list fs16">
-                                    <li>올해 (비)대면교육 과목이 과거 연도와 중복되지 않도록 신청 바랍니다.</li>
-                                    <li>올해 (비)대면교육 지각부 작성자(추가비 면제)는 올해 (비)대면교육에 한해서만 가능합니다.</li>
-                                    <li>
-                                        <p class="blue fw-medium">연말 진행되는 (비)대면교육 정원이 마감될 경우 내년 보수교육을 신청하시기 바랍니다.</p>
-                                    </li>
-                                    <li>
-                                        <div class="ea-list-p">
-                                            <p>
-                                                <span class="text-bg-red">2025년 온라인교육(4H)+온라인교육(4H)은 2년 주기로 신청
-                                                    가능합니다.</span>
-                                            </p>
-                                            <p>ex) 2025년 정기 온라인(8H) 이수 시, 2026년 (비)대면(4H)+온라인(4H) 이수</p>
-                                            <p>ex) 2025년 정기 (비)대면(4H)+온라인(4H) 이수 시, 2026년 온라인(8H) or (비)대면(4H)+온라인(4H)
-                                                이수</p>
-                                        </div>
-                                    </li>
-                                    <li>(비)대면교육이 시작되면 입실 불가합니다. (절대 시간 엄수)</li>
-                                    <li>자격증을 취득한 해는 보수교육 면제입니다. 면제 신청을 해주세요. (면제 미신청자만 해당)</li>
-                                </ol>
+                        <section class="ea-section gray">
+                            <div class="ea-sec-compl-wrap">
+                                <h2>1.(비)대면교육 선택</h2>
+                                <span class="tag-selected"><i class="ico-wh-selected"></i>선택완료</span>
                             </div>
-                            <div class="mb60"></div>
-                            <button type="button" class="krds-btn text bot-close-btn">
-                                더보기
-                                <i class="svg-icon ico-angle"></i>
-                            </button>
                         </section>
+
+
+                        <section class="ea-section sky">
+                            <h2>2.온라인교육 선택</h2>
+                            <div class="white-box">
+                                <ol class="ea-list fs16">
+                                    <li>
+                                        <div class="ea-list-p">
+                                            <p class="blue fw-medium">올해 온라인교육(8H) 수강자는 내년에 (비)대면교육(4H)+온라인교육(4H) 이수해야
+                                                합니다.</p>
+                                            <p>ex) 2025년 정기 온라인(8H) 이수 시, 2026년 (비)대면(4H)+온라인(4H) 이수</p>
+                                            <p>ex) 2025년 정기 (비)대면(4H)+온라인(4H) 이수 시, 2026년 온라인(8H) or (비)대면(4H)+온라인(4H)
+                                                이수</p>
+                                            <p class="fw-normal">※ 자격증을 취득한 해는 보수교육 면제입니다. 면제 신청을 해주세요. (면제 미신청자만 해당)
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+
+
+
+
 
                         <!-- 검색 입력폼 -->
                         <form id="" name="" action="#" method="post" class="mt30">
@@ -238,45 +214,9 @@
                                 <div class="search-top-box full">
                                     <div class="form-col-group">
                                         <div class="sch-select select-style">
-                                            <ul class="input-group range mw500">
-                                                <li>
-                                                    <input type="text" id="" class="krds-input datepicker medium"
-                                                        placeholder="시작일">
-                                                </li>
-                                                <li class="mark">~</li>
-                                                <li>
-                                                    <input type="text" id="" class="krds-input datepicker medium"
-                                                        placeholder="종료일" maxlength="4">
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="form-col-group">
-
-                                        <div class="sch-select select-style">
                                             <select class="krds-form-select medium" title="선택" id="ntt-type">
-                                                <option value="">시도회 전체</option>
-                                                <option value="대한간호조무사협회 중앙회">대한간호조무사협회 중앙회</option>
-                                                <option value="서울시간호조무사회">서울시간호조무사회</option>
-                                                <option value="부산시간호조무사회">부산시간호조무사회</option>
-                                                <option value="대구시간호조무사회">대구시간호조무사회</option>
-                                                <option value="인천시간호조무사회">인천시간호조무사회</option>
-                                                <option value="광주·전남간호조무사회">광주·전남간호조무사회</option>
-                                                <option value="대전·충남간호조무사회">대전·충남간호조무사회</option>
-                                                <option value="울산·경남간호조무사회">울산·경남간호조무사회</option>
-                                                <option value="경기도간호조무사회">경기도간호조무사회</option>
-                                                <option value="강원도간호조무사회">강원도간호조무사회</option>
-                                                <option value="충청북도간호조무사회">충청북도간호조무사회</option>
-                                                <option value="전북도간호조무사회">전북도간호조무사회</option>
-                                                <option value="경상북도간호조무사회">경상북도간호조무사회</option>
-                                                <option value="제주도간호조무사회">제주도간호조무사회</option>
-                                            </select>
-                                        </div>
-                                        <div class="sch-select select-style">
-                                            <select class="krds-form-select medium" title="선택" id="ntt-type">
-                                                <option value="">접수상태 전체</option>
-                                                <option value="접수중">접수중</option>
-                                                <option value="접수마감">접수마감</option>
+                                                <option value="">교육분야 전체</option>
+                                                <option value="과정명">과정명</option>
                                             </select>
                                         </div>
                                         <div class="bbs-search-form-wrap">
@@ -313,7 +253,7 @@
                         <!-- 검색 결과 : 리스트 -->
                         <div class="table-board borad-list">
                             <table>
-                                <caption class="sr-only">대면교육일정 일정 목록이며 NO, 과정명,일자/시간/장소 접수상태, 과정선택을 제공합니다.</caption>
+                                <caption class="sr-only">온라인교육 일정 목록이며 NO, 과정명 수강기간, 과정선택을 제공합니다.</caption>
                                 <colgroup>
                                     <col width="8%;">
                                     <col width="auto">
@@ -324,24 +264,29 @@
                                     <tr>
                                         <th scope="col">NO</th>
                                         <th scope="col">과정명</th>
-                                        <th scope="col">일자/시간/장소</th>
-                                        <th scope="col">신청현황</th>
+                                        <th scope="col">수강기간</th>
                                         <th scope="col">과정선택</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr style="display:none">
-                                        <td class="no-contents" colspan="5">등록 된 게시물이 없습니다.</td>
+                                        <td class="no-contents" colspan="4">등록 된 게시물이 없습니다.</td>
                                     </tr>
                                     <tr>
                                         <td class="num">1</td>
                                         <td class="cell-subject">
                                             <div class="subject-title">
-                                                <a href="#none" title="페이지 이동" target="_self" class="open-modal"
+                                                <span class="krds-badge small bg-light-primary">노인간호</span>
+                                                <a href="#none" title="페이지 이동"  class="open-modal"
                                                     data-target="modal_detail">
-                                                    <p class="ellipsis-2 subject-">간호실무의 개념 및 병태생리</p>
+                                                    <p class="ellipsis-2 subject-name">기본공통과정 </p>
                                                 </a>
                                                 <div class="btn-list">
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_sample">
+                                                        <i class="ico-splay"></i>
+                                                        샘플보기
+                                                    </button>
                                                     <button type="button" class="smallBtn open-modal"
                                                         data-target="modal_detail">
                                                         상세보기
@@ -354,82 +299,19 @@
                                             <ul class="edu-priod-list">
                                                 <li>
                                                     <i class="ico-calendar"></i>
-                                                    <p>2025.05.03 (토)</p>
+                                                    <p>~ 2025.05.03 (토) 까지</p>
                                                 </li>
                                                 <li>
                                                     <i class="ico-time"></i>
-                                                    <p>14:00 ~ 16:00</p>
-                                                </li>
-                                                <li>
-                                                    <i class="ico-location"></i>
-                                                    <p>서귀포시 청사 강의실</p>
+                                                    <p>4:00 시간</p>
                                                 </li>
                                             </ul>
-                                        </td>
-                                        <td class="td-appl">
-                                            <div class="td-appl-area">
-                                                <div class="appl-stat ing">접수중</div>
-                                                <!-- <div class="appl-stat end">접수마감</div> -->
-                                                <div class="appl-num">
-                                                    (<span class="red fw-bold">28</span>/100)
-                                                </div>
-                                            </div>
                                         </td>
                                         <td class="td-chk">
                                             <div class="krds-form-check large">
                                                 <input type="radio" name="subject-radio" class="chk-subject" value="S001"
-                                                    data-subject="간호실무의 개념 및 병태생리 (4시간)" id="rdo-1">
+                                                    data-subject="기본공통과정" id="rdo-1">
                                                 <label for="rdo-1"></label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="num">1</td>
-                                        <td class="cell-subject">
-                                            <div class="subject-title">
-                                                <a href="#none" title="페이지 이동" target="_self" class="open-modal"
-                                                    data-target="modal_detail">
-                                                    <p class="ellipsis-2 subject-name">현대 정신건강의 실무</p>
-                                                </a>
-                                                <div class="btn-list">
-                                                    <button type="button" class="smallBtn open-modal"
-                                                        data-target="modal_detail">
-                                                        상세보기
-                                                        <i class="svg-icon ico-plus small"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="edu-period">
-                                            <ul class="edu-priod-list">
-                                                <li>
-                                                    <i class="ico-calendar"></i>
-                                                    <p>2025.05.03 (토)</p>
-                                                </li>
-                                                <li>
-                                                    <i class="ico-time"></i>
-                                                    <p>14:00 ~ 16:00</p>
-                                                </li>
-                                                <li>
-                                                    <i class="ico-location"></i>
-                                                    <p>서귀포시 청사 강의실</p>
-                                                </li>
-                                            </ul>
-                                        </td>
-                                        <td class="td-appl">
-                                            <div class="td-appl-area">
-                                                <div class="appl-stat ing">접수중</div>
-                                                <!-- <div class="appl-stat end">접수마감</div> -->
-                                                <div class="appl-num">
-                                                    (<span class="red fw-bold">28</span>/100)
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="td-chk">
-                                            <div class="krds-form-check large">
-                                                <input type="radio" name="subject-radio" class="chk-subject" value="S002"
-                                                    data-subject="현대 정신건강의 실무 (4시간)" id="rdo-2">
-                                                <label for="rdo-2"></label>
                                             </div>
                                         </td>
                                     </tr>
@@ -437,12 +319,17 @@
                                         <td class="num">2</td>
                                         <td class="cell-subject">
                                             <div class="subject-title">
-                                                <a href="#none" title="페이지 이동" target="_self" class="open-modal"
+                                                <span class="krds-badge small bg-light-primary">지역사회간호</span>
+                                                <a href="#none" title="페이지 이동"  class="open-modal"
                                                     data-target="modal_detail">
-                                                    <p class="ellipsis-2 subject-name">과정명이 최대 2줄로 나옴, 말 줄임 적용
-                                                    </p>
+                                                    <p class="ellipsis-2 subject-name">사춘기 및 결혼기 여성	</p>
                                                 </a>
                                                 <div class="btn-list">
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_sample">
+                                                        <i class="ico-splay"></i>
+                                                        샘플보기
+                                                    </button>
                                                     <button type="button" class="smallBtn open-modal"
                                                         data-target="modal_detail">
                                                         상세보기
@@ -455,32 +342,105 @@
                                             <ul class="edu-priod-list">
                                                 <li>
                                                     <i class="ico-calendar"></i>
-                                                    <p>2025.05.03 (토)</p>
+                                                    <p>~ 2025.05.03 (토) 까지</p>
                                                 </li>
                                                 <li>
                                                     <i class="ico-time"></i>
-                                                    <p>14:00 ~ 16:00</p>
-                                                </li>
-                                                <li>
-                                                    <i class="ico-location"></i>
-                                                    <p>서귀포시 청사 강의실</p>
+                                                    <p>4:00 시간</p>
                                                 </li>
                                             </ul>
                                         </td>
-                                        <td class="td-appl">
-                                            <div class="td-appl-area">
-                                                <!-- <div class="appl-stat ing">접수중</div> -->
-                                                <div class="appl-stat end">접수마감</div>
-                                                <div class="appl-num">
-                                                    (<span class="red fw-bold">100</span>/100)
+                                        <td class="td-chk">
+                                            <div class="krds-form-check large">
+                                                <input type="radio" name="subject-radio" class="chk-subject" value="S002"
+                                                    data-subject="사춘기 및 결혼기 여성	" id="rdo-2">
+                                                <label for="rdo-2"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">3</td>
+                                        <td class="cell-subject">
+                                            <div class="subject-title">
+                                                <span class="krds-badge small bg-light-primary">지역사회간호</span>
+                                                <a href="#none" title="페이지 이동"  class="open-modal"
+                                                    data-target="modal_detail">
+                                                    <p class="ellipsis-2 subject-name">뇌졸중의 뱅태생리의 이해 및 재활간호</p>
+                                                </a>
+                                                <div class="btn-list">
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_sample">
+                                                        <i class="ico-splay"></i>
+                                                        샘플보기
+                                                    </button>
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_detail">
+                                                        상세보기
+                                                        <i class="svg-icon ico-plus small"></i>
+                                                    </button>
                                                 </div>
                                             </div>
+                                        </td>
+                                        <td class="edu-period">
+                                            <ul class="edu-priod-list">
+                                                <li>
+                                                    <i class="ico-calendar"></i>
+                                                    <p>~ 2025.05.03 (토) 까지</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-time"></i>
+                                                    <p>4:00 시간</p>
+                                                </li>
+                                            </ul>
                                         </td>
                                         <td class="td-chk">
                                             <div class="krds-form-check large">
                                                 <input type="radio" name="subject-radio" class="chk-subject" value="S003"
-                                                    data-subject="과정명이 최대 2줄로 나옴, 말 줄임 적용 (4시간)" id="rdo-3" disabled>
+                                                    data-subject="뇌졸중의 뱅태생리의 이해 및 재활간호" id="rdo-3">
                                                 <label for="rdo-3"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">4</td>
+                                        <td class="cell-subject">
+                                            <div class="subject-title">
+                                                <span class="krds-badge small bg-light-primary">지역사회간호</span>
+                                                <a href="#none" title="페이지 이동"  class="open-modal"
+                                                    data-target="modal_detail">
+                                                    <p class="ellipsis-2 subject-name">[비대면교육]현대정신건강의 실무</p>
+                                                </a>
+                                                <div class="btn-list">
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_sample">
+                                                        <i class="ico-splay"></i>
+                                                        샘플보기
+                                                    </button>
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_detail">
+                                                        상세보기
+                                                        <i class="svg-icon ico-plus small"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="edu-period">
+                                            <ul class="edu-priod-list">
+                                                <li>
+                                                    <i class="ico-calendar"></i>
+                                                    <p>~ 2025.05.03 (토) 까지</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-time"></i>
+                                                    <p>4:00 시간</p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="td-chk">
+                                            <div class="krds-form-check large">
+                                                <input type="radio" name="subject-radio" class="chk-subject" value="S004"
+                                                    data-subject="[비대면교육]현대정신건강의 실무" id="rdo-4" disabled>
+                                                <label for="rdo-4"></label>
                                             </div>
                                         </td>
                                     </tr>
@@ -492,24 +452,9 @@
                         </div>
                         <!-- //검색 결과 : 리스트 -->
 
-                        <div class="agree-area">
-                            <div class="terms-view">
-                                <p>간호조무사 대면교육 동의서 (동의 필수)</p>
-                                <button type="button" class="krds-btn small text open-modal"
-                                    data-target="modal_terms">자세히보기 <i class="svg-icon ico-angle right"></i></button>
-
-
-                            </div>
-                            <div class="krds-form-check medium">
-                                <input type="checkbox" name="agree-check" id="agree-check" required>
-                                <label for="agree-check">상기 교육을 수강함에 있어 대면교육 동의서 내용에 동의합니다.</label>
-                            </div>
-                        </div>
-
-
                         <div class="btnList-sort right">
                             <button type="button" class="krds-btn blue">뒤로</button>
-                            <button type="button" class="krds-btn" onclick="validateStep01()">다음 <i
+                            <button type="button" class="krds-btn" onclick="validateStep02()">다음 <i
                                     class="svg-icon ico-angle right"></i></button>
                         </div>
 
@@ -558,13 +503,13 @@
                     <span class="edu-year">교육년도: 2025년</span>
                 </div>
                 <div class="edu-appl-list">
-                    <div class="edu-items step01 none" id="edu-step01">
+                    <div class="edu-items step01 selected" id="edu-step01">
                         <div class="icon">
                             <i class="ico-chk-list"></i>
                         </div>
                         <div class="text">
                             <div class="edu-item-title">1.(비)대면교육 선택</div>
-                            <div class="edu-item-subject"><span id="eab-subject01"></span></div>
+                            <div class="edu-item-subject"><span id="eab-subject01">간호실무의 개념 및 병태생리 (4시간)</span> </div>
                         </div>
                     </div>
 
@@ -603,6 +548,51 @@
 
     </div>
 
+
+
+
+    <!-- 모달 : 샘플보기 -->
+
+    <!--    <section id="modal_sample" class="videoSample krds-modal fade in shown" role="dialog" aria-labelledby="tit_modal_sample" data-type="medium"> -->
+    <section id="modal_sample" class="videoSample krds-modal fade" role="dialog" aria-labelledby="tit_modal_sample"
+        data-type="medium">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- modal title -->
+                <div class="modal-header">
+                    <p class="c-name">과정명</p>
+                    <h2 id="tit_modal_sample" class="s-name">2025년 기본공통과정(필수과목 포함) <span
+                            class="fc-puple fw-lighter">교육년도:2025</span>
+                    </h2>
+                </div>
+                <!-- //modal title -->
+                <!-- modal contents -->
+                <div class="modal-conts">
+                    <div class="video-area">
+                        <video width="100%" height="400" controls>
+                            <source src="#" type="video/mp4">
+                            브라우저가 비디오 태그를 지원하지 않습니다.
+                        </video>
+                    </div>
+                </div>
+                <!-- //modal contents -->
+                <!-- modal btn -->
+                <div class="modal-btn btn-wrap center">
+                    <button type="button" class="krds-btn medium black close-modal">학습종료</button>
+                </div>
+                <!-- //modal btn -->
+                <!-- close button -->
+                <button type="button" class="krds-btn medium icon btn-close close-modal">
+                    <span class="sr-only">닫기</span>
+                    <i class="svg-icon ico-popup-close"></i>
+                </button>
+                <!-- //close button -->
+            </div>
+        </div>
+        <div class="modal-back in"></div>
+    </section>
+
+    <!-- // 모달 : 샘플보기 -->
 
 
 
@@ -1000,67 +990,6 @@
     <!-- // 모달 : 상세보기 -->
 
 
-
-
-    <!-- 모달 : 자세히보기 -->
-    <!--   <section id="modal_terms" class="detailed krds-modal fade in shown" role="dialog" aria-labelledby="tit_modal_terms"
-        data-type="large"> -->
-    <section id="modal_terms" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_detail"
-        data-type="large">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!-- modal title -->
-                <div class="modal-header">
-                    <h2 id="tit_modal_terms" class="modal-title">
-                        간호조무사 대면교육 동의서
-                    </h2>
-                </div>
-                <!-- //modal title -->
-                <!-- modal contents -->
-                <div class="modal-conts mb40">
-                    <div class="bar"></div>
-                    <div class="modal-terms-conf mt20">
-                        <h3 class="modal-terms-title">현대 정신 건강의 실무</h3>
-                        <p class="modal-terms-date">2025.06.22 (일) 14:00 ~ 18:00</p>
-                        <div class="ea-section gray mt10">
-                            <h4>운영방침</h4>
-                            <ol class="dash-list fs14">
-                                <li>- 교육 시작 시 입실 불가(교통상황 및 주차시간 고려 요망)</li>
-                                <li>- 교육생 외 입장 불가(가족, 애완동물 등)</li>
-                                <li>- 교육 중 이탈(외출, 개인업무 등)로 인해 발생한 문제에 대해서는 교육생 본인에게 책임이 있음</li>
-                                <li>- 출결 확인을 위하여 교육장 입·퇴실 시 QR코드 출결 또는 출석부에 총 1회 서명</li>
-                            </ol>
-                        </div>
-
-                        <div class="ea-section gray mt10">
-                            <h4>사진·영상 활용</h4>
-                            <ol class="dash-list fs14">
-                                <li>- 사용 형식 : 교육 중 강의 장면 등 사진 및 동영상 촬영</li>
-                                <li>- 사용 목적 : 교육 홍보, 사업 결과 보고 등</li>
-                                <li>- 보존기간: 간호조무사 등 규칙 제16조(보수교육 관계서류의 보존)에 의거 3년 동안 보존</li>
-
-                            </ol>
-                        </div>
-                        <p class="req-text mt10">
-                            ※ 초상권 사용에 대한 동의를 거부할 권리가 있습니다.
-                        </p>
-                        <p class="req-text">다만 위 사항은 교육 신청에 반드시 필요한 사항으로, 거부하실 경우 교육 신청이 제한될 수 있습니다.</p>
-                    </div>
-                </div>
-                <!-- //modal contents -->
-
-                <!-- close button -->
-                <button type="button" class="krds-btn medium icon btn-close close-modal">
-                    <span class="sr-only">닫기</span>
-                    <i class="svg-icon ico-popup-close"></i>
-                </button>
-                <!-- //close button -->
-            </div>
-        </div>
-        <div class="modal-back in"></div>
-    </section>
-    <!-- //modal -->
-    <!--// 모달 : 자세히보기 -->
 
 </body>
 
