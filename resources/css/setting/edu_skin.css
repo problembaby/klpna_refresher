@@ -1040,7 +1040,7 @@ font-style: normal;
 .edu-appl-cont .terms-view .krds-btn:hover{background: none;}
 .edu-appl-cont .terms-view .krds-btn:focus{background: none;}
 
-.edu-appl-board{background: #4A3466; width: 100%; height:180px; transition: all 0.3s ease;}
+.edu-appl-board{background: #4A3466; width: 100%; height:auto; transition: all 0.3s ease;}
 .edu-appl-board.fixed {
   position: fixed;
   bottom: 0;
@@ -1134,6 +1134,31 @@ font-size: 13px; color:#fff;
 
 .ico-wh-selected::before{content: ""; background: url(../../img/refre/ico-wh-selected.svg)no-repeat; display: block; width: 24px; height:24px; }
 
+/**************************
+유예해소자교육
+****************************/
+
+.sch-info .req-noti{
+    color: var(--color-text-bosu_txt, #9157DA);
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */
+}
+
+.krds-form-check input[type=checkbox]:checked ~ label:before {
+    background-color: #9157DA;
+    border-color: #9157DA;
+}
+
+.eab-subject-list{
+    color: var(--color-text-bosu_txt, #9157DA);
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 27px */
+
+}
 
 
 /** 노트북 */

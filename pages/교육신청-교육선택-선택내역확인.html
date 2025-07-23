@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="../resources/img/logo/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>신청안내 - KLPNA 보수교육센터</title>
+    <title>교육선택 - KLPNA 보수교육센터</title>
 
     <!-- css -->
     <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
@@ -28,6 +28,117 @@
 <body>
     <div id="wrap">
         <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+
+
+
+        <script>
+
+
+            /***********************
+            * 선택정보 동작 
+            * ***************************/
+
+            $(document).ready(function () {
+                $('.td-chk .chk-subject').on('change', function () {
+                    const checked = $('.chk-subject:checked').length;
+                    if (checked > 2) {
+                        this.checked = false;
+                        alert('최대 2개까지 선택할 수 있습니다.');
+                        return;
+                    }
+
+                    const $step03 = $('#edu-step03');
+                    const $ul = $('#eab-subject03');
+                    const selected = $('.chk-subject:checked').map(function () {
+                        return $(this).data('subject');
+                    }).get();
+
+                    $step03.removeClass('none').addClass('selected');
+                    $ul.stop(true, true).fadeOut(100, function () {
+                        const items = selected.map(text => '<li>' + text + '</li>').join('');
+                        $ul.html(items).fadeIn(200);
+                    });
+
+                    const $container = $step03.find('.edu-item-subject');
+                    if (!$container.is(':visible')) {
+                        $container.stop(true, true).slideDown(300);
+                    }
+                });
+            });
+
+
+
+
+
+            /**********************************
+             *  다음 버튼 클릭 시 유효성 검사
+             * *****************************/
+
+
+            function validateAppl() {
+                const cnt = $('.chk-subject:checked').length;
+                if (cnt < 2) {
+                    alert('2개의 과정을 선택해주세요.');
+                    return false;
+                }
+                alert('완료');
+                return true;
+            }
+
+
+
+            /************************************************
+             * 선택정보 하단 고정 스크립트
+             * **************************************/
+
+            $(function () {
+                const $board = $(".edu-appl-board");
+                let $footer;
+
+                function updateFooter() {
+                    $footer = $("footer, .footer, #footer");
+                }
+
+                function toggleFixedBoard() {
+                    updateFooter();
+                    if ($footer.length === 0) return;
+
+                    const scrollTop = $(window).scrollTop();
+                    const windowHeight = $(window).height();
+                    const footerTop = $footer.offset().top;
+
+                    const boardHeight = $board.outerHeight();
+                    const boardBottom = scrollTop + windowHeight;
+
+                    const shouldFix = boardBottom < footerTop - 10;
+
+                    if (shouldFix) {
+                        // 고정 상태
+                        $board.addClass("fixed").css({
+                            position: "fixed",
+                            bottom: "0",
+                            top: "auto",
+                            transform: "translateY(0)",
+                        });
+                    } else {
+                        // footer 위에 고정
+                        $board.removeClass("fixed").css({
+                            position: "absolute",
+                            bottom: "auto",
+                            top: footerTop - boardHeight - 10 + "px",
+                            transform: "none",
+                        });
+                    }
+                }
+
+                $(window).on("scroll resize orientationchange", toggleFixedBoard);
+                setTimeout(toggleFixedBoard, 300); // footer 늦게 렌더될 경우 대비
+            });
+
+
+
+        </script>
 
 
         <!-- 컨테이너 영역 -->
@@ -64,8 +175,8 @@
                     <!--스탭-->
                     <div class="step bg-purple">
                         <ol class="progress-bar">
-                            <li class="progress-step active">1. 신청안내</li>
-                            <li class="progress-step">2. 교육선택</li>
+                            <li class="progress-step none">1. 신청안내</li>
+                            <li class="progress-step active">2. 교육선택</li>
                             <li class="progress-step">3. 선택내역 확인</li>
                             <li class="progress-step">4. 결제 완료</li>
                         </ol>
@@ -73,175 +184,422 @@
                     <!--//스탭-->
 
                     <!--컨텐츠  :교육신청-->
-                    <div class="edu-appl-cont">
-                        <section class="ea-section sky">
-                            <div class="ea-title">
-                                <i class="ico-check"></i>
-                                <h2>교육대상 확인</h2>
-                                <span class="req">(필수)</span>
-                            </div>
-                            <div class="ea-top-area">
-                                <h3><span class="user-name">홍길동</span>님은 <span class="bold">2024년 보충 유예해소자 1년 이상 2년 미만
-                                        교육 대상자</span> 입니다.</h3>
-                                <a href="./관련법규.html" target="_blank" title="관련법규 페이지 이동" class="krds-btn small a-link text">관련법규 보기 <i
-                                        class="svg-icon ico-angle right"></i></a>
-                            </div>
-                            <div class="ea-terms-desc">
-                                <ul class="ea-list">
-                                    <li>
-                                        <div class="">
-                                            <p class="bold-blue">위에 제시된 교육 대상자가 아닐 경우 상담센터(1661-6933)로 문의하시기 바랍니다.</p>
-                                            <p class="bold">사유 : 한국보건의료인국가시험원 면허(자격)센터 "면제·유예·비대상 승인자 명단＂과 협회 보수교육 대상자
-                                                정보의 미 연계로 인함.</p>
-                                        </div>
-                                    </li>
-                                    <li>보수교육 면제·유예·비대상에 해당하시는 분은 먼저 해당 연도의 면제·유예·비대상 신청을 통해 판정을 받으신 후 교육을 신청하시기 바랍니다.
-                                    </li>
-                                    <li>
-                                        <div class="">
-                                            <p>교육 신청 후에는 부분 환불 또는 환불 처리가 되지 않을 수 있으니, 위 내용을 충분히 확인하신 후 신청하시어 불이익을 받지 않도록
-                                                주의하시기 바랍니다.</p>
-                                            <p class="bold">※ 이외에도 당해 보수 교육 시간에 대한 내용은 "교육소개 > 교육이수시간" 페이지에서 확인 바랍니다.
-                                            </p>
-                                        </div>
+                    <div class="edu-appl-cont mb-borad">
 
-                                    </li>
-                                    <li>
-                                        이전 년도 온라인 강의를 수강하신 경우, 이번연도에는 대면 또는 비대면 강의를 수강하셔야 합니다.
-                                    </li>
-                                </ul>
+
+                        <section class="ea-section gray">
+                            <div class="ea-sec-compl-wrap">
+                                <h2>1.(비)대면교육 선택</h2>
+                                <span class="tag-selected"><i class="ico-wh-selected"></i>선택완료</span>
                             </div>
-                            <div class="ea-agree-area">
-                                <p>위 주의사항을 확인하셨습니까?</p>
-                                <div class="krds-form-check">
-                                    <input type="checkbox" name="chk_1" id="chk_1">
-                                    <label for="chk_1">예, 확인했습니다.</label>
-                                </div>
+                        </section>
+
+                        <section class="ea-section gray mt10">
+                            <div class="ea-sec-compl-wrap">
+                                <h2>2.온라인교육 선택</h2>
+                                <span class="tag-selected"><i class="ico-wh-selected"></i>선택완료</span>
+                            </div>
+                        </section>
+
+
+                        <section class="ea-section sky mt10">
+                            <h2>2.유예해소자교육 선택</h2>
+                            <div class="white-box">
+                                <p class="fw-bold">※ 자격증을 취득한 해는 보수교육이 면제입니다. 면제 미신청자는 신청을 해주세요.</p>
                             </div>
                         </section>
 
 
 
-                        <section class="ea-section sky mt30">
-                            <div class="ea-title">
-                                <i class="ico-check"></i>
-                                <h2>교육 유형 선택</h2>
-                                <span class="req">(필수)</span>
-                            </div>
-                            <div class="ea-top-area check-list">
-                                <div class="krds-form-check">
-                                    <input type="radio" name="ea_1" id="ea_1">
-                                    <label for="ea_1">대면 교육 + 온라인교육 선택</label>
-                                </div>
-                                <div class="krds-form-check">
-                                    <input type="radio" name="ea_1" id="ea_2" checked>
-                                    <label for="ea_2">비대면 교육 + 온라인교육 선택</label>
-                                </div>
-                                <div class="krds-form-check">
-                                    <input type="radio" name="ea_1" id="ea_3" checked>
-                                    <label for="ea_3">온라인교육 + 온라인교육 선택</label>
-                                </div>
-                            </div>
-                            <div class="ea-terms-desc">
-                                <ul class="ea-list fs16">
-                                    <li>대 면 교 육 : 신청한 날짜 및 시간에 현장에서 교육 수강</li>
-                                    <li>비대면교육 : 신청한 날짜 및 시간에 화상 교육 시스템을 이용하여 컴퓨터 또는 모바일로 교육 수강</li>
-                                    <li>온라인교육 : 원하는 시간에 자유롭게 온라인으로 교육 수강</li>
-                                </ul>
-                            </div>
-                        </section>
 
 
-                        <section class="ea-section gray mt30">
-                            <div class="ea-title">
-                                <i class="ico-check"></i>
-                                <h2>주의사항</h2>
-                            </div>
-                            <p class="fs-14">아래의 조건에 해당되지 않거나 간호조무사로 근무하신 분은 해당연도 보수교육 신청바랍니다.</p>
-                            <div class="ea-terms-desc">
-                                <h4>면제</h4>
-                                <ul class="ea-list fs16">
-                                    <li>간호조무사 자격증 취득한 연도</li>
-                                    <li>기타 사유: ex)출산, 간호학 전공 대학생, 군복무자</li>
-                                </ul>
-                            </div>
-                            <div class="ea-terms-desc">
-                                <h4>유예</h4>
-                                <ul class="ea-list fs16">
-                                    <li>2016년 : 6개월 이상 간호조무사로 종사하지 않은 자</li>
-                                    <li>2019년 ~ 2023년 : 하루도 간호조무사로 종사하지 않은 자</li>
-                                    <li>2024년 ~ 2025년 : 6개월 이상 간호조무사로 종사하지 않은 자</li>
-                                </ul>
-                            </div>
-                            <div class="ea-terms-desc">
-                                <h4>비대상</h4>
-                                <ul class="ea-list fs16">
-                                    <li>2017년 : 하루도 간호조무사로 종사하지 않은 자</li>
-                                    <li>2018년 : 하루도 간호조무사로 종사하지 않은 자</li>
-                                </ul>
-                            </div>
-                        </section>
-
-                        <div class="bar mt30 mb30"></div>
-
-                        <div class="ea-card-area">
-                            <div class="top">
-                                <button class="krds-btn blue btn-expand" type="button" data-expand="btnExpand">
-                                    <i class="ico-card"></i>
-                                    제휴카드 안내보기 (최대 46,500원 할인)
-                                    <i class="svg-icon ico-angle right"></i>
-                                </button>
-
-                                <button type="button" class="krds-btn">교육신청하기 <i class="svg-icon ico-angle right"></i></button>
-                            </div>
-
-                            <div class="es-card-desc div-expand" id="btnExpand"> 
-                                <div class="top-text">
-                                    <h4>교육신청 전 <span class="red">최대 46,500원</span> 상당의 할인혜택 제공</h4>
-                                    <a href="/index.klpn?contentId=146&nttId=563043&upperMenuId=130000&menuId=130100" target="_blank" class="krds-btn tertiary small">KLPNA회원카드 자세히보기</a>
-                                </div>
-
-                                <div class="es-card-conf">
-                                    <div class="img">
-                                        <img src="../resources/img/refre/img-klpna-card.png" alt="KLPNA 카드 이미지">
-                                    </div>
-                                    <div class="cont">
-                                        <h5 class="mb10">KLPNA회원카드 혜택</h5>
-                                        <p class="st">회원카드로 회비 결제 시 연1회 15,000 하나머니 지급</p>
-                                        <ol class="ea-list card">
-                                            <li>신규 발급 시 회비 납부자에 한하여 13,500 복지포인트 지급</li>
-                                            <li>결제계좌를 하나은행 최초개설 시 18,000 복지포인트 지급</li>
-                                            <li>실적 관계없이 나이키(3%) 등 청구할인 제공</li>
-                                            <li>가입 동의자에 한하여 교통사고 재해보험 무료 제공</li>
-                                            <li>보수교육장 대기 없이 빠른입장 가능한 하이패스 출결 기능</li>
-                                        </ol>
-                                        <div class="mt20 ref-text">
-                                            <p>＊ ‘구’ KLPN회원카드 발급자는 신규 KLPNA회원카드로 교체 발급 시 하나머니 혜택이 적용됩니다.</p>
-                                            <p>＊ 교체발급 방법은 [KLPNA회원카드 자세히보기] 클릭 시 확인 가능합니다.</p>
+                        <!-- 검색 입력폼 -->
+                        <form id="" name="" action="#" method="post" class="mt30">
+                            <fieldset class="bbs-search-wrap">
+                                <div class="search-top-box full">
+                                    <div class="form-col-group">
+                                        <div class="sch-select select-style">
+                                            <select class="krds-form-select medium" title="선택" id="ntt-type">
+                                                <option value="">교육분야 전체</option>
+                                                <option value="과정명">과정명</option>
+                                            </select>
                                         </div>
+                                        <div class="bbs-search-form-wrap">
+                                            <input type="text" id="search-wrd" class="krds-input medium"
+                                                placeholder="과정명을 입력하세요." title="키워드 입력">
+                                        </div>
+                                        <button type="button" class="krds-btn medium black">
+                                            <i class="svg-icon ico-sch"></i>
+                                            검색
+                                        </button>
                                     </div>
                                 </div>
+                            </fieldset>
+                        </form>
+                        <!-- //검색 입력폼 -->
 
+
+                        <!-- 검색 결과 : 리스트 상단 -->
+                        <div class="search-list-top">
+                            <ul class="sch-info" aria-live="polite">
+                                <li>총 <span class="point">24</span>건</li>
+                                <li><span class="req-noti">2개과정 선택</span></li>
+                            </ul>
+                            <div class="sch-sort gap-2">
+                                <select name="" id="" class="krds-form-select small">
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="50">50</option>
+                                </select>
+                                <button type="button" class="krds-btn black small">적용</button>
                             </div>
-                            
+                        </div>
+                        <!-- //검색 결과 : 리스트 상단 -->
+
+                        <!-- 검색 결과 : 리스트 -->
+                        <div class="table-board borad-list">
+                            <table>
+                                <caption class="sr-only">유예해소자교육 일정 목록이며 NO, 과정명 수강기간/이수기간, 과정선택을 제공합니다.</caption>
+                                <colgroup>
+                                    <col width="8%;">
+                                    <col width="auto">
+                                    <col width="20%">
+                                    <col width="10%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">NO</th>
+                                        <th scope="col">과정명</th>
+                                        <th scope="col">수강기간/이수기간</th>
+                                        <th scope="col">과정선택</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="display:none">
+                                        <td class="no-contents" colspan="4">등록 된 게시물이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">1</td>
+                                        <td class="cell-subject">
+                                            <div class="subject-title">
+                                                <span class="krds-badge small bg-light-primary">노인간호</span>
+                                                <a href="#none" title="페이지 이동" class="open-modal"
+                                                    data-target="modal_detail">
+                                                    <p class="ellipsis-2 subject-name">기본공통과정 </p>
+                                                </a>
+                                                <div class="btn-list">
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_sample">
+                                                        <i class="ico-splay"></i>
+                                                        샘플보기
+                                                    </button>
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_detail">
+                                                        상세보기
+                                                        <i class="svg-icon ico-plus small"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="edu-period">
+                                            <ul class="edu-priod-list">
+                                                <li>
+                                                    <i class="ico-calendar"></i>
+                                                    <p>~ 2025.05.03 (토) 까지</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-time"></i>
+                                                    <p>4:00 시간</p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="td-chk">
+                                            <div class="krds-form-check large">
+                                                <input type="checkbox" name="subject-checkbox" class="chk-subject"
+                                                    value="S001" data-subject="기본공통과정" id="rdo-1">
+                                                <label for="rdo-1"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">2</td>
+                                        <td class="cell-subject">
+                                            <div class="subject-title">
+                                                <span class="krds-badge small bg-light-primary">지역사회간호</span>
+                                                <a href="#none" title="페이지 이동" class="open-modal"
+                                                    data-target="modal_detail">
+                                                    <p class="ellipsis-2 subject-name">사춘기 및 결혼기 여성 </p>
+                                                </a>
+                                                <div class="btn-list">
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_sample">
+                                                        <i class="ico-splay"></i>
+                                                        샘플보기
+                                                    </button>
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_detail">
+                                                        상세보기
+                                                        <i class="svg-icon ico-plus small"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="edu-period">
+                                            <ul class="edu-priod-list">
+                                                <li>
+                                                    <i class="ico-calendar"></i>
+                                                    <p>~ 2025.05.03 (토) 까지</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-time"></i>
+                                                    <p>4:00 시간</p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="td-chk">
+                                            <div class="krds-form-check large">
+                                                <input type="checkbox" name="subject-checkbox" class="chk-subject"
+                                                    value="S002" data-subject="사춘기 및 결혼기 여성	" id="rdo-2">
+                                                <label for="rdo-2"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">3</td>
+                                        <td class="cell-subject">
+                                            <div class="subject-title">
+                                                <span class="krds-badge small bg-light-primary">지역사회간호</span>
+                                                <a href="#none" title="페이지 이동" class="open-modal"
+                                                    data-target="modal_detail">
+                                                    <p class="ellipsis-2 subject-name">뇌졸중의 뱅태생리의 이해 및 재활간호</p>
+                                                </a>
+                                                <div class="btn-list">
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_sample">
+                                                        <i class="ico-splay"></i>
+                                                        샘플보기
+                                                    </button>
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_detail">
+                                                        상세보기
+                                                        <i class="svg-icon ico-plus small"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="edu-period">
+                                            <ul class="edu-priod-list">
+                                                <li>
+                                                    <i class="ico-calendar"></i>
+                                                    <p>~ 2025.05.03 (토) 까지</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-time"></i>
+                                                    <p>4:00 시간</p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="td-chk">
+                                            <div class="krds-form-check large">
+                                                <input type="checkbox" name="subject-checkbox" class="chk-subject"
+                                                    value="S003" data-subject="뇌졸중의 뱅태생리의 이해 및 재활간호" id="rdo-3">
+                                                <label for="rdo-3"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">4</td>
+                                        <td class="cell-subject">
+                                            <div class="subject-title">
+                                                <span class="krds-badge small bg-light-primary">지역사회간호</span>
+                                                <a href="#none" title="페이지 이동" class="open-modal"
+                                                    data-target="modal_detail">
+                                                    <p class="ellipsis-2 subject-name">[비대면교육]현대정신건강의 실무</p>
+                                                </a>
+                                                <div class="btn-list">
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_sample">
+                                                        <i class="ico-splay"></i>
+                                                        샘플보기
+                                                    </button>
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_detail">
+                                                        상세보기
+                                                        <i class="svg-icon ico-plus small"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="edu-period">
+                                            <ul class="edu-priod-list">
+                                                <li>
+                                                    <i class="ico-calendar"></i>
+                                                    <p>~ 2025.05.03 (토) 까지</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-time"></i>
+                                                    <p>4:00 시간</p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="td-chk">
+                                            <div class="krds-form-check large">
+                                                <input type="checkbox" name="subject-checkbox" class="chk-subject"
+                                                    value="S004" data-subject="[비대면교육]현대정신건강의 실무" id="rdo-4" disabled>
+                                                <label for="rdo-4"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //검색 결과 : 리스트 -->
+
+                        <div class="btnList-sort right">
+                            <button type="button" class="krds-btn blue">뒤로</button>
+                            <button type="button" class="krds-btn" onclick="return validateAppl()">교육신청 <i
+                                    class="svg-icon ico-angle right"></i></button>
                         </div>
 
-                    </div>
-                    <!--//컨텐츠  :교육신청-->
+                        <!-- 페이지네이션 영역 -->
+                        <div class="krds-pagination">
+                            <a class="page-navi prev disabled" href="#">이전</a>
+                            <div class="page-links">
+                                <a class="page-link" href="#">1</a>
+                                <a class="page-link" href="#">2</a>
+                                <a class="page-link" href="#">3</a>
+                                <a class="page-link active" href="#">4</a>
+                                <a class="page-link" href="#">5</a>
+                                <a class="page-link" href="#">6</a>
+                                <a class="page-link" href="#">7</a>
+                                <a class="page-link" href="#">8</a>
+                                <span class="page-link link-dot"></span>
+                                <a class="page-link" href="#">99</a>
+                            </div>
+                            <a class="page-navi next" href="#">다음</a>
+                        </div>
+                        <!-- //페이지네이션 영역 -->
 
+
+
+
+
+                    </div>
+
+                    <!--//컨텐츠  :교육신청-->
 
 
                 </div>
 
-            </div>
-            <!-- //컨텐츠 영역 -->
-        </div>
-        <!-- //컨테이너 영역 --용
 
-        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+            </div>
+
+        </div>
+
+
+        <!--교육신청 : 하단 고정 보드-->
+        <div class="edu-appl-board fixed box-shadow">
+            <div class="inner">
+                <div class="edu-board-top">
+                    <h2><i class="ico-white-write"></i>선택정보</h2>
+                    <span class="edu-year">교육년도: 2025년</span>
+                </div>
+                <div class="edu-appl-list">
+                    <div class="edu-items step01 selected" id="edu-step01">
+                        <div class="icon">
+                            <i class="ico-chk-list"></i>
+                        </div>
+                        <div class="text">
+                            <div class="edu-item-title">1.(비)대면교육 선택</div>
+                            <div class="edu-item-subject"><span id="eab-subject01">간호실무의 개념 및 병태생리 (4시간)</span> </div>
+                        </div>
+                    </div>
+
+                    <div class="edu-items step02 selected" id="edu-step02">
+                        <div class="icon">
+                            <i class="ico-chk-list"></i>
+                        </div>
+                        <div class="text">
+                            <div class="edu-item-title">2.온라인교육 선택 (4시간)</div>
+                            <div class="edu-item-subject"><span id="eab-subject02">사춘기 및 결혼기 여성</span></div>
+                        </div>
+                    </div>
+
+
+                    <div class="edu-items step03 two none" id="edu-step03">
+                        <div class="icon">
+                            <i class="ico-chk-list"></i>
+                        </div>
+                        <div class="text">
+                            <div class="edu-item-title">3. 유예해소교육 선택</div>
+                            <div class="edu-item-subject">
+                                <ul id="eab-subject03" class="eab-subject-list">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--//교육신청 : 하단 고정 보드-->
+
+
+        <!-- //컨텐츠 영역 -->
+    </div>
+    <!-- //컨테이너 영역 -->
+
+    <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
 
     </div>
 
+
+
+
+    <!-- 모달 : 샘플보기 -->
+
+    <!--    <section id="modal_sample" class="videoSample krds-modal fade in shown" role="dialog" aria-labelledby="tit_modal_sample" data-type="medium"> -->
+    <section id="modal_sample" class="videoSample krds-modal fade" role="dialog" aria-labelledby="tit_modal_sample"
+        data-type="medium">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- modal title -->
+                <div class="modal-header">
+                    <p class="c-name">과정명</p>
+                    <h2 id="tit_modal_sample" class="s-name">2025년 기본공통과정(필수과목 포함) <span
+                            class="fc-puple fw-lighter">교육년도:2025</span>
+                    </h2>
+                </div>
+                <!-- //modal title -->
+                <!-- modal contents -->
+                <div class="modal-conts">
+                    <div class="video-area">
+                        <video width="100%" height="400" controls>
+                            <source src="#" type="video/mp4">
+                            브라우저가 비디오 태그를 지원하지 않습니다.
+                        </video>
+                    </div>
+                </div>
+                <!-- //modal contents -->
+                <!-- modal btn -->
+                <div class="modal-btn btn-wrap center">
+                    <button type="button" class="krds-btn medium black close-modal">학습종료</button>
+                </div>
+                <!-- //modal btn -->
+                <!-- close button -->
+                <button type="button" class="krds-btn medium icon btn-close close-modal">
+                    <span class="sr-only">닫기</span>
+                    <i class="svg-icon ico-popup-close"></i>
+                </button>
+                <!-- //close button -->
+            </div>
+        </div>
+        <div class="modal-back in"></div>
+    </section>
+
+    <!-- // 모달 : 샘플보기 -->
 
 
 
@@ -637,6 +995,8 @@
     </section>
 
     <!-- // 모달 : 상세보기 -->
+
+
 
 </body>
 
