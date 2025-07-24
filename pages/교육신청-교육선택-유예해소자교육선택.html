@@ -40,6 +40,10 @@
             * ***************************/
 
             $(document).ready(function () {
+
+                $('body').addClass('edu-appl-step03');  // edu-appl-step01, edu-appl-step02 ,edu-appl-step03
+
+
                 $('.td-chk .chk-subject').on('change', function () {
                     const checked = $('.chk-subject:checked').length;
                     if (checked > 2) {

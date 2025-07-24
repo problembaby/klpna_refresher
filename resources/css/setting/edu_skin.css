@@ -459,7 +459,7 @@ align-self: stretch;
 
 .lec-detail-list{display: flex; flex-direction: column; width: 100%; padding:20px 0; gap:10px}
 .lec-detail-list li{display: flex; width: 100%;}
-.lec-detail-list li .label{display: flex; gap:5px; align-items: center; color:#464C53; font-size: 13px; margin-right:10px}
+.lec-detail-list li .label{display: flex; gap:5px; align-items: center; color:#464C53; font-size: 13px; margin-right:10px; }
 .lec-detail-list li .date{color: var(--color-text-basic, #0D0E10);
 font-size: 16px;
 font-style: normal;
@@ -1058,12 +1058,15 @@ line-height: 150%;
 display: flex; align-items: center;
 }
 
+.eab-subject-list li{display: flex; gap:5px; align-items: center;}
+.eab-subject-list li::before{content:""; display: block; width: 3px; height:3px; border-radius: 50%; background-color: #9157DA; flex:0 auto; }
+
 .ico-white-write::before{content: ""; background: url(../../img/refre/ico-white-write.svg)no-repeat; display: block; width: 24px; height:24px; margin-right: 10px;}
 .ico-chk-list::before{content: ""; background: url(../../img/refre/ico-chk-list.svg)no-repeat; display: block; width: 30px; height:31px; margin-right: 10px;}
 .edu-appl-board .inner{padding: 20px 10px;}
 
 .edu-appl-list{margin-top: 10px; display: flex; gap:20px }
-.edu-items{flex: 0 1 500px; background-color: #fff; padding:20px; border-radius: 10px; display: flex; align-items: center; gap:10px }
+.edu-items{flex: 0 1 100%; background-color: #fff; padding:20px; border-radius: 10px; display: flex; align-items: center; gap:10px }
 .edu-item-title{color: var(--color-text-title, #0D0E10);
 font-size: 13px;
 font-style: normal;
@@ -1159,6 +1162,128 @@ font-weight: 700;
 line-height: 150%; /* 27px */
 
 }
+
+
+/*************************
+선택내역확인
+*************************/
+
+.ico-base-bullet::before{content:""; display: block; background: url(../../img/refre/ico-base-bullet.svg)no-repeat; width: 24px; height:25px; }
+.ico-subject::before{content:""; display: block; background: url(../../img/refre/ico-subject.svg)no-repeat; width: 18px; height:19px; }
+
+
+.edu-sel-section .section-title{display: flex; align-items: center; font-size: 18px; margin-bottom: 10px;}
+
+.edu-sel-lsit{display: flex; width: 100%; gap:30px}
+.edu-sel-lsit .edu-sel-items{flex: 0 1 450px}
+
+.edu-sel-summary{border-radius: 10px;
+border: 1px solid var(--color-border-light, #D9D9D9);
+padding: 20px;
+flex-direction: column;
+display: flex;
+height:100%
+
+}
+.edu-sel-summary .type{
+color: var(--color-text-title, #0D0E10);
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; 
+}
+.edu-sel-summary .lec-detail-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:10px 0;
+    gap: 5px;
+}
+
+.edu-sel-summary  .lec-detail-list li .text {
+    font-size: 14px;
+}
+.edu-sel-summary  .lec-detail-list li .subject {
+color: var(--color-text-bosu_txt, #9157DA);
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 27px */
+}
+
+.edu-pay-list{
+    display: flex;
+    gap:20px;
+    background: var(--color-bg-secondary, #F7F8FB);
+    padding: 30px 0;
+    align-items: stretch;
+}
+
+.edu-pay-list .lec-detail-list{padding-top:10px; gap:0}
+.edu-pay-list .lec-detail-list .value{font-size: 16px; font-weight: 700;}
+ 
+.edu-pay-list > li{flex: 1 100%; border-right: 1px solid var(--color-border-nomal, #C6C6C6); padding:0 30px }
+.edu-pay-list > li:last-child{border-right: 0;}
+.edu-pay-list .edu-pay-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.edu-join-head{display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;}
+
+.edu-pay-title{font-size: 16px;}
+
+
+.edu-total-box{margin-top: 20px; display: flex; align-items: center; gap:10px}
+.edu-total-amount{
+color: var(--color-system-danger, #DE3412);
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+}
+
+.edu-total-note{
+color: var(--color-text-title, #0D0E10);
+font-size: 16px;
+font-style: normal;
+}
+
+.pay-box{padding:30px; background: var(--color-bg-secondary, #F7F8FB);}
+
+.pay-radio-list {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+
+.pay-box .pay-radio-list > li {
+    flex: 1 0 20px;
+    width: 100%; background: var(--color-bg-secondary, #F7F8FB);}
+
+.text-box{
+    padding:20px 30px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.text-box.gray{
+    background: var(--gray-gray-5, #F8F8F8);
+}
+
+
+.krds-info-list.listStep01, .krds-info-list.listStep02 {gap:5px!important}
+.krds-info-list.listStep01 > li{font-size: 16px; font-weight: 600; gap:10px!important; padding-left: 20px;}
+.krds-info-list.listStep02 > li{font-size: 14px!important; font-weight: 400; color:#464C53}
+
+
+
+
+
+.pay-radio-list > li .krds-form-chip input[type=radio]:checked ~ label, .pay-radio-list > li .krds-form-chip input[type=checkbox]:checked ~ label {
+    border: 5px solid #AF77F5;
+}
+
 
 
 /** 노트북 */
@@ -1307,6 +1432,65 @@ body.edu-appl-step03 .step02 {
 }
 
 
+.edu-sel-lsit {
+    flex-direction: column;
+    gap:10px
+}
+
+.edu-sel-lsit .edu-sel-items {
+    flex: 0 1 auto;
+}
+.edu-sel-summary {
+    flex-direction: column;
+    height: auto;
+    padding:10px 20px;
+}
+
+.edu-pay-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: var(--color-bg-secondary, #F7F8FB);
+    padding: 0 20px;
+    align-items: stretch;
+}
+
+.edu-pay-list > li {
+    flex: 1 100%;
+    border-bottom: 1px solid var(--color-border-nomal, #C6C6C6);
+    border-right:0;
+    padding: 20px 0;
+}
+.edu-pay-list > li:last-child{border-bottom:0}
+.edu-pay-list .lec-detail-list {
+    padding-bottom:0
+}
+
+.edu-total-box {
+    margin-top: 10px;
+    padding-bottom:10px
+}
+
+.edu-sel-section .pay-radio-list {
+    gap: 0;
+}
+.pay-box .pay-radio-list > li {
+    flex: 1 0 40%;
+    width: 100%;
+    background: var(--color-bg-secondary, #F7F8FB);
+}
+
+.pay-box {
+    padding: 20px 10px;
+    background: var(--color-bg-secondary, #F7F8FB);
+}
+
+.text-box {
+    padding: 20px 10px;
+    width: 100%;
+    border-radius: 12px;
+}
+
 
 
 }
@@ -1402,6 +1586,63 @@ body.edu-appl-step03 .step02 {
     width:var(--krds-icon--size-large);
 }
 
+.edu-items {
+    flex: 1;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.eab-subject-list {
+    font-size: 16px;
+}
+.edu-year {
+    font-size: 14px;
+}
+
+.edu-item-subject {
+    font-size: 16px;
+}
+
+.ico-white-write::before {
+    content: "";
+    background: url(../../img/refre/ico-white-write.svg)no-repeat;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.ea-section h2 {
+    font-size: 16px;
+}
+
+.ea-sec-compl-wrap .tag-selected {
+    height: 24px;
+    padding: 0px 10px;
+    font-size: 13px;
+    color: #fff;
+}
+
+
+.ico-wh-selected::before {
+    content: "";
+    background: url(../../img/refre/ico-wh-selected.svg)no-repeat;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-size: cover;
+}
+
+.ea-section p {font-size: 14px;}
+.ea-list.fs16 li {
+    font-size: 14px;
+}
+
+.agree-area .terms-view, .agree-area .krds-form-check.medium > input[type=radio] ~ label, .krds-form-check.medium > input[type=checkbox] ~ label{font-size: 14px}
 
 }
 
