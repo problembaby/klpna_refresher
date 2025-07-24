@@ -1270,21 +1270,48 @@ font-style: normal;
 .text-box.gray{
     background: var(--gray-gray-5, #F8F8F8);
 }
-
+.text-box.sky{
+background: var(--color-primary-bg, #ECF2FE);
+}
 
 .krds-info-list.listStep01, .krds-info-list.listStep02 {gap:5px!important}
 .krds-info-list.listStep01 > li{font-size: 16px; font-weight: 600; gap:10px!important; padding-left: 20px;}
 .krds-info-list.listStep02 > li{font-size: 14px!important; font-weight: 400; color:#464C53}
 
 
-
-
-
 .pay-radio-list > li .krds-form-chip input[type=radio]:checked ~ label, .pay-radio-list > li .krds-form-chip input[type=checkbox]:checked ~ label {
     border: 5px solid #AF77F5;
 }
 
+.complete-wrap .complete-img::before {
+    content: "";
+    background: url(../../img/join/join-complete.svg)no-repeat;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    text-align: center;
+}
 
+.edu-complite-area{display: flex; gap:10px; flex-direction: column; align-items: center;} 
+.edu-complite-area .img-complite::before{content:""; background: url(../../img/join/join-complete.svg) no-repeat; display: block; width: 200px; height:200px} 
+
+.edu-complite-area .text{
+    color: var(--color-text-basic, #0D0E10);
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.pay-area{display: flex; flex-direction: row; gap:10px; background: var(--color-primary-bg, #ECF2FE);  padding: 10px 30px; font-size: 22px; margin-top: 10px
+}
+
+.pay-area .pay{font-weight: bold;}
+
+
+.acct-issue-box .msg{font-size: 16px;}
+.acct-issue-box .num{font-size: 18px; font-weight: 700; margin-top: 10px;}
+
+.acct-issue-text{text-align: center;}
+.acct-issue-text .num{text-align: center; font-size: 28px; font-weight: 700; margin-top: 10px;}
 
 /** 노트북 */
 @media (max-width: 1440px) {
@@ -1493,6 +1520,8 @@ body.edu-appl-step03 .step02 {
 
 
 
+
+
 }
 
 /** 모바일 */
@@ -1560,6 +1589,14 @@ body.edu-appl-step03 .step02 {
 }
 .search-top-box.full > *{width: 100%;}
 .search-top-box.full .input-group{width: 100%;}
+
+.edu-complite-area .text {
+    font-size: 20px;
+}
+.acct-issue-text .num {
+    font-size: 20px;
+}
+
 
 }
 
