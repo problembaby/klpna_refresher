@@ -1313,6 +1313,76 @@ background: var(--color-primary-bg, #ECF2FE);
 .acct-issue-text{text-align: center;}
 .acct-issue-text .num{text-align: center; font-size: 28px; font-weight: 700; margin-top: 10px;}
 
+
+.link-tab {display: flex; width: 100%; margin-bottom: 30px; border-bottom: 2px solid #B1B8BE;}
+
+.link-tab .link-tab-items{font-size: 18px; flex:1 auto; color: var(--color-text-disabled, #8A949E);
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+font-size: 19px;
+font-style: normal;
+font-weight: 700;
+border-bottom: 2px solid #B1B8BE;
+padding:20px;
+}
+
+.link-tab .link-tab-items.active{
+    color:#9157DA;
+    border-bottom: 4px solid var(--color-text-bosu_txt, #9157DA);
+
+}
+
+.o-accordion-list.edu{
+
+}
+
+.ico-chk-pp::before{
+    content: "";
+    display: block;
+    background:url(../../img/refre/ico-chk-pp.svg);
+    width:24px;
+    height:25px;
+    margin-right:16px
+}
+
+
+.edu-bbsBox-list{width: 100%;}
+.edu-bbsBox-list h3{font-size: 18px; padding:10px 30px}
+
+.edu-time-list{display: flex; flex-wrap: wrap; width: 100%;}
+.edu-time-list .white-box{height:100%}
+
+.edu-time-items{padding:10px 20px; display: flex; flex-direction: column; flex:0 1 50%;  }
+.edu-time-items .edu-time-items__title{color: var(--color-text-title, #0D0E10);
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */  }
+
+.edu-time-items__list{margin:10px 0; display: flex; gap:3px; flex-direction: column;}
+.edu-time-items__list li > p{font-size: 16px; background-color: #FFF0F5; display: inline-block;}
+
+.edu-time-items__clock {display: flex; align-items: center; gap:5px; font-size: 16px;}
+.edu-time-items__clock .edu-time{}
+.edu-time-items__clock .edu-time .time{font-weight: 600; color:#9157DA}
+
+.fs14{font-size: 14px;}
+.fs16{font-size: 16px;}
+.text-box .krds-info-list.listStep01.time li{font-size: 14px; font-weight: 400;
+} 
+
+.edu-time-items__h5{font-size:16px; margin-top: 5px;}
+.o-accordion-list.edu.krds-accordion .accordion-item.active .accordion-collapse {
+    height: auto;
+    max-height: 200vh;
+    transition: all 1.5s ease-in-out;
+    visibility: visible;
+    background: var(--gray-gray-5, #F8F8F8);
+}
+
+
 /** 노트북 */
 @media (max-width: 1440px) {
     .gnb-bg{display: none;}
@@ -1597,6 +1667,14 @@ body.edu-appl-step03 .step02 {
     font-size: 20px;
 }
 
+.edu-time-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
+}
+
+
 
 }
 
@@ -1680,6 +1758,11 @@ body.edu-appl-step03 .step02 {
 }
 
 .agree-area .terms-view, .agree-area .krds-form-check.medium > input[type=radio] ~ label, .krds-form-check.medium > input[type=checkbox] ~ label{font-size: 14px}
+
+.white-box {
+    padding: 10px;
+
+}
 
 }
 

@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../resources/img/logo/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>교육이수시간 - KLPNA 보수교육센터</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+    <link rel="stylesheet" href="../resources/lib/aos/aos.css">
+
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script defer src="../resources/krds/js/component/ui-script.js"></script>
+    <script defer src="../resources/krds/js/pattern/pattern.js"></script>
+    <script src="../resources/js/script.js"></script>
+    <script src="../resources/lib/aos/aos.js"></script>
+
+<body>
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                <nav class="krds-side-navigation">
+                    <h1 class="lnb-tit">교육소개</h1>
+                    <!-- lnb-list -->
+                    <ul class="lnb-list">
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">관련법규</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">신청방법</a>
+                        </li>
+                        <li class="lnb-item">
+                            <button type="button" class="lnb-btn lnb-toggle" aria-controls="lnbmenu-gbjkpo6"
+                                aria-expanded="false">교육일정</button>
+                            <!-- lnb-submenu -->
+                            <div class="lnb-submenu">
+                                <ul id="lnbmenu-gbjkpo6">
+                                    <li class="lnb-subitem">
+                                        <a href="#" class="lnb-btn lnb-link">온라인교육</a>
+                                    </li>
+                                    <li class="lnb-subitem">
+                                        <a href="#" class="lnb-btn lnb-link">대면교육</a>
+                                    </li>
+                                    <li class="lnb-subitem">
+                                        <a href="#" class="lnb-btn lnb-link">비대면교육</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //lnb-submenu -->
+                        </li>
+
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link active selected">교육이수시간</a>
+                        </li>
+                    </ul>
+                    <!-- //lnb-list -->
+                </nav>
+                <!-- //사이드 메뉴 -->
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">교육소개</a></li>
+                            <li><a href="#;" class="txt">교육이수시간</a></li>
+                        </ol>
+
+                    </nav>
+                    <!-- breadcrumb -->
+
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">교육이수시간</h1>
+
+                        <ol class="breadcrumb-action">
+                            <li>
+                                <button class="icon-bg-round" onclick="window.print(); return false;">
+                                    <i class="svg-icon ico-print"></i>
+                                    <span class="sr-only">print</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+
+                    <!--탭영역-->
+                    <div class="link-tab border">
+                        <a href="./교육이수시간_tab1.html" class="link-tab-items" target="_self" title="선택됨">연도별 보수교육 이수 대상조건
+                            및 교육시간</a>
+                        <a href="./교육이수시간_tab2.html" class="link-tab-items active" target="_self">연도별 보수교육 이수 대상조건 및
+                            교육시간</a>
+                    </div>
+                    <!--//탭영역-->
+
+
+
+                    <!-- 검색 입력폼 -->
+                    <form id="" name="" action="#" method="post">
+                        <fieldset class="bbs-search-wrap">
+                            <div class="search-top-box">
+                                <div class="form-col-group">
+                                    <div class="sch-select select-style">
+                                        <select class="krds-form-select medium" title="선택" id="ntt-type">
+                                            <option value="">제목</option>
+                                            <option value="">내용</option>
+                                        </select>
+                                    </div>
+                                    <div class="bbs-search-form-wrap">
+                                        <input type="text" id="search-wrd" class="krds-input medium"
+                                            placeholder="검색어를 입력하세요." title="키워드 입력">
+                                    </div>
+                                    <button type="button" class="krds-btn medium black">
+                                        <i class="svg-icon ico-sch"></i>
+                                        검색
+                                    </button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!-- //검색 입력폼 -->
+
+
+
+
+                    <!-- accordion -->
+                    <div class="krds-accordion type-line o-accordion-list edu mt30">
+                        <div class="accordion-item">
+                            <h5 class="accordion-header">
+                                <span class="ico-chk-pp"></span>
+                                <button type="button" id="accordionHeaderSample01" class="btn-accordion"
+                                    aria-controls="accordionCollapseSample01">
+                                    <p class="ellipsis-2">
+                                        당해연도 면제대상자의 보수교육 이수시간
+                                    </p>
+                                </button>
+                            </h5>
+                            <div id="accordionCollapseSample01" class="accordion-collapse collapse"
+                                aria-labelledby="accordionHeaderSample01">
+                                <div class="accordion-body">
+                                    <!-- accordion contents -->
+                                    <div class="edu-bbsBox-list">
+                                        <ul class="edu-time-list">
+                                            <li class="edu-time-items">
+                                                <div class="white-box">
+                                                    <h4 class="edu-time-items__title">보수교육 면제 연도 : 2024년</h4>
+                                                    <ul class="edu-time-items__list">
+                                                        <li>
+                                                            <p>신청 교육 : 2025년 정기보수교육</p>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="edu-time-items__clock">
+                                                        <i class="ico-clock"></i>
+                                                        <span class="edu-time">
+                                                            <span class="label">이수평점(시간):</span>
+                                                            <span class="time">8시간</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="edu-time-items">
+                                                <div class="white-box">
+                                                    <h4 class="edu-time-items__title">보수교육 면제 연도 : 2023년</h4>
+                                                    <ul class="edu-time-items__list">
+                                                        <li>
+                                                            <p>신청 교육 : 2024년 보충보수교육</p>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="edu-time-items__clock">
+                                                        <i class="ico-clock"></i>
+                                                        <span class="edu-time">
+                                                            <span class="label">이수평점(시간):</span>
+                                                            <span class="time">8시간</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="edu-time-items">
+                                                <div class="white-box">
+                                                    <h4 class="edu-time-items__title">보수교육 면제 연도 : 2022년</h4>
+                                                    <ul class="edu-time-items__list">
+                                                        <li>
+                                                            <p>신청 교육 : 2023년 보충보수교육</p>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="edu-time-items__clock">
+                                                        <i class="ico-clock"></i>
+                                                        <span class="edu-time">
+                                                            <span class="label">이수평점(시간):</span>
+                                                            <span class="time">8시간</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="edu-time-items">
+                                                <div class="white-box">
+                                                    <h4 class="edu-time-items__title">보수교육 면제 연도 : 2021년</h4>
+                                                    <ul class="edu-time-items__list">
+                                                        <li>
+                                                            <p>신청 교육 : 2022년 보충보수교육</p>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="edu-time-items__clock">
+                                                        <i class="ico-clock"></i>
+                                                        <span class="edu-time">
+                                                            <span class="label">이수평점(시간):</span>
+                                                            <span class="time">8시간</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="edu-time-items">
+                                                <div class="white-box">
+                                                    <h4 class="edu-time-items__title">보수교육 면제 연도 : 2020년</h4>
+                                                    <ul class="edu-time-items__list">
+                                                        <li>
+                                                            <p>신청 교육 : 2021년 보충보수교육</p>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="edu-time-items__clock">
+                                                        <i class="ico-clock"></i>
+                                                        <span class="edu-time">
+                                                            <span class="label">이수평점(시간):</span>
+                                                            <span class="time">8시간</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="edu-time-items">
+                                                <div class="white-box">
+                                                    <h4 class="edu-time-items__title">보수교육 면제 연도 : 2019년</h4>
+                                                    <ul class="edu-time-items__list">
+                                                        <li>
+                                                            <p>신청 교육 : 2020년 보충보수교육</p>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="edu-time-items__clock">
+                                                        <i class="ico-clock"></i>
+                                                        <span class="edu-time">
+                                                            <span class="label">이수평점(시간):</span>
+                                                            <span class="time">8시간</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="edu-time-items">
+                                                <div class="white-box">
+                                                    <h4 class="edu-time-items__title">보수교육 면제 연도 : 2018년</h4>
+                                                    <ul class="edu-time-items__list">
+                                                        <li>
+                                                            <p>신청 교육 : 2019년 보충보수교육</p>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="edu-time-items__clock">
+                                                        <i class="ico-clock"></i>
+                                                        <span class="edu-time">
+                                                            <span class="label">이수평점(시간):</span>
+                                                            <span class="time">8시간</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="edu-time-items">
+                                                <div class="white-box">
+                                                    <h4 class="edu-time-items__title">보수교육 면제 연도 : 2017년</h4>
+                                                    <ul class="edu-time-items__list">
+                                                        <li>
+                                                            <p>신청 교육 : 2018년 보충보수교육</p>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="edu-time-items__clock">
+                                                        <i class="ico-clock"></i>
+                                                        <span class="edu-time">
+                                                            <span class="label">이수평점(시간):</span>
+                                                            <span class="time">8시간</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="edu-time-items">
+                                                <div class="white-box">
+                                                    <h4 class="edu-time-items__title">보수교육 면제 연도 : 2016년</h4>
+                                                    <ul class="edu-time-items__list">
+                                                        <li>
+                                                            <p>신청 교육 : 2017년 보충보수교육</p>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="edu-time-items__clock">
+                                                        <i class="ico-clock"></i>
+                                                        <span class="edu-time">
+                                                            <span class="label">이수평점(시간):</span>
+                                                            <span class="time">8시간</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+
+                                    </div>
+                                    <!-- //accordion contents -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h5 class="accordion-header">
+                                <span class="ico-chk-pp"></span>
+                                <button type="button" id="accordionHeaderSample02" class="btn-accordion"
+                                    aria-controls="accordionCollapseSample02">
+                                    <p>
+                                        당해연도 유예대상자의 보수교육 이수시간
+                                    </p>
+                                </button>
+                            </h5>
+                            <div id="accordionCollapseSample02" class="accordion-collapse collapse"
+                                aria-labelledby="accordionHeaderSample02">
+                                <div class="accordion-body">
+                                    <!-- accordion contents -->
+                                    <ul class="edu-time-list">
+                                        <li class="edu-time-items">
+                                            <div class="white-box">
+                                                <h4 class="edu-time-items__title">보수교육 유예 연도 : 2016~2024년</h4>
+                                                <h5 class="edu-time-items__h5">업무복귀연도 : 2025년</h5>
+                                                <ul class="edu-time-items__list">
+                                                    <li>
+                                                        <p>신청 교육 : 2025년 정기 보수교육(8시간)+유예해소자(12시간)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="edu-time-items__clock">
+                                                    <i class="ico-clock"></i>
+                                                    <span class="edu-time">
+                                                        <span class="label">이수평점(시간):</span>
+                                                        <span class="time">20시간</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="edu-time-items">
+                                            <div class="white-box">
+                                                <h4 class="edu-time-items__title">보수교육 유예 연도 : 2016~2023년</h4>
+                                                <h5 class="edu-time-items__h5">업무복귀연도 : 2024년</h5>
+                                                <ul class="edu-time-items__list">
+                                                    <li>
+                                                        <p>신청 교육 : 2024년 보충 보수교육(8시간)+유예해소자(12시간)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="edu-time-items__clock">
+                                                    <i class="ico-clock"></i>
+                                                    <span class="edu-time">
+                                                        <span class="label">이수평점(시간):</span>
+                                                        <span class="time">20시간</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="edu-time-items">
+                                            <div class="white-box">
+                                                <h4 class="edu-time-items__title">보수교육 유예 연도 : 2016~2022년</h4>
+                                                <h5 class="edu-time-items__h5">업무복귀연도 : 2023년</h5>
+                                                <ul class="edu-time-items__list">
+                                                    <li>
+                                                        <p>신청 교육 : 2023년 보충 보수교육(8시간)+유예해소자(12시간)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="edu-time-items__clock">
+                                                    <i class="ico-clock"></i>
+                                                    <span class="edu-time">
+                                                        <span class="label">이수평점(시간):</span>
+                                                        <span class="time">20시간</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="edu-time-items">
+                                            <div class="white-box">
+                                                <h4 class="edu-time-items__title">보수교육 유예 연도 : 2016~2021년</h4>
+                                                <h5 class="edu-time-items__h5">업무복귀연도 : 2022년</h5>
+                                                <ul class="edu-time-items__list">
+                                                    <li>
+                                                        <p>신청 교육 : 2022년 보충 보수교육(8시간)+유예해소자(12시간)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="edu-time-items__clock">
+                                                    <i class="ico-clock"></i>
+                                                    <span class="edu-time">
+                                                        <span class="label">이수평점(시간):</span>
+                                                        <span class="time">20시간</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="edu-time-items">
+                                            <div class="white-box">
+                                                <h4 class="edu-time-items__title">보수교육 유예 연도 : 2016~2020년</h4>
+                                                <h5 class="edu-time-items__h5">업무복귀연도 : 2021년</h5>
+                                                <ul class="edu-time-items__list">
+                                                    <li>
+                                                        <p>신청 교육 : 2021년 보충 보수교육(8시간)+유예해소자(12시간)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="edu-time-items__clock">
+                                                    <i class="ico-clock"></i>
+                                                    <span class="edu-time">
+                                                        <span class="label">이수평점(시간):</span>
+                                                        <span class="time">20시간</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="edu-time-items">
+                                            <div class="white-box">
+                                                <h4 class="edu-time-items__title">보수교육 유예 연도 : 2016~2019년</h4>
+                                                <h5 class="edu-time-items__h5">업무복귀연도 : 2020년</h5>
+                                                <ul class="edu-time-items__list">
+                                                    <li>
+                                                        <p>신청 교육 : 2020년 보충 보수교육(8시간)+유예해소자(12시간)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="edu-time-items__clock">
+                                                    <i class="ico-clock"></i>
+                                                    <span class="edu-time">
+                                                        <span class="label">이수평점(시간):</span>
+                                                        <span class="time">20시간</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="edu-time-items">
+                                            <div class="white-box">
+                                                <h4 class="edu-time-items__title">보수교육 유예 연도 : 2016~2018년</h4>
+                                                <h5 class="edu-time-items__h5">업무복귀연도 : 2019년</h5>
+                                                <ul class="edu-time-items__list">
+                                                    <li>
+                                                        <p>신청 교육 : 2019년 보충 보수교육(8시간)+유예해소자(12시간)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="edu-time-items__clock">
+                                                    <i class="ico-clock"></i>
+                                                    <span class="edu-time">
+                                                        <span class="label">이수평점(시간):</span>
+                                                        <span class="time">20시간</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="edu-time-items">
+                                            <div class="white-box">
+                                                <h4 class="edu-time-items__title">보수교육 유예 연도 : 2016~2017년</h4>
+                                                <h5 class="edu-time-items__h5">업무복귀연도 : 2018년</h5>
+                                                <ul class="edu-time-items__list">
+                                                    <li>
+                                                        <p>신청 교육 : 2018년 보충 보수교육(8시간)+유예해소자(8시간)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="edu-time-items__clock">
+                                                    <i class="ico-clock"></i>
+                                                    <span class="edu-time">
+                                                        <span class="label">이수평점(시간):</span>
+                                                        <span class="time">16시간</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="edu-time-items">
+                                            <div class="white-box">
+                                                <h4 class="edu-time-items__title">보수교육 유예 연도 : 2018년</h4>
+                                                <h5 class="edu-time-items__h5">업무복귀연도 : 2019년</h5>
+                                                <ul class="edu-time-items__list">
+                                                    <li>
+                                                        <p>신청 교육 : 2019년 보충 보수교육(8시간)+유예해소자(4시간)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="edu-time-items__clock">
+                                                    <i class="ico-clock"></i>
+                                                    <span class="edu-time">
+                                                        <span class="label">이수평점(시간):</span>
+                                                        <span class="time">12시간</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="edu-time-items">
+                                            <div class="white-box">
+                                                <h4 class="edu-time-items__title">보수교육 유예 연도 : 2017년</h4>
+                                                <h5 class="edu-time-items__h5">업무복귀연도 : 2018년</h5>
+                                                <ul class="edu-time-items__list">
+                                                    <li>
+                                                        <p>신청 교육 : 2018년 보충 보수교육(8시간)+유예해소자(4시간)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="edu-time-items__clock">
+                                                    <i class="ico-clock"></i>
+                                                    <span class="edu-time">
+                                                        <span class="label">이수평점(시간):</span>
+                                                        <span class="time">12시간</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="edu-time-items">
+                                            <div class="white-box">
+                                                <h4 class="edu-time-items__title">보수교육 유예 연도 : 2016년</h4>
+                                                <h5 class="edu-time-items__h5">업무복귀연도 : 2017년</h5>
+                                                <ul class="edu-time-items__list">
+                                                    <li>
+                                                        <p>신청 교육 : 2017년 보충 보수교육(8시간)+유예해소자(4시간)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="edu-time-items__clock">
+                                                    <i class="ico-clock"></i>
+                                                    <span class="edu-time">
+                                                        <span class="label">이수평점(시간):</span>
+                                                        <span class="time">12시간</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- //accordion contents -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h5 class="accordion-header">
+                                <span class="ico-chk-pp"></span>
+                                <button type="button" id="accordionHeaderSample03" class="btn-accordion"
+                                    aria-controls="accordionCollapseSample03">
+                                    <p class="ellipsis-2">
+                                        당해연도 비대상자의 보수교육 이수시간
+                                    </p>
+                                </button>
+                            </h5>
+                            <div id="accordionCollapseSample03" class="accordion-collapse collapse"
+                                aria-labelledby="accordionHeaderSample03">
+                                <div class="accordion-body">
+                                    <!-- accordion contents -->
+                                    <ul class="edu-time-list">
+                                        <li class="edu-time-items">
+                                            <div class="white-box">
+                                                <h4 class="edu-time-items__title">보수교육 비대상 연도 : 2016~2018년</h4>
+                                                <h5 class="edu-time-items__h5">업무복귀연도 : 2019년</h5>
+                                                <ul class="edu-time-items__list">
+                                                    <li>
+                                                        <p>신청 교육 : 2019년 보충 보수교육(8시간)+유예해소자(12시간)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="edu-time-items__clock">
+                                                    <i class="ico-clock"></i>
+                                                    <span class="edu-time">
+                                                        <span class="label">이수평점(시간):</span>
+                                                        <span class="time">20시간</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="edu-time-items">
+                                            <div class="white-box">
+                                                <h4 class="edu-time-items__title">보수교육 비대상 연도 : 2018년</h4>
+                                                <h5 class="edu-time-items__h5">업무복귀연도 : 2019년</h5>
+                                                <ul class="edu-time-items__list">
+                                                    <li>
+                                                        <p>신청 교육 : 2019년 보충 보수교육(8시간)+유예해소자(4시간)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="edu-time-items__clock">
+                                                    <i class="ico-clock"></i>
+                                                    <span class="edu-time">
+                                                        <span class="label">이수평점(시간):</span>
+                                                        <span class="time">12시간</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="edu-time-items">
+                                            <div class="white-box">
+                                                <h4 class="edu-time-items__title">보수교육 비대상 연도 : 2016~2017년</h4>
+                                                <h5 class="edu-time-items__h5">업무복귀연도 : 2018년</h5>
+                                                <ul class="edu-time-items__list">
+                                                    <li>
+                                                        <p>신청 교육 : 2018년 보충 보수교육(8시간)+유예해소자(8시간)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="edu-time-items__clock">
+                                                    <i class="ico-clock"></i>
+                                                    <span class="edu-time">
+                                                        <span class="label">이수평점(시간):</span>
+                                                        <span class="time">16시간</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="edu-time-items">
+                                            <div class="white-box">
+                                                <h4 class="edu-time-items__title">보수교육 비대상 연도 : 2017년</h4>
+                                                <h5 class="edu-time-items__h5">업무복귀연도 : 2018년</h5>
+                                                <ul class="edu-time-items__list">
+                                                    <li>
+                                                        <p>신청 교육 : 2018년 보충 보수교육(8시간)+유예해소자(4시간)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="edu-time-items__clock">
+                                                    <i class="ico-clock"></i>
+                                                    <span class="edu-time">
+                                                        <span class="label">이수평점(시간):</span>
+                                                        <span class="time">12시간</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+
+                                    <!-- //accordion contents -->
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <!-- //accordion -->
+
+                    <!-- 페이지네이션 영역 -->
+                    <div class="krds-pagination">
+                        <span class="page-navi prev disabled" href="#">이전</span>
+                        <div class="page-links">
+                            <a class="page-link" href="#">1</a>
+                            <a class="page-link" href="#">2</a>
+                            <a class="page-link" href="#">3</a>
+                            <a class="page-link active" href="#">4</a>
+                            <a class="page-link" href="#">5</a>
+                            <a class="page-link" href="#">6</a>
+                            <a class="page-link" href="#">7</a>
+                            <a class="page-link" href="#">8</a>
+                            <span class="page-link link-dot"></span>
+                            <a class="page-link" href="#">99</a>
+                        </div>
+                        <a class="page-navi next" href="#">다음</a>
+                    </div>
+                    <!-- //페이지네이션 영역 -->
+
+                    <div class="text-box gray mt60">
+                        <ol class="krds-info-list ordered listStep01 time" role="list">
+                            <li role="listitem"><span class="num">1. </span>보수교육 면제∙유예∙비대상 사유 해당자이나 미신청자는 해당연도 면제∙유예∙비대상
+                                신청을 먼저 해야합니다.</li>
+                            <li role="listitem"><span class="num">2. </span>신청서 제출 후 '판정 중' 및 '불가자'로 판정된 경우, 해당연도
+                                면제∙유예∙비대상이 반영되지 않습니다. 반드시 승인여부 확인 후 교육신청 바랍니다.</li>
+                            <li role="listitem"><span class="num">3. </span> 보수교육 면제∙유예∙비대상 승인자이나 위 표에 따른 교육 신청이 제대로 되지
+                                않는 경우, 상담센터(1661-6933) 또는 1:1 문의 바랍니다.</li>
+
+                        </ol>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <!-- //컨텐츠 영역 -->
+        </div>
+        <!-- //컨테이너 영역 -->
+
+        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>
