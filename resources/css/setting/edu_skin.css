@@ -1383,6 +1383,142 @@ line-height: 150%; /* 24px */  }
 }
 
 
+/*********************************
+신청방법
+*********************************/
+
+.appl-way-section{
+    width: 100%; margin-top: 50px;
+}
+
+.flow-list{display: flex; position: relative;}
+.flow-list:before{
+    display: block; content:""; background: url(../../img/refre/dot-line.png);width: 100%; height:2px;
+    position: absolute; top:123px;
+    z-index: -1;
+}
+.flow-list.flow-3 li{
+    flex:0 0 33%
+}
+.flow-list.flow-4 li{
+    flex:0 0 25%
+}
+.flow-list.flow-5 li{
+    flex:0 0 20%
+}
+
+.flow-list-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap:10px;
+    position: relative;
+    
+}
+
+.flow-list-items .icon{
+    width: 100px; height:100px; margin: 0 auto; 
+}
+
+.flow-list-items .icon img{width:100%}
+
+.ico-appl-action::before{
+    content:"";
+    display: block;
+    background: url(../../img/refre/ico-wayStep-action.svg)no-repeat;
+    width:22px;
+    height:28px
+}
+.ico-appl-flow::before{
+    content:"";
+    display: block;
+    background: url(../../img/refre/ico-wayStep-flow.svg)no-repeat;
+    width:21px;
+    height:22px
+}
+.ico-appl-none::before{
+    content:"";
+    display: block;
+    background: url(../../img/refre/ico-wayStep-none.svg)no-repeat;
+    width:21px;
+    height:20px
+}
+.ico-appl-end::before{
+    content:"";
+    display: block;
+    background: url(../../img/refre/ico-wayStep-end.svg)no-repeat;
+    width:21px;
+    height:20px
+}
+
+.flow-list-items .state-icon{display: flex; align-items: center; justify-content: center; height:30px; position: relative;}
+
+.flow-list-items .msg .step{color: #6300FF;
+text-align: center;
+font-size: 13px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 19.5px */}
+
+.flow-list-items .msg p{color: var(--color-text-basic, #0D0E10);
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%;}
+
+.state-icon.start::before{
+    display: block;
+    content:"";
+    height: 30px;
+    width: 50%;
+    background-color: #fff;
+    position: absolute;
+    z-index: -1;
+    left:0
+}
+.state-icon.end::before{
+    display: block;
+    content:"";
+    height: 30px;
+    width: 50%;
+    background-color: #fff;
+    position: absolute;
+    z-index: -1;
+    right:0
+}
+
+.appl-way-section .border-box{
+    border: 2px solid var(--color-bosu, #AF77F5);
+    padding:20px;
+}
+
+.appl-way-section .border-box .step-title{position: relative; width: 100%;}
+.appl-way-section .border-box .step-title span{
+   display: inline-flex;
+padding: 5px 10px;
+justify-content: center;
+align-items: center;
+background: #6300FF;
+color:#fff;
+font-size: 13px;
+font-weight: 700;
+position: absolute;
+top: -36px;
+left:50%;
+transform: translateX(-50%);
+}
+
+.flow-list-items .or{border-radius: 50%;
+background: var(--color-text-medium, #333); width: 50px; height:50px; display: flex; align-items: center; justify-content: center; color:#fff; text-align: center; font-size: 13px; font-weight: 700;}
+
+.flow-list-items .or.pos{
+    position: absolute;
+    top:100px;
+    left:50%;
+    transform: translateX(-50%);
+}
+
 /** 노트북 */
 @media (max-width: 1440px) {
     .gnb-bg{display: none;}
@@ -1675,6 +1811,36 @@ body.edu-appl-step03 .step02 {
 }
 
 
+.flow-list-items .icon {
+    width: 60px;
+    height: 60px;
+}
+
+.flow-list:before {
+    top: 83px;
+}
+.flow-list-items .or.pos {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flow-list-items .or {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 50%;
+    background: var(--color-text-medium, #333);
+}
+
+
 
 }
 
@@ -1763,6 +1929,24 @@ body.edu-appl-step03 .step02 {
     padding: 10px;
 
 }
+
+.flow-list-items .msg p {
+    font-size: 10px;
+}
+.flow-list-items .msg .step {
+    color: rgb(99, 0, 255);
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.appl-way-section .border-box {
+    border: 2px solid var(--color-bosu, #AF77F5);
+    padding: 20px 10px;
+}
+
 
 }
 
